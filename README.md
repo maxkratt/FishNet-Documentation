@@ -42,11 +42,10 @@ To toggle between beta features simply use the Fish-Networking menu in engine, c
 
 ## External Links
 
-GitHub: [https://github.com/FirstGearGames/FishNet/](https://github.com/FirstGearGames/FishNet/)
-
-Asset Store: [https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815](https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815)
-
-Community Discord: [https://discord.gg/Ta9HgDh4Hj](https://discord.gg/Ta9HgDh4Hj)
+* Fish-Networking GitHub: [https://github.com/FirstGearGames/FishNet/](https://github.com/FirstGearGames/FishNet/)
+* Asset Store: [https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815](https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815)
+* Community Discord: [https://discord.gg/Ta9HgDh4Hj](https://discord.gg/Ta9HgDh4Hj)
+* Documentation GitHub: [https://github.com/FirstGearGames/FishNet-Documentation](https://github.com/FirstGearGames/FishNet-Documentation)
 
 ## Add-ons
 
@@ -56,4 +55,4 @@ Add-ons: [https://fish-networking.gitbook.io/docs/manual/general/addons](https:/
 
 ## Need more documentation?
 
-Documentation is especially important to newcomers, and we understand this. As Fish-Networking developers it can at times be difficult to know what is expected or lacking for beginners. If you find a topic unclear, or not covered well enough, please visit our [GitHub Issues](https://github.com/FirstGearGames/FishNet/issues) and create a new issue requesting improvements.
+Documentation is especially important to newcomers, and we understand this. As Fish-Networking developers it can at times be difficult to know what is expected or lacking for beginners. If you find a topic unclear, or not covered well enough, please visit our [GitHub Discussions](https://github.com/FirstGearGames/FishNet/discussions) and create a new discussion requesting improvements.
