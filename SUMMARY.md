@@ -38,7 +38,7 @@
   * [Third-Party](manual/guides/third-party.md)
   * [Getting Started](manual/guides/getting-started/README.md)
     * [Commonly Used Guides](manual/guides/getting-started/commonly-used-guides.md)
-    * [Ownership](manual/guides/getting-started/ownership.md)
+    * [Ownership - Moving Soon](manual/guides/getting-started/ownership-moving-soon.md)
     * [Step by Step](manual/guides/getting-started/step-by-step/README.md)
       * [Getting Connected](manual/guides/getting-started/step-by-step/getting-connected.md)
       * [Preparing Your Player](manual/guides/getting-started/step-by-step/preparing-your-player.md)
