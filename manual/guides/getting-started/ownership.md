@@ -6,6 +6,10 @@ description: >-
 
 # Ownership
 
+{% hint style="warning" %}
+This article is being improved and in result will be moved to a new location soon.
+{% endhint %}
+
 ## Related Articles
 
 * [Terminology](../../general/terminology/)
