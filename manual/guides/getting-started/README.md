@@ -6,4 +6,6 @@ description: >-
 
 # Getting Started
 
-This guide will cover a range of topics ranging from terminology, details on API you'll likely be using often, and setting up your first scene to connect to.
+This section highlights the features you'll use most frequently and provides resources to help you explore them further
+
+You’ll also find several step-by-step guides for common first-time tasks.
