@@ -99,7 +99,6 @@
     * [Predicted Spawning](manual/guides/spawning/predicted-spawning.md)
     * [Nested NetworkObjects](manual/guides/spawning/nested-networkobjects.md)
     * [Object Pooling](manual/guides/spawning/object-pooling.md)
-  * [Components](manual/guides/components-1.md)
   * [NetworkBehaviour](manual/guides/network-behaviour-guides.md)
   * [NetworkObjects](manual/guides/networkobjects.md)
   * [Attributes, Quality of Life](manual/guides/attributes-quality-of-life.md)
