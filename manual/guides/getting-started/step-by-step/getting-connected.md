@@ -6,6 +6,8 @@ description: >-
 
 ## Step-by-Step Guide
 
+{% stepper %}
+{% step %}
 ### Creating the NetworkManager
 The **NetworkManager** is a central component of FishNet that manages the networking lifecycle, including establishing connections, hosting sessions, and handling client-server communication. For convenience, FishNet has a ready-made NetworkManager prefab that you can use. You can find the prefab located in the FishNet directory under `Demos/Prefabs/NetworkManager.prefab`.
 Drag and drop this NetworkManager prefab into your Unity scene.
@@ -15,8 +17,8 @@ Drag and drop this NetworkManager prefab into your Unity scene.
 {% hint style="info" %}
 If you imported FishNet from the git URL instead of the asset store or .unitypackage file, then the location of the FishNet directory will be `Packages/FishNet: Networking Evolved` instead of `Assets/FishNet`
 {% endhint %}
-
-
+{% endstep %}
+{% step %}
 ### Configuring FishNet to Auto Start
 The **NetworkHudCanvas** is a user interface provided by the example **NetworkManager** designed for quick testing of network connections. It displays buttons to start as a client and/or server. It also allows you to automatically start as a server, client, or host as soon as the **NetworkManager** loads in the game.
 
@@ -25,8 +27,8 @@ Expand the **NetworkManager's** fold-out icon to see its child game objects and 
 This configuration will ensure that the application automatically starts as a host (a server and a client at the same time) when the scene is loaded.
 
 <figure><img src="../../../../.gitbook/assets/setting-autostart-type.png" alt="Setting the Auto Start Type"><figcaption><p>Setting the Auto Start Type</p></figcaption></figure>
-
-
+{% endstep %}
+{% step %}
 ### Testing the Connection
 Once everything is set up, press the Play button in Unity's Editor to launch your scene.
 
@@ -39,6 +41,7 @@ If the buttons do not look like the example image then it just means your projec
 Additionally the console will log some network-related messages. Successful connection messages should appear, indicating that the host and client are running properly.
 
 <figure><img src="../../../../.gitbook/assets/successful-connection-logs.png" alt="Successful connection logs"><figcaption><p>Successful connection logs</p></figcaption></figure>
-
+{% endstep %}
+{% endstepper %}
 
 By following these steps, you should now have a functional network setup in your Unity project using FishNet. This guide provides the foundation for more complex networking workflows, such as syncing objects and managing connections.
