@@ -1,39 +1,71 @@
-# Ownership
+---
+description: >-
+  Understanding how to use ownership, as well how it affects clients and the
+  server is essential for any project.
+---
 
-Ownership is a term you will see and use very frequently throughout your development with Fish-Net. There can be only one owner, and ownership dictates which client has control over an object. It's important to know that an object does not always have an owner, and that ownership changes must be completed by the server.
+## What is Ownership?
 
-When a client owns an object they are considered the rightful user to take actions on the object, such as moving a character or using a weapon on that character. You might also want to give a client temporary ownership over world objects, such as using a turret in your scene.
+Ownership is a core concept in Fish-Net, determining which client has control over an object.&#x20;
 
-There are several ways to give ownership to a client. The first is spawning an object with a specific connection, or client, as the owner. There is an example below, but you may also see [Spawning and Despawning](../spawning/) for more information on this.
+Every NetworkObject in Fish-Net can be assigned a client to own it, or the object can have no assigned owner. The server is exclusively responsible for changing ownership of objects, even though it cannot own an object itself.
 
-## Spawning With Ownership
+When a client owns an object, they are considered its rightful user, capable of actions like moving a character or using a weapon. Ownership can also be temporarily granted for interactions with world objects, such as using a turret.
+
+Ownership checks are essential for ensuring proper control over objects. Common scenarios include:
+
+* Validating if a client can manipulate an object.
+* Checking ownership status for player-related values like name or score.
+* Ensuring only the owner executes specific network calls (e.g., ServerRpcs).
+
+## Assigning Ownership
+
+Ownership can be granted in several ways:
+
+* Spawning with Ownership: When creating an object, ownership can be assigned to a specific connection.
 
 ```csharp
 Gameobject go = Instantiate(_yourPrefab);
 InstanceFinder.ServerManager.Spawn(go, ownerConnection);
 ```
+{% endcode %}
 
-## Changing Or Adding Ownership
-
-If an object is already spawned you may give or take ownership for that object at anytime. The example below shows how to give ownership to a connection. Previous owners will be replaced with the newOwner. Both the previous and new owner, as well the server can receive a callback indicating that the owner status has changed. See [NetworkBehaviour Callbacks](../network-behaviour-guides.md) for more details.
+* Changing or Adding Ownership: If an object is already spawned, ownership can be modified at any time. Previous owners are replaced with the new owner.
 
 ```csharp
 networkObject.GiveOwnership(newOwnerConnection);
 ```
 
-## Removing Ownership
-
-You can also remove ownership from a client on any object at any time.
+* Removing Ownership: Ownership can be revoked from a client when needed.
 
 ```csharp
 networkObject.RemoveOwnership();
 ```
 
-As mentioned an owner is a client, commonly one that has control over an object. You can verify that you own an object by using the _IsOwner_ property in your script. Your script must inherit from [NetworkBehaviour](../components/network-behaviour-components.md) to use this. Here's a demonstration of only moving a character if the client is an owner of the object.
+{% hint style="success" %}
+`ownerConnection` and `newOwnerConnection` above represent a NetworkConnection that will be set as the new owner.
+{% endhint %}
+
+## Checking Ownership
+
+Ownership can be verified via the following NetworkObject or NetworkBehaviour properties:
 
 ```csharp
-private void Update()
+base.IsOwner;      // Returns true if the local client owns the object.
+base.Owner;        // Retrieves the current owner NetworkConnection.
+base.IsController; // True if the local client owns the object or is the server with no assigned owner.
+```
+
+### Simple Movement Example
+
+A client must own an object to execute certain actions. Below is an example of movement logic restricted to the object's owner:
+
+```csharp
+void Update()
 {
+    // The client's game instance will have several player objects in it if there 
+    // are multiple players playing, but he will only own one of them and should
+    // should only move that one that he owns.
     if (base.IsOwner)
     {
         float hor = Input.GetAxisRaw("Horizontal");
@@ -43,21 +75,11 @@ private void Update()
 }
 ```
 
-The above code will only move the transform if the client has ownership. Commonly when paired with [Network Transform](../components/network-transform.md) and Client Authoritative, this will relay that movement to the server, and the server will send it to other clients.
+When paired with a **Network Transform** set to Client Authoritative, this movement will be relayed to the server and synchronized across all clients.
 
-## Checking Ownership
+## Transferring Ownership
 
-Ownership can be checked a variety of ways. These can all be checked on the NetworkObject or a NetworkBehaviour.
+Only the server can assign, transfer, or remove ownership. Typically, ownership is granted when spawning an object.
 
-```csharp
-//Is true if the local client owns the object.
-base.IsOwner;
-//Returns the current owner NetworkConnection.
-//This can be accessible on clients even if they do not own the object
-//so long as ServerManager.ShareIds is enabled. Sharing Ids has absolutely no
-//security risk.
-base.Owner;
-//True if the local client owns the object, or if
-//is the server and there is no owner.
-base.IsController
-```
+* Automatic Ownership Assignment: The PlayerSpawner script (found in the NetworkManager prefab) ensures the spawned player object is owned by its respective client.
+* Immediate Ownership: In cases where a client needs immediate ownership—such as controlling a turret without delay—the PredictedOwner component can be used. This component can be extended for customized logic.
