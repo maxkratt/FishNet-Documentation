@@ -28,7 +28,6 @@ Ownership can be granted in several ways:
 Gameobject go = Instantiate(_yourPrefab);
 InstanceFinder.ServerManager.Spawn(go, ownerConnection);
 ```
-{% endcode %}
 
 * Changing or Adding Ownership: If an object is already spawned, ownership can be modified at any time. Previous owners are replaced with the new owner.
 
@@ -75,11 +74,11 @@ void Update()
 }
 ```
 
-When paired with a **Network Transform** set to Client Authoritative, this movement will be relayed to the server and synchronized across all clients.
+When paired with a [Network Transform](../components/network-transform.md) set to Client Authoritative, this movement will be relayed to the server and synchronized across all clients.
 
 ## Transferring Ownership
 
 Only the server can assign, transfer, or remove ownership. Typically, ownership is granted when spawning an object.
 
 * Automatic Ownership Assignment: The PlayerSpawner script (found in the NetworkManager prefab) ensures the spawned player object is owned by its respective client.
-* Immediate Ownership: In cases where a client needs immediate ownership—such as controlling a turret without delay—the PredictedOwner component can be used. This component can be extended for customized logic.
+* Immediate Ownership: In cases where a client needs immediate ownership—such as controlling a turret without delay—the [PredictedOwner](../components/prediction/predictedowner.md) component can be used. This component can be extended for customized logic.
