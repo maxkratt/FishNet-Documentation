@@ -4,7 +4,7 @@
 
 Ownership is when a specific client 'owns' the object, while controller is whichever entity controls the object. By our terms, only a client can own an object, but server or client may be controller.
 
-When a client owns an object they are the 'controller' and are able to send [remote procedure calls](../../guides/remote-procedure-calls.md) without disabling authority checks, among other tasks such as generating prediction data.
+When a client owns an object they are the 'controller' and are able to send [remote procedure calls](../../guides/remote-procedure-calls/) without disabling authority checks, among other tasks such as generating prediction data.
 
 A controller is the server if the object is not owned by any client, but again, the client becomes the controller when they own the object.
 

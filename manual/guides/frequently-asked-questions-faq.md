@@ -12,7 +12,7 @@ description: Discover frequently asked questions and their answers.
 
 Broadcast are generally the best choice for sending data without a player object. Many developers trade this data in a custom [authenticator ](components/authenticator.md)class, which allows data to be sent before the client initializes anything at all for the network. See our PasswordAuthenticator script for an example of doing this.
 
-Another approach is to use a custom player spawner instead of our PlayerSpawner. You may send broadcasts back and forward freely, and only spawn your player when you feel is right. See [broadcasts](synchronizing/broadcast.md) for more information on this feature.
+Another approach is to use a custom player spawner instead of our PlayerSpawner. You may send broadcasts back and forward freely, and only spawn your player when you feel is right. See [broadcasts](remote-procedure-calls/broadcast.md) for more information on this feature.
 
 </details>
 
@@ -130,7 +130,7 @@ If a client is not an observer of an object then the server does not spawn the o
 
 <summary>Why are my SyncTypes not syncing on other devices when I change it on the owner client?</summary>
 
-Clients may update SyncTypes locally, but they are not synchronized over the network; only the server may synchronize SyncTypes. Typically, clients will send a Remote Procedure Call to the server indicating it wants to update something, and the server complies. See these guides for more information: [Remote Procedure Calls](remote-procedure-calls.md), [SyncTypes](synchronizing/).
+Clients may update SyncTypes locally, but they are not synchronized over the network; only the server may synchronize SyncTypes. Typically, clients will send a Remote Procedure Call to the server indicating it wants to update something, and the server complies. See these guides for more information: [Remote Procedure Calls](remote-procedure-calls/), [SyncTypes](synchronizing/).
 
 </details>
 
@@ -152,7 +152,7 @@ However, even if the interval is met, SyncTypes always synchronize after remote 
 
 By default only clients which own the objects may send a ServerRpc. You may bypass this restriction by setting 'RequireOwnership' to false in the ServerRpc attribute. If you've not bypassed this restriction, the sender will always be owner.
 
-The [ServerRpc guide ](remote-procedure-calls.md#serverrpc)shows how to set RequireOwnership, as well how to know which spectator might be sending the RPC. You will notice in the guide a NetworkConnection is specified at the end of the RPC parameters. You do not pass in a connection when sending the ServerRpc, it's set automatically when you receive the RPC call.
+The [ServerRpc guide ](remote-procedure-calls/#serverrpc)shows how to set RequireOwnership, as well how to know which spectator might be sending the RPC. You will notice in the guide a NetworkConnection is specified at the end of the RPC parameters. You do not pass in a connection when sending the ServerRpc, it's set automatically when you receive the RPC call.
 
 </details>
 

@@ -1,8 +1,8 @@
 # Remote Procedure Calls
 
-Remote Procedure Calls(RPCs) are a type of [communication](../general/terminology/communicating.md#server-and-host-2) that are received on the same object they are sent from. The three types of RPCs are ServerRpc, ObserversRpc, and TargetRpc. RPCs are easy to use and are just like calling another method. Since Remote Procedure Calls are object bound, they must be called on scripts which inherit from [NetworkBehaviour](components/network-behaviour-components.md).
+Remote Procedure Calls(RPCs) are a type of [communication](../../general/terminology/communicating.md#server-and-host-2) that are received on the same object they are sent from. The three types of RPCs are ServerRpc, ObserversRpc, and TargetRpc. RPCs are easy to use and are just like calling another method. Since Remote Procedure Calls are object bound, they must be called on scripts which inherit from [NetworkBehaviour](../components/network-behaviour-components.md).
 
-Fish-Net will [generate serializers](automatic-serializers-guides.md) for your types automatically, including arrays and lists. In rare cases Fish-Net may not be able to create a serializer for you. When this occurs you must create a [custom serializer](automatic-serializers-guides.md).
+Fish-Net will [generate serializers](../automatic-serializers-guides.md) for your types automatically, including arrays and lists. In rare cases Fish-Net may not be able to create a serializer for you. When this occurs you must create a [custom serializer](../automatic-serializers-guides.md).
 
 {% hint style="info" %}
 Remote Procedure Call methods do not need to have prefixes as shown in the examples, but it's good practice to use them to keep your intentions known.
@@ -27,7 +27,7 @@ private void RpcSendChat(string msg)
 }
 ```
 
-By default only the [owner](ownership/) of an object may send a ServerRpc. It is however possible to allow ServerRpcs to be called by any client, owner or not. This is done by setting RequireOwnership to false in the _ServerRpc_ attribute. You may optionally know which connection is calling the RPC by using a NetworkConnection type with a null default as the last parameter. The NetworkConnection parameter will automatically be populated with whichever client is calling the ServerRpc; you do not need to specify the connection.
+By default only the [owner](../ownership/) of an object may send a ServerRpc. It is however possible to allow ServerRpcs to be called by any client, owner or not. This is done by setting RequireOwnership to false in the _ServerRpc_ attribute. You may optionally know which connection is calling the RPC by using a NetworkConnection type with a null default as the last parameter. The NetworkConnection parameter will automatically be populated with whichever client is calling the ServerRpc; you do not need to specify the connection.
 
 ```csharp
 [ServerRpc(RequireOwnership = false)]
@@ -39,7 +39,7 @@ private void RpcSendChat(string msg, NetworkConnection conn = null)
 
 ## ObserversRpc <a href="#observersrpc" id="observersrpc"></a>
 
-ObserversRpc allows the server to run logic on clients. Only observing clients will get and run the logic. Observers are set by using the [Network Observer](components/network-observer.md) component. To use ObserversRpc add the _ObserversRpc_ attribute to a method.
+ObserversRpc allows the server to run logic on clients. Only observing clients will get and run the logic. Observers are set by using the [Network Observer](../components/network-observer.md) component. To use ObserversRpc add the _ObserversRpc_ attribute to a method.
 
 ```csharp
 private void FixedUpdate()

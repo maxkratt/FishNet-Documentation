@@ -1,6 +1,6 @@
 # SyncTypes
 
-Like[ remote procedure calls](../remote-procedure-calls.md), SyncTypes are another type of [communication](../../general/terminology/communicating.md). These are fields which automatically synchronize over the network to clients when the server changes them. There are a variety of SyncTypes available: SyncVar, SyncDictionary, SyncList, custom SyncTypes, and more.
+Like[ remote procedure calls](../remote-procedure-calls/), SyncTypes are another type of [communication](../../general/terminology/communicating.md). These are fields which automatically synchronize over the network to clients when the server changes them. There are a variety of SyncTypes available: SyncVar, SyncDictionary, SyncList, custom SyncTypes, and more.
 
 When changes are made to a SyncType, only the changes are sent. For example, if you have a SyncList of 10 values and add another, only the just added entry will be sent.
 

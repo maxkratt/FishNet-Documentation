@@ -8,7 +8,7 @@ description: >-
 
 When inheriting from [NetworkBehaviours ](components/network-behaviour-components.md)you are indicating that your script will utilize the network in some way. Once a NetworkBehaviour script is added to an object the [NetworkObject](broken-reference) component will automatically be attached.
 
-NetworkBehaviours are essential for [Remote Procedure Calls](remote-procedure-calls.md), [Synchronizing](synchronizing/), and having access to vital network information.&#x20;
+NetworkBehaviours are essential for [Remote Procedure Calls](remote-procedure-calls/), [Synchronizing](synchronizing/), and having access to vital network information.&#x20;
 
 ## Properties <a href="#properties" id="properties"></a>
 
