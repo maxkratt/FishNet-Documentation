@@ -11,21 +11,21 @@ description: >-
 
 There are a variety of ways to purchase Pro and Projects.&#x20;
 
+{% hint style="danger" %}
+Please read the following very carefully to ensure you understand it fully. If you have questions please contact staff on [Discord](https://discord.gg/Ta9HgDh4Hj).
+{% endhint %}
+
+There are two types of purchases, **Fish-Networking Pro**, and **Projects**.
+
 **Fish-Networking Pro** can be purchased from [GitHub](https://github.com/sponsors/FirstGearGames), [Patreon](https://www.patreon.com/firstgeargames), or the [Unity Asset Store](https://assetstore.unity.com/publishers/46529).
 
-{% hint style="info" %}
-At this time **Projects** can only be purchased through GitHub and Patreon. Once FPSLand V4 is complete projects will be added to the asset store as well.
-{% endhint %}
+At this time **Projects** can only be purchased through GitHub and Patreon.
 
-{% hint style="success" %}
-Please consider making purchases through GitHub as our preferred platform, or Patreon. When purchased through GitHub or Patreon more of your support goes towards the developers and community helpers.
+Once FPSLand V4 is complete projects will be added to the asset store as well.
 
-In addition, GitHub and Patreon offer extra bonuses as a thank you!
-{% endhint %}
+_Please consider making purchases through GitHub as our preferred platform, or Patreon. When purchased through GitHub or Patreon more of your support goes towards the developers and community helpers._
 
-{% hint style="warning" %}
-When buying through the asset store you are gaining lifetime updates to only what you purchased. For example: if you purchased Fish-Networking Pro on the asset store, this does not automatically provide you with Projects.
-{% endhint %}
+_In addition, GitHub and Patreon offer extra bonuses as a thank you!_
 
 ### GitHub and Patreon Perks
 
@@ -74,11 +74,13 @@ The amount of months received are directly related to what goes back into the pr
 
 ## After Purchasing
 
+{% hint style="danger" %}
+Projects are only available when purchasing through GitHub or Patreon.
+{% endhint %}
+
 Access Fish-Networking Pro and Projects on our [website](https://firstgeargames.com), or if you purchased on the asset store use your purchases asset link provided by Unity.
 
-{% hint style="success" %}
 Please keep in mind that you may change your support tier at anytime when joining us through GitHub or Patreon.
-{% endhint %}
 
 {% hint style="info" %}
 Do not forget your Discord roles!
