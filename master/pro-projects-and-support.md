@@ -75,14 +75,16 @@ The amount of months received are directly related to what goes back into the pr
 ## After Purchasing
 
 {% hint style="danger" %}
-Projects are only available when purchasing through GitHub or Patreon.
+Please be certain you read [Purchasing](pro-projects-and-support.md#purchasing) thoroughly.
 {% endhint %}
 
-Access Fish-Networking Pro and Projects on our [website](https://firstgeargames.com), or if you purchased on the asset store use your purchases asset link provided by Unity.
+If you purchased through GitHub or Patreon your downloads will be available on our [website](https://firstgeargames.com).
 
-Please keep in mind that you may change your support tier at anytime when joining us through GitHub or Patreon.
+If you purchased Fish-Networking Pro on the asset store, please use the asset store to download Fish-Networking Pro.
 
 {% hint style="info" %}
+Keep in mind that you may change your support tier at anytime when joining us through GitHub or Patreon.
+
 Do not forget your Discord roles!
 {% endhint %}
 
