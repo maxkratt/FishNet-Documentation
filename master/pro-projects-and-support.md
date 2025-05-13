@@ -97,7 +97,7 @@ Business tiers are unique in that they receive dedicated channels. Please contac
 **How to claim your role:**
 
 * **GitHub Instructions:** log into your downloads on our website. After logging in you will be shown a temporary Id above downloads. Copy this Id and direct message our Discord bot Sharky with it.
-* **Patreon Instructions:** [https://support.patreon.com/hc/en-us/articles/212052266-Get-my-Discord-role.](https://support.patreon.com/hc/en-us/articles/212052266-Get-my-Discord-role.)
+* **Patreon Instructions:** [https://support.patreon.com/hc/en-us/articles/212052266-Getting-Discord-access](https://support.patreon.com/hc/en-us/articles/212052266-Getting-Discord-access)
 * **Asset Store Instructions:** Join our Discord and message Sharky your purchase invoice number.
 
 ## Pro
