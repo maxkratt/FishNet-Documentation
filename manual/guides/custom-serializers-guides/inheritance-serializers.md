@@ -15,7 +15,7 @@ layout:
 
 # Inheritance Serializers
 
-Another frequently asked question is how to handle serialization for classes which are inherited by multiple other classes. These are often used to allow [RPCs ](../remote-procedure-calls.md)to use the base class as a parameter, while permitting other inheriting types to be used as arguments. This approach is similar to [Interface serializers.](interface-serializers.md)
+Another frequently asked question is how to handle serialization for classes which are inherited by multiple other classes. These are often used to allow [RPCs ](../remote-procedure-calls/)to use the base class as a parameter, while permitting other inheriting types to be used as arguments. This approach is similar to [Interface serializers.](interface-serializers.md)
 
 ## Class Example
 

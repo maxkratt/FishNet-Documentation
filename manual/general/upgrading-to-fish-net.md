@@ -96,7 +96,7 @@ When converting from Mirror you will most likely want to use Initialized.
 
 **NetworkBehaviour callbacks:** callbacks such as OnStartClient for the most part are the same in Fish-Networking. Some of the callbacks do provide additional information which is not available within Mirror's callbacks. There are also several new callbacks to use. For a complete guide on using Fish-Networking callbacks click [here](https://fish-networking.gitbook.io/docs/manual/guides/network-behaviour-guides#callbacks).
 
-**Remote Procedure Call renames:** see [Remote Procedure Calls](../guides/remote-procedure-calls.md) for enhanced features and usage related to RPCs.
+**Remote Procedure Call renames:** see [Remote Procedure Calls](../guides/remote-procedure-calls/) for enhanced features and usage related to RPCs.
 
 | Mirror       | Fish-Networking | Notes                                         |
 | ------------ | --------------- | --------------------------------------------- |
@@ -105,7 +105,7 @@ When converting from Mirror you will most likely want to use Initialized.
 | \[ClientRpc] | \[ObserversRpc] |                                               |
 
 {% hint style="info" %}
-RPCs within Fish-Networking has many advantages over Mirror; see [Remote Procedure Calls](../guides/remote-procedure-calls.md) for more information.
+RPCs within Fish-Networking has many advantages over Mirror; see [Remote Procedure Calls](../guides/remote-procedure-calls/) for more information.
 {% endhint %}
 
 Mirror uses several singletons while Fish-Networking uses an anti-singleton design. There are still easy ways to access similar features. All of the same access can be returned from the NetworkObject component, as well by using [InstanceFinder](../guides/instancefinder-guides.md).

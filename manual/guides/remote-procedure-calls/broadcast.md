@@ -118,7 +118,7 @@ private void OnEnable()
 private void OnDisable()
 {
     //There are no differences in unregistering.
-    InstanceFinder.ServerManager.UnregisterBroadcast<ChatBroadcast>(OnChatBrodcast);
+    InstanceFinder.ServerManager.UnregisterBroadcast<ChatBroadcast>(OnChatBroadcast);
 }
 ```
 
