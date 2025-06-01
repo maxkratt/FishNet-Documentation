@@ -1,5 +1,10 @@
 ---
+cover: .gitbook/assets/fishnet-cover.png
+coverY: 0
 layout:
+  cover:
+    visible: true
+    size: full
   title:
     visible: true
   description:
@@ -12,13 +17,13 @@ layout:
     visible: true
 ---
 
-# Introduction
+# What is FishNet?
 
 ## Overview
 
-Fish-Networking(Fish-Net) is an original free versatile networking solution for Unity([https://unity.com/](https://unity.com/)), built from the ground up, offering more features than any other free solution.
+Fish-Networking (FishNet) is an original free versatile networking solution for [Unity](https://unity.com/), built from the ground up, offering more features than any other free solution.&#x20;
 
-Fish-Net is server authoritative by design by allowing the use of dedicated servers, but does permit users to act as server and client, for faster development and testing.
+FishNet is server authoritative by design by allowing the use of dedicated servers, but does permit users to act as server and client, for faster development and testing. **There are no CCU caps or CCU paywalls in FishNet**, you can also use any server host you want to, including hosting the server yourself or letting your players do it.
 
 Any kind of network topology is supported through the Transport system. Transports can use a variety of technologies to allow communications between server, client, and even third parties.
 
@@ -28,7 +33,7 @@ High-level API allows you to quickly access the ability to synchronize states, l
 
 Developing projects can take a lot of time, and updating your networking solution along the way is often inevitable. Fish-Networking promises to not release any breaking API or behavior changes between major versions. Major releases will occur no more frequent than every six months, unless **absolutely necessary**.
 
-When breaks do occur we will do our best to keep the changes simple. We also have our [Break Solutions](manual/general/changelog/major-version-update-solutions.md) section which will describe planned breaks, the next major release, and how to remedy breaks for each version.
+When breaks do occur we will do our best to keep the changes simple. We also have our [Break Solutions](guides/upgrading-api.md) section which will describe planned breaks, the next major release, and how to remedy breaks for each version.
 
 ## Long-Term Support
 
@@ -42,16 +47,15 @@ To toggle between beta features simply use the Fish-Networking menu in engine, c
 
 ## External Links
 
-* Fish-Networking GitHub: [https://github.com/FirstGearGames/FishNet/](https://github.com/FirstGearGames/FishNet/)
-* Asset Store: [https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815](https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815)
-* Community Discord: [https://discord.gg/Ta9HgDh4Hj](https://discord.gg/Ta9HgDh4Hj)
-* Documentation GitHub: [https://github.com/FirstGearGames/FishNet-Documentation](https://github.com/FirstGearGames/FishNet-Documentation)
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Fish-Networking GitHub</td><td><a href=".gitbook/assets/github-card.png">github-card.png</a></td><td><a href="https://github.com/FirstGearGames/FishNet/">https://github.com/FirstGearGames/FishNet/</a></td></tr><tr><td>Asset Store</td><td><a href=".gitbook/assets/unity-card.png">unity-card.png</a></td><td><a href="https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815">https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815</a></td></tr><tr><td>Community Discord</td><td><a href=".gitbook/assets/discord-card.png">discord-card.png</a></td><td><a href="https://discord.gg/Ta9HgDh4Hj">https://discord.gg/Ta9HgDh4Hj</a></td></tr></tbody></table>
 
-## Add-ons
+## Community Made Resources
 
-There are several add-ons to aid you through your development. Add-ons may be anything from third-party assets to internal plugins.&#x20;
+There are many third-party add-ons, integrations, and resources that can aid you through your development. Many assets also have direct support for FishNet and work well together with it.
 
-Add-ons: [https://fish-networking.gitbook.io/docs/manual/general/addons](https://fish-networking.gitbook.io/docs/manual/general/addons)
+&#x20;<a href="overview/asset-integrations/" class="button primary">Asset Integrations</a> <a href="overview/community-resources.md" class="button primary">Community Resources</a>
+
+
 
 ## Need more documentation?
 
