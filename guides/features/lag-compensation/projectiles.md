@@ -6,7 +6,7 @@ Another bonus to this approach is you are not networking the projectile movement
 
 Here is an example of what this guide will cover. Notice how even though the client has a 220ms ping the projectile is still aligned on the server. Other clients would align the projectile as well with the same guide code.
 
-<figure><img src="../../../.gitbook/assets/PredictedProjectile_00.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/predicted-projectile-example.gif" alt=""><figcaption></figcaption></figure>
 
 First the local client, or owning client, fires the projectile. The projectile is spawned locally, then the client tells the server to also fire the projectile. The MAX\_PASSED\_TIME constant is covered in the next code snippet.
 

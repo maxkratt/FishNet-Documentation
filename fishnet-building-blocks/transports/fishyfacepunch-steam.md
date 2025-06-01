@@ -42,7 +42,7 @@ Note that this transport requires Facepunch.Steamworks to be installed separatel
 
 ## Component Settings
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Default FishyFacepunch Component</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/facepunch-component.png" alt=""><figcaption><p>Default FishyFacepunch Component</p></figcaption></figure>
 
 * **Steam App ID:** The App ID assigned to your game when registered with Steam. The default is 480 which is steams testing game (SpaceWars).
 

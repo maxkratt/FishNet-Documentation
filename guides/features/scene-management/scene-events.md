@@ -10,7 +10,7 @@ There are a variety of events within SceneManager to help with your development.
 
 This diagram represents which order events can be expected to run. You may also find this diagram within your Fish-Networking import under Example/All/SceneManager.
 
-![SceneManager Event Order](<../../../.gitbook/assets/SceneManager Event Diagram.png>)
+![SceneManager Event Order](<../../../.gitbook/assets/scenemanager-event-diagram.png>)
 
 {% hint style="info" %}
 Notice that client and server process queues and events exactly the same. OnClientPresence change is a special exception, as discussed below.

@@ -144,7 +144,7 @@ Meow Meow Wizard Arena brings a fun game with excellent feeling controls to mobi
 
 The goal is simple, try to reach the top, _try_ being the operative word. Test your agility as a werewolf, a cow, or a strikingly hansom man wearing a cape. With over 500,000 downloads you'll have a hard time putting this one down.
 
-<figure><img src="../../.gitbook/assets/aaaaa.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/showcase-one-up.jpg" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://play.google.com/store/apps/details?id=com.HitGamingStudio.OneUp" %}
 
@@ -204,4 +204,4 @@ Plethora is a MMO made with Fish-Networking, utilizing our built-in client-side 
 
 [https://plethora.game/](https://plethora.game/)
 
-![](<../../.gitbook/assets/banner (1).png>)
+![](<../../.gitbook/assets/showcase-plethora.png>)

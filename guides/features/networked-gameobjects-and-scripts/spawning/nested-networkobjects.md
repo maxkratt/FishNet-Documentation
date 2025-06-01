@@ -14,11 +14,11 @@ Between instantiating the prefab and spawning the root NetworkObject you may mak
 
 For example, if my prefab looks like this:
 
-![](../../../../.gitbook/assets/220801-15-12-145.png)
+![](../../../../.gitbook/assets/nested-network-enabled.png)
 
 But I change the activate state of _NestedNob_ to disabled before server spawning as such:
 
-![](../../../../.gitbook/assets/220801-15-13-264.png)
+![](../../../../.gitbook/assets/nested-network-disabled.png)
 
 RootNob will be spawned over the network with NestedNob disabled / not spawned.
 

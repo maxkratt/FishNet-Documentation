@@ -8,6 +8,6 @@ When using prediction it is essential that Fish-Networkings timing system is use
 
 Add the TimeManager component to your NetworkManager if it does not already exist.
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/prediction-configuring-timemanager.png" alt=""><figcaption></figcaption></figure>
 
 Once added change the Physics Mode to **Time Manager**, and you are done.

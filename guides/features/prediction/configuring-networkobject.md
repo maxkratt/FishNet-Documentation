@@ -8,7 +8,7 @@ description: >-
 
 All of the current options for the NetworkObject inspector are shown below. There are many but many will not be seen depending on your setup, and most are just there to provide you more fine-tuning for your game or setup.
 
-<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/prediction-configuring-networkobject.png" alt=""><figcaption></figcaption></figure>
 
 To begin you must first choose to Enable Prediction. Next you will set the Prediction Type. If you are using a rigidbody or rigidbody2D set the prediction type accordingly. Other is used for non-physics such as character controllers.
 

@@ -12,13 +12,13 @@ To begin I am entering the ColliderRollbackDemo scene included with Fish-Network
 
 In my scene is an object named EnemySetup. The screen capture below shows two boxes on the 'enemy'. One for the body, and one for the head.
 
-<figure><img src="../../../.gitbook/assets/221111-16-36-628.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/collider-rollback-hitboxes.png" alt=""><figcaption></figcaption></figure>
 
 Each hitbox must be on a new object. Generally speaking, the hitbox would be a child of whichever component moves. With an actual humanoid rig, you would probably place the head collider on a child beneath the neck bone.
 
 Notice the 'hitbox' objects are children of the moving component, and only have a collider on them. You may use any collider type.
 
-<figure><img src="../../../.gitbook/assets/221111-16-42-162.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/collider-rollback-children-objects.png" alt=""><figcaption></figcaption></figure>
 
 Next the ColliderRollback script must be added somewhere within your prefab or object. For the sake of simplicity I have mine on the root, with the NetworkObject.
 
@@ -28,7 +28,7 @@ Once added, specify each object you added as a collider within the **Collider Pa
 To make things easier, place the suffix 'Hitbox' on all your hitbox objects. You can then lock the inspector on your ColliderRollback object, search Hitbox, and quickly drag all entries in at once.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/221111-16-44-588.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/collider-rollback-setup.png" alt=""><figcaption></figcaption></figure>
 
 You've completed all the steps required for setting up an object.
 

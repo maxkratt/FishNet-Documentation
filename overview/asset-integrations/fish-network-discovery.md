@@ -38,7 +38,7 @@ Fork: [https://github.com/FirstGearGames/Fish-Networking-Discovery/](https://git
 
 ## Component Settings
 
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Default Fish Network Discovery</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/network-discovery-component.png" alt=""><figcaption><p>Default Fish Network Discovery</p></figcaption></figure>
 
 * **Secret:** Secret Message to use when advertising or searching for servers
 * **Port:** Port to use when advertising or searching for servers

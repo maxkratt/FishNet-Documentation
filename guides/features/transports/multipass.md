@@ -28,7 +28,7 @@ Like other transports to use Multipass it must be added to a gameObject, general
 Be sure that each transport within Multipass is listening on a different port.
 {% endhint %}
 
-![Setup example.](../../../.gitbook/assets/220305-08-46-564.png)
+![Setup example.](../../../.gitbook/assets/multipass-setup-example.png)
 
 ## Client
 

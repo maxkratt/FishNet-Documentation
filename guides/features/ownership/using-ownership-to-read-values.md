@@ -22,7 +22,7 @@ First make a new script on an empty scene object and name it PlayerNames; this s
 
 After adding the script to your scene object a NetworkObject component will automatically be added to the same object. On the NetworkObject enable 'Is Global', make this object a prefab, then delete it from your scene.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/player-names-prefab.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 Notice that on the NetworkObject we also set the Initialize Order to -128. Doing so ensures that this NetworkObject will initialize before any other object does, which promises the OnStart callbacks will execute before other scripts. This step is most likely not needed, but given this is more-or-less a managing script for player names giving it execution priority is good practice.
@@ -130,7 +130,7 @@ The above code snippet will give players a random name when they connect, and al
 
 After you have made the prefab select your scene NetworkManager, make a child object named ServerSpawner, and add the script ServerSpawner. You may place this script anywhere in your scene or game, but for simplicity sake we're going to nest it beneath the NetworkManager. After you add the script, insert your newly created PlayerNames prefab into the 'Network Objects' field and ensure Automatically Spawn is enabled.
 
-<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/player-names-server-spawner.png" alt=""><figcaption></figcaption></figure>
 
 ## Displaying Player Names
 

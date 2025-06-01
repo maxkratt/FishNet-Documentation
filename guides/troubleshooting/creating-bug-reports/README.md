@@ -72,4 +72,4 @@ GitHub does not allow uploading unitypackage files. You may have to archive your
 Model files can be large and pink materials are not fun to look at! If possible replace models with standard meshes and use the standard render pipeline.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/240107-10-22-598.png" alt=""><figcaption><p>Example of files found within a sample project.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/bug-report-files-to-export.png" alt=""><figcaption><p>Example of files found within a sample project.</p></figcaption></figure>

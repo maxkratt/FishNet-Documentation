@@ -22,9 +22,9 @@ By Default when examining the NetworkManager in the Editor nothing will be assig
 
 See below for screen captures of the NetworkManager.
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt="Editor Mode"><figcaption><p>Editor Mode - Nothing will be assigned, unless you impliment your own Object Pool</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/object-pool-unassigned.png" alt="Editor Mode"><figcaption><p>Editor Mode - Nothing will be assigned, unless you impliment your own Object Pool</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Play Mode - Default Object Pool Automatically Assigned</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/object-pool-automatically-assigned.png" alt=""><figcaption><p>Play Mode - Default Object Pool Automatically Assigned</p></figcaption></figure>
 
 {% hint style="info" %}
 By default the object pool is enabled, but your network objects will only use the pool if the default despawn behavior is modified, or through the despawn call. See below for examples to both of these.
@@ -36,7 +36,7 @@ On the [NetworkObject](../../../../manual/guides/spawning/broken-reference/) com
 \
 This setting is set to "Destroy" by default, so make sure to switch this over to "Pool" if you want Fish-Networking to automatically use the default object pool.
 
-<figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/network-object-despawn-type-pool.png" alt=""><figcaption></figcaption></figure>
 
 ### Manual Despawn Behavior
 

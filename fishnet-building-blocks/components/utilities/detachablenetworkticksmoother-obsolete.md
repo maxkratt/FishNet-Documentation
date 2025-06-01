@@ -8,7 +8,7 @@ description: >-
 
 The DetachableNetworkTickSmooth will detach from parents at runtime and follow the configured follow object. Generally this is placed on an empty object beneath the parent, and you will set your camera target to this.
 
-<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption><p>For use with prediction. You may follow NetworkObjectRoot if not using prediction.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/detatchable-network-tick-smoother.png" alt=""><figcaption><p>For use with prediction. You may follow NetworkObjectRoot if not using prediction.</p></figcaption></figure>
 
 <details>
 
