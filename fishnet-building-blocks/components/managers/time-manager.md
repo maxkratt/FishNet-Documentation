@@ -1,35 +1,49 @@
 ---
-description: TimeManager handles and provides callbacks related to network timing.
+description: The TimeManager handles and provides callbacks related to network timing.
 ---
 
 # TimeManager
 
-## Component Settings <a href="#server-and-host" id="server-and-host"></a>
+## Description <a href="#server-and-host" id="server-and-host"></a>
 
-<details>
+The **TimeManager** component is responsible for managing network time and tick-based systems within the networking framework. It is central to keeping networked objects synchronized in time, handling ticks, timing conversions, physics step control, and providing hooks for network-related timing events in FishNet. It does this by managing how network timing is performed, either using fixed ticks or variable intervals and by providing precise timing for sending and receiving network data, ensuring synchronization between server and clients. It also controls the physics simulation mode (manual, automatic, or disabled) to maintain consistent simulation across the network.
 
-<summary>Timing <em>determines frequency of key network activities.</em></summary>
+{% hint style="success" %}
+Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Timing.TimeManager.html).
+{% endhint %}
 
-**Update Order** controls when the TimeManager will invoke its version of Unity callbacks. BeforeTick would be a good option if you wanted to collect input in OnUpdate before the tick occurred.
+## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-**Timing Type** controls when data is sent and read. When set to Tick data is only processed on frames which also tick. When Variable is selected data will be sent and read every frame, when available.
+<div align="left"><figure><img src="../../../.gitbook/assets/time-manager-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
-**Allow Tick Dropping** will let the client skip ticks when they occur several times over a single frame. This can be useful to prevent the client from running an increasing number of simulations per frame, resulting in more performance loss.
+### :gear:  **Update Order**
 
-**Maximum Frame Ticks** is shown when Allow Tick Dropping is enabled. This value is the maximum number of ticks that can occur per frame before the client begins dropping ticks to recover performance.
+> Controls when the TimeManager will invoke its version of Unity callbacks. BeforeTick would be a good option if you wanted to collect input in OnUpdate before the tick occurred.
 
-**Tick Rate** is an average of how many times per second the TimeManager will invoke tick events, as well how often data may be sent or received.
+### :gear:  **Timing Type**
 
-**Ping Interval** is how often in seconds a user receives a ping update. A larger ping has a very small chance of server tick synchronization losing accuracy. These changes do not affect prediction.
+> Dictates when data is sent and read. When set to Tick data is only processed on frames which also tick. When Variable is selected data will be sent and read every frame, when available.
 
-**Timing Interval** is how many seconds between prediction timing updates. Lower values will result in marginally more accurate timings at the cost of bandwidth.
+### :gear:  **Allow Tick Dropping**
 
-</details>
+> Will let the client skip ticks when they occur several times over a single frame. This can be useful to prevent the client from running an increasing number of simulations per frame, resulting in more performance loss.
 
-<details>
+### :gear:  **Maximum Frame Ticks**
 
-<summary>Physics <em>determines how physics are handled by the network.</em></summary>
+> This is shown when **Allow Tick Dropping** is enabled. This value is the maximum number of ticks that can occur per frame before the client begins dropping ticks to recover performance.
 
-**Physics Mode** determines how physics are run. _Unity_ will let the engine manage physics. _TimeManager_ simulates physics on ticks. For physics based prediction you must use the _TimeManager_ setting.
+### :gear:  **Tick Rate**
 
-</details>
+> This is an average of how many times per second the TimeManager will invoke tick events, as well how often data may be sent or received.
+
+### :gear:  **Ping Interval**
+
+> How often, in seconds, a user receives a ping update. A larger ping has a very small chance of server tick synchronization losing accuracy. These changes do not affect prediction.
+
+### :gear:  **Timing Interval**
+
+> This is how many seconds between prediction timing updates. Lower values will result in marginally more accurate timings at the cost of bandwidth.
+
+### :gear:  **Physics Mode**
+
+> The Physics Mode determines how physics are run. **Unity** will let the engine manage physics. **TimeManager** simulates physics on ticks. When using Client-Side Prediction you must use the **TimeManager** setting.

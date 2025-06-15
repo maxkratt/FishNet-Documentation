@@ -1,9 +1,10 @@
 ---
+description: A pre-configured NetworkManager prefab, for ease-of-use.
 layout:
   title:
     visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: true
   outline:

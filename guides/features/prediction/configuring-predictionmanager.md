@@ -16,11 +16,11 @@ Depending on your game type you may want to adjust the default client and server
 
 Having more interpolation also means reducing the chances of data having to predict data when it is expected to be known. There's a variety of ways to know if data is confirmed, predicted, or in the future; this topic is covered later.
 
-Client interpolation indicates how many ticks inputs from the server(and other clients) are held before they are run.&#x20;
+Client interpolation indicates how many ticks inputs from the server(and other clients) are held before they are run.
 
 For casual games an interpolation of 2-3 may be desired to drastically improve the likeliness inputs will always be available to run. This will of course add on a delay to when those inputs are run, so perhaps for fast paced games a value of 1 would be better.
 
-Server interpolation is much the same but typically should be a lower value. This is how much of a buffer the server tries to hold for inputs, resulting in the server not running them after a number of ticks equal to the specified interpolation.&#x20;
+Server interpolation is much the same but typically should be a lower value. This is how much of a buffer the server tries to hold for inputs, resulting in the server not running them after a number of ticks equal to the specified interpolation.
 
 ## Excessive Replicate Dropping
 

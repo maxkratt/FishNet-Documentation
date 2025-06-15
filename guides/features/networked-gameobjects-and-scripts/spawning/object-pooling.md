@@ -4,14 +4,14 @@ Fish-Networking has built-in functionality for Object pooling that will allow th
 
 ## General
 
-When Despawning [Spawned NetworkObjects](../networkobjects.md#spawned-networkobject) using FishNet, instead of destroying the object you may just want to disable it and store it to be used again at a later time. This describes what Object Pooling is.\
+When Despawning [Spawned NetworkObjects](../networkobjects/#spawned-networkobject) using FishNet, instead of destroying the object you may just want to disable it and store it to be used again at a later time. This describes what Object Pooling is.\
 \
 FishNet has a default implementation that will allow the objects you have instantiated to be disabled and pooled, instead of being destroyed. This functionality works for clients and server.\
 \
 You can also Pre-warm assets for later use, which is discussed later in this guide.
 
 {% hint style="warning" %}
-Reminder that [Scene NetworkObjects](../networkobjects.md#scene-networkobject) do not get added to the Object Pool and are already disabled instead of destroyed when despawned.
+Reminder that [Scene NetworkObjects](../networkobjects/#scene-networkobject) do not get added to the Object Pool and are already disabled instead of destroyed when despawned.
 {% endhint %}
 
 ## Setup

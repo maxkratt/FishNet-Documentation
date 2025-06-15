@@ -10,7 +10,7 @@ description: Discover frequently asked questions and their answers.
 
 <summary>How do I send some initial data to the server as soon as I connect and before my player spawns?</summary>
 
-Broadcast are generally the best choice for sending data without a player object. Many developers trade this data in a custom [authenticator ](../../fishnet-building-blocks/components/authenticator.md)class, which allows data to be sent before the client initializes anything at all for the network. See our PasswordAuthenticator script for an example of doing this.
+Broadcast are generally the best choice for sending data without a player object. Many developers trade this data in a custom [authenticator ](../../fishnet-building-blocks/components/utilities/authenticator.md)class, which allows data to be sent before the client initializes anything at all for the network. See our PasswordAuthenticator script for an example of doing this.
 
 Another approach is to use a custom player spawner instead of our [PlayerSpawner](../../fishnet-building-blocks/components/playerspawner.md). You may send broadcasts back and forward freely, and only spawn your player when you feel is right. See [broadcasts](../features/network-communication/broadcasts.md) for more information on this feature.
 

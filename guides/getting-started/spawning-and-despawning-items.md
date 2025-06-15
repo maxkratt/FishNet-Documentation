@@ -4,7 +4,7 @@ description: Learn about spawning and despawning by having your players throw cu
 
 # Spawning and Despawning Items
 
-Now that we have players moving around, let's learn how to _spawn_ and _despawn_ [NetworkObjects](../features/networked-gameobjects-and-scripts/networkobjects.md).
+Now that we have players moving around, let's learn how to _spawn_ and _despawn_ [NetworkObjects](../features/networked-gameobjects-and-scripts/networkobjects/).
 
 While you can [Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) and [Destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) regular Game Objects, Network Objects need to be Spawned and Despawned, this tells FishNet to synchronize the action over the network. FishNet stores all network object prefabs in a collection called the [Spawnable Prefabs](../../fishnet-building-blocks/scriptableobjects/spawnableprefabs/). You can see this and customize it on the [NetworkManager](../../fishnet-building-blocks/components/managers/network-manager.md).
 

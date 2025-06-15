@@ -6,18 +6,26 @@ description: >-
 
 # RollbackManager (Pro Feature)
 
-The RollbackManager must be added and configured properly for lag compensation to function properly. Objects you wish to rollback must contain the[ ColliderRollback](../colliderrollback.md) script on them.
+## Description <a href="#server-and-host" id="server-and-host"></a>
 
-## Component Settings <a href="#server-and-host" id="server-and-host"></a>
+The RollbackManager must be added and configured properly for lag compensation to function properly. Objects you wish to rollback must contain the[ ColliderRollback](../colliderrollback.md) script on them. You can learn more about using it on this page: [lag-compensation](../../../guides/features/lag-compensation/ "mention")
 
-<details>
+{% hint style="success" %}
+Check out its API page for more specific methods [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.ColliderRollback.RollbackManager.html).
+{% endhint %}
 
-<summary>Settings <em>are general settings related to the RollbackManager.</em></summary>
+## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-**Bounding Box Layer** when specified is the layer to first test against before rolling back colliders. When a layer is specified a collider will be added to your ColliderRollback objects; because of this, be sure to use a layer which has no physics intersections and is not used for anything else.
+<div align="left"><figure><img src="../../../.gitbook/assets/rollback-manager-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
-**Maximum Rollback Time** is the maxium time colliders may rollback. Using a value of 1f would allow colliders to rollback at most one second in the past, which is a very reasonable amount of time given typical player latencies are less than 100ms.
+### :gear:  **Bounding Box Layer**
 
-**Interpolation** is the amount of interpolation you are using on your NetworkTransform components. If you are using rigidbodies with PredictedObject this would be the Spectator Interpolation value.
+> This is the layer to first test against before rolling back colliders. When a layer is specified a collider will be added to your [ColliderRollback](../colliderrollback.md) objects; because of this, be sure to use a layer which has no physics intersections and is not used for anything else.
 
-</details>
+### :gear:  **Maximum Rollback Time**
+
+> This is the maximum of seconds colliders may rollback. Using a value of 1f would allow colliders to rollback at most one second in the past, which is a very reasonable amount of time given typical player latencies are less than 100ms.
+
+### :gear:  **Interpolation**
+
+> This is the amount of interpolation you are using on your [NetworkTransform](../network-transform.md) components. Or if you are using rigidbodies with prediction this would be the **interpolation** value on the smoothing component.

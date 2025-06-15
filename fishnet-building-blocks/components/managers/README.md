@@ -6,4 +6,4 @@ description: >-
 
 # Managers
 
-Most managers have additional settings which can be configured when added to your scene NetworkManager object.
+The [NetworkManager](network-manager.md) will automatically add the needed manager components to itself at run-time, if they aren't already added. You can add them yourself to customize their settings in the editor.&#x20;
