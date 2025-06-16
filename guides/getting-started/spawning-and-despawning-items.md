@@ -98,7 +98,7 @@ public class PlayerCubeCreator : NetworkBehaviour
 {% endtabs %}
 
 {% hint style="info" %}
-Because this script contains a [ServerRpc](../features/network-communication/remote-procedure-calls.md#serverrpc), it will also need to be a [NetworkBehaviour](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md).
+This may be a great time to read [this page](../features/network-communication/remote-procedure-calls.md) about RPCs[^1] such as the [ServerRpc](../features/network-communication/remote-procedure-calls.md#serverrpc) we use here.
 {% endhint %}
 
 Because this script contains a ServerRpc, it will also need to be a **NetworkBehaviour**. The `Update` method listens for the user to press the <kbd>Fire1</kbd> button (typically the left mouse button) and then calls `SpawnCube`.
@@ -107,6 +107,10 @@ Because this script contains a ServerRpc, it will also need to be a **NetworkBeh
 
 * The **ServerRpc** attribute: This is crucial. It means this method is intended to be called by a client, but it will _execute only on the server_. The client sends a message to the server, requesting this method to be run.
 * `Spawn(obj);`: This is the most critical line for networked objects. Calling `Spawn(obj)` on the `NetworkObject` tells FishNet's `ServerManager` to "spawn" this object over the network. This means the server will now instruct all currently connected clients (and any clients that connect later) to instantiate their own replica of this object.
+
+{% hint style="info" %}
+You can read our more in-depth page about **Spawning** [here](spawning-and-despawning-items.md).
+{% endhint %}
 {% endstep %}
 
 {% step %}
@@ -209,3 +213,5 @@ Download the project files with these completed steps here, or explore the repos
 
 <a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/spawning-and-despawning-items/spawning-and-despawning-items.unitypackage" class="button primary">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/spawning-and-despawning-items" class="button secondary">Repository</a>
 {% endhint %}
+
+[^1]: Remote Procedure Calls
