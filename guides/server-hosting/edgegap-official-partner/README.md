@@ -2,6 +2,8 @@
 description: >-
   Netcode is just the start! Get your game online, easily and in minutes, with
   automated game servers and hosting with Edgegap.
+cover: ../../../.gitbook/assets/edgegap-cover.png
+coverY: 0
 ---
 
 # Edgegap - Official Partner
@@ -18,7 +20,7 @@ Want to learn more about Edgegap tech? Discover how it works [here!](https://www
 
 * A free trial allows production and testing is at no cost to you.
 * Their platform is built to scale with your game’s popularity.
-* [Pay-per-use pricing](https://edgegap.com/en/ressources/pricing) is regularly 85% less expensive than traditional public cloud services.&#x20;
+* [Pay-per-use pricing](https://edgegap.com/en/ressources/pricing) is regularly 85% less expensive than traditional public cloud services.
 
 ### Bonus Features
 

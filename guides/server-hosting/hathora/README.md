@@ -3,6 +3,8 @@ description: >-
   Hathora Cloud lets you host and scale your headless Unity servers globally.
   Upload a dedicated Linux server build and instantly have access to 11+ regions
   around the world.
+cover: ../../../.gitbook/assets/hathora-cover.png
+coverY: 0
 ---
 
 # Hathora
