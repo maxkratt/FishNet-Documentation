@@ -1,4 +1,7 @@
 ---
+description: >-
+  The default transport of FishNet, utilizing the power, efficiency and
+  reliability of LiteNetLib.
 coverY: 0
 layout:
   cover:
@@ -7,7 +10,7 @@ layout:
   title:
     visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: true
   outline:
@@ -18,9 +21,9 @@ layout:
 
 # Tugboat
 
-## General
+## Description
 
-Tugboat uses LiteNetLib to support reliable and unreliable messages. This is the default transport for Fish-Networking.
+Tugboat uses [LiteNetLib](https://github.com/RevenantX/LiteNetLib) to support reliable and unreliable messages. This is the default transport for Fish-Networking and will automatically be added to your [NetworkManager](../components/managers/network-manager.md) if no other [transport](./) has been added already. It supports a large variety of platforms, and is a good choice for many games.
 
 ***
 
@@ -38,7 +41,9 @@ The [Transport Manager](../components/managers/transportmanager/) will automatic
 
 ***
 
-## Component Settings <a href="#server-and-host" id="server-and-host"></a>
+## Settings <a href="#server-and-host" id="server-and-host"></a>
+
+<div align="left"><figure><img src="../../.gitbook/assets/tugboat-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
 <details>
 

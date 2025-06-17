@@ -1,5 +1,21 @@
 ---
 description: To understand FishNet, it's helpful to grasp a few fundamental concepts
+cover: ../../.gitbook/assets/foundamentals-cover.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Fundamentals
@@ -10,7 +26,7 @@ At its heart, a networked game using Fish-Networking can be thought of as a sing
 
 The code you write behaves the same as it does in a regular game, code in <mark style="color:blue;">`Update`</mark> will run each frame, <mark style="color:blue;">`Awake`</mark> triggers as soon as a script is being loaded, etc. **But** FishNet adds additional features such as [Synced Variables](../features/network-communication/synchronizing/), which you will be able to set on the game instance that is acting as the server and they will automatically have their value synced to all connected client game instances. FishNet also has [Remote Procedure Calls](../features/network-communication/remote-procedure-calls.md), which are methods that you call on one game instance and FishNet will execute the method on a different game instance instead of executing it locally.
 
-To enable these features, FishNet needs to be able to identify game objects and scripts across the network so that it can know which game object and specific script on that game object you called an RPC[^1] or changed a SyncVar[^2] on. FishNet does this by assigning IDs to selected GameObjects that you give a [NetworkObject ](../features/networked-gameobjects-and-scripts/networkobjects.md)component to. It also assigns IDs to any component that inherits from [NetworkBehaviour](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md), which is a MonoBehaviour that supports RPCs, SyncVars, and useful network methods and properties.
+To enable these features, FishNet needs to be able to identify game objects and scripts across the network so that it can know which game object and specific script on that game object you called an RPC[^1] or changed a SyncVar[^2] on. FishNet does this by assigning IDs to selected GameObjects that you give a [NetworkObject ](../features/networked-gameobjects-and-scripts/networkobjects/)component to. It also assigns IDs to any component that inherits from [NetworkBehaviour](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md), which is a MonoBehaviour that supports RPCs, SyncVars, and useful network methods and properties.
 
 For NetworkObjects that can be instantiated during run-time, FishNet needs to store a prefab of them and assign an ID to the prefab so that it can instantiate that same one across the network when you spawn it on the server. This is handled with a prefab collection scriptable object called the [Spawnable Prefabs](../../fishnet-building-blocks/scriptableobjects/spawnableprefabs/).
 

@@ -1,10 +1,12 @@
 ---
-description: NetworkAnimator synchronizes animations across the network.
+description: The NetworkAnimator component synchronizes animations across the network.
 ---
 
 # NetworkAnimator
 
-The NetworkAnimator will automatically synchronize animation changes across the network.
+## Description
+
+FishNet's **Network Animator** is a component designed to synchronize Unity’s Animator state and parameters over the network. It supports both server-authoritative and client-authoritative modes. In client authority mode, the owner client can send animation parameter changes to the server, which then relays them to other clients.
 
 {% hint style="info" %}
 This component does not align with our Client-Side prediction API. You may still use the NetworkAnimator with prediction but the animations likely be updated slightly before the prediction state runs.
@@ -12,25 +14,41 @@ This component does not align with our Client-Side prediction API. You may still
 
 You may place as many NetworkAnimators as you like on children or root. When an animator is not specified on the Animator field the first one on the same object is used.
 
-## Component Settings <a href="#server-and-host" id="server-and-host"></a>
+{% hint style="success" %}
+Check out the API page for specific methods, and properties [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Animating.NetworkAnimator.html).
+{% endhint %}
 
-<details>
+## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<summary>Settings are general settings related to the NetworkAnimator.</summary>
+<div align="left"><figure><img src="../../.gitbook/assets/network-animator-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
-**Animator** field indicates which Animator to synchronize over the network. The referenced animator can be anywhere on the object. You may also change the Animator at runtime using Network Animator API.
+### :gear:  **Animator**
 
-**Interpolation** is how many ticks of interpolation. Like the [NetworkTransform](network-transform.md), the animator will be this number of ticks behind before iterating data. To use tick alignment with a NetworkTransform, use the same value of interpolation as on the NetworkTransform.
+> This field indicates which Animator to synchronize over the network. The referenced animator can be anywhere on the object. You may also change the Animator at runtime using Network Animator API.
 
-**Smooth Floats** will ensure floats are moved over time on those receiving animator updates. This is commonly left true to allow blending between animation trees.
+### :gear:  **Synchronize When Disabled**
 
-**Client Authoritative** as true allows the owning client to make changes to their animations locally, and those changes will be sent to the server and other clients. While false the server must change animations to have them sent to clients.
+> When enabled, this will allow the **NetworkAnimator** to synchronize changes even when the **Animator** component is disabled.
 
-**Send To Owner** will only be displayed when _**Client Authoritative**_ is false. While _**Synchronize To Owner**_ is true the server will also send animation changes to the object owner; while false the owner will not get the animation changes by the server. This can be useful if you want to run animations locally in real time on owning clients.
+### :gear:  **Interpolation**
 
-**Synchronized Parameters (pro feature)** allows only specified parameters to be synchronized over the network. This can be useful if some parameters should only be used for the local client, or do not necessarily need to be networked.
+> This is how many ticks of interpolation to use. Like the [NetworkTransform](network-transform.md), the animator will be this number of ticks behind before iterating data. To use tick alignment with a NetworkTransform, use the same value of interpolation as on the NetworkTransform.
 
-</details>
+### :gear:  **Smooth Floats**
+
+> This will ensure floats are moved over time on those receiving animator updates. This is commonly left true to allow blending between animation trees.
+
+### :gear:  **Client Authoritative**
+
+> When this is enabled it allows the owning client to make changes to their animations locally, and those changes will be sent to the server and other clients. While disabled the server must change animations to have them sent to clients.
+
+### :gear:  **Send To Owner**
+
+> This will only be displayed when _**Client Authoritative**_ is false. While _**Synchronize To Owner**_ is true the server will also send animation changes to the object owner; while false the owner will not get the animation changes by the server. This can be useful if you want to run animations locally in real time on owning clients.
+
+### :gear:  **Synchronized Parameters (pro feature)**
+
+> These allow only specified parameters to be synchronized over the network. This can be useful if some parameters should only be used for the local client, or do not necessarily need to be networked.
 
 ## Runtime
 

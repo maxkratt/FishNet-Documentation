@@ -45,4 +45,4 @@ public class YourClass
 }
 ```
 
-Given how flexible a custom SyncType may be there is not a one-size fits all example. You may view several custom examples within your FishNet import under FishNet/Example/All/CustomSyncType.
+Given how flexible a custom SyncType may be there is not a one-size fits all example. You may view several custom examples within your FishNet import under `FishNet/Demos/CustomSyncType`.

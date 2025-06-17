@@ -12,7 +12,7 @@ The options available to users to keep [**NetworkObjects**](../../../manual/guid
 
 ## Spawned NetworkObjects
 
-[**Spawned NetworkObjects**](../networked-gameobjects-and-scripts/networkobjects.md#spawnednetworkobject) that do not fall into the other categories below can persist between scenes by moving them while loading into the next scene.\
+[**Spawned NetworkObjects**](../networked-gameobjects-and-scripts/networkobjects/#spawnednetworkobject) that do not fall into the other categories below can persist between scenes by moving them while loading into the next scene.\
 \
 The [**SceneLoadData**](scene-data/sceneloaddata.md) that is passed into the Load Method of the SceneManager has an array that you can populate with all of the Spawned NetworkObjects you want to send to the new loaded scene.
 
@@ -39,11 +39,11 @@ SceneManager.LoadGlobalScenes(sld);
 
 ## Scene NetworkObjects
 
-[**Scene NetworkObjects**](../networked-gameobjects-and-scripts/networkobjects.md#scenenetworkobject) currently cannot persist across scenes, it is a [**limitation**](../../troubleshooting/technical-limitations.md) with the way Unity and Fishnet was designed. You can not mark them as Global, or put them into "DontDestroyOnLoad" scene. If you would like a Scene NetworkObject to persist across scenes it is recommended to remove them and use the other options available on this page.
+[**Scene NetworkObjects**](../networked-gameobjects-and-scripts/networkobjects/#scenenetworkobject) currently cannot persist across scenes, it is a [**limitation**](../../troubleshooting/technical-limitations.md) with the way Unity and Fishnet was designed. You can not mark them as Global, or put them into "DontDestroyOnLoad" scene. If you would like a Scene NetworkObject to persist across scenes it is recommended to remove them and use the other options available on this page.
 
 ## Global NetworkObjects
 
-<mark style="color:blue;">**G**</mark>[<mark style="color:blue;">**lobal NetworkObjects**</mark>](../networked-gameobjects-and-scripts/networkobjects.md#globalnetworkobject) work similar to how a normal GameObject would when put into the "DontDestroyOnLoad"(DDOL) scene.\
+<mark style="color:blue;">**G**</mark>[<mark style="color:blue;">**lobal NetworkObjects**</mark>](../networked-gameobjects-and-scripts/networkobjects/#globalnetworkobject) work similar to how a normal GameObject would when put into the "DontDestroyOnLoad"(DDOL) scene.\
 \
 When loading and unloading scenes, **Global NetworkObjects** will stay in the (DDOL) scene on both the server and client persisting their state. No extra steps needed.
 
@@ -55,6 +55,6 @@ Clients typically are always an observer of the DDOL scene, so global objects ma
 
 ## Nested NetworkObjects
 
-Unity will not allow [**Nested GameObjects**](../networked-gameobjects-and-scripts/spawning/nested-networkobjects.md) to be moved into other scenes.\
+Unity will not allow [**Nested GameObjects**](../networked-gameobjects-and-scripts/networkobjects/nested-networkobjects.md) to be moved into other scenes.\
 \
 However! Fishnet will automatically detect if you are trying to send a NestedNetworkObject and send the root of the object instead!

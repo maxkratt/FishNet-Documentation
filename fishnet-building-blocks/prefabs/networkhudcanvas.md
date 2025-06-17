@@ -1,3 +1,9 @@
+---
+description: >-
+  A basic HUD for starting and stopping the client and server, useful for
+  development.
+---
+
 # NetworkHudCanvas
 
 The NetworkHudCanvas prefab can be used to show a simple Heads-Up Display in your game allowing you to quickly start and stop the FishNet server and client.

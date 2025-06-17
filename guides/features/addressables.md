@@ -1,6 +1,10 @@
+---
+description: How to manage prefab and scene addressables with FishNet.
+---
+
 # Addressables
 
-Both addressable scenes and prefabs work over the network.&#x20;
+Both addressable scenes and prefabs work over the network.
 
 ## Scene Addressables
 

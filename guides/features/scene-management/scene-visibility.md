@@ -10,7 +10,7 @@ description: >-
 
 You can control if clients become an [**Observer**](../observers/) of gameobjects in a scene that they are in. This is possible if you set your [**ObserverManager**](../../../fishnet-building-blocks/components/managers/observermanager/) to include a **Scene Condition**.\
 \
-The **Scene Condition** ensures that[ **NetworkObjects**](../networked-gameobjects-and-scripts/networkobjects.md) both scene and spawned are only visible to players in the same scene as the object. In most cases you will want to add a [NetworkObserver](../../../fishnet-building-blocks/components/network-observer.md) component, with a scene condition to your networked objects.
+The **Scene Condition** ensures that[ **NetworkObjects**](../networked-gameobjects-and-scripts/networkobjects/) both scene and spawned are only visible to players in the same scene as the object. In most cases you will want to add a [NetworkObserver](../../../fishnet-building-blocks/components/network-observer.md) component, with a scene condition to your networked objects.
 
 {% hint style="info" %}
 When encountering an error about being unable to find a NetworkObject or RPCLink during a scene change, you likely forgot to add the scene condition.

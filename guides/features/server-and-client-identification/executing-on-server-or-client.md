@@ -16,7 +16,7 @@ Very often your code will need to know if it's running on a server or a client, 
 
 {% tabs %}
 {% tab title="Description" %}
-You can easily check if the current code is running on the server with a Boolean check. FishNet's [NetworkBehaviour](../networked-gameobjects-and-scripts/network-behaviour-guides.md) and [NetworkObject](../networked-gameobjects-and-scripts/networkobjects.md) classes have easy to use properties for this exact reason. They are also accessible from the [NetworkManager](../../../fishnet-building-blocks/components/managers/network-manager.md) directly.
+You can easily check if the current code is running on the server with a Boolean check. FishNet's [NetworkBehaviour](../networked-gameobjects-and-scripts/network-behaviour-guides.md) and [NetworkObject](../networked-gameobjects-and-scripts/networkobjects/) classes have easy to use properties for this exact reason. They are also accessible from the [NetworkManager](../../../fishnet-building-blocks/components/managers/network-manager.md) directly.
 
 You can use `IsClientStarted` to detect if the instance running the code is a client. It could also be a server.
 

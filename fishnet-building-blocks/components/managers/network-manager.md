@@ -1,43 +1,50 @@
 ---
 description: >-
-  NetworkManager is an essential component for running the client and server. It
-  acts as a bridge between core components and configuring your network.
+  The NetworkManager is an essential component for running the client and
+  server. It acts as a bridge between core components and configuring your
+  network.
 ---
 
 # NetworkManager
 
-Although this component manages the network, itself should not be a networked object, and must not contain a Network Object component on the same object, or as a parent of.
+## Description
 
-## Component Settings <a href="#server-and-host" id="server-and-host"></a>
+The **NetworkManager** is the central component of FishNet that manages the networking lifecycle, including establishing connections, hosting sessions, and handling client-server communication. Although this component manages the network, it should not itself be a networked object, and must not contain a [Network Object](../network-object.md) component on the same object, or as a parent or child of it.  Additionally, the Network Manager can be used to register components and access them directly from it. This can be useful for other manager like scripts.
 
-<details>
+The Network Manager utilizes several sub-manager components, which it will add at runtime if they do not already exist on the object.
 
-<summary><strong>Settings</strong> <em>are basic settings related to the NetworkManager.</em></summary>
+{% hint style="success" %}
+Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.NetworkManager.html).
+{% endhint %}
 
-**Run In Background** allows the application to run in the background when true. Running in the background is often essential for clients, and especially for server.
+## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-**Don't Destroy On Load** will ensure the Network Manager persist between scene changes. If you are using only one Network Manager it's best to leave this true.
+<div align="left"><figure><img src="../../../.gitbook/assets/network-manager-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
-**Persistence** specifies how to behave when multiple NetworkManagers are spawned at once.
+### :gear:  **Run In Background**
 
-</details>
+> This allows the application to run in the background when true. Running in the background is often essential for clients, and especially for the server.
 
-<details>
+### :gear:  **Don't Destroy On Load**
 
-<summary>Logging c<em>ontrols how network logging is configured.</em></summary>
+> This will ensure the Network Manager persist between scene changes. If you are using only one Network Manager it's best to leave this true.
 
-**Logging** lets you specify what actions to log for builds, editor, and headless. When the field is not populated default logging settings are used. To make a custom logging settings open your create menu -> Fish-Networking -> Logging -> Logging Configuration.
+### :gear:  **Persistence**
 
-</details>
+> This option specifies how to behave when multiple NetworkManagers exist in your game.
 
-<details>
+### :gear:  **Logging**
 
-<summary>Prefabs <em>is for network prefab settings.</em></summary>
+> This lets you specify what actions to log for builds, editor, and headless mode. When the field is not populated, the default logging settings are used. To make a custom logging settings open your create menu and choose: **Tools > Fish-Networking > Logging > Logging Configuration.**
 
-**Spawnable Prefabs** dictates which prefabs collection to use for networked objects. By default this field is automatically set to DefaultPrefabObjects; you can however make your own PrefabObjects class with customized rules and applications.
+### :gear:  **Spawnable Prefabs**
 
-**Object Pool** is which object pooling script to use. When not set DefaultObjectPool is added automatically. You may inherit from ObjectPool to create your own.
+> This option dictates which prefabs collection to use for networked objects. By default this field is automatically set to DefaultPrefabObjects for any saved scene; you can however make your own PrefabObjects class with customized rules and applications.
 
-**Refresh Default Prefabs** while true will refresh the DefaultPrefabCollection every time play mode is entered. This is generally not needed as true, but can be useful if your prefab collection is regularly becoming corrupted through symlinks.
+### :gear:  **Object Pool**
 
-</details>
+> Which object pooling script to use. When not set, DefaultObjectPool is added automatically at run-time. You may inherit from ObjectPool to create your own.
+
+### :gear:  **Refresh Default Prefabs**
+
+> While true, this will refresh the DefaultPrefabCollection every time play mode is entered. This is generally not needed to be enabled, but can be useful if your prefab collection is regularly becoming corrupted through symlinks.

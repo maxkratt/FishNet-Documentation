@@ -38,11 +38,19 @@ public class SyncMaterialColor : NetworkBehaviour
 ```
 {% endcode %}
 
-This simple script has a `color` variable of the type `SyncVar<Color>`. It should be set to `readonly`, but we can still get and set its `Value`.
+This simple script has a `color` variable of the type `SyncVar<Color>`. It needs be set to `readonly`, but don't worry, we can still get and set its `Value`.
+
+{% hint style="info" %}
+Setting your **SyncVar** as `readonly` will cause it to be hidden from the Unity Inspector. You can read about a work-around for this [here](../features/network-communication/synchronizing/customizing-behavior.md).
+{% endhint %}
 
 In `Awake` we subscribe to the SyncVar's `OnChange` event. This event is very useful as it will be invoked as soon as the SyncVar changes, even on a client when the server changes it and it's synced.
 
 `OnColorChanged` is our method that we subscribed to the OnChange event. This method simply gets the MeshRenderer and sets its material color to the SyncVar's Color Value, thus updating the visuals to match on all devices.
+
+{% hint style="success" %}
+You may want to read more about **SyncVars** and the other available **SyncTypes** that FishNet has, such as **SyncLists.** You can find those pages [here](../features/network-communication/synchronizing/).
+{% endhint %}
 {% endstep %}
 
 {% step %}
