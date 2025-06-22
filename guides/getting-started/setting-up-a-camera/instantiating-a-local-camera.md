@@ -8,13 +8,13 @@ With this method of camera management we will instantiate a camera from a prefab
 
 {% stepper %}
 {% step %}
-### Creating a Camera Prefab
+#### Creating a Camera Prefab
 
 Let's start by dragging the **Main Camera** in the scene into our **Project Window** to create a prefab out of it. You can now delete the **Main Camera** from the **Scene Hierarchy**.
 {% endstep %}
 
 {% step %}
-### Giving the Player a Camera Holder
+#### Giving the Player a Camera Holder
 
 Now create an empty Game Object on your **Player Prefab** and position it where you'd like. This will be where we instantiate and position the **Camera** object.
 
@@ -22,7 +22,7 @@ Now create an empty Game Object on your **Player Prefab** and position it where 
 {% endstep %}
 
 {% step %}
-### Writing a PlayerCamera Script
+#### Writing a PlayerCamera Script
 
 Let's now add the following script to the **Player Prefab** that we will use to instantiate our **Camera Prefab** once our player spawns in.
 
@@ -54,7 +54,7 @@ This script uses the [OnStartClient](../../features/networked-gameobjects-and-sc
 {% endstep %}
 
 {% step %}
-### Assign your References to the Script
+#### Assign your References to the Script
 
 Now select the **Player Camera** component in your **Player Prefab** and add the **Camera Prefab** we made to the _Camera Prefab_ field. Also select the **CameraHolder** game object in the _Camera Holder_ field.
 
@@ -62,7 +62,7 @@ Now select the **Player Camera** component in your **Player Prefab** and add the
 {% endstep %}
 
 {% step %}
-### Test the Camera In-Game
+#### Test the Camera In-Game
 
 With all that set you should be able to run the game and see how the camera is created for only your local player.
 

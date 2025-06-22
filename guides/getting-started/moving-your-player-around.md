@@ -16,7 +16,7 @@ Client-authoritative movement makes it easier for the client to cheat with speed
 
 {% stepper %}
 {% step %}
-### Creating a Player Movement Script
+#### Creating a Player Movement Script
 
 Select your **Player** prefab in the Project window. In the Inspector, click on **Add Component** and search for **New Script**. Name the script `PlayerMovement` and click **Create and Add**.
 
@@ -24,7 +24,7 @@ Select your **Player** prefab in the Project window. In the Inspector, click on 
 {% endstep %}
 
 {% step %}
-### Editing the Script
+#### Editing the Script
 
 Double-click the `PlayerMovement` script to open it in your code editor. Replace the default code with the following:
 
@@ -115,9 +115,9 @@ Since there will be multiple player game objects in the game, we need to determi
 {% endstep %}
 
 {% step %}
-### Synchronizing the Movement
+#### Synchronizing the Movement
 
-Now we have code that will allow clients to move only their respective player object, but nothing is yet synchronized over the network This means that we won't ever see other players moving, and they won't see us moving.&#x20;
+Now we have code that will allow clients to move only their respective player object, but nothing is yet synchronized over the network This means that we won't ever see other players moving, and they won't see us moving.
 
 To fix this, we will use Fish-Networking's built-in [NetworkTransform](../../fishnet-building-blocks/components/network-transform.md) component. This component can be used to synchronize a network object's scale, rotation, position, and parent hierarchy.
 
@@ -129,7 +129,7 @@ This component has quite a few settings, but the most important ones for us righ
 {% endstep %}
 
 {% step %}
-### **Test Player Movement**
+#### **Test Player Movement**
 
 Save your scene and press the **Play** button in Unity's Editor. Your player capsule should now be visible. Use the **W, A, S, D** keys or arrow keys to move your player around the scene.
 
