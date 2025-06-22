@@ -14,7 +14,7 @@ SceneLoadData Video Guide
 
 See Sub-Pages below for the different Scene Data Classes.
 
-* [**SceneLookupData**](scenelookupdata.md)
-* [**SceneLoadData**](sceneloaddata.md)
-* [**SceneUnloadData**](sceneunloaddata.md)
+* [**SceneLookupData**](broken-reference)
+* [**SceneLoadData**](broken-reference)
+* [**SceneUnloadData**](broken-reference)
 

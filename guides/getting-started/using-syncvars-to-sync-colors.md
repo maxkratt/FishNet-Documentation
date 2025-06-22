@@ -10,9 +10,9 @@ Let's liven up the colors in our game and synchronize them with SyncVars.
 
 {% stepper %}
 {% step %}
-### Creating a Script to Sync Color
+#### Creating a Script to Sync Color
 
-Create  a new script called `SyncMaterialColor`. This will be used to synchronize the **Material** color of our **MeshRenderers**.
+Create a new script called `SyncMaterialColor`. This will be used to synchronize the **Material** color of our **MeshRenderers**.
 
 {% code title="SyncMaterialColor.cs" lineNumbers="true" %}
 ```csharp
@@ -54,7 +54,7 @@ You may want to read more about **SyncVars** and the other available **SyncTypes
 {% endstep %}
 
 {% step %}
-### Add the Script Component
+#### Add the Script Component
 
 Now add your newly created script to your **Cube Prefab**. The script won't currently do anything unless we change the `color` **SyncVar** in it, so let's do that next.
 
@@ -62,7 +62,7 @@ Now add your newly created script to your **Cube Prefab**. The script won't curr
 {% endstep %}
 
 {% step %}
-### Give the Cubes Random Colors
+#### Give the Cubes Random Colors
 
 Let's give the cubes some color now as soon as we instantiate them.
 
@@ -96,10 +96,10 @@ public class PlayerCubeCreator : NetworkBehaviour
     private void SpawnCube()
     {
         NetworkObject obj = Instantiate(cubePrefab, transform.position, Quaternion.identity);
-<strong>
-</strong><strong>        obj.GetComponent&#x3C;SyncMaterialColor>().color.Value = Random.ColorHSV();
-</strong><strong>
-</strong>        Spawn(obj); // NetworkBehaviour shortcut for ServerManager.Spawn(obj);
+
+<strong>        obj.GetComponent&#x3C;SyncMaterialColor>().color.Value = Random.ColorHSV();
+</strong>
+        Spawn(obj); // NetworkBehaviour shortcut for ServerManager.Spawn(obj);
     }
 }
 
@@ -146,7 +146,7 @@ This line of code gets the **SyncMaterialColor** component and sets the SyncVar 
 {% endstep %}
 
 {% step %}
-### Test the Synchronized Cubes
+#### Test the Synchronized Cubes
 
 Now all you need to do is run your game again and see if the cubes spawn with a random color and if that color is synchronized across the network.
 

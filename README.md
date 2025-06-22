@@ -21,7 +21,7 @@ layout:
 
 ## Overview
 
-Fish-Networking (FishNet) is an original free versatile networking solution for [Unity](https://unity.com/), built from the ground up, offering more features than any other free solution.&#x20;
+Fish-Networking (FishNet) is an original free versatile networking solution for [Unity](https://unity.com/), built from the ground up, offering more features than any other free solution.
 
 FishNet is server authoritative by design by allowing the use of dedicated servers, but does permit users to act as server and client, for faster development and testing. **There are no CCU caps or CCU paywalls in FishNet**, you can also use any server host you want to, including hosting the server yourself or letting your players do it.
 
@@ -53,14 +53,8 @@ To toggle between beta features simply use the Fish-Networking menu in engine, c
 
 There are many third-party add-ons, integrations, and resources that can aid you through your development. Many assets also have direct support for FishNet and work well together with it.
 
-&#x20;<a href="overview/asset-integrations/" class="button primary">Asset Integrations</a> <a href="overview/community-resources.md" class="button primary">Community Resources</a>
+<a href="overview/asset-integrations/" class="button primary">Asset Integrations</a> <a href="overview/community-resources.md" class="button primary">Community Resources</a>
 
+## Contributing Documentation
 
-
-## Need more documentation?
-
-Documentation is especially important to newcomers, and we understand this. As Fish-Networking developers it can at times be difficult to know what is expected or lacking for beginners. If you find a topic unclear, or not covered well enough, please visit our [GitHub Discussions](https://github.com/FirstGearGames/FishNet/discussions) and create a new discussion requesting improvements.
-
-{% hint style="success" %}
-You can also contribute to our documentation directly using [GitHub](https://github.com/FirstGearGames/FishNet-Documentation)!
-{% endhint %}
+We are now taking documentation contributions! If you'd like to include your own guide, or make edits to our current documentation, you can do so on our documentation GitHub [here](https://github.com/FirstGearGames/FishNet-Documentation).
