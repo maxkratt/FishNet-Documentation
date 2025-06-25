@@ -8,7 +8,7 @@ With this method our local player will take control of the Main Camera it finds 
 
 {% stepper %}
 {% step %}
-#### The Main Camera Tag
+### The Main Camera Tag
 
 Before we start we need to ensure our camera object in the scene is tagged as the "Main Camera"
 
@@ -16,7 +16,7 @@ Before we start we need to ensure our camera object in the scene is tagged as th
 {% endstep %}
 
 {% step %}
-#### Giving the Player a Camera Holder
+### Giving the Player a Camera Holder
 
 Now create an empty Game Object on your **Player Prefab** and position it where you'd like. This will be where we parent and position the **Camera** object.
 
@@ -24,7 +24,7 @@ Now create an empty Game Object on your **Player Prefab** and position it where 
 {% endstep %}
 
 {% step %}
-#### Writing a PlayerCamera Script
+### Writing a PlayerCamera Script
 
 Let's now add the following script to the **Player Prefab** that we will use to take control of our **Camera** once our player spawns in.
 
@@ -64,7 +64,7 @@ This script uses the [OnOwnershipClient](../../features/networked-gameobjects-an
 {% endstep %}
 
 {% step %}
-#### Assign your References to the Script
+### Assign your References to the Script
 
 Now select the **Player Camera** component in your **Player Prefab** and add the **Camera Prefab** we made to the _Camera Prefab_ field. Also select the **CameraHolder** game object in the _Camera Holder_ field.
 
@@ -72,7 +72,7 @@ Now select the **Player Camera** component in your **Player Prefab** and add the
 {% endstep %}
 
 {% step %}
-#### Test the Camera In-Game
+### Test the Camera In-Game
 
 With all that set you should be able to run the game and see how the camera from the scene is controlled by only your local player.
 
@@ -83,5 +83,5 @@ With all that set you should be able to run the game and see how the camera from
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-the-scene-camera/using-the-scene-camera.unitypackage" class="button primary">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/using-the-scene-camera" class="button secondary">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-the-scene-camera/using-the-scene-camera.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/using-the-scene-camera" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}

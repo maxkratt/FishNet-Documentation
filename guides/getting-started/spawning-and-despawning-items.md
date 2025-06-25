@@ -211,7 +211,7 @@ Launch the game again and observe the objects being Despawned successfully on th
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/spawning-and-despawning-items/spawning-and-despawning-items.unitypackage" class="button primary">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/spawning-and-despawning-items" class="button secondary">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/spawning-and-despawning-items/spawning-and-despawning-items.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/spawning-and-despawning-items" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}
 
 [^1]: Remote Procedure Calls

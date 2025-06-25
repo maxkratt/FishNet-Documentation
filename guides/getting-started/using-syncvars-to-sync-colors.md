@@ -157,7 +157,7 @@ Now all you need to do is run your game again and see if the cubes spawn with a 
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-syncvars-to-sync-colors/using-syncvars-to-sync-colors.unitypackage" class="button primary">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/using-syncvars-to-sync-colors" class="button secondary">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-syncvars-to-sync-colors/using-syncvars-to-sync-colors.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/using-syncvars-to-sync-colors" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}
 
 [^1]: synchronized variables
