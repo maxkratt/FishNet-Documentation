@@ -1,8 +1,3 @@
----
-cover: ../../../.gitbook/assets/edgegap-cover.png
-coverY: 0
----
-
 # Other Hosting Options
 
 In addition to PlayFlow there are other hosting options available. Here are a few that we are aware of.
