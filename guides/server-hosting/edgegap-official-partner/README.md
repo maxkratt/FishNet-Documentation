@@ -30,7 +30,7 @@ These hosts offer session-based servers, as well persistent servers. Relay servi
 
 [Amazon Web Services (AWS)](https://aws.amazon.com/)
 
-AWS is a bit more difficult to setup and manage and is primarily recommended to experienced developers.
+AWS is a bit more difficult to setup and manage. We generally only recommend AWS to experienced developers.
 
 * Pay-per-use pricing — a little more complex.
 * Session-based servers available.
