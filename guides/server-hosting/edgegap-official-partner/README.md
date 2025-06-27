@@ -1,36 +1,67 @@
----
-description: >-
-  Netcode is just the start! Get your game online, easily and in minutes, with
-  automated game servers and hosting with Edgegap.
-cover: ../../../.gitbook/assets/edgegap-cover.png
-coverY: 0
----
+# Other Hosting Options
 
-# Edgegap - Official Partner
+In addition to PlayFlow there are other hosting options available. Here are a few that we are aware of.
 
-Directly from your Unity project, Edgegap’s plugin containerizes your game and builds and deploys a fully managed authoritative server (aka “dedicated servers”). This simple solution ensures players worldwide can play your game.
-
-You can visit their official website at [https://edgegap.com](https://edgegap.com).
-
-{% hint style="info" %}
-Want to learn more about Edgegap tech? Discover how it works [here!](https://www.youtube.com/watch?v=BHnJuXZNKiI)
+{% hint style="warning" %}
+We strongly recommend reviewing our [Server Hosting](../) page for terminology as well the Pros/Cons of services mentioned on this page.
 {% endhint %}
 
-### Key Benefits of Using Edgegap
+This information is updated to the best of our knowledge. If you are interested in a service listed below — to better understand their platform — please visit the provided links to their official website.
 
-* A free trial allows production and testing is at no cost to you.
-* Their platform is built to scale with your game’s popularity.
-* [Pay-per-use pricing](https://edgegap.com/en/ressources/pricing) is regularly 85% less expensive than traditional public cloud services.
+## Dedicated Servers
 
-### Bonus Features
+These hosts offer session-based servers, as well persistent servers. Relay services may be available as well.
 
-* Relay and dedicated server capabilities.
-* Customizable matchmaking.
-* Powerful and informative web control panel.
-* An officially supported Fish-Networking plugin.
+[Hathora](https://hathora.dev/)
 
-### Helpful Links
+* Pay-per-use pricing.
+* Session-based servers available.
+* Persistent servers available.
+* Relay servers available.
+* Match Making / Lobbies.
 
-* [Edgegap's ](https://edgegap.com/)website.
-* Edgegap provided[ tutorial for Fish-Networking.](https://docs.edgegap.com/docs/sample-projects/fishnet-on-edgegap/)
-* Additional learning resources on [Edgegap's GitHub.](https://github.com/edgegap)
+[Edgegap](https://edgegap.com/)
+
+* Pay-per-use pricing.
+* Session-based servers available.
+* Persistent servers available.
+* Relay servers available.
+* Match Making / Lobbies.
+
+[Amazon Web Services (AWS)](https://aws.amazon.com/)
+
+AWS is a bit more difficult to setup and manage. We generally only recommend AWS to experienced developers.
+
+* Pay-per-use pricing — a little more complex.
+* Session-based servers available.
+* Persistent servers available.
+* Relay servers available.
+* Match Making / Lobbies.
+
+We have a community guide for AWS [here](getting-started-with-aws.md)!
+
+## Relays Only
+
+These are relay only services.
+
+[Epic Online Services (EOS)](https://onlineservices.epicgames.com/en-US/services)
+
+EOS provides a number of features for free. The API and documentation is a bit more complex, which may be difficult to beginners. A vetted third-party [EOS transport](../../../fishnet-building-blocks/transports/fishyeos-epic-online-services.md) is available for FishNet, which may help with some of those hurdles.
+
+A cross-platform friends list is possible with EOS but at the cost of complexity; eg: you will not be able to directly access your Steam friends via the EOS platform. With this in mind, match making with friends may be more difficult.
+
+* Free to all developers.
+* Session-based relays.
+* \*Match Making / Lobbies.
+* \*Friends list.
+
+[Steam Relay](https://partner.steamgames.com/doc/features/multiplayer/steamdatagramrelay)
+
+Steam relays are offered free when you launch your game on steam; there is a percentage of sales, as well initial fee when using Steam.
+
+We have an official FishNet transport for Steam, and there are third-party Unity assets available as well to help utilize Steam Relays. A popular asset is [Toolkit for Steamworks Foundation by Heathen Engineering](https://github.com/heathen-engineering/Toolkit-for-Steamworks-Foundation).
+
+* Free for games launched using Steam.
+* Session-based relays.
+* Match Making / Lobbies.
+* Friends list (Steam).
