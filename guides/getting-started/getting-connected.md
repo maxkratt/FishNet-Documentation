@@ -55,7 +55,7 @@ You willl see following warning: "Player prefab is empty and cannot be spawned f
 This is fine and will be dealt with in the next section.
 {% endhint %}
 
-By following these steps, you should now have a functional network setup in your Unity project using FishNet. This guide provides the foundation for more complex networking workflows, such as syncing objects and managing connections.&#x20;
+By following these steps, you should now have a functional network setup in your Unity project using FishNet. This guide provides the foundation for more complex networking workflows, such as syncing objects and managing connections.
 
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:

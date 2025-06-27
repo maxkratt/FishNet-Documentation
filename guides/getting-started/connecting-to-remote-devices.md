@@ -10,7 +10,7 @@ Once you have a basic networked game set up and can connect as a host, the next 
 
 {% stepper %}
 {% step %}
-### **Identifying the Server's IP Address**
+#### **Identifying the Server's IP Address**
 
 For a client to connect to a remote server, it needs to know the server's IP address.
 
@@ -23,7 +23,7 @@ For testing on a local network, you can often find your machine's IP address by 
 {% endstep %}
 
 {% step %}
-### **Configuring the Client to Connect**
+#### **Configuring the Client to Connect**
 
 To connect as a client to a remote server, you'll need to manually set the server's address.
 
@@ -40,7 +40,7 @@ The `NetworkHudCanvas` is a convenient debugging tool. In a finished game, you w
 {% endstep %}
 
 {% step %}
-### **Building and Testing the Connection**
+#### **Building and Testing the Connection**
 
 To test connecting to a remote device, you'll need to build your game.
 
@@ -49,11 +49,11 @@ To test connecting to a remote device, you'll need to build your game.
 3. **Launch the Client:** On a _separate_ machine, launch the client build you just created.
 4. **Connect:** If you disabled auto-start, click the "Start Client" button from the NetworkHudCanvas in the client build.
 
-If configured correctly, the client should connect to the server, and you should see network-related messages in both the server and client consoles indicating a successful connection. You should also see players spawning as configured in the [preparing-your-player.md](preparing-your-player.md "mention") guide.&#x20;
+If configured correctly, the client should connect to the server, and you should see network-related messages in both the server and client consoles indicating a successful connection. You should also see players spawning as configured in the [preparing-your-player.md](preparing-your-player.md "mention") guide.
 {% endstep %}
 
 {% step %}
-### **Troubleshooting Common Connection Issues**
+#### **Troubleshooting Common Connection Issues**
 
 If your client fails to connect, consider these common issues:
 
