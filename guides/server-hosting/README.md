@@ -20,8 +20,7 @@ Persistent services are typically always running, no matter the number of player
 
 ### Dedicated Servers
 
-Dedicated servers is a common term which implies a server authoritative game server. There are several advantages to a dedicated server, and very few cons.\
-
+Dedicated servers is a common term which implies a server authoritative game server. There are several advantages to a dedicated server, and very few cons.
 
 **Benefits of a dedicated server:**
 
@@ -50,4 +49,3 @@ A relay is a client authoritative service, where the client simulates as the ser
 * **Bandwidth**: total used bandwidth is rarely restricted — or at least not to a means you will encounter. However, there are often limitations on how much data can be regularly sent. Games which need to send data rapidly, or send large chunks of data, may find themselves being throttled by the relay; this can create any number of issues.
 * **Latency**: the client acting as the server is typically the determining factor for latency. A host with a weak connection will result in all players having increased latency. Players further from the host will also experience more latency.
 * **Persistence**: there is no state persistence with relays — when the host ends the session everything is lost. In addition, a leaving host will often immediately terminate the game session for all connected players.
-
