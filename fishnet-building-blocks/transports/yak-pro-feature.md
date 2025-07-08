@@ -18,7 +18,7 @@ layout:
 Yak is part of Fish-Networking Pro features.
 {% endhint %}
 
-## General
+## Description
 
 An offline transport that runs off your multiplayer code. No local or remote connections are made using this transport.
 
@@ -36,12 +36,12 @@ To support offline play and online play you will want to consider using [Multipa
 
 ## How to Install
 
-Yak is part of FishNet Pro! So you must have purchased pro. See how to purchase and download FishNet Pro [here](../../../../overview/readme/pro-projects-and-support.md).\
+Yak is part of FishNet Pro! So you must have purchased pro. See how to purchase and download FishNet Pro [here](../../overview/readme/pro-projects-and-support.md).\
 \
 After Installing FishNet Pro, just add Yak to your Transport manager, most likely you will be adding Yak onto Multipass like mentioned in the General Section above.
 
 ***
 
-## Component Settings
+## Settings
 
 No settings needed to be configured with Yak.

@@ -16,9 +16,9 @@ layout:
 
 ## General
 
-A transport to utilize Unity's Official Transport with Fishnet. Supports both Unity Transport 1.0 and Unity Transport 2.0\
+A transport to utilize Unity's Official Transport with FishNet. Supports both Unity Transport 1.0 and Unity Transport 2.0\
 \
-Using FishyUnityTransport also allows you to utilize some of Unity's Multiplayer Services, like Relay!
+Using **FishyUnityTransport** also allows you to utilize some of [Unity's Multiplayer Services](https://unity.com/solutions/multiplayer), like [Relay](https://unity.com/products/relay)!
 
 ***
 

@@ -45,42 +45,50 @@ The [Transport Manager](../components/managers/transportmanager/) will automatic
 
 <div align="left"><figure><img src="../../.gitbook/assets/tugboat-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
-<details>
+### :gear:  Stop Sockets On Thread
 
-<summary>Settings <em>are general settings for Tugboat.</em></summary>
+> When enabled, causes the local server and client sockets to be stopped using a new thread. This option can be useful for ensuring that the socket shutdown process does not block the main thread, which may help with smoother shutdowns or prevent the application from freezing during network cleanup.
 
-**Dont Route** forces sockets to send data directly to the network adapter interface without routing through other services such as routers. This is often only needed when working with multiple network adapters.
+### :gear:  Don't Route
 
-</details>
+> Enable **Don't Route** if you want your Tugboat server or client to send data directly to the local interface, avoiding any network routing by the operating system. This is an advanced option primarily for special networking requirements.
+
+### :gear:  **Unreliable MTU**
+
+> This is the largest size an unreliable packet may be. When a single outbound data exceeds this value it is sent reliably. Smaller unreliable datas will be automatically split over multiple unreliable sends.
+
+### :gear:  **Reuse Address**
+
+> Allows the same address and port to be used multiple times by the server. This can be useful if you wish to launch multiple builds or server instances on the same machine using the same configuration.
+
+### :gear:  I**Pv4 Bind Address**
+
+> This is which address to bind the server to. If set and IPv4 is not available this will cause a socket error upon server start.
+
+### :gear:  **Enable IPv6**
+
+> Enables IPv6 binding when available. In some cases you may want this disabled if you have an IPv6 interface you do not want used.
+
+### :gear:  **IPv6 Bind Address**
+
+> This is which address to bind the server to. If set and IPv6 is not available this will cause a socket error upon server start.
+
+### :gear:  **Port**
+
+> Is which port the server will listen on. This is also the port clients will connect to. In some instances you may need to change this at runtime using `TransportManager.SetPort()`.
+
+### :gear:  **Maximum Clients**
+
+> **Maximum Clients** is the maximum active clients allowed before the transport begins to deny connections.
+
+### :gear:  **Client Address**
+
+> This is which address to connect to as a client. This is typically your server address. Localhost is set as default for local testing.
 
 <details>
 
 <summary>Channels <em>are settings related to channels, such as reliable and unreliable.</em></summary>
 
-**Unreliable MTU** is the largest size an unreliable packet may be. When a single outbound data exceeds this value it is sent reliably. Smaller unreliable datas will be automatically split over multiple unreliable sends.
 
-</details>
-
-<details>
-
-<summary>Server <em>are settings used by the server.</em></summary>
-
-**IPv4 Bind Address** is which address to bind the server to. If set and IPv4 is not available this will cause a socket error upon server start.
-
-**Enable IPv6** enables IPv6 binding when available. In some cases you may want this disabled if you have an IPv6 interface you do not want used.
-
-* **IPv6 Bind Address** is which address to bind the server to. If set and IPv6 is not available this will cause a socket error upon server start.
-
-**Port** is which port the server will listen on. This is also the port clients will connect to. In some instances you may need to change this at runtime using TransportManager.SetPort().
-
-**Maximum Clients** is the maximum active clients allowed before the transport begins to deny connections.
-
-</details>
-
-<details>
-
-<summary>Client <em>are settings used by the client.</em></summary>
-
-**Client Address** is which address to connect to. This is typically your server address. Localhost is set as default for local testing.
 
 </details>
