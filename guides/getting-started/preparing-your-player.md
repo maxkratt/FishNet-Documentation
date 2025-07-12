@@ -74,5 +74,5 @@ Don't worry if you encounter an error in a second game window stating: **"Server
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/preparing-your-player/preparing-your-player.unitypackage" class="button primary">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/preparing-your-player" class="button secondary">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/preparing-your-player/preparing-your-player.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/preparing-your-player" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}

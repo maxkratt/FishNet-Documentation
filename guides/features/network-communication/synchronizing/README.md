@@ -36,7 +36,7 @@ Setting a SendRate of 0f will allow SyncTypes to send changes every network tick
 
 There is a small limitation with all **SyncTypes** when running both the client and server in a single build.
 
-While as the host client, the previous value, when applicable, in callbacks will be the current value if the `asServer` parameter is false. This is mostly noticed in [SyncVars](syncvar.md), note the example below:
+While as the host client, the previous value, when applicable, in callbacks will be the current value or null if the `asServer` parameter is false. This is mostly noticed in [SyncVars](syncvar.md), note the example below:
 
 ```csharp
 // This example assumes you are acting as the host client.

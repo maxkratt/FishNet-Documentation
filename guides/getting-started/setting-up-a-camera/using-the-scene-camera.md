@@ -83,5 +83,5 @@ With all that set you should be able to run the game and see how the camera from
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-the-scene-camera/using-the-scene-camera.unitypackage" class="button primary">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/using-the-scene-camera" class="button secondary">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-the-scene-camera/using-the-scene-camera.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/using-the-scene-camera" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}

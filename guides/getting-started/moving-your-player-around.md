@@ -142,5 +142,5 @@ To test multi-player movement, you can build and run the game, which will automa
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/moving-your-player-around/moving-your-player-around.unitypackage" class="button primary">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/moving-your-player-around" class="button secondary">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/moving-your-player-around/moving-your-player-around.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/moving-your-player-around" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}

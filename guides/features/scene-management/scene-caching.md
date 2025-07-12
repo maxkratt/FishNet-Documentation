@@ -28,7 +28,7 @@ sud.Options.Mode = ServerUnloadMode.KeepUnused;
 
 ## Host Behaviour
 
-In situations where the Hosts Server needs to keep a scene loaded, but the Hosts Client was requested to unload that scene. Instead of unloading, the Hosts Client will be removed from the scene using the observer system updating the Clients [**Scene Visibility**](broken-reference). \
+In situations where the Hosts Server needs to keep a scene loaded, but the Hosts Client was requested to unload that scene. Instead of unloading, the Hosts Client will be removed from the scene using the observer system updating the Clients [**Scene Visibility**](scene-visibility.md). \
 \
 As Host, the Server and Client share the same instance of loaded Scenes and Game Objects. If it were to actually unload a scene from the Host Client, it would also unload on the server.
 

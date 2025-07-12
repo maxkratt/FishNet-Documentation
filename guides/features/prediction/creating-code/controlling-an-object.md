@@ -129,7 +129,7 @@ private void Update()
 
 OnTick will now be used to build our replicate data. A separate method of 'CreateReplicateData' is not needed to create the data but is done to organize our code better.
 
-When attempting to create the replicate data we return with default if not the owner of the object. Server receives and runs inputs from the owner so it does not need to create datas, and when clients do not own an object they will get the input for it from the server, as forwarded by other clients if using state forwarding. When not using state forwarding default should still be used in this scenario, but clients will not run replicates on non-owned objects. You can also run inputs on the server if there is no owner; using base.HasAuthority would probably be best for this. See [Checking Ownership](broken-reference) for more information.
+When attempting to create the replicate data we return with default if not the owner of the object. Server receives and runs inputs from the owner so it does not need to create datas, and when clients do not own an object they will get the input for it from the server, as forwarded by other clients if using state forwarding. When not using state forwarding default should still be used in this scenario, but clients will not run replicates on non-owned objects. You can also run inputs on the server if there is no owner; using base.HasAuthority would probably be best for this. See [Checking Ownership](../../ownership/#checking-ownership) for more information.
 
 ```csharp
 private void TimeManager_OnTick()
@@ -189,7 +189,7 @@ For example, it could be beneficial to send an input as reliable if you absolute
 {% hint style="info" %}
 On non-owned objects a number of replicates will arrive as ReplicateState Created, but will contain default values. This is our PredictionManager.RedundancyCount feature working.
 
-This is normal and indicates that the client or server had gracefully stopped sending states as there is no new data to send. This can be useful if you are [Predicting States.](broken-reference)
+This is normal and indicates that the client or server had gracefully stopped sending states as there is no new data to send. This can be useful if you are [Predicting States.](understanding-replicatestate/predicting-states-in-code.md)
 {% endhint %}
 
 Now the reconcile must be sent to clients to perform corrections. Only the server will actually send the reconcile but be sure to call CreateReconcile no matter if client, server, owner or not; this is to future proof an upcoming feature. Unlike our CreateReplicateData method, using CreateReconcile is not optional.

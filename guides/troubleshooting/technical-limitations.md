@@ -12,7 +12,7 @@ A networked scene object will be disabled when a scene loads, and will not activ
 
 Our [SceneManager](../../fishnet-building-blocks/components/managers/scenemanager.md) allows instantiated networked objects to be moved between scenes, but networked scene objects may not. Unity cannot know a scene objects details without the scene being loaded first, so trying to spawn a scene object without the client having the scene loaded would result in errors.
 
-Due to the movement restrictions just mentioned, networked scene objects may not be marked DontDestroyOnLoad, nor can the [NetworkObject.IsGlobal](../../manual/guides/broken-reference/) feature be used. Both of these would place the scene object in a new scene, causing errors.
+Due to the movement restrictions just mentioned, networked scene objects may not be marked DontDestroyOnLoad, nor can the [NetworkObject.IsGlobal](../features/networked-gameobjects-and-scripts/networkobjects/#global-networkobject) feature be used. Both of these would place the scene object in a new scene, causing errors.
 
 When a networked scene object is despawned it is always disabled, rather than destroyed. This is so you may spawn it at a later time. Manually destroying a scene object on the server is possible and would simply result in it never being spawned on clients.
 
