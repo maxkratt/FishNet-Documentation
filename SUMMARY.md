@@ -125,7 +125,6 @@
   * [Terminology](guides/server-hosting/terminology.md)
   * [Services](guides/server-hosting/other-hosting-options/README.md)
     * [PlayFlow Cloud (Our Recommendation)](guides/server-hosting/services/playflow-cloud-our-recommendation/README.md)
-      * [Getting Started with PlayFlow](guides/server-hosting/services/playflow-cloud-our-recommendation/getting-started-with-playflow.md)
     * [Getting Started with AWS](guides/server-hosting/other-hosting-options/getting-started-with-aws.md)
 * [Upgrading To Fish-Networking](guides/upgrading-to-fish-net.md)
 * [Troubleshooting](guides/troubleshooting/README.md)
