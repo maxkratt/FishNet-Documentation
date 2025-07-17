@@ -1,0 +1,23 @@
+---
+description: Where to go from here?
+---
+
+# Beyond the Basics
+
+After having gone through the previous guides, it's recommended that you read the following sections to get a better understanding of how Fish-Networking works and its most commonly used features.
+
+## Important features of FishNet
+
+<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-plane-departure">:plane-departure:</i> <strong>High-Level Overview</strong></td><td>Get a high-level overview of multiplayer games with FishNet.</td><td><a href="../../guides/high-level-overview/">high-level-overview</a></td></tr><tr><td><i class="fa-vector-square">:vector-square:</i> <strong>Networked GameObjects and Scripts</strong></td><td>Learn about Networking GameObjects and Scripts.</td><td><a href="../../guides/features/networked-gameobjects-and-scripts/">networked-gameobjects-and-scripts</a></td></tr><tr><td><i class="fa-server">:server:</i> <strong>Server and Client Identification</strong></td><td>Find out how to determine if code is running on the server or client.</td><td><a href="../../guides/features/server-and-client-identification/">server-and-client-identification</a></td></tr><tr><td><i class="fa-fingerprint">:fingerprint:</i> <strong>Network Connections</strong></td><td>Understand how FishNet identifies different clients.</td><td><a href="../../guides/features/server-and-client-identification/networkconnections.md">networkconnections.md</a></td></tr><tr><td><i class="fa-at">:at:</i> <strong>Ownership</strong></td><td>Discover what owning a NetworkObject means and how clients can do so.</td><td><a href="../../guides/features/ownership/">ownership</a></td></tr><tr><td><i class="fa-location-plus">:location-plus:</i> <strong>Spawning</strong></td><td>Get to grips with spawning objects across the network.</td><td><a href="../../guides/features/networked-gameobjects-and-scripts/spawning/">spawning</a></td></tr><tr><td><i class="fa-house-signal">:house-signal:</i> <strong>Synchronized Variables</strong></td><td>Learn about FishNet's automatically synchronized variables and how to use them!</td><td><a href="../../guides/features/network-communication/synchronizing/">synchronizing</a></td></tr><tr><td><i class="fa-messages">:messages:</i> <strong>Remote Procedure Calls</strong></td><td>Find out about how to call methods remotely.</td><td><a href="../../guides/features/network-communication/remote-procedure-calls.md">remote-procedure-calls.md</a></td></tr><tr><td><i class="fa-binary-circle-check">:binary-circle-check:</i> <strong>Data Serialization</strong></td><td>Take a look at how FishNet can automatically serialize your data to send across the network, and how you can manually control it too!</td><td><a href="../../guides/features/data-serialization/">data-serialization</a></td></tr><tr><td><i class="fa-calendar-circle-exclamation">:calendar-circle-exclamation:</i> <strong>Network State Events</strong></td><td>Get information about the most commonly used network events, such as players connecting and the network starting or stopping.</td><td><a href="../../guides/features/network-callbacks.md">network-callbacks.md</a></td></tr><tr><td><i class="fa-house-tree">:house-tree:</i> <strong>Scene Management</strong></td><td>Learn about managing scenes while the network is connected.</td><td><a href="../../guides/features/scene-management/">scene-management</a></td></tr></tbody></table>
+
+### More Feature Guides
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-book-open">:book-open:</i> <strong>Feature Guides</strong></td><td>Explore guides for even more FishNet features, including Client-side Prediction, Area of Interest, Transports, Addressables, and Lag Compensation.</td><td><a href="../../guides/features/">features</a></td></tr></tbody></table>
+
+## Moving On and Getting Help
+
+After reading through those sections you are encouraged to jump in and start making projects using FishNet! There are some available demos on specific Fish-Networking features included in the FishNet asset itself, these can be a great tool for learning more about the specific features.
+
+If you run into errors or issues you can check out the [troubleshooting](../../guides/troubleshooting/ "mention") guides to find solutions to common problems. You are also welcome to join the official Discord community and ask questions and learn from others there: [https://discord.gg/Ta9HgDh4Hj](https://discord.gg/Ta9HgDh4Hj)
+
+_Now go create something amazing!_

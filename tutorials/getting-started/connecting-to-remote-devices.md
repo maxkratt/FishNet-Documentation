@@ -10,7 +10,7 @@ Once you have a basic networked game set up and can connect as a host, the next 
 
 {% stepper %}
 {% step %}
-#### **Identifying the Server's IP Address**
+**Identifying the Server's IP Address**
 
 For a client to connect to a remote server, it needs to know the server's IP address.
 
@@ -23,12 +23,12 @@ For testing on a local network, you can often find your machine's IP address by 
 {% endstep %}
 
 {% step %}
-#### **Configuring the Client to Connect**
+**Configuring the Client to Connect**
 
 To connect as a client to a remote server, you'll need to manually set the server's address.
 
 1. **Locate the NetworkManager:** In your Unity scene, select the **NetworkManager** game object.
-2. **Select or add the Transport Component:** In the Inspector, locate the [Transport](../high-level-overview/transports.md) component (e.g., [Tugboat](../../fishnet-building-blocks/transports/tugboat.md) if you're using the default). If there is none, add Tugboat now.
+2. **Select or add the Transport Component:** In the Inspector, locate the [Transport](../../guides/high-level-overview/transports.md) component (e.g., [Tugboat](../../fishnet-building-blocks/transports/tugboat.md) if you're using the default). If there is none, add Tugboat now.
 3. **Set the Address:** Find the `Client Address` field within the Transport component. Enter the IP address of your remote server here. For example, if your server's local IP is `192.168.1.100`, you would enter that.
 4. **Set the Port (if different):** The default port for FishNet is `7777`. If your server is configured to use a different port, update the `Port` field accordingly.
 
@@ -40,7 +40,7 @@ The `NetworkHudCanvas` is a convenient debugging tool. In a finished game, you w
 {% endstep %}
 
 {% step %}
-#### **Building and Testing the Connection**
+**Building and Testing the Connection**
 
 To test connecting to a remote device, you'll need to build your game.
 
@@ -53,7 +53,7 @@ If configured correctly, the client should connect to the server, and you should
 {% endstep %}
 
 {% step %}
-#### **Troubleshooting Common Connection Issues**
+**Troubleshooting Common Connection Issues**
 
 If your client fails to connect, consider these common issues:
 

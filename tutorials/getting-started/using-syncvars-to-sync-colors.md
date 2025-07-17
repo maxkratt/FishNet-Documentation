@@ -4,13 +4,13 @@ description: Synchronizing color with synchronized variables!
 
 # Using SyncVars to Sync Colors
 
-We've got quite a few things synchronized now, but how would you synchronize a specific variable in one of your scripts? SyncVars[^1] are one answer! A [SyncVar](../features/network-communication/synchronizing/syncvar.md) is a FishNet generic type that can be used within [NetworkBehaviours](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md) that automatically synchronize their value from the server to all clients.
+We've got quite a few things synchronized now, but how would you synchronize a specific variable in one of your scripts? SyncVars[^1] are one answer! A [SyncVar](../../guides/features/network-communication/synchronizing/syncvar.md) is a FishNet generic type that can be used within [NetworkBehaviours](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md) that automatically synchronize their value from the server to all clients.
 
 Let's liven up the colors in our game and synchronize them with SyncVars.
 
 {% stepper %}
 {% step %}
-#### Creating a Script to Sync Color
+**Creating a Script to Sync Color**
 
 Create a new script called `SyncMaterialColor`. This will be used to synchronize the **Material** color of our **MeshRenderers**.
 
@@ -41,7 +41,7 @@ public class SyncMaterialColor : NetworkBehaviour
 This simple script has a `color` variable of the type `SyncVar<Color>`. It needs be set to `readonly`, but don't worry, we can still get and set its `Value`.
 
 {% hint style="info" %}
-Setting your **SyncVar** as `readonly` will cause it to be hidden from the Unity Inspector. You can read about a work-around for this [here](../features/network-communication/synchronizing/customizing-behavior.md).
+Setting your **SyncVar** as `readonly` will cause it to be hidden from the Unity Inspector. You can read about a work-around for this [here](../../guides/features/network-communication/synchronizing/customizing-behavior.md).
 {% endhint %}
 
 In `Awake` we subscribe to the SyncVar's `OnChange` event. This event is very useful as it will be invoked as soon as the SyncVar changes, even on a client when the server changes it and it's synced.
@@ -49,12 +49,12 @@ In `Awake` we subscribe to the SyncVar's `OnChange` event. This event is very us
 `OnColorChanged` is our method that we subscribed to the OnChange event. This method simply gets the MeshRenderer and sets its material color to the SyncVar's Color Value, thus updating the visuals to match on all devices.
 
 {% hint style="success" %}
-You may want to read more about **SyncVars** and the other available **SyncTypes** that FishNet has, such as **SyncLists.** You can find those pages [here](../features/network-communication/synchronizing/).
+You may want to read more about **SyncVars** and the other available **SyncTypes** that FishNet has, such as **SyncLists.** You can find those pages [here](../../guides/features/network-communication/synchronizing/).
 {% endhint %}
 {% endstep %}
 
 {% step %}
-#### Add the Script Component
+**Add the Script Component**
 
 Now add your newly created script to your **Cube Prefab**. The script won't currently do anything unless we change the `color` **SyncVar** in it, so let's do that next.
 
@@ -62,7 +62,7 @@ Now add your newly created script to your **Cube Prefab**. The script won't curr
 {% endstep %}
 
 {% step %}
-#### Give the Cubes Random Colors
+**Give the Cubes Random Colors**
 
 Let's give the cubes some color now as soon as we instantiate them.
 
@@ -146,7 +146,7 @@ This line of code gets the **SyncMaterialColor** component and sets the SyncVar 
 {% endstep %}
 
 {% step %}
-#### Test the Synchronized Cubes
+**Test the Synchronized Cubes**
 
 Now all you need to do is run your game again and see if the cubes spawn with a random color and if that color is synchronized across the network.
 

@@ -11,7 +11,7 @@ NetworkTransform is FishNet’s robust solution for syncing transform data (posi
 You may place as many NetworkTransforms as you like on children. A single NetworkTransform will synchronize the object it is directly on.
 
 {% hint style="info" %}
-Check out the [moving-your-player-around.md](../../guides/getting-started/moving-your-player-around.md "mention") guide for an example of using the **Network Transform** to sync basic player movement.
+Check out the [moving-your-player-around.md](../../tutorials/getting-started/moving-your-player-around.md "mention") guide for an example of using the **Network Transform** to sync basic player movement.
 {% endhint %}
 
 {% hint style="success" %}

@@ -4,7 +4,7 @@ description: Learn about spawning and despawning by having your players throw cu
 
 # Spawning and Despawning Items
 
-Now that we have players moving around, let's learn how to _spawn_ and _despawn_ [NetworkObjects](../features/networked-gameobjects-and-scripts/networkobjects/).
+Now that we have players moving around, let's learn how to _spawn_ and _despawn_ [NetworkObjects](../../guides/features/networked-gameobjects-and-scripts/networkobjects/).
 
 While you can [Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) and [Destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) regular Game Objects, Network Objects need to be Spawned and Despawned, this tells FishNet to synchronize the action over the network. FishNet stores all network object prefabs in a collection called the [Spawnable Prefabs](../../fishnet-building-blocks/scriptableobjects/spawnableprefabs/). You can see this and customize it on the [NetworkManager](../../fishnet-building-blocks/components/managers/network-manager.md).
 
@@ -14,7 +14,7 @@ We have added a large green cube to act as the floor which you can do too, but t
 
 {% stepper %}
 {% step %}
-#### Creating the Item NetworkObject Prefab
+**Creating the Item NetworkObject Prefab**
 
 Let's create a **Cube** in the scene hierarchy, and add a **NetworkObject** component to it. We've also decreased it's scale by half so that it doesn't look too large.\
 Then drag it into the project window to turn it into a prefab; you can destroy the original game object in the scene hierarchy now.
@@ -23,7 +23,7 @@ Then drag it into the project window to turn it into a prefab; you can destroy t
 {% endstep %}
 
 {% step %}
-#### Creating a Script to Spawn the Cube
+**Creating a Script to Spawn the Cube**
 
 Now create a script called `PlayerCubeCreator` and add it to your **Player Prefab**. This script is going to be responsible for spawning our new cube item across the network.
 
@@ -98,7 +98,7 @@ public class PlayerCubeCreator : NetworkBehaviour
 {% endtabs %}
 
 {% hint style="info" %}
-This may be a great time to read [this page](../features/network-communication/remote-procedure-calls.md) about RPCs[^1] such as the [ServerRpc](../features/network-communication/remote-procedure-calls.md#serverrpc) we use here.
+This may be a great time to read [this page](../../guides/features/network-communication/remote-procedure-calls.md) about RPCs[^1] such as the [ServerRpc](../../guides/features/network-communication/remote-procedure-calls.md#serverrpc) we use here.
 {% endhint %}
 
 Because this script contains a ServerRpc, it will also need to be a **NetworkBehaviour**. The `Update` method listens for the user to press the <kbd>Fire1</kbd> button (typically the left mouse button) and then calls `SpawnCube`.
@@ -114,7 +114,7 @@ You can read our more in-depth page about **Spawning** [here](spawning-and-despa
 {% endstep %}
 
 {% step %}
-#### Assigning the Prefab to Your Script
+**Assigning the Prefab to Your Script**
 
 Now select your **Player Prefab** and assign your **Cube Prefab** to the "Cube Prefab" field in your newly created **Player Cube Creator** script.
 
@@ -126,7 +126,7 @@ You may have noticed that an **Empty Network Behaviour** component was automatic
 {% endstep %}
 
 {% step %}
-#### Test If the Spawning Works
+**Test If the Spawning Works**
 
 Now launch a couple instances of your game and see if you can run around and spawn cube items by pressing the <kbd>Fire1</kbd> button. The cubes should be visible on all devices connected to each other.
 
@@ -134,7 +134,7 @@ Now launch a couple instances of your game and see if you can run around and spa
 {% endstep %}
 
 {% step %}
-#### Add Some Physics
+**Add Some Physics**
 
 Static cubes are boring! Let's add a **Rigidbody** component to the **Cube Prefab** to enable basic physics interactions with them.
 
@@ -146,7 +146,7 @@ Now the cubes should roll around and collide with the ground. Let's add a **Rigi
 {% endstep %}
 
 {% step %}
-#### Test If the Physics Works
+**Test If the Physics Works**
 
 If you launch the game now, the cubes should have basics physics working.
 
@@ -160,7 +160,7 @@ Networked Rigidbodies are a complex topic, and better suited to a different guid
 {% endstep %}
 
 {% step %}
-#### Script to Despawn Cubes On A Timer
+**Script to Despawn Cubes On A Timer**
 
 Now that we can `Spawn` cubes successfully, let's `Despawn` them after a few seconds so that we don't end up with too many objects at once.
 
@@ -192,13 +192,13 @@ public class DespawnAfterTime : NetworkBehaviour
 ```
 {% endcode %}
 
-This script uses the [OnStartServer](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#onstartserver) NetworkBehaviour override method to start a Coroutine which will `Despawn` the object. OnStartServer will run on the server when the object is initialized with the network.
+This script uses the [OnStartServer](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#onstartserver) NetworkBehaviour override method to start a Coroutine which will `Despawn` the object. OnStartServer will run on the server when the object is initialized with the network.
 
 `Despawn` needs to be called on the server and it will destroy the game object locally as well as on all clients automatically for you.
 {% endstep %}
 
 {% step %}
-#### Assigning the Script and Testing
+**Assigning the Script and Testing**
 
 Open your **Cube Prefab** now and add the **Despawn After Time** script you just made to the object.
 
