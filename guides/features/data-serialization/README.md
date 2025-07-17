@@ -43,15 +43,15 @@ In very rare cases a data type cannot be automatically serialized; a _Sprite_ is
 FishNet should be able to automatically serialize many basic C# and Unity types as well as classes and structs made with serializable types.
 {% endhint %}
 
-### The NonSerialized Attribute
+### The ExcludeSerialization Attribute
 
 {% tabs %}
 {% tab title="Description" %}
-This attribute is part of the `System` namespace, and may be used to prevent a field from being serialized over the network when using your own types. It's important to remember that placing **NonSerialized** over a field will also prevent it from showing in the inspector, nor working for other serializers such as JsonUtility.
+This attribute is part of the `FishNet.CodeGenerating` namespace, and may be used to prevent a field from being serialized by FishNet's automatic serializer and thus sent over the network when using your own types.&#x20;
 {% endtab %}
 
 {% tab title="Example" %}
-This simple example shows how to use **NonSerialized** to _hide_ a field from FishNet's automatic serialization.
+This simple example shows how to use **ExcludeSerialization** to _hide_ a field from FishNet's automatic serialization.
 
 ```csharp
 public class PlayerStats
@@ -60,8 +60,8 @@ public class PlayerStats
     public float MoveSpeed;
     /* In this example ControllerIndex is only used
      * for local multiplayer. This data does not need to be sent
-     * over the network so it's been marked with NonSerialized. */
-    [System.NonSerialized]
+     * over the network so it's been marked with ExcludeSerialization. */
+    [ExcludeSerialization]
     public int ControllerIndex;
 }
 ```
