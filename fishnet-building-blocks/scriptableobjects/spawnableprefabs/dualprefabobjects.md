@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # DualPrefabObjects
 
 The Dual Prefab Objects asset can be used to have Fish-Networking spawn a different prefab on the clients as it uses on the server. Whenever you spawn the server selected version, FishNet will spawn the client version on all clients.

@@ -2,17 +2,6 @@
 description: >-
   This component lets you override the default observer conditions for a
   specific network object.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # NetworkObserver
@@ -41,16 +30,16 @@ Each condition must be created as a scriptable object, and dropped into the Netw
 
 <div align="left"><figure><img src="../../.gitbook/assets/network-observer-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
-### :gear:  **Override Type**
+### :gear: **Override Type**
 
 > This is used to change how the **NetworkObserver** component uses the [ObserverManager](managers/observermanager/) settings. _Add Missing_ will add any conditions from the ObserverManager which are not already on the NetworkObserver. _UseManager_ replaces conditions with those from the manager. _Ignore Manager_ will keep the NetworkObserver conditions, ignoring the ObserverManager entirely.
 >
 > _Add Missing_ is usually the recommended option.
 
-### :gear:  **Update Host Visibility**
+### :gear: **Update Host Visibility**
 
 > This will change the visibility of renderers for the host client when server objects are not visible to the client. If you wish to enable and disable other aspects during a visibility change consider using the [`NetworkObject.OnHostVisibilityUpdated`](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkObject.html#FishNet_Object_NetworkObject_OnHostVisibilityUpdated) event.
 
-### :gear:  **Observer Conditions**
+### :gear: **Observer Conditions**
 
 > This is a list of which observer conditions to use. You can find out more about the specific ones here: [observerconditions](../scriptableobjects/observerconditions/ "mention")

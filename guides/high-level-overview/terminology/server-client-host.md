@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Server, Client, Host
 
 ## Ownership and Controller <a href="#server-and-host" id="server-and-host"></a>

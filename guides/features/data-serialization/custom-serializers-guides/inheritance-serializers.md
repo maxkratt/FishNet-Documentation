@@ -1,16 +1,5 @@
 ---
 description: Learn how to serialize classes and any their children classes.
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Inheritance Serializers

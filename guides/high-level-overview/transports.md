@@ -1,16 +1,5 @@
 ---
 description: Transports control how data is sent, received, and handled over the network.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Transports

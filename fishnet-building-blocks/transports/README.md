@@ -1,16 +1,5 @@
 ---
 description: Transports control how data is sent, received, and handled over the network.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Transports
@@ -25,7 +14,7 @@ There are many transports available, some are maintained by the Fish-Networking 
 
 ## Switching Transports at Run-Time or using Multiple Transports
 
-FishNet has support for changing transports on your NetworkManager while the network is not running as well as allowing servers to utilize multiple transports at once. For example you may want to use FishyEOS or Unity Transport to support your console users, but also use Tugboat to give a better experience to your Non-Console users.&#x20;
+FishNet has support for changing transports on your NetworkManager while the network is not running as well as allowing servers to utilize multiple transports at once. For example you may want to use FishyEOS or Unity Transport to support your console users, but also use Tugboat to give a better experience to your Non-Console users.
 
 FishNet uses the Multipass transport to achieve both of these goals.
 

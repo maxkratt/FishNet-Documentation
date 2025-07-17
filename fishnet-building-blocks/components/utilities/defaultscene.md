@@ -2,17 +2,6 @@
 description: >-
   This component can be used to easily load an online scene when network starts
   and an offline one when it stops.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # DefaultScene
@@ -33,22 +22,22 @@ For this component to work, both the online scene and the offline scene must be 
 
 <div align="left"><figure><img src="../../../.gitbook/assets/default-scene-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
-### :gear:  **Enable Global Scenes**
+### :gear: **Enable Global Scenes**
 
 > This will load the scenes as global when enabled, or as connection when not. For more information on the differences see [Scene Loading](../../../guides/features/scene-management/loading-scenes/).
 
-### :gear:  **Start In Offline**
+### :gear: **Start In Offline**
 
 > This will load the server and clients into the offline scene when the game starts.
 
-### :gear:  **Offline Scene**
+### :gear: **Offline Scene**
 
 > This is the scene to load when offline.
 
-### :gear:  **Online Scene**
+### :gear: **Online Scene**
 
 > This is the scene to load when online.
 
-### :gear:  **Replace Scenes**
+### :gear: **Replace Scenes**
 
 > This can be set to replace all loaded scenes, or just online scenes with the Online or Offline scene. For more information see loading [Scene Loading - replacing scenes](../../../guides/features/scene-management/loading-scenes/).

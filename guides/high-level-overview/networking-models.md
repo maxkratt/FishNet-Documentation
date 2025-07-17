@@ -2,17 +2,6 @@
 description: >-
   This page discusses the varius networking models and architectures used in
   games and what Fish-Networking uses.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Networking Models

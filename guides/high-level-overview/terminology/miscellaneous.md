@@ -2,17 +2,6 @@
 description: >-
   There are a several commonly terms which you may encounter throughout your
   development experience with FishNet.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Miscellaneous

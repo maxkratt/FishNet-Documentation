@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Broadcasts
 
 Broadcasts allow you to send messages to one or more objects without them requiring a NetworkObject component. This could be useful for communicating between objects which are not necessarily networked, such as a chat system.

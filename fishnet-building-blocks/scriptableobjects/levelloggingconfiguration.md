@@ -2,17 +2,6 @@
 description: >-
   The scriptable object that allows you to customize what FishNet will output
   logs of.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # LevelLoggingConfiguration
@@ -25,18 +14,18 @@ The **Level Logging Configuration** scriptable object simply allows you to custo
 
 <figure><img src="../../.gitbook/assets/level-logging-configuration.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure>
 
-### :gear:  **Logging Enabled**
+### :gear: **Logging Enabled**
 
 > This is simply a toggle to enable and disable all of Fish-Networking's logs.
 
-### :gear:  **Development Logging**
+### :gear: **Development Logging**
 
 > This controls the level of logs sent while the game is a development build or editor.
 
-### :gear:  **GUI Logging**&#x20;
+### :gear: **GUI Logging**
 
 > This controls the level of logging to use when the game is built regularly, as opposed to a headless (non GUI) build.
 
-### :gear:  **Headless Logging**
+### :gear: **Headless Logging**
 
 > This controls the logging level for headless game builds.

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # InstanceFinder
 
 There is a lot of useful information you can get from [NetworkBehaviours ](../../fishnet-building-blocks/components/network-behaviour-components.md)but there may be some cases that your script does not inherit from NetworkBehaviour. This is where InstanceFinder can help you out.

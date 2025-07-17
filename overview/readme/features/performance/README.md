@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Performance
 
 Prior to Fish-Networking we developed assets for other solutions, such as Mirror Networking. These assets have proven to perform 4 times faster, and use little as 13% the bandwidth of Mirror's internal components. Unfortunately, third party assets can only go so far. This is strongly in part why Fish-Networking was made.
