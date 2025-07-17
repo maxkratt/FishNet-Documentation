@@ -14,7 +14,7 @@ layout:
 
 # Bayou
 
-## General
+## Description
 
 Bayou is the transport you are looking for when you want communication on WebGL!\
 \
@@ -39,26 +39,33 @@ Once Downloaded and Imported into Unity with FishNet. You should add the compone
 
 ***
 
-## Component Settings
+## Settings
 
-#### Security
+<div align="left"><figure><img src="../../.gitbook/assets/bayou-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
 
-* **Enable WSS**: When enabled uses Secure WebSockets instead of normal WebSockets.
-* **SSL Configuration**: Used to configure the SSL Certificate.
-  * Enabled: Turns on/off Requiring SSL Certificate.
-  * Certificate Path: File Path for the certificate
-  * Certificate Password: Password for certificate
-  * SSL Protocol: The protocol you would like to use for encryption.
+### :gear:  **Use WSS**
 
-#### Channels
+> When enabled, Bayou will use Secure WebSockets instead of normal WebSockets.
+>
+> When this is enabled the following options will be available:
+>
+> * **Enabled**: Turns on/off Requiring SSL Certificate.
+> * **Certificate Path**: File Path for the certificate
+> * **Certificate Password**: Password for certificate
+> * **SSL Protocol**: The protocol you would like to use for encryption.
 
-* **MTU**: Maximum Transmission Unity for the unreliable channel (in bytes)
+### :gear:  **MTU**
 
-#### Server
+> Maximum Transmission Unity for the unreliable channel (in bytes)
 
-* **Port**: The port you want to bind the server to. Default port is 7770
-* **Maximum Clients**: The amount of clients allowed to connect to the server. Default is 2000 clients.
+### :gear:  **Port**
 
-#### Client
+> The port you want to bind the server to. Default port is 7770.
 
-* **Client Address:** The Address the client should use to connect to the server!
+### :gear:  **Maximum Clients**
+
+> The maximum amount of clients allowed to connect to the server. Default is 2000 clients.
+
+### :gear:  **Client Address**
+
+> The Address the client should use to connect to the server.

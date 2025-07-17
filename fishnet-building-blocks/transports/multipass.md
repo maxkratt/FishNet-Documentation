@@ -14,9 +14,9 @@ layout:
 
 # Multipass
 
-## General
+## Description
 
-Multipass is a pass-through transport that allows multiple transports to run on the server at once. For example, you may want to run Tugboat for your desktop or mobile users, and Bayou for your web users. With Multipass a single server build can run both, joining players from both together in the same game.
+**Multipass** is a pass-through transport that allows multiple transports to run on the server at once. For example, you may want to run Tugboat for your desktop or mobile users, and Bayou for your web users. With **Multipass** a single server build can run both, joining players from both together in the same game.
 
 For usage see the [guide](../../guides/features/transports/multipass.md#setup).
 
@@ -36,7 +36,14 @@ Just add Multipass to your [Transport Manager](../components/managers/transportm
 
 ***
 
-## Component Settings
+## Settings
 
-* **Global Server Actions: W**hile true will perform server actions such as start or stop server, on all transports.
-* **Transports:** A collection of transports you wish Multipass to support.
+<div align="left"><figure><img src="../../.gitbook/assets/multipass-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+
+### :gear:  **Global Server Actions**
+
+> **W**hile enabled, this will perform server actions such as start or stop server on all transports.
+
+### :gear:  **Transports**
+
+> A collection of [transports](../../guides/features/transports/) you wish **Multipass** to support.

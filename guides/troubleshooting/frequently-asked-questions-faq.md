@@ -44,7 +44,7 @@ If you import a new version of Fish-Networking and there are immediately compile
 
 There are several ways to make rooms within Fish-Networking.
 
-You can use a third party service which creates individual server instances, each acting as their own. There are several services which provide this, an example of one is [Edgegap](../server-hosting/edgegap-official-partner/).
+You can use a third party service which creates individual server instances, each acting as their own. There are several services which provide this, an example of one is [Edgegap](../server-hosting/other-hosting-options/).
 
 Another option is to have a single Fish-Networking instance manage rooms in a single build. This reduces the complexity of a third party service but requires you to develop with [stacked scenes](../features/scene-management/scene-stacking.md) in mind. Our project [Lobby and Worlds ](../../overview/readme/pro-projects-and-support.md#projects)accomplishes this, and is available to supporters.
 
@@ -79,6 +79,15 @@ A large variety of third party services allow you to host p2p games. Steam and E
 When trying to connect to your IP directly you must allow connections through your firewall. Be sure to adjust your firewall to allow the port used by your game.
 
 You can also join/create LAN games without changing your firewall by using our [Fish-Networking Discovery addon](../../overview/asset-integrations/fish-network-discovery.md).
+
+</details>
+
+<details>
+
+<summary>What can I do if I encounter a "port already used"?</summary>
+
+Check to make sure you aren't trying to start the FishNet server twice, perhaps due to manually starting it as well as FishNet automatically starting it if enabled in the [ServerManager ](../../fishnet-building-blocks/components/managers/server-manager.md)component's [#start-on-headless](../../fishnet-building-blocks/components/managers/server-manager.md#start-on-headless "mention") option. \
+You can also try enabling the [ReuseAddress](../../fishnet-building-blocks/transports/tugboat.md#reuse-address) option if using the [Tugboat transport](../../fishnet-building-blocks/transports/tugboat.md). This will allow the server to bind to the port even if it was recently used, making server restarts and multiple concurrent instances possible without port conflicts.
 
 </details>
 

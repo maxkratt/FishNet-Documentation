@@ -8,7 +8,7 @@ description: >-
 
 ## Description <a href="#server-and-host" id="server-and-host"></a>
 
-The **ServerSpawner** component is a helpful tool that you can use for instantiating and _optionally_ spawning objects as soon as the FishNet server successfully starts running. This is very often used to instantiate [Global Network Objects](#user-content-fn-1)[^1], which need to be instantiated at run-time instead of existing inside a scene directly.
+The **ServerSpawner** component is a helpful tool that you can use for optionally instantiating and spawning objects as soon as the FishNet server successfully starts running (or on your own command if preferred). This is very often used to instantiate [Global Network Objects](#user-content-fn-1)[^1], which need to be instantiated at run-time instead of existing inside a scene directly.
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
@@ -16,7 +16,7 @@ The **ServerSpawner** component is a helpful tool that you can use for instantia
 
 ### :gear:  **Automatically Spawn**
 
-> This dictates whether the component will call **Spawn** on the objects after it instantiated them.
+> This dictates whether the component will instantiate and spawn the objects as soon as the server starts, or only after you manually call `Spawn` on the **ServerSpawner** component.
 >
 > You can disable this if you want to manually control when these objects are spawned.
 

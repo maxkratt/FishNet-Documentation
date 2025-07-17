@@ -35,9 +35,9 @@ This tutorial was kindly provided by haseebzahid413#2226.
 13. Open Putty
 14.
     1. Copy IPV4 DNS address for the instance we created above from AWS EC2 Instances window
-    2. Putty Configuration > Session > Host Name   set this hostname to follows
+    2. Putty Configuration > Session > Host Name set this hostname to follows
     3.
-       1. ec2-user@  followed by the DNS address copied above
+       1. ec2-user@ followed by the DNS address copied above
     4. Keep port at 22
     5. Connection Type SSH
     6. Go to Connection > SSH > Auth
