@@ -206,4 +206,4 @@
 
 ## API Documentation
 
-* [API Reference](https://firstgeargames.com/FishNet/api/api/index.html)
+* [API Reference](https://fish-networking.com/FishNet/api/api/index.html)
