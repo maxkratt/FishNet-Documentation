@@ -1,6 +1,12 @@
+---
+description: A community-made guide for using AWS to host a FishNet server.
+cover: ../../../.gitbook/assets/aws-cover.png
+coverY: 0
+---
+
 # Getting Started with AWS
 
-This tutorial was kindly provided by haseebzahid413#2226.
+_This tutorial was kindly provided by haseebzahid413#2226._
 
 ## Verify Permissions for AWS Account
 

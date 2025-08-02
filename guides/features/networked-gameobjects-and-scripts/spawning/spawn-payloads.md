@@ -26,7 +26,7 @@ For example you can do the following:
 public override void WritePayload(NetworkConnection connection, Writer writer)
 {
     // Writes the string stored in the class variable playerName to the spawn payload.
-    writer.WriteString("playerName);
+    writer.WriteString(playerName);
     // Writes the integer 42 to the payload.
     writer.WriteInt32(42);
 }

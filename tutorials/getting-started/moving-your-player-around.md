@@ -16,7 +16,7 @@ Client-authoritative movement makes it easier for the client to cheat with speed
 
 {% stepper %}
 {% step %}
-#### Creating a Player Movement Script
+**Creating a Player Movement Script**
 
 Select your **Player** prefab in the Project window. In the Inspector, click on **Add Component** and search for **New Script**. Name the script `PlayerMovement` and click **Create and Add**.
 
@@ -24,13 +24,13 @@ Select your **Player** prefab in the Project window. In the Inspector, click on 
 {% endstep %}
 
 {% step %}
-#### Editing the Script
+**Editing the Script**
 
 Double-click the `PlayerMovement` script to open it in your code editor. Replace the default code with the following:
 
 {% tabs fullWidth="false" %}
 {% tab title="Old Input System" %}
-Unlike typical single-player scripts that use `MonoBehaviour`, this script inherits from `NetworkBehaviour`. This allows for direct access to the `IsOwner` field. Although you could still check ownership via the [NetworkObject](../../fishnet-building-blocks/components/network-object.md) component on a **MonoBehaviour**, [NetworkBehaviour](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md) provides significant advantages. It enables [RPCs](../features/network-communication/remote-procedure-calls.md), [SyncVars](../features/network-communication/synchronizing/), and [specialized override methods](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) (akin to Unity's `Start`, `Awake`, and `OnDestroy` but for networked objects).
+Unlike typical single-player scripts that use `MonoBehaviour`, this script inherits from `NetworkBehaviour`. This allows for direct access to the `IsOwner` field. Although you could still check ownership via the [NetworkObject](../../fishnet-building-blocks/components/network-object.md) component on a **MonoBehaviour**, [NetworkBehaviour](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md) provides significant advantages. It enables [RPCs](../../guides/features/network-communication/remote-procedure-calls.md), [SyncVars](../../guides/features/network-communication/synchronizing/), and [specialized override methods](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) (akin to Unity's `Start`, `Awake`, and `OnDestroy` but for networked objects).
 
 {% code title="PlayerMovement.cs" lineNumbers="true" fullWidth="false" %}
 ```csharp
@@ -70,7 +70,7 @@ If using [Unity's New Input System](https://learn.unity.com/tutorial/setting-up-
 
 <figure><img src="../../.gitbook/assets/player-input-component-disabled.png" alt=""><figcaption><p>The PlayerInput component added to the Player Prefab and Disabled</p></figcaption></figure>
 
-Unlike typical single-player scripts that use `MonoBehaviour`, this script inherits from `NetworkBehaviour`. This allows for direct access to the `IsOwner` field. Although you could still check ownership via the [NetworkObject](../../fishnet-building-blocks/components/network-object.md) component on a **MonoBehaviour**, [NetworkBehaviour](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md) provides significant advantages. It enables [RPCs](../features/network-communication/remote-procedure-calls.md), [SyncVars](../features/network-communication/synchronizing/), and [specialized override methods](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) (akin to Unity's `Start`, `Awake`, and `OnDestroy` but for networked objects).
+Unlike typical single-player scripts that use `MonoBehaviour`, this script inherits from `NetworkBehaviour`. This allows for direct access to the `IsOwner` field. Although you could still check ownership via the [NetworkObject](../../fishnet-building-blocks/components/network-object.md) component on a **MonoBehaviour**, [NetworkBehaviour](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md) provides significant advantages. It enables [RPCs](../../guides/features/network-communication/remote-procedure-calls.md), [SyncVars](../../guides/features/network-communication/synchronizing/), and [specialized override methods](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) (akin to Unity's `Start`, `Awake`, and `OnDestroy` but for networked objects).
 
 <pre class="language-csharp" data-title="PlayerMovement.cs" data-line-numbers><code class="lang-csharp">using FishNet.Object;
 using UnityEngine;
@@ -115,7 +115,7 @@ Since there will be multiple player game objects in the game, we need to determi
 {% endstep %}
 
 {% step %}
-#### Synchronizing the Movement
+**Synchronizing the Movement**
 
 Now we have code that will allow clients to move only their respective player object, but nothing is yet synchronized over the network This means that we won't ever see other players moving, and they won't see us moving.
 
@@ -129,7 +129,7 @@ This component has quite a few settings, but the most important ones for us righ
 {% endstep %}
 
 {% step %}
-#### **Test Player Movement**
+**Test Player Movement**
 
 Save your scene and press the **Play** button in Unity's Editor. Your player capsule should now be visible. Use the **W, A, S, D** keys or arrow keys to move your player around the scene.
 
