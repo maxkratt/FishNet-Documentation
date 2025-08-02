@@ -22,7 +22,7 @@ Installing via the Unity Asset Store is the easiest method and ensures you get a
 6. Select **My Assets**, find **FishNet**, and click **Download** and then **Import**.
 
 {% hint style="success" %}
-&#x20;**Recommended for most users** who want a stable release without version control setup.
+Recommended for most users who want a stable release without version control setup.
 {% endhint %}
 
 ***
@@ -37,7 +37,7 @@ Use this method if you have a `.unitypackage` file, for example, downloaded from
 4. Click **Import** to bring all the FishNet files into your project.
 
 {% hint style="info" %}
-**Best for** offline installs or specific package versions not yet on the Asset Store.
+Best for offline installs or specific package versions not yet on the Asset Store.
 {% endhint %}
 
 ***
@@ -58,7 +58,7 @@ This method keeps FishNet up to date via a Git repository. Ideal if you want the
 6. Click **Add** to install.
 
 {% hint style="warning" %}
-Ensure you have Git installed on your system and added to your system path.
+Ensure you have the [Git client](https://git-scm.com/) (minimum version 2.14.0) installed on your system and added to the PATH system environment variable.
 {% endhint %}
 
 ***
