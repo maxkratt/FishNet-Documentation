@@ -138,7 +138,7 @@ And that's all there is to it, you should now have a script like this that you c
 
 {% code title="ManualPlayerSpawner.cs" lineNumbers="true" %}
 ```csharp
-using FishNet.Connection
+using FishNet.Connection;
 using FishNet.Managing;
 using FishNet.Object;
 using UnityEngine;
