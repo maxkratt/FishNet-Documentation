@@ -17,7 +17,7 @@ When adding this component manually, be careful not to unintentionally override 
 This component will be added to a network object at run-time if it doesn't already exist.
 
 {% hint style="success" %}
-Check out the API page for specific methods, and properties [here](https://firstgeargames.com/FishNet/api/api/FishNet.Observing.NetworkObserver.html).
+Check out the API page for specific methods, and properties [here](https://fish-networking.com/FishNet/api/api/FishNet.Observing.NetworkObserver.html).
 {% endhint %}
 
 ## Conditions <a href="#conditions" id="conditions"></a>
@@ -38,7 +38,7 @@ Each condition must be created as a scriptable object, and dropped into the Netw
 
 ### :gear: **Update Host Visibility**
 
-> This will change the visibility of renderers for the host client when server objects are not visible to the client. If you wish to enable and disable other aspects during a visibility change consider using the [`NetworkObject.OnHostVisibilityUpdated`](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkObject.html#FishNet_Object_NetworkObject_OnHostVisibilityUpdated) event.
+> This will change the visibility of renderers for the host client when server objects are not visible to the client. If you wish to enable and disable other aspects during a visibility change consider using the [`NetworkObject.OnHostVisibilityUpdated`](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkObject.html#FishNet_Object_NetworkObject_OnHostVisibilityUpdated) event.
 
 ### :gear: **Observer Conditions**
 

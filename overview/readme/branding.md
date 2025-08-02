@@ -6,4 +6,4 @@ You may not alter the colors nor design on the images provided.
 
 You may resize images but not skew them such as by changing their aspect ratio.
 
-<a href="https://firstgeargames.com/FishNet/media/fishnet_media.zip" class="button primary" data-icon="down-to-line">Branding Pack</a>
+<a href="https://fish-networking.com/FishNet/media/fishnet_media.zip" class="button primary" data-icon="down-to-line">Branding Pack</a>

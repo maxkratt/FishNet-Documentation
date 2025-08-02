@@ -37,7 +37,7 @@ private void NetworkTrigger_OnEnter(Collider other)
 }
 ```
 
-There is a fair chance a number of controllers will want to set velocities directly as well. PredictionRigidbody does support this. We encourage you to review the [PredictionRigidbody API](https://firstgeargames.com/FishNet/api/api/FishNet.Object.Prediction.PredictionRigidbody.html#methods) for all available functionality.
+There is a fair chance a number of controllers will want to set velocities directly as well. PredictionRigidbody does support this. We encourage you to review the [PredictionRigidbody API](https://fish-networking.com/FishNet/api/api/FishNet.Object.Prediction.PredictionRigidbody.html#methods) for all available functionality.
 
 Our last example demonstrates setting velocities directly.
 

@@ -20,4 +20,4 @@ The **HashGrid** is required when using the [Grid Condition](../../network-obser
 
 ### :gear:  **Accuracy**
 
-> This determines how close a client's [FirstObject](https://firstgeargames.com/FishNet/api/api/FishNet.Connection.NetworkConnection.html#FishNet_Connection_NetworkConnection_FirstObject) must be (in Unity units) to be considered in range. Note that accuracy is not as precise as when using a [Distance Condition](../../../scriptableobjects/observerconditions/distancecondition.md).
+> This determines how close a client's [FirstObject](https://fish-networking.com/FishNet/api/api/FishNet.Connection.NetworkConnection.html#FishNet_Connection_NetworkConnection_FirstObject) must be (in Unity units) to be considered in range. Note that accuracy is not as precise as when using a [Distance Condition](../../../scriptableobjects/observerconditions/distancecondition.md).

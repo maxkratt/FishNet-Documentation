@@ -14,7 +14,7 @@ The **NetworkManager** is the central component of FishNet that manages the netw
 The Network Manager utilizes several sub-manager components, which it will add at runtime if they do not already exist on the object.
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.NetworkManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.NetworkManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

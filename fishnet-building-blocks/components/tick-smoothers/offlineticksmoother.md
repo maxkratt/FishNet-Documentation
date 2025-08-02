@@ -14,7 +14,7 @@ The OfflineTickSmoother behaves just like the [networkticksmoother.md](networkti
 There are several public APIs available for changing the smoother settings at runtime. An example of some are changing adaptive interpolation type, interpolation value, teleporting the smoothed object, and more.
 
 {% hint style="success" %}
-Please review our [API ](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Transforming.NetworkTickSmoother.html)for all runtime settings.
+Please review our [API ](https://fish-networking.com/FishNet/api/api/FishNet.Component.Transforming.NetworkTickSmoother.html)for all runtime settings.
 {% endhint %}
 
 ## Settings

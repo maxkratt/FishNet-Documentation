@@ -8,7 +8,7 @@ description: >-
 
 ### SyncTypeSettings
 
-[SyncTypeSettings](https://firstgeargames.com/FishNet/api/api/FishNet.Object.Synchronizing.SyncTypeSettings.html) can be initialized with any SyncType to define the default settings of your SyncType.
+[SyncTypeSettings](https://fish-networking.com/FishNet/api/api/FishNet.Object.Synchronizing.SyncTypeSettings.html) can be initialized with any SyncType to define the default settings of your SyncType.
 
 ```csharp
 //Custom settings are optional.
@@ -70,7 +70,7 @@ private void Awake()
 }
 ```
 
-The code above will actually prevent compilation in the editor as our code generators will detect you did not include the readonly indicator. To remove the readonly indicator you must also add the [AllowMutableSyncType](https://firstgeargames.com/FishNet/api/api/FishNet.CodeGenerating.AllowMutableSyncTypeAttribute.html) above your SyncType.
+The code above will actually prevent compilation in the editor as our code generators will detect you did not include the readonly indicator. To remove the readonly indicator you must also add the [AllowMutableSyncType](https://fish-networking.com/FishNet/api/api/FishNet.CodeGenerating.AllowMutableSyncTypeAttribute.html) above your SyncType.
 
 ```csharp
 //This will work and show your SyncType in the inspector!

@@ -11,7 +11,7 @@ description: >-
 This component will automatically change between online and offline scenes depending on server and client connective state. When a connection is started the online scene is loaded, and when disconnected the offline scene is loaded. This component must be placed on or beneath your [NetworkManager](../managers/network-manager.md).
 
 {% hint style="success" %}
-Check out the API page for specific methods [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Scenes.DefaultScene.html).
+Check out the API page for specific methods [here](https://fish-networking.com/FishNet/api/api/FishNet.Component.Scenes.DefaultScene.html).
 {% endhint %}
 
 {% hint style="warning" %}

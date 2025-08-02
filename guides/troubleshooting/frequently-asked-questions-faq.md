@@ -101,7 +101,7 @@ By default when the clientHost is not an observer of an object the renders for t
 
 You may disable this feature by changing a setting on the [ObserverManager](../../fishnet-building-blocks/components/managers/observermanager/). It's also possible to disable this per [NetworkObject](../../fishnet-building-blocks/components/network-object.md).
 
-You can also utilize [NetworkObject events](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkObject.html#events) to manually update renderers.
+You can also utilize [NetworkObject events](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkObject.html#events) to manually update renderers.
 
 </details>
 
@@ -149,7 +149,7 @@ Clients may update SyncTypes locally, but they are not synchronized over the net
 
 SyncTimes run on intervals, defaulted to every 100ms if the SyncType has changed; the interval may be changed on the [ServerManager](../../fishnet-building-blocks/components/managers/server-manager.md).
 
-However, even if the interval is met, SyncTypes always synchronize after remote procedure calls (RPC), even if you set them before calling the RPC. You can change SyncTypes to synchronize first on a per SyncType basis using [SyncTypeSettings](https://firstgeargames.com/FishNet/api/api/FishNet.Object.Synchronizing.SyncTypeSettings.html). Review also [SyncTypes guide](../features/network-communication/synchronizing/) thoroughly for updating a SyncTypes settings.
+However, even if the interval is met, SyncTypes always synchronize after remote procedure calls (RPC), even if you set them before calling the RPC. You can change SyncTypes to synchronize first on a per SyncType basis using [SyncTypeSettings](https://fish-networking.com/FishNet/api/api/FishNet.Object.Synchronizing.SyncTypeSettings.html). Review also [SyncTypes guide](../features/network-communication/synchronizing/) thoroughly for updating a SyncTypes settings.
 
 </details>
 
@@ -193,7 +193,7 @@ You can view more information about SyncTypes [here](../features/network-communi
 
 <summary>Why do I get the warning: "Cannot complete action because client is not active."?</summary>
 
-You will see this warning if the client is not started. It's also possible to see this warning if you are trying to communicate with the server such as using a ServerRpc before the object is initialized for the client. See NetworkBehaviour [API](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html) and [callback order](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) for more information on this.
+You will see this warning if the client is not started. It's also possible to see this warning if you are trying to communicate with the server such as using a ServerRpc before the object is initialized for the client. See NetworkBehaviour [API](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html) and [callback order](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) for more information on this.
 
 It's also possible you have a method decorated with the '\[Client]' attribute, such as if you want a method to only run on clients. This will cause the warning, even if your intents are to not have the client connected. If this is true, you may set LoggingType to Off within the Client attribute.
 
@@ -203,7 +203,7 @@ It's also possible you have a method decorated with the '\[Client]' attribute, s
 
 <summary>Why do I get the warning: "Cannot complete action because server is not active."?</summary>
 
-You will see this warning if the server is not started. It's also possible to see this warning if you are trying to communicate with a client such as using a Target or ObserversRpc before the object is initialized for the server. See NetworkBehaviour [API](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html) and [callback order](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) for more information on this.
+You will see this warning if the server is not started. It's also possible to see this warning if you are trying to communicate with a client such as using a Target or ObserversRpc before the object is initialized for the server. See NetworkBehaviour [API](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html) and [callback order](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) for more information on this.
 
 It's also possible you have a method decorated with the '\[Server]' attribute, such as if you want a method to only run on server. This will cause the warning, even if your intents are to not have the server running. If this is true, you may set LoggingType to Off within the Server attribute.
 

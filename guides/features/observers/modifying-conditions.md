@@ -1,6 +1,6 @@
 # Modifying Conditions
 
-Several conditions may be modified at run-time. What can be modified for each condition may vary. I encourage you to view the [API](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Observing.html) to see what each condition exposes.
+Several conditions may be modified at run-time. What can be modified for each condition may vary. I encourage you to view the [API](https://fish-networking.com/FishNet/api/api/FishNet.Component.Observing.html) to see what each condition exposes.
 
 To change properties on a condition you must access the condition through the [NetworkObserver](../../../fishnet-building-blocks/components/network-observer.md) component.
 

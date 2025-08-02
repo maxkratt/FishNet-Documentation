@@ -13,7 +13,7 @@ The **NetworkObject** component is essential for any game object that needs to b
 You can nest network objects, place them in scenes, or in prefabs, but the component itself cannot be added to a game object at run-time.
 
 {% hint style="success" %}
-Check out the API page for more specific methods, properties, and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkObject.html).
+Check out the API page for more specific methods, properties, and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkObject.html).
 {% endhint %}
 
 ## Settings

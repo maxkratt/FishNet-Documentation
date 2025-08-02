@@ -15,7 +15,7 @@ Check out the [moving-your-player-around.md](../../tutorials/getting-started/mov
 {% endhint %}
 
 {% hint style="success" %}
-Check out the API page for more specific methods, properties, and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Transforming.NetworkTransform.html).
+Check out the API page for more specific methods, properties, and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Component.Transforming.NetworkTransform.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

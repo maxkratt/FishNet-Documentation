@@ -13,7 +13,7 @@ The **ServerManager** is a central component responsible for handling server-rel
 The **ServerManager** can be used directly to start and stop the FishNet server as well as monitor its state and send [broadcasts](../../../guides/features/network-communication/broadcasts.md) to the clients.
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Server.ServerManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Server.ServerManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

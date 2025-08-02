@@ -78,7 +78,7 @@ The amount of months received are directly related to what goes back into the pr
 Please be certain you read [Purchasing](pro-projects-and-support.md#purchasing) thoroughly.
 {% endhint %}
 
-If you purchased through GitHub or Patreon your downloads will be available on our [website](https://firstgeargames.com).
+If you purchased through GitHub or Patreon your downloads will be available on our [website](https://fish-networking.com).
 
 If you purchased Fish-Networking Pro on the asset store, please use the asset store to download Fish-Networking Pro.
 

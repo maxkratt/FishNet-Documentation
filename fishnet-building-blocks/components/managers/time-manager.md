@@ -9,7 +9,7 @@ description: The TimeManager handles and provides callbacks related to network t
 The **TimeManager** component is responsible for managing network time and tick-based systems within the networking framework. It is central to keeping networked objects synchronized in time, handling ticks, timing conversions, physics step control, and providing hooks for network-related timing events in FishNet. It does this by managing how network timing is performed, either using fixed ticks or variable intervals and by providing precise timing for sending and receiving network data, ensuring synchronization between server and clients. It also controls the physics simulation mode (manual, automatic, or disabled) to maintain consistent simulation across the network.
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Timing.TimeManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Timing.TimeManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

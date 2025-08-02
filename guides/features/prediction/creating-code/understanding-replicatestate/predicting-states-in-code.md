@@ -31,7 +31,7 @@ private void RunInputs(ReplicateData data, ReplicateState state = ReplicateState
 }
 ```
 
-Before we go any further you must first understand what each ReplicateState is. These change based on if input is known, replaying inputs or not, and more. You can check out the [ReplicateState API](https://firstgeargames.com/FishNet/api/api/FishNet.Object.ReplicateState.html) which will explain thoroughly. You can also find this information right in the source of FishNet.
+Before we go any further you must first understand what each ReplicateState is. These change based on if input is known, replaying inputs or not, and more. You can check out the [ReplicateState API](https://fish-networking.com/FishNet/api/api/FishNet.Object.ReplicateState.html) which will explain thoroughly. You can also find this information right in the source of FishNet.
 
 If you've read through ReplicateState and do not fully understand them please continue reading as they become more clear as this guide progresses. You can also visit us on Discord for questions!
 

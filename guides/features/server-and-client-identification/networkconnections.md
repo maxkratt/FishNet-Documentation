@@ -29,7 +29,7 @@ A **NetworkConnection** in FishNet is a core object that represents a single con
 
 ### Important Fields and Properties
 
-**ClientId** — One important field is the [`ClientId`](https://firstgeargames.com/FishNet/api/api/FishNet.Connection.NetworkConnection.html#FishNet_Connection_NetworkConnection_ClientId). This is a unique ID for the NetworkConnection and it is used in a few other places in Fish-Networking. If a ClientId is not set, it defaults to -1, and generally ClientIds increment from 0 until the maximum integer value before reusing old ones from the beginning.
+**ClientId** — One important field is the [`ClientId`](https://fish-networking.com/FishNet/api/api/FishNet.Connection.NetworkConnection.html#FishNet_Connection_NetworkConnection_ClientId). This is a unique ID for the NetworkConnection and it is used in a few other places in Fish-Networking. If a ClientId is not set, it defaults to -1, and generally ClientIds increment from 0 until the maximum integer value before reusing old ones from the beginning.
 
 **FirstObject** — FishNet doesn't have a forced Player GameObject, but you can get the first object owned by a client with the **FirstObject** property. You can also set it with the `SetFirstObject` method, which can be useful if you have the object destroyed and re-instantiated.
 
@@ -40,7 +40,7 @@ A **NetworkConnection** in FishNet is a core object that represents a single con
 **CustomData** — As mentioned above, this is a user-definable object for storing arbitrary data on the connection. It is not synced at all.
 
 {% hint style="success" %}
-Many more useful fields, properties, and methods are available and can be found in the [API page](https://firstgeargames.com/FishNet/api/api/FishNet.Connection.NetworkConnection.html).
+Many more useful fields, properties, and methods are available and can be found in the [API page](https://fish-networking.com/FishNet/api/api/FishNet.Connection.NetworkConnection.html).
 {% endhint %}
 
 ***
