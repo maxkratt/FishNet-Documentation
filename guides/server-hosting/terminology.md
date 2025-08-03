@@ -14,19 +14,19 @@ Persistent services are typically always running, no matter the number of player
 
 ### Dedicated Servers
 
-Dedicated servers is a common term which implies a server authoritative game server. There are several advantages to a dedicated server, and very few cons.
+A dedicated server refs to a server-authoritative game server. There are several advantages to a dedicated server, and very few cons.
 
 **Benefits of a dedicated server:**
 
-* **Scalability**: servers are rarely limited to a set number of players. If you need worlds which support a dozens or more players generally a dedicated server is the recommended route.
+* **Scalability**: dedicated servers are rarely limited to a set number of players. If you need worlds which support dozens — even hundreds — of players, generally a dedicated server is the recommended route.
 * **Security**: a dedicated server is the only way to effectively prevent player cheating, as the server becomes your game's authority and allows you to validate player information.
 * **Bandwidth**: data transfer is rarely limited with dedicated servers. Relays may limit how much total data you can send, or throttle how frequently you can send data.
 * **Latency:** for games which require a fast response time a dedicated server is mandatory. These servers can deploy across the world, providing the best latency and most neutrality for players.
-* **Persistence**: if you want players to be able to join and leave servers, be them session-based or persistent, a dedicated server will provide a smoother experience. A player host is not required for a dedicated server.
+* **Persistence**: if you want players to be able to join and leave servers, whether the service is session-based or persistent, a dedicated server will provide a smoother experience. Unlike peer-to-peer hosting, no player-host is required.
 
 **Drawbacks of a dedicated server:**
 
-* Can be more expensive if a relay service is available to you free as part of where you launched your game, or other means.
+* **Cost:** dedicated servers can be more expensive, especially if a free relay service is available through your platform or other means.
 
 ### Relays
 
