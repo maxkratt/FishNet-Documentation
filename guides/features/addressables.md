@@ -90,5 +90,7 @@ public void UnoadAddressables(string addressablesPackage)
 ```
 
 {% hint style="warning" %}
-When adding addressables on your client be sure to do so before the server will send spawn messages for them.
+When using addressables be sure the client has addressable bundles loaded before the server sends spawn messages for the objects; the above example demonstrates loading addressables.\
+\
+For example: if you are going to load a scene with addressables ensure the client has already loaded the addressables bundle for that scene before the server is to add the client to the scene.
 {% endhint %}
