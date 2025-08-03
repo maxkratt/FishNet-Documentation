@@ -30,16 +30,16 @@ A dedicated server refs to a server-authoritative game server. There are several
 
 ### Relays
 
-A relay is a client authoritative service, where the client simulates as the server.
+A relay is a client-authoritative service, where the client acts as the server.
 
 **Benefits of a relay:**
 
-* Ideal for casual games when a free relay service is available. Impractical if you have to pay for the relay service.
+* **Cost-effective for Casual Games: Relays are Ide**al for casual or small-scale games, especially when a free relay service is available. However, using a paid relay service can quickly become impractical, as pay-per-use dedicated servers are often more affordable, while also gaining other advantages.
 
 **Drawbacks of a relay:**
 
 * **Scalability**: relays cannot scale. You are often limited to a number of players per session.
-* **Security**: whichever player is acting as the server, is the authoritative client. Because there is not a neutral authority, cheating is very possible and often easily performed on relay servers. If cheating is a concern, a relay is likely not for you.
-* **Bandwidth**: total used bandwidth is rarely restricted — or at least not to a means you will encounter. However, there are often limitations on how much data can be regularly sent. Games which need to send data rapidly, or send large chunks of data, may find themselves being throttled by the relay; this can create any number of issues.
-* **Latency**: the client acting as the server is typically the determining factor for latency. A host with a weak connection will result in all players having increased latency. Players further from the host will also experience more latency.
-* **Persistence**: there is no state persistence with relays — when the host ends the session everything is lost. In addition, a leaving host will often immediately terminate the game session for all connected players.
+* **Security**: the client acting as the host is the authoritative source. Because there is not a neutral authority, cheating is very possible and often easily performed on relay servers. If cheating is a concern, a relay is likely not for you.
+* **Bandwidth**: while total bandwidth usage is rarely restricted, most relay services impose limitations on data transfer frequency or size. Games that require rapid data transmission or large data chunks may experience throttling, leading to various performance issues.
+* **Latency**: the hosting client's network connection determines latency for the entire session. A weak connection results in higher latency for all players, and players located far from the host will experience additional delay.
+* **Persistence**: relay services do not support state persistence. When the host ends the session, all progress is lost. Additionally, if the host leaves unexpectedly, the game session typically terminates immediately for all connected players.
