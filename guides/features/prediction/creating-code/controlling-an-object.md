@@ -64,7 +64,7 @@ Learn more about using [PredictionRigidbody](../predictionrigidbody.md).
 
 Typically speaking you would want to run your replicate(or inputs) during OnTick. When you send the reconcile depends on if you are using physics bodies or not.
 
-When using physics bodies, such as a rigidbody, you would send the reconcile during OnPostTick because you want to send the state after the physics have simulated your replicate inputs. See the [TimeManager API ](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Timing.TimeManager.html#FishNet_Managing_Timing_TimeManager_OnPostTick)for more details on tick and physics event callbacks.
+When using physics bodies, such as a rigidbody, you would send the reconcile during OnPostTick because you want to send the state after the physics have simulated your replicate inputs. See the [TimeManager API ](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Timing.TimeManager.html#FishNet_Managing_Timing_TimeManager_OnPostTick)for more details on tick and physics event callbacks.
 
 Non-physics controllers can also send in OnTick, since they do not need to wait for a physics simulation to have the correct outcome after running inputs.
 

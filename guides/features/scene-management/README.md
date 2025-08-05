@@ -12,7 +12,7 @@ description: >-
 The [**SceneManager**](../../../fishnet-building-blocks/components/managers/scenemanager.md) Component has many scene features to support your multiplayer needs. The links below will take you to the different guides for each feature that the [**SceneManager**](../../../fishnet-building-blocks/components/managers/scenemanager.md) has to offer.
 
 {% hint style="success" %}
-Visit the [**API**](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Scened.SceneManager.html) to see the public items exposed to the user in the SceneManager.
+Visit the [**API**](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Scened.SceneManager.html) to see the public items exposed to the user in the SceneManager.
 {% endhint %}
 
 ## Sub Pages

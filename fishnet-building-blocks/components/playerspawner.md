@@ -11,7 +11,7 @@ description: >-
 The **PlayerSpawner** component in FishNet is responsible for spawning player objects for clients when they connect to the server. You set the player prefab using the inspector or via the `SetPlayerPrefab` method. You can also define an array of spawn points (Transforms) for players (the **Spawns** array). If no spawn points are set, the prefab’s own position and rotation are used. You also have access to the `OnSpawned` event that fires on the server when a player is spawned.
 
 {% hint style="success" %}
-Check out the API page for specific fields and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Spawning.PlayerSpawner.html).
+Check out the API page for specific fields and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Component.Spawning.PlayerSpawner.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

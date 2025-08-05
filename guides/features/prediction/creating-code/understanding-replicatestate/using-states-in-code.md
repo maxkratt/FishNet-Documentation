@@ -120,7 +120,7 @@ private void MovePlayer(ReplicateData data, ReplicateState state = ReplicateStat
 }
 ```
 
-Preventing future movement on rigidbodies is a few more lines of code, but still pretty easy. We're going to use the RigidbodyPauser reference on the NetworkObject to pause the rigidbody when in the future. The RigidbodyPauser is a lesser known part of our [NetworkObject API ](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkObject.html#FishNet_Object_NetworkObject_RigidbodyPauser)and is used almost exclusively for prediction.
+Preventing future movement on rigidbodies is a few more lines of code, but still pretty easy. We're going to use the RigidbodyPauser reference on the NetworkObject to pause the rigidbody when in the future. The RigidbodyPauser is a lesser known part of our [NetworkObject API ](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkObject.html#FishNet_Object_NetworkObject_RigidbodyPauser)and is used almost exclusively for prediction.
 
 ```csharp
 [Replicate]

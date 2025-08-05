@@ -13,7 +13,7 @@ Adding this component to a [NetworkObject](../../../guides/features/networked-ga
 The **PredictedSpawn** component allows you to inherit from it and then override any of several available virtual methods to customize and validate predicted spawns.
 
 {% hint style="success" %}
-Check out its full API page for the specific methods [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Ownership.PredictedSpawn.html).
+Check out its full API page for the specific methods [here](https://fish-networking.com/FishNet/api/api/FishNet.Component.Ownership.PredictedSpawn.html).
 {% endhint %}
 
 ## Settings
@@ -22,11 +22,11 @@ Check out its full API page for the specific methods [here](https://firstgeargam
 
 ### :gear:  **Allow Spawning**
 
-> This allows clients to predicted spawn this object. You can change this at run-time with the [`SetAllowSpawning`](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Ownership.PredictedSpawn.html#FishNet_Component_Ownership_PredictedSpawn_SetAllowDespawning_System_Boolean_) method. Just be sure to do so on the client and server side.
+> This allows clients to predicted spawn this object. You can change this at run-time with the [`SetAllowSpawning`](https://fish-networking.com/FishNet/api/api/FishNet.Component.Ownership.PredictedSpawn.html#FishNet_Component_Ownership_PredictedSpawn_SetAllowDespawning_System_Boolean_) method. Just be sure to do so on the client and server side.
 
 ### :gear:  **Allow Despawning**
 
-> This allows clients to predicted despawn this object. You can change this at run-time with the [`SetAllowDespawning`](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Ownership.PredictedSpawn.html#FishNet_Component_Ownership_PredictedSpawn_SetAllowDespawning_System_Boolean_) method. Just be sure to do so on the client and server side.
+> This allows clients to predicted despawn this object. You can change this at run-time with the [`SetAllowDespawning`](https://fish-networking.com/FishNet/api/api/FishNet.Component.Ownership.PredictedSpawn.html#FishNet_Component_Ownership_PredictedSpawn_SetAllowDespawning_System_Boolean_) method. Just be sure to do so on the client and server side.
 
 {% hint style="info" %}
 You can implement WritePayload and ReadPayload in your classes which inherit NetworkBehaviour to send data with spawn messages. This can even be used for predicted spawns to the server, and clients!

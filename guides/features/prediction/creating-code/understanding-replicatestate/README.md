@@ -7,7 +7,7 @@ description: >-
 # Understanding ReplicateState
 
 {% hint style="info" %}
-If you need a refresher on what each state means see our [API](https://firstgeargames.com/FishNet/api/api/FishNet.Object.ReplicateState.html) or simply navigate to the ReplicateState enum in your code editor.
+If you need a refresher on what each state means see our [API](https://fish-networking.com/FishNet/api/api/FishNet.Object.ReplicateState.html) or simply navigate to the ReplicateState enum in your code editor.
 {% endhint %}
 
 Each state is a flag value; a replicate state may contain multiple flags. There are numerous extensions you may use to check if a state contains certain values.

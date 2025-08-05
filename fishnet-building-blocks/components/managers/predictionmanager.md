@@ -11,7 +11,7 @@ description: >-
 The **PredictionManager** is a core component responsible for managing the prediction system, which allows clients to predict their own actions and then reconcile (correct) their state when authoritative updates are received from the server. It allows you to tweak various global prediction settings and get certain prediction callbacks.
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Predicting.PredictionManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Predicting.PredictionManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

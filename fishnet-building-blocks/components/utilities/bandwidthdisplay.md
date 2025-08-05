@@ -30,8 +30,8 @@ Using this component in combination with the [Statistics Manager](../managers/st
 
 ### :gear:  **Show Outgoing**
 
-> When enabled, this will display the bandwidth used from data being sent. This can be changed at runtime with the [`SetShowOutgoing`](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Utility.BandwidthDisplay.html#FishNet_Component_Utility_BandwidthDisplay_SetShowOutgoing_System_Boolean_) method.
+> When enabled, this will display the bandwidth used from data being sent. This can be changed at runtime with the [`SetShowOutgoing`](https://fish-networking.com/FishNet/api/api/FishNet.Component.Utility.BandwidthDisplay.html#FishNet_Component_Utility_BandwidthDisplay_SetShowOutgoing_System_Boolean_) method.
 
 ### :gear:  **Show Incoming**
 
-> When enabled, this will display the bandwidth used from data being received. This can be changed at runtime with the [`SetShowIncoming`](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Utility.BandwidthDisplay.html#FishNet_Component_Utility_BandwidthDisplay_SetShowIncoming_System_Boolean_) method.
+> When enabled, this will display the bandwidth used from data being received. This can be changed at runtime with the [`SetShowIncoming`](https://fish-networking.com/FishNet/api/api/FishNet.Component.Utility.BandwidthDisplay.html#FishNet_Component_Utility_BandwidthDisplay_SetShowIncoming_System_Boolean_) method.

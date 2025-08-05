@@ -11,7 +11,7 @@ description: >-
 The **Statistics Manager** component is responsible for tracking and reporting network traffic statistics for your multiplayer game. Its **Network Traffic** can be used to gain basic information about how much network traffic your game is using. These values must be enabled for the [BandwidthDisplay](../utilities/bandwidthdisplay.md) component to function.
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Statistic.StatisticsManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Statistic.StatisticsManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

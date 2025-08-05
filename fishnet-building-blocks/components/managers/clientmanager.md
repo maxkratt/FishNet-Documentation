@@ -13,7 +13,7 @@ It maintains a reference to the network connection of the local client, `Connect
 When enabled, this component will also timeout the client from the server if the server doesn't respond after a set time.&#x20;
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Client.ClientManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Client.ClientManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

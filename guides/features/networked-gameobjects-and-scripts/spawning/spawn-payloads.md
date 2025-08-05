@@ -18,7 +18,7 @@ When writing and reading, the order and amount of data written and read is impor
 
 The first parameter of the **WritePayload** method needs to be a [NetworkConnection](../../server-and-client-identification/networkconnections.md), this represents which client the spawn is going to happen for and is provided by FishNet when it calls the method.
 
-The second parameter should be of the type [Writer](https://firstgeargames.com/FishNet/api/api/FishNet.Serializing.Writer.html), this will represent a reference to the Writer being used and you will use it to add data to the payload.
+The second parameter should be of the type [Writer](https://fish-networking.com/FishNet/api/api/FishNet.Serializing.Writer.html), this will represent a reference to the Writer being used and you will use it to add data to the payload.
 
 For example you can do the following:
 
@@ -33,14 +33,14 @@ public override void WritePayload(NetworkConnection connection, Writer writer)
 ```
 
 {% hint style="success" %}
-You can view the API for this method [here](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#FishNet_Object_NetworkBehaviour_WritePayload_FishNet_Connection_NetworkConnection_FishNet_Serializing_Writer_).
+You can view the API for this method [here](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#FishNet_Object_NetworkBehaviour_WritePayload_FishNet_Connection_NetworkConnection_FishNet_Serializing_Writer_).
 {% endhint %}
 
 ## Read Payload
 
 The first parameter of the **ReadPayload** method needs to be a [NetworkConnection](../../server-and-client-identification/networkconnections.md), this represents which client the spawn is happening for and is provided by FishNet when it calls the method.
 
-The second parameter should be of the type [Reader](https://firstgeargames.com/FishNet/api/api/FishNet.Serializing.Reader.html), this will represent a reference to the Reader being used and you will use it to get data out of  the payload.
+The second parameter should be of the type [Reader](https://fish-networking.com/FishNet/api/api/FishNet.Serializing.Reader.html), this will represent a reference to the Reader being used and you will use it to get data out of  the payload.
 
 For example you can do the following:
 
@@ -55,7 +55,7 @@ public override void ReadPayload(NetworkConnection connection, Reader reader)
 ```
 
 {% hint style="success" %}
-You can view the API for this method [here](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#FishNet_Object_NetworkBehaviour_ReadPayload_FishNet_Connection_NetworkConnection_FishNet_Serializing_Reader_).
+You can view the API for this method [here](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#FishNet_Object_NetworkBehaviour_ReadPayload_FishNet_Connection_NetworkConnection_FishNet_Serializing_Reader_).
 {% endhint %}
 
 ## More Advanced Example

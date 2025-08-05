@@ -8,7 +8,7 @@ description: >-
 
 ## General
 
-Loading scenes of all types depend upon SceneLoadData. The SceneLoadData class contains information about what scenes to load, how to load them, which objects to move to new scenes, and more. You can view the SceneLoadData API [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Scened.SceneLoadData.html).
+Loading scenes of all types depend upon SceneLoadData. The SceneLoadData class contains information about what scenes to load, how to load them, which objects to move to new scenes, and more. You can view the SceneLoadData API [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Scened.SceneLoadData.html).
 
 ## Default Values
 

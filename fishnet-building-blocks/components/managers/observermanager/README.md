@@ -11,7 +11,7 @@ description: >-
 **ObserverManager** is used to globally customize the observer system. Observer conditions within the ObserverManager will be automatically added to [NetworkObjects](../../../../guides/features/networked-gameobjects-and-scripts/networkobjects/), unless the [NetworkObserver](../../network-observer.md) component is set to ignore the manager.
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Observing.ObserverManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Observing.ObserverManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

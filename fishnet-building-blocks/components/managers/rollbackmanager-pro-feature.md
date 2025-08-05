@@ -11,7 +11,7 @@ description: >-
 The RollbackManager must be added and configured properly for lag compensation to function properly. Objects you wish to rollback must contain the[ ColliderRollback](../colliderrollback.md) script on them. You can learn more about using it on this page: [lag-compensation](../../../guides/features/lag-compensation/ "mention")
 
 {% hint style="success" %}
-Check out its API page for more specific methods [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.ColliderRollback.RollbackManager.html).
+Check out its API page for more specific methods [here](https://fish-networking.com/FishNet/api/api/FishNet.Component.ColliderRollback.RollbackManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

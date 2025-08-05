@@ -17,7 +17,7 @@ public class YourClass : NetworkBehaviour
 * new value will be sent to clients. */
 ```
 
-SyncTypes can also be customized with additional options by using the UpdateSettings method within your declared SyncTypes, or using the initializer of your SyncType. These options include being notified when the value changes, changing how often the SyncType will synchronize, and more. You can view a full list of SyncVar properties which may be changed by viewing the [API](https://firstgeargames.com/FishNet/api/api/FishNet.Object.Synchronizing.SyncVarAttribute.html#fields).
+SyncTypes can also be customized with additional options by using the UpdateSettings method within your declared SyncTypes, or using the initializer of your SyncType. These options include being notified when the value changes, changing how often the SyncType will synchronize, and more. You can view a full list of SyncVar properties which may be changed by viewing the [API](https://fish-networking.com/FishNet/api/api/FishNet.Object.Synchronizing.SyncVarAttribute.html#fields).
 
 Below is a demonstration on sending SyncTypes at a longer interval of at most every 1f, and being notified of when the value changes.
 

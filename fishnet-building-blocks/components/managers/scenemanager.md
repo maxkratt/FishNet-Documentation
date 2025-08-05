@@ -14,7 +14,7 @@ FishNet’s **SceneManager** provides robust, synchronized, and event-driven sce
 The callbacks within the SceneManager are informative and quite useful, well worth looking into!
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Scened.SceneManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Scened.SceneManager.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>

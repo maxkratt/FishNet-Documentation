@@ -21,7 +21,7 @@ Commonly used properties are:
 * **IsOwner** is true if you are a client, and the owner of the object.
 * **HasAuthority** is true if you are the owner, or if server and there is no owner.
 
-To view all properties please visit the [NetworkBehaviour API](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#properties).
+To view all properties please visit the [NetworkBehaviour API](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#properties).
 
 {% hint style="info" %}
 When accessing a NetworkBehaviour property or method consider using the 'base' keyword to show your intentions.
@@ -35,7 +35,7 @@ For example, base.IsOwner
 You do not need to include the base.XYZ() calls when implementing callbacks.
 {% endhint %}
 
-Like Properties, there are a large number of available methods. The methods you will be using commonly are known as callbacks. If you are interested in all available methods view the [methods section under API](https://firstgeargames.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#methods).
+Like Properties, there are a large number of available methods. The methods you will be using commonly are known as callbacks. If you are interested in all available methods view the [methods section under API](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#methods).
 
 Most callbacks have a server and client version, and each has great potential. To use a callback you must inherit from NetworkBehaviour and override the callback you wish to use.
 

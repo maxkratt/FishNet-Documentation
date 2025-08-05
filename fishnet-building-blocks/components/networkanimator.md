@@ -15,7 +15,7 @@ This component does not align with our Client-Side prediction API. You may still
 You may place as many NetworkAnimators as you like on children or root. When an animator is not specified on the Animator field the first one on the same object is used.
 
 {% hint style="success" %}
-Check out the API page for specific methods, and properties [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Animating.NetworkAnimator.html).
+Check out the API page for specific methods, and properties [here](https://fish-networking.com/FishNet/api/api/FishNet.Component.Animating.NetworkAnimator.html).
 {% endhint %}
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
@@ -64,7 +64,7 @@ To synchronize these actions over the network you will simply call each desired 
 _myNetworkAnimator.Play(stringOrHash);
 ```
 
-There are several more common methods in our NetworkAnimator component that you will want to use. To see all methods you're encouraged to view our [API](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Animating.NetworkAnimator.html) or simply open the NetworkAnimator source file.
+There are several more common methods in our NetworkAnimator component that you will want to use. To see all methods you're encouraged to view our [API](https://fish-networking.com/FishNet/api/api/FishNet.Component.Animating.NetworkAnimator.html) or simply open the NetworkAnimator source file.
 
 Here are some examples of commonly used methods.
 

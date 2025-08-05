@@ -37,7 +37,7 @@ public void OnKeyDown_Enter(string text)
 }
 ```
 
-Sending from the server to client(s) is done very much the same, but you are presented with more options. For a complete list of options I encourage you to view the [API](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Server.ServerManager.html#methods). Here is an example of sending a broadcast to all clients which have visibility of a specific client. This establishes the idea that clientA sends a chat message to the server, and the server relays it to other clients which can see clientA. In this example clientA would also get the broadcast.
+Sending from the server to client(s) is done very much the same, but you are presented with more options. For a complete list of options I encourage you to view the [API](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Server.ServerManager.html#methods). Here is an example of sending a broadcast to all clients which have visibility of a specific client. This establishes the idea that clientA sends a chat message to the server, and the server relays it to other clients which can see clientA. In this example clientA would also get the broadcast.
 
 ```csharp
 // When receiving broadcast on the server which connection

@@ -2,7 +2,7 @@
 
 ## Description <a href="#server-and-host" id="server-and-host"></a>
 
-The **Match Condition** evaluates to true when players or objects share the same match[^1]. Both owned and non-owned objects can be added to matches. Objects or players not added to matches will have their data synchronized with everyone, unless prevented by another condition. See the [MatchCondition api](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Observing.MatchCondition.html) for more information on usage. This condition is not a timed condition.
+The **Match Condition** evaluates to true when players or objects share the same match[^1]. Both owned and non-owned objects can be added to matches. Objects or players not added to matches will have their data synchronized with everyone, unless prevented by another condition. See the [MatchCondition api](https://fish-networking.com/FishNet/api/api/FishNet.Component.Observing.MatchCondition.html) for more information on usage. This condition is not a timed condition.
 
 <div align="left"><figure><img src="../../../.gitbook/assets/match-observer-condition.svg" alt="" width="466"><figcaption></figcaption></figure></div>
 

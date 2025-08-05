@@ -15,7 +15,7 @@ With the TransportManager you can optionally utilize an intermediate layer to mo
 If you want to modify network data such as for encryption, or use any one of our number of transports, you will want to add this component to your [NetworkManager](../network-manager.md) game object.
 
 {% hint style="success" %}
-Check out its API page for more specific methods and events [here](https://firstgeargames.com/FishNet/api/api/FishNet.Managing.Transporting.TransportManager.html).
+Check out its API page for more specific methods and events [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Transporting.TransportManager.html).
 {% endhint %}
 
 ## Settings

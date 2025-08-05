@@ -11,7 +11,7 @@ description: >-
 This component is used for receiving collision events for prediction enabled objects for 2D Colliders. It is very much equivalent to a Collider's `OnCollisionEnter`, `OnCollisionExit`, and `OnCollisionStay` messages, except that to receive these you would add this component to your game object and subscribe to its public events.
 
 {% hint style="success" %}
-Check out this API page [here](https://firstgeargames.com/FishNet/api/api/FishNet.Component.Prediction.NetworkCollider2D.html) for the specific details.
+Check out this API page [here](https://fish-networking.com/FishNet/api/api/FishNet.Component.Prediction.NetworkCollider2D.html) for the specific details.
 {% endhint %}
 
 ## Settings
