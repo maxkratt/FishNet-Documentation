@@ -29,7 +29,7 @@ Recommended for most users who want a stable release without version control set
 
 ### Unity Package File
 
-Use this method if you have a `.unitypackage` file, for example, downloaded from [GitHub Releases](https://github.com/FirstGearGames/FishNet/releases), from the [FirstGearGames website](https://www.fish-networking.com/), or shared by a team member.
+Use this method if you have a `.unitypackage` file, for example, downloaded from [GitHub Releases](https://github.com/FirstGearGames/FishNet/releases), from the [Fish-Networking website](https://www.fish-networking.com/), or shared by a team member.
 
 1. Download the FishNet `.unitypackage` file.
 2. In Unity, go to **Assets > Import Package > Custom Package…**
