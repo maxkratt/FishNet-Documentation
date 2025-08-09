@@ -29,7 +29,7 @@ Before calling the SceneManagers Load Scene functions you will need to setup the
 
 #### SceneLookupData
 
-[**SceneLookupData**](../scene-data/scenelookupdata.md) is the class used to specify what scene you want the [**SceneManager**](../../../../fishnet-building-blocks/components/managers/scenemanager.md) to load. You will not create the lookup data manually and instead use the SceneLoadData constructors that will create the SceneLookupData automatically.
+[**SceneLookupData**](../scene-data/scenelookupdata.md) is the class used to specify what scene you want the [**SceneManager**](../../../../fishnet-building-blocks/components/managers/scenemanager.md) to load. You do not need to create the lookup data manually but can instead use the SceneLoadData constructors which will create the SceneLookupData automatically.
 
 #### SceneLoadData
 
@@ -49,7 +49,7 @@ Loading new Scenes can only be done by Name, you cannot use Handle or Scene Refe
 
 #### Global Scenes
 
-* Global Scenes can be loaded by calling LoadGlobalScenes() in the SceneManager.
+* Global Scenes can be loaded by calling `LoadGlobalScenes()` in the SceneManager.
 * When loaded globally, scenes will be loaded for all current, and future clients.
 
 ```csharp
