@@ -5,9 +5,9 @@ description: A well crafted bug report will result in bugs being resolved much q
 # Creating Bug Reports
 
 {% hint style="danger" %}
-Important: a new requirement is in place when creating bug reports.
+Important: sample projects are now mandatory with each bug report.
 
-To ensure your bug report is not closed please read this documentation thoroughly before creating a bug report.
+Please review [Necessary Information](./#necessary-information) and [Sample Project](./#sample-project) before creating bug reports to ensure your issue is reviewed.
 {% endhint %}
 
 New bug reports can be created by navigating [here](https://github.com/FirstGearGames/FishNet/issues/new?assignees=\&labels=\&projects=\&template=bug_report.md\&title=). You will need to be logged into GitHub to create a bug report.
