@@ -4,6 +4,12 @@ description: A well crafted bug report will result in bugs being resolved much q
 
 # Creating Bug Reports
 
+{% hint style="danger" %}
+Important: sample projects are now mandatory with each bug report.
+
+Please review [Necessary Information](./#necessary-information) and [Sample Project](./#sample-project) before creating bug reports to ensure your issue is reviewed.
+{% endhint %}
+
 New bug reports can be created by navigating [here](https://github.com/FirstGearGames/FishNet/issues/new?assignees=\&labels=\&projects=\&template=bug_report.md\&title=). You will need to be logged into GitHub to create a bug report.
 
 ## Keep An Eye On Your Reports
@@ -24,15 +30,19 @@ When filling out your report please include the following:
 
 * Unity version.
 * Fish-Networking version.
-* Discord link where you troubleshot the issue.
 
-{% hint style="info" %}
-If you are not able to join our Discord to troubleshoot please specify this in place of where you would include the Discord link. We still expect you to troubleshoot the issue locally if you are unable to connect with our helpers.
+{% hint style="warning" %}
+Since V4 is now in long-term-support we will only review bug reports on the latest Fish-Networking version.
 {% endhint %}
 
-{% hint style="success" %}
-Leaving your Discord name in our server, or email address(less preferred) will allow us to contact you if you're unresponsive to the bug report while we still need more information.
+* Steps you took to troubleshot the issue.
+* An attached [sample project](./#sample-project).
+
+{% hint style="warning" %}
+If the sample project does not meet our guidelines the file will be deleted and the bug report will be closed.
 {% endhint %}
+
+Tip: Leaving your Discord name as it is in our server, or email address(less preferred) will allow us to contact you if you're unresponsive to the bug report while we still need more information.
 
 ### Description
 
@@ -40,7 +50,7 @@ Provide a brief description of the bug report. This should be a summary of what 
 
 ### Replication
 
-In an ordered fashion please provide step-by-step details on how to reproduce the bug. Be sure to indicate if starting as client, server, if multiple builds must be running, what actions to take, and so on.
+In an ordered fashion please provide step-by-step details on how to reproduce the bug using your sample project. Be sure to indicate if starting as client, server, if multiple builds must be running, what actions to take, and so on.
 
 ### Expected Behavior
 
@@ -52,19 +62,18 @@ If there is any media or content which could assist us in resolving your issue p
 
 ## Sample Project
 
-A sample project is not always required; but, at times issues are too complex to reproduce using the issue template. When this is true we will ask you to create a sample project for us to look at. When including a sample project also state how to use the project.
+A sample project should reproduce the issue in the most minimal way possible.
 
 ### Guidelines
 
-Sample projects should always follow guidelines to keep them simple and small.
-
 * All samples must be within their own folder so when imported into a Unity project they will not be merged with other files. For example, MyBugReport\Scripts, MyBugReport\Prefabs, and so on.
-* Provide only files needed to reproduce the problem. Do not provide extra models, prefabs, code, etc unrelated to the problem. Delete any code in provided scripts which does not directly affect your issue.&#x20;
+* Provide only files needed to reproduce the problem. Do not provide extra models, prefabs, code, etc unrelated to the problem. Delete any code in provided scripts which does not directly affect your issue.
 * Do not include Fish-Networking within your sample project; only include the files needed to reproduce the problem.
 * Use the old input system.
-* Export as a **unitypackage.**  To do so right-click your folder, Export Package, and uncheck **Include Dependencies** at the bottom.
+* Keep the sample project **under** 1mB.
+* Export as a **unitypackage.** To do so right-click your folder, Export Package, and uncheck **Include Dependencies** at the bottom.
 
-{% hint style="info" %}
+{% hint style="success" %}
 GitHub does not allow uploading unitypackage files. You may have to archive your exported package before uploading. Please use zip format when doing so.
 {% endhint %}
 
