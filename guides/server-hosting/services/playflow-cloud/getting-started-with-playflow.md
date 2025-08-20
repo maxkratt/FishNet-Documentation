@@ -6,7 +6,7 @@ description: Step-by-step tutorial for getting up and running with PlayFlow Clou
 
 This guide assumes you have some or all of your game already written using FishNet and are now ready to use PlayFlow to implement a dedicated server. You can also use PlayFlow throughout the development process as its one-click deployment makes it easy to setup a temporary server for testing.
 
-## Before We Begin...
+## Before we Begin...
 
 {% stepper %}
 {% step %}
@@ -72,7 +72,7 @@ If we have set the [networkhudcanvas.md](../../../../fishnet-building-blocks/pre
 
 Once that's all done we can move on to using PlayFlow Cloud!
 
-## Deploying Your Game With PlayFlow
+## Deploying your Game with PlayFlow
 
 {% stepper %}
 {% step %}
@@ -193,12 +193,10 @@ In the Unity Editor, select the Tugboat component (or other transport you may be
 
 You can now run the game or build and run it and connect as a client. Your game should connect to the PlayFlow server we setup and work correctly!
 {% endstep %}
+{% endstepper %}
 
-{% step %}
-### Take the Next Steps! <a href="#next-steps" id="next-steps"></a>
+## Take the Next Steps!
 
-Well done! You've now learned how to setup and deploy your server using PlayFlow. If you want to check out more of their features you can checkout their documentation here: [https://documentation.playflowcloud.com/](https://documentation.playflowcloud.com/)
+Well done! You've now learned how to setup and deploy your server using PlayFlow. If you want to check out more of their features, you can check out their documentation here: [https://documentation.playflowcloud.com/](https://documentation.playflowcloud.com/)
 
 You are also encouraged to join their <i class="fa-discord">:discord:</i> Discord server here: [https://discord.gg/P5w45Vx5Q8](https://discord.gg/P5w45Vx5Q8)
-{% endstep %}
-{% endstepper %}

@@ -136,6 +136,7 @@
   * [Services](guides/server-hosting/services/README.md)
     * [PlayFlow Cloud (Recommended)](guides/server-hosting/services/playflow-cloud/README.md)
       * [Getting Started with PlayFlow](guides/server-hosting/services/playflow-cloud/getting-started-with-playflow.md)
+      * [Easy WebGL hosting with PlayFlow](guides/server-hosting/services/playflow-cloud/easy-webgl-hosting-with-playflow.md)
     * [Getting Started with AWS](guides/server-hosting/services/getting-started-with-aws.md)
 * [Upgrading To Fish-Networking](guides/upgrading-to-fish-net.md)
 * [Troubleshooting](guides/troubleshooting/README.md)
