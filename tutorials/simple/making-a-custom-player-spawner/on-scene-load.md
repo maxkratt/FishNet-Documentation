@@ -79,9 +79,9 @@ NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer:
 {% endstep %}
 
 {% step %}
-### Final Script
+### Basic Final Script
 
-The script is now finished and you can add it to a game object in your desired scene and assign the player prefab to it.
+The script can now be added to a game object in your desired scene and assigned a player prefab to it. As long as the client is loaded into this scene after connecting, he should get a player object spawned for him.
 
 {% code title="ScenePlayerSpawner.cs" lineNumbers="true" %}
 ```csharp
@@ -97,6 +97,158 @@ public class ScenePlayerSpawner : NetworkBehaviour
     // This method runs on the server when the client is about to spawn this object.
     // Since the player is about to spawn this object, we know he is in this scene.
     public override void OnSpawnServer(NetworkConnection connection)
+    {
+        NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+        Spawn(obj, connection, gameObject.scene);
+    }
+}
+```
+{% endcode %}
+{% endstep %}
+{% endstepper %}
+
+{% hint style="warning" %}
+This will work great as long as the scene is not one of the starting scenes. If it is, then FishNet may complain that we are trying to spawn an object for the client before all the starting scenes have been loaded, to fix that, check out the section below.
+{% endhint %}
+
+***
+
+### Handling Starting Scenes
+
+If this scene happens to be a scene that's loaded before or as soon as the client connects, then the previous script will cause a warning. To fix this we need to only spawn the player **after** the client has loaded all starting scenes.
+
+{% stepper %}
+{% step %}
+### Listening for the Event
+
+Let's start solving this by adding the override methods `OnStartServer` and `OnStopServer`. We will use these to subscribe to the [SceneManager](../../../fishnet-building-blocks/components/managers/scenemanager.md)'s [OnClientLoadedStartScenes ](../../../guides/features/network-callbacks.md#shared-events)event.
+
+```csharp
+public override void OnStartServer()
+{
+    SceneManager.OnClientLoadedStartScenes += OnClientLoadedStartScenes;
+}
+
+public override void OnStopServer()
+{
+    if (SceneManager != null)
+        SceneManager.OnClientLoadedStartScenes -= OnClientLoadedStartScenes;
+}
+```
+
+These methods will run on the server side as soon as this [NetworkObject](../../../guides/features/networked-gameobjects-and-scripts/networkobjects/) is spawned and despawned. We use them to subscribe and unsubscribe to the event as shown above.
+{% endstep %}
+
+{% step %}
+### Handling the Event
+
+Now we'll write the code that will spawn the player when this event is triggered, as long as he is actually in the scene (remember this event will be triggered whenever the player has loaded all starting scenes, which may or not include this one at all).
+
+```csharp
+private void OnClientLoadedStartScenes(NetworkConnection connection, bool asServer)
+{
+    // Since this method is called when the client has loaded all start scenes,
+    // we need to check if the client is actually in this scene before spawning the player.
+    // We use Observers.Contains to see if this connection is observing this object, and
+    // thus in this scene. We could have alternatively checked if the connection has this
+    // scene loaded like so: connection.Scenes.Contains(gameObject.scene)
+    if (asServer && Observers.Contains(connection))
+        SpawnPlayer(connection);
+}
+```
+
+You will notice we are calling a `SpawnPlayer` method here, we'll create that shortly.
+{% endstep %}
+
+{% step %}
+### Adjusting the OnSpawnServer Method
+
+Now we will adjust to the `OnSpawnServer` method to make sure it only spawns a player if he's loaded the starting scenes.
+
+```csharp
+// This method runs on the server when the client is about to spawn this object.
+// Since the player is about to spawn this object, we know he is in this scene.
+// BUT he may not have loaded all start scenes yet, so we check that.
+public override void OnSpawnServer(NetworkConnection connection)
+{
+    if (connection.LoadedStartScenes(true))
+        SpawnPlayer(connection);
+}
+```
+
+Checking the `NetworkConnection.LoadedStartScenes` method will return, as expected, whether or not that client has loaded the starting scenes. It takes a Boolean parameter for whether this check is happening on the server or client side. We'll pass true as this will always happen on the server for us.
+{% endstep %}
+
+{% step %}
+### The SpawnPlayer Method
+
+Finally, we moved the actual player spawning logic into its own method called **SpawnPlayer**.
+
+```csharp
+private void SpawnPlayer(NetworkConnection connection)
+{
+    NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+    Spawn(obj, connection, gameObject.scene);
+}
+```
+
+This is all pretty self-explanatory, but you may be wondering why this method is called twice; once in **OnSpawnServer** and once in **OnClientLoadedStartScenes**. Couldn't this cause two players to be spawned for a single player when he loads into our scene?
+
+It shouldn't, because in our **OnSpawnServer** method we first checked whether the client had loaded the starting scenes before we allowed it to spawn a player, this prevents it from spawning a player if **OnSpawnServer** runs before **OnClientLoadedStartScenes.**&#x20;
+
+Then in **OnClientLoadedStartScenes** we checked that the client was observing this object before spawning a player, this prevents it from spawning a player if **OnClientLoadedStartScenes** runs before **OnSpawnServer.**
+
+The result of this is that whichever happens later will be the one to spawn the player, and FishNet won't have any issues with starting scenes or later loading scenes.
+{% endstep %}
+
+{% step %}
+### Final Script
+
+The script is now finished and you can add it to a game object in your desired scene and assign the player prefab to it.
+
+{% code title="ScenePlayerSpawner.cs" lineNumbers="true" %}
+```csharp
+using FishNet.Connection;
+using FishNet.Managing;
+using FishNet.Object;
+using UnityEngine;
+
+public class ScenePlayerSpawner : NetworkBehaviour
+{
+    [SerializeField] private NetworkObject playerPrefab;
+
+    public override void OnStartServer()
+    {
+        SceneManager.OnClientLoadedStartScenes += OnClientLoadedStartScenes;
+    }
+
+    public override void OnStopServer()
+    {
+        if (SceneManager != null)
+            SceneManager.OnClientLoadedStartScenes -= OnClientLoadedStartScenes;
+    }
+
+    private void OnClientLoadedStartScenes(NetworkConnection connection, bool asServer)
+    {
+        // Since this method is called when the client has loaded all start scenes,
+        // we need to check if the client is actually in this scene before spawning the player.
+        // We use Observers.Contains to see if this connection is observing this object, and
+        // thus in this scene. We could have alternatively checked if the connection has this
+        // scene loaded like so: connection.Scenes.Contains(gameObject.scene)
+        if (asServer && Observers.Contains(connection))
+            SpawnPlayer(connection);
+    }
+
+    // This method runs on the server when the client is about to spawn this object.
+    // Since the player is about to spawn this object, we know he is in this scene.
+    // BUT he may not have loaded all start scenes yet, so we check that.
+    public override void OnSpawnServer(NetworkConnection connection)
+    {
+        if (connection.LoadedStartScenes(true))
+            SpawnPlayer(connection);
+    }
+
+    private void SpawnPlayer(NetworkConnection connection)
     {
         NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
         Spawn(obj, connection, gameObject.scene);

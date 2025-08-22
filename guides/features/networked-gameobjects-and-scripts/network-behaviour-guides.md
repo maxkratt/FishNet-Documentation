@@ -31,6 +31,8 @@ For example, base.IsOwner
 
 ## Callbacks <a href="#callbacks" id="callbacks"></a>
 
+{% embed url="https://www.youtube.com/watch?v=goH4CX-aG-E" %}
+
 {% hint style="success" %}
 You do not need to include the base.XYZ() calls when implementing callbacks.
 {% endhint %}

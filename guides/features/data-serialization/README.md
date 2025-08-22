@@ -6,7 +6,7 @@ description: >-
 
 # Data Serialization
 
-Anytime you use a type within a [communication ](../../high-level-overview/terminology/communicating.md)Fish-Networking automatically recognizes you wish to send the type over the network, and will create a serializer for it. FishNet will only attempt to automatically serialize public fields and properties. You do not need to perform any extra steps for this process, but if you would like to exclude such fields from being serialized use `[System.NonSerialized]` above the field.
+Anytime you use a type within a [communication ](../../high-level-overview/terminology/communicating.md)Fish-Networking automatically recognizes you wish to send the type over the network, and will create a serializer for it. FishNet will only attempt to automatically serialize public fields and properties. You do not need to perform any extra steps for this process, but if you would like to exclude such fields from being serialized use `[ExcludeSerialization]` above the field.
 
 For example, _Name_ and _Level_ will be sent over the network but not _Victories_.
 
@@ -15,7 +15,7 @@ public class PlayerStat
 {
     public string Name;
     public int Level;
-    [System.NonSerialized]
+    [ExcludeSerialization]
     public int Victories;
 }
 
