@@ -4,6 +4,12 @@ description: Step-by-step tutorial for getting up and running with PlayFlow Clou
 
 # Getting Started with PlayFlow
 
+{% embed url="https://www.youtube.com/watch?v=TyvBHUlYP64" %}
+
+***
+
+## Written Tutorial
+
 This guide assumes you have some or all of your game already written using FishNet and are now ready to use PlayFlow to implement a dedicated server. You can also use PlayFlow throughout the development process as its one-click deployment makes it easy to setup a temporary server for testing.
 
 ## Before we Begin...
@@ -139,7 +145,13 @@ Now let's link our Unity Project to the PlayFlow one we've just created.&#x20;
 {% step %}
 ### Build and Upload the Server
 
-You can now customize the other settings in the PlayFlow Cloud window, such as the Development Build or Server Scene.
+You should now specify the scene that the server should start in with the **Server Scene** field. You can set it manually by selecting the chosen scene through the dropdown or you can make PlayFlow use the **Build Settings' Scene List** instead, by enabling that option.
+
+{% hint style="info" %}
+Don't forget to add your scenes to Unity's build settings scene list!
+{% endhint %}
+
+You can also customize the other settings in the PlayFlow Cloud window, such as the **Development Build** or **Build Version**.
 
 When you're happy with those, you can press the **Upload Server** button to have PlayFlow automatically build and upload a headless Linux server build of your game. This will take a brief moment, and then you will have a log in the editor console saying the build uploaded successfully.&#x20;
 
