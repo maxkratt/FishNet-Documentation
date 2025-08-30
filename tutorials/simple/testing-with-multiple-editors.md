@@ -6,7 +6,7 @@ description: A tutorial for running multiple Unity Editor windows for testing mu
 
 During your multiplayer game development, you may find it useful to run multiple Unity editors to test out your project locally. This can be especially helpful if you want to use the Unity Inspector or Scene Hierarchy to analyze your game at runtime. While you could do this by duplicating your project's files and opening them in a new Unity editor instance, you will run into issues of keeping the projects in sync with one another, among other things.
 
-This tutorial will go over two solutions to the problem. Firstly using a community extension called [**ParrelSync**](https://github.com/VeriorPies/ParrelSync?tab=readme-ov-file#parrelsync), and then by using Unity's own multiplayer tool called [**Multiplayer Play Mode**](https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html).
+This tutorial will go over two solutions to the problem. Firstly by using Unity's own multiplayer tool called [**Multiplayer Play Mode**](https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html), and then by using a community extension called [**ParrelSync**](https://github.com/VeriorPies/ParrelSync?tab=readme-ov-file#parrelsync).
 
 ## Multiplayer Play Mode vs ParrelSync
 
