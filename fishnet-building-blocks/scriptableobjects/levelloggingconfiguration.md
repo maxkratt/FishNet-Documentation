@@ -14,9 +14,21 @@ The **Level Logging Configuration** scriptable object simply allows you to custo
 
 <figure><img src="../../.gitbook/assets/level-logging-configuration.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure>
 
-### :gear: **Logging Enabled**
+### :gear: **Is Enabled**
 
 > This is simply a toggle to enable and disable all of Fish-Networking's logs.
+
+### :gear: Add Local Tick
+
+> This option allows you to prepend the network's local tick when log was made onto the log message. This can be quite handy for precise debugging.
+
+### :gear: **Add Timestamps**
+
+> This allows you to prepend to all logs the local date and time when the log was made.
+
+### :gear: Enable Timestamps In Editor
+
+> Since Unity's console already includes the time that logs are sent at, it can be handy to hide FishNet's Timestamps in the editor and only display them in builds.
 
 ### :gear: **Development Logging**
 
