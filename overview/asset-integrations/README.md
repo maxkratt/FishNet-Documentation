@@ -14,6 +14,8 @@ The following resources are put together by developers such as yourself. The Fis
 
 ## Asset Integrations
 
+[MetaVoiceChat](https://github.com/Metater/MetaVoiceChat) is a completely **free,** simple, and self-contained proximity voice chat solution for&#x20;Unity's popular client-server networking libraries with all of&#x20;the features you need.
+
 [Dissonance Voice Chat](https://assetstore.unity.com/packages/tools/audio/dissonance-voice-chat-70078) is a real-time Voice over IP (VoIP) system designed to be built directly into Unity games. [Dissonance Voice Chat for Fish-Networking](https://github.com/LambdaTheDev/DissonanceVoiceForFishNet) is a community integration for using it with FishNet, provided by [LambdaTheDev](https://github.com/LambdaTheDev) and the creator of Dissonance.
 
 [Turtle Pass](https://github.com/DanielSnd/TurtlePass) allows you to send large byte arrays over several frames to prevent data from overwhelming bandwidth limited transports like Steam and Unity Transport.
