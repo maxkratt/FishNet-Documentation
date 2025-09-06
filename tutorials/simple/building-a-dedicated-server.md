@@ -1,10 +1,10 @@
 ---
 description: Instructions for how to build a dedicated FishNet server.
+cover: ../../.gitbook/assets/dedicated-server-tutorial-cover.png
+coverY: 0
 ---
 
 # Building a Dedicated Server
-
-<figure><img src="../../.gitbook/assets/dedicated-server-graphic.png" alt=""><figcaption></figcaption></figure>
 
 FishNet supports running your project as a **dedicated server**, meaning Unity runs without rendering graphics and focuses purely on network logic. This is the recommended way to host multiplayer games at scale. You can deploy this build to a server hosting service, your own physical servers, or even give it to your players to allow them to host their own servers for your game.
 
