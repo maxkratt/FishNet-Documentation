@@ -1,5 +1,7 @@
 ---
 description: A tutorial for running multiple Unity Editor windows for testing multiplayer.
+cover: ../../.gitbook/assets/multiple-editors-tutorial-cover.png
+coverY: 0
 ---
 
 # Testing with Multiple Editors
