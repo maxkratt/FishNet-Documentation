@@ -23,7 +23,7 @@ But I change the activate state of _NestedNob_ to disabled before server spawnin
 RootNob will be spawned over the network with NestedNob disabled / not spawned.
 
 ```csharp
-//An example of changing the enabled state for NestedNob.
+// An example of changing the enabled state for NestedNob.
 public GameObject MyPrefab;
 
 private void SpawnPrefab()
@@ -31,8 +31,8 @@ private void SpawnPrefab()
     GameObject go = Instantiate(MyPrefab);
     GameObject nestedNob = go.transform.GetChild(0);
     nestedNob.SetActive(false);
-    //MyPrefab will spawn with NestedNob disabled for server and all clients
-    //until you spawn it at a later time.
+    // MyPrefab will spawn with NestedNob disabled for server and all clients
+    // until you spawn it at a later time.
     base.Spawn(go);
 }
 ```

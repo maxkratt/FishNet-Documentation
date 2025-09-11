@@ -8,7 +8,7 @@ coverY: 0
 
 _This tutorial was kindly provided by haseebzahid413#2226._
 
-## Verify Permissions for AWS Account
+## Verify permissions for AWS account
 
 1. Go to AWS Management Console
 2. Launch a Virtual Machine
@@ -107,7 +107,7 @@ _This tutorial was kindly provided by haseebzahid413#2226._
       3. Server is up and running
    5. Go back to Unity for Client editor testing or build
 
-## Connecting A Client
+## Connecting a client
 
 1. Run in unity
 2. Press Client

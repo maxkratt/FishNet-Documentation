@@ -18,7 +18,7 @@ The DetachableNetworkTickSmooth will detach from parents at runtime and follow t
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/detatchable-network-tick-smoother-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/detatchable-network-tick-smoother-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear:  **Attach On Stop**
 

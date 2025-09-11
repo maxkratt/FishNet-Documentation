@@ -8,7 +8,7 @@ The **Owner Only Condition** evaluates to true when a player owns the object. An
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/owner-only-observer-condition.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/owner-only-observer-condition.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear: **Add Order**
 

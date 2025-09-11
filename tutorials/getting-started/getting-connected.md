@@ -2,18 +2,32 @@
 description: >-
   The first step to networking is connecting over the network. Learn about that
   process here!
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Getting Connected
 
 {% stepper %}
 {% step %}
-#### Creating the NetworkManager
+### **Creating the NetworkManager**
 
 The **NetworkManager** is a central component of FishNet that manages the networking lifecycle, including establishing connections, hosting sessions, and handling client-server communication. For convenience, FishNet has a ready-made NetworkManager prefab that you can use. You can find the prefab located in the FishNet directory under `Demos/Prefabs/NetworkManager.prefab`.\
 Drag and drop this NetworkManager prefab into your Unity scene.
 
-<figure><img src="../../.gitbook/assets/adding-network-manager.png" alt="Adding the NetworkManager Prefab"><figcaption><p>Adding the NetworkManager Prefab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/adding-network-manager.png" alt="Adding the NetworkManager Prefab"><figcaption><p>Adding the NetworkManager prefab</p></figcaption></figure>
 
 {% hint style="info" %}
 If you imported FishNet from the git URL instead of the asset store or .unitypackage file, then the location of the FishNet directory will be `Packages/FishNet: Networking Evolved` instead of `Assets/FishNet`
@@ -21,7 +35,7 @@ If you imported FishNet from the git URL instead of the asset store or .unitypac
 {% endstep %}
 
 {% step %}
-#### Configuring FishNet to Auto Start
+### **Configuring FishNet to auto start**
 
 The **NetworkHudCanvas** is a user interface provided by the example **NetworkManager** designed for quick testing of network connections. It displays buttons to start as a client and/or server. It also allows you to automatically start as a server, client, or host as soon as the **NetworkManager** loads in the game.
 
@@ -33,7 +47,7 @@ This configuration will ensure that the application automatically starts as a ho
 {% endstep %}
 
 {% step %}
-#### Testing the Connection
+### **Testing the connection**
 
 Once everything is set up, press the Play button in Unity's Editor to launch your scene.
 

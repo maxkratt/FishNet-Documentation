@@ -10,6 +10,8 @@ When inheriting from [NetworkBehaviours ](../../../fishnet-building-blocks/compo
 
 NetworkBehaviours are essential for [Remote Procedure Calls](../network-communication/remote-procedure-calls.md), [Synchronizing](../network-communication/synchronizing/), and having access to vital network information.
 
+***
+
 ## Properties <a href="#properties" id="properties"></a>
 
 There are several public properties available within NetworkBehaviour, many of which you will use regularly. Most of the properties are only available after the object has been initialized. See the [callbacks](network-behaviour-guides.md#server-and-host-1) section for more information on initialization.
@@ -29,6 +31,8 @@ When accessing a NetworkBehaviour property or method consider using the 'base' k
 For example, base.IsOwner
 {% endhint %}
 
+***
+
 ## Callbacks <a href="#callbacks" id="callbacks"></a>
 
 {% embed url="https://www.youtube.com/watch?v=goH4CX-aG-E" %}
@@ -42,10 +46,10 @@ Like Properties, there are a large number of available methods. The methods you 
 Most callbacks have a server and client version, and each has great potential. To use a callback you must inherit from NetworkBehaviour and override the callback you wish to use.
 
 ```csharp
-//Example of implementing an override.
+// Example of implementing an override.
 public override void OnStartServer()
 {
-    //This is run when the server initializes the object.
+    // This is run when the server initializes the object.
 }
 ```
 
@@ -59,7 +63,7 @@ Unity Awake and OnEnable callbacks will always occur before any network activity
 
 To begin we will cover the server side callbacks.
 
-#### **OnStartNetwork:**
+### **OnStartNetwork**
 
 In some instances you will need to initialize for both server and client. You can save some code and time by using OnStartNetwork instead of the OnStart for Client and Server. It's important to remember that OnStartNetwork will only call once, even if you are clientHost.
 
@@ -75,7 +79,7 @@ public override void OnStartNetwork()
 }
 ```
 
-#### **OnStartServer:**
+### **OnStartServer**
 
 ```csharp
 public override void OnStartServer()
@@ -112,7 +116,7 @@ When clientHost base.IsOwner will not return true, even with the owner set. This
 When you need to check 'IsOwner' on OnStartServer use **base.Owner.IsLocalClient**.
 {% endhint %}
 
-#### **OnOwnershipServer:**
+### **OnOwnershipServer**
 
 ```csharp
 public override void OnOwnershipServer(NetworkConnection prevOwner)
@@ -126,7 +130,7 @@ public override void OnOwnershipServer(NetworkConnection prevOwner)
 }
 ```
 
-#### **OnSpawnServer:**
+### **OnSpawnServer**
 
 ```csharp
 public override void OnSpawnServer(NetworkConnection connection)
@@ -142,7 +146,7 @@ public override void OnSpawnServer(NetworkConnection connection)
 }
 ```
 
-#### **OnDespawnServer:**
+### **OnDespawnServer**
 
 ```csharp
 public override void OnDespawnServer(NetworkConnection connection)
@@ -160,7 +164,7 @@ public override void OnDespawnServer(NetworkConnection connection)
 When the server despawns a NetworkObject any pending synchronize changes will be sent out with the despawn message. This ensures clients will get the latest data, even if timed, before the object is despawned for them.
 {% endhint %}
 
-#### **OnStopServer:**
+### **OnStopServer**
 
 ```csharp
 public override void OnStopServer()
@@ -180,7 +184,7 @@ Next are the client callbacks. These callbacks will always occur after the serve
 
 For the most part client callbacks are the same as the server ones, except they occur only if the client connection is started. Only key differences will be included in the descriptions of each callback.
 
-#### **OnStartClient:**
+### **OnStartClient**
 
 ```csharp
 public override void OnStartClient()
@@ -200,7 +204,7 @@ Any buffered remote procedure calls will occur immediately after OnStartClient.
 If you are coming from Mirror instead of using OnLocalPlayer use OnStartClient with a base.IsOwner check.
 {% endhint %}
 
-#### **OnOwnershipClient:**
+### **OnOwnershipClient**
 
 ```csharp
 public override void OnOwnershipClient(NetworkConnection prevOwner)
@@ -211,7 +215,7 @@ public override void OnOwnershipClient(NetworkConnection prevOwner)
 }
 ```
 
-#### **OnStopClient:**
+### **OnStopClient**
 
 ```csharp
 public override void OnStopClient()
@@ -223,7 +227,7 @@ public override void OnStopClient()
 }
 ```
 
-#### **OnStopNetwork:**
+### **OnStopNetwork**
 
 Like OnStartNetwork, this method can be used to save lines of code when needing to deinitialize for both server and client stop. OnStopNetwork will also only be called once even when clientHost.
 

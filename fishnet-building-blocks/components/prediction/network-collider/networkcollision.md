@@ -14,16 +14,16 @@ Check out this API page [here](https://fish-networking.com/FishNet/api/api/FishN
 
 ## Settings
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/network-collision-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/network-collision-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Maximum Simultaneous Hits**
+### :gear: **Maximum Simultaneous Hits**
 
 > This is the maximum number of simultaneous hits that the component will check for. You can use this field to customize how many overlapping colliders the component should be able to detect. It should be noted that having too large of a value will decrease its performance. In most cases, the default value of 16 suffices.
 
-### :gear:  **Additional Size**
+### :gear: **Additional Size**
 
 > The **Additional Size** determines the distance in units by which collision traces are extended. This extension helps prevent missed overlaps when colliders do not intersect sufficiently. Depending on the scale used in your game you may want to raise or lower this value.
 
-### :gear:  **Layers**
+### :gear: **Layers**
 
 > These are the Layers to detect collisions on. This is used when value is not set as **Nothing**.

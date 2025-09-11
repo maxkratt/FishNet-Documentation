@@ -8,7 +8,7 @@ The **Distance Condition** ensures that an object is only observed if it is at l
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/distance-observer-condition.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/distance-observer-condition.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear: **Add Order**
 

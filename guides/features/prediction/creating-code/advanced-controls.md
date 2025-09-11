@@ -10,19 +10,20 @@ description: >-
 Be sure to review the previous guides in this section before reviewing this page.
 {% endhint %}
 
-## Guide Goal
+## Guide goal
 
 Implementing additional features into your prediction is much like you would code in a single player game, only remembering to reconcile anything that could de-synchronize the prediction.
 
 In this guide a psuedo ground check before a jump will be added, as well a sprint function.
 
-## Sprinting and Ground Checks
+## Sprinting and ground checks
 
 First the ReplicateData needs to be updated to contain our sprint action, which will rely on a stamina mechanic. Not much changed other than we added the Sprint boolean and set it using the constructor.
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>public struct ReplicateData : IReplicateData
-</strong><strong>{
-</strong>    public bool Jump;
+```csharp
+public struct ReplicateData : IReplicateData
+{
+    public bool Jump;
     public bool Sprint;
     public float Horizontal;
     public float Vertical;
@@ -39,7 +40,7 @@ First the ReplicateData needs to be updated to contain our sprint action, which 
     public uint GetTick() => _tick;
     public void SetTick(uint value) => _tick = value;
 }
-</code></pre>
+```
 
 After updating the ReplicateData we need to poll for the sprint key when creating the data, like you would in most games.
 
@@ -51,7 +52,7 @@ private ReplicateData CreateReplicateData()
     if (!base.IsOwner)
         return default;
 
-    //Build the replicate data with all inputs which affect the prediction.
+    // Build the replicate data with all inputs which affect the prediction.
     float horizontal = Input.GetAxisRaw("Horizontal");
     float vertical = Input.GetAxisRaw("Vertical");
 
@@ -74,29 +75,30 @@ private ReplicateData CreateReplicateData()
 Declare a stamina float in your class.
 
 ```csharp
-//Current stamina for the player.
+// Current stamina for the player.
 private float _stamina;
 ```
 
 Now use our new Sprint bool and stamina field to apply sprinting within the replicate method.
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>[Replicate]
-</strong>private void RunInputs(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
+```csharp
+[Replicate]
+private void RunInputs(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
 {
     float delta = (float)base.TimeManager.TickDelta;
-    //Regenerate stamina at 3f per second.
+    // Regenerate stamina at 3f per second.
     _stamina += (3f * delta);
-    //How much it cost to use sprint per delta.
-    //This causes sprint to use stamina twice as fast
-    //as the stamina recharges.
+    // How much it cost to use sprint per delta.
+    // This causes sprint to use stamina twice as fast
+    // as the stamina recharges.
     float sprintCost = (6f * delta);
     Vector3 forces = new Vector3(data.Horizontal, 0f, data.Vertical) * _moveRate;
-    //If sprint is held and enough stamina exist then multiple forces.
-    if (data.Sprint &#x26;&#x26; _stamina >= sprintCost)
+    // If sprint is held and enough stamina exist then multiple forces.
+    if (data.Sprint && _stamina >= sprintCost)
     {    
-        //Reduce stamina by cost.
+        // Reduce stamina by cost.
         _stamina -= sprintCost;
-        //Increase forces by 30%.
+        // Increase forces by 30%.
         forces *= 1.3f;
     }
     
@@ -109,15 +111,15 @@ Now use our new Sprint bool and stamina field to apply sprinting within the repl
     
     /* Now check if to jump. IsGrounded() does not exist, we're going to
     * pretend it uses a raycast or overlap to check. */
-    if (data.Jump &#x26;&#x26; IsGrounded())
+    if (data.Jump && IsGrounded())
     {
         Vector3 jmpFrc = (Vector3.up * _jumpForce);
        PredictionRigidbody.AddForce(jmpFrc, ForceMode.Impulse);
     }
     
-    //Rest of the code remains the same.
+    // Rest of the code remains the same.
 }
-</code></pre>
+```
 
 {% hint style="danger" %}
 If a value can affect your prediction do not store it outside the replicate method, unless you are also reconciling the value. An exception applies if you are setting the value inside your replicate method.
@@ -131,8 +133,8 @@ Reconciling only a rigidbody state is very simple.
 [Reconcile]
 private void ReconcileState(ReconcileData data, Channel channel = Channel.Unreliable)
 {
-    //Call reconcile on your PredictionRigidbody field passing in
-    //values from data.
+    // Call reconcile on your PredictionRigidbody field passing in
+    // values from data.
     PredictionRigidbody.Reconcile(data.PredictionRigidbody);
 }
 ```
@@ -143,7 +145,7 @@ If you are using multiple rigidbodies you at the very least need to reconcile th
 If you are also applying forces to these rigidbodies be sure to use PredictionRigidbody with them, and reconcile the PredictionRigidbody instead of RigidbodyState.
 {% endhint %}
 
-## Changes To Reconcile
+## Changes to reconcile
 
 Because objects can reconcile to previous states it's fundamental to also reconcile any values stored outside the replicate method. Imagine if you had 10f stamina, enough to sprint, and did so successfully on the server and owner. After your sprint you only had 1f stamina, not enough to sprint further.
 

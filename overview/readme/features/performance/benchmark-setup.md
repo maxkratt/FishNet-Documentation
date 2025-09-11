@@ -17,7 +17,7 @@ description: >-
 * Every client is it's own executable.
 * Server tick rate is set to 10 (every 100ms).
 
-## Gathering Results
+## Gathering results
 
 Performance results are determined by setting a server at it's highest possible frame rate and comparing frame time as more variables or clients are introduced.
 
@@ -95,7 +95,7 @@ namespace FishNet.Managing.Timing
             _sampleAccumulator += newSample;
             _samples[_writeIndex] = newSample;
 
-            //Increase writeIndex.
+            // Increase writeIndex.
             _writeIndex++;
             _writtenSamples = Math.Max(_writtenSamples, _writeIndex);
             if (_writeIndex >= _samples.Length)
@@ -144,20 +144,20 @@ public class DisplayPerformance : MonoBehaviour
 
         _average.ComputeAverage(_frames);
         _frames = 0;
-        //Update display twice a second.
+        // Update display twice a second.
         _nextDisplayTime = Time.time + 1f;
 
         double avgFrameRate = _average.Average;
-        //Performance lost.
+        // Performance lost.
         double lost = avgFrameRate / (double)TargetFrameRate;
         lost = (1d - lost);
 
-        //Replace this with the equivelent of your networking solution.
+        // Replace this with the equivelent of your networking solution.
         int clientCount = InstanceFinder.ServerManager.Clients.Count;
 
         Debug.Log($"Average {lost.ToString("0.###")} performance lost with {clientCount} clients.");
 #elif UNITY_EDITOR
-        //Max out editor frames to test client side scalability.
+        // Max out editor frames to test client side scalability.
         Application.targetFrameRate = 9999;
 #else
         /* Limit client frame rate to 15

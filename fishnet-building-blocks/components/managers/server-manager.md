@@ -18,43 +18,43 @@ Check out its API page for more specific methods and events [here](https://fish-
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/server-manager-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/server-manager-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **SyncType Rate**
+### :gear: **SyncType Rate**
 
 > This is the default send rate for [SyncTypes](../../../guides/features/network-communication/synchronizing/). Setting it to 0 will send updates every tick. This value can be overridden for individual SyncTypes.
 
-### :gear:  **Spawn Packing**
+### :gear: **Spawn Packing**
 
 > This determines how well transform properties will be packed[^1] when being sent in a spawn message. If transforms spawn marginally off reducing the packing may help.
 >
 > These can be edited for **Position**, **Rotation** and **Scale** independently.
 
-### :gear:  **Change Frame Rate**
+### :gear: **Change Frame Rate**
 
 > When enabled, this will change the frame rate limitation when acting as server only.
 >
 > * **Frame Rate** is the frame rate to use while only the server is active. There is also a setting for client frame rate on the [ClientManager](clientmanager.md). When both server and client are active the higher of the two frame rates will be used.
 
-### :gear:  **Start On Headless**
+### :gear: **Start On Headless**
 
 > When this is enabled, FishNet will automatically start the server when loaded on a server (headless) build.
 
-### :gear:  **Remote Client Timeout**
+### :gear: **Remote Client Timeout**
 
 > This decides if the server should disconnect clients which seem unresponsive. This feature can be set to disabled, work in development and releases, or only releases.
 >
 > * **Timeout** is how long the client must be unresponsive before they are kicked.
 
-### :gear:  **Share Ids**
+### :gear: **Share Ids**
 
 > While true, this enables clients to be aware of other clients in-game and objects owned by other clients. Objects owned by other clients are only known if they are available to the local client, such as through the observer system. Client Ids are not sensitive information but leaving this option enabled will use slightly additional bandwidth.
 
-### :gear:  **Authenticator**
+### :gear: **Authenticator**
 
 > This is where you can specify which [authenticator](../utilities/authenticator.md) to use. When left empty clients may join the server without specialized authentication.
 
-### :gear:  **Allow Predicted Spawning**
+### :gear: **Allow Predicted Spawning**
 
 > This option lets prefabs and scene objects be setup to use [Predicted Spawning](../../../guides/features/networked-gameobjects-and-scripts/spawning/predicted-spawning.md). You can use this setting to enable or disable predicted spawning without having to change the settings for every object. This value may also be set at runtime. If changing at runtime be certain to also change on the client; otherwise they could be kicked for trying to use a disabled feature.
 >

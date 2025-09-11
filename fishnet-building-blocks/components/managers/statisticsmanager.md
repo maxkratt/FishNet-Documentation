@@ -16,16 +16,16 @@ Check out its API page for more specific methods and events [here](https://fish-
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/statistics-manager-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/statistics-manager-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Update Interval**
+### :gear: **Update Interval**
 
 > This is how often network traffic related operations occur, such as invoking update events.
 
-### :gear:  **Update Client**
+### :gear: **Update Client**
 
 > This will invoke client traffic updates when enabled.
 
-### :gear:  **Update Server**
+### :gear: **Update Server**
 
 > This will invoke server traffic updates when enabled.

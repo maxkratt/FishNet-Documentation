@@ -4,9 +4,9 @@ description: >-
   writing code for your replicate method.
 ---
 
-# Using States In Code
+# Using States in Code
 
-## Future States
+## Future states
 
 You will see the term 'in the future' or 'future state' used frequently when working with prediction. When in the future it's not possible to know the data from the controller, which is why we call it the _future_. When using client-prediction, as a client you are always moving in real-time, before even knowing the servers current state. Due to this, you will not know other clients or server states until they are forwarded to you, and during that time of unknowing we consider the object to be in the future.
 
@@ -16,7 +16,7 @@ The future this is where you gain the opportunity to predict future input from t
 You will never be in the future on objects you controller, given you only replay inputs up to what you created and never beyond.
 {% endhint %}
 
-## The Created Flag
+## The created flag
 
 When a state is not created the data will be default. This often catches a lot of developers off guard as they might expect to see continual input from the controller, such as if the controller is always holding a movement key.
 
@@ -26,12 +26,12 @@ A common use case is updating the objects animator only when data is known.
 [Replicate]
 private void MovePlayer(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
 {
-    //Left/right movement.
+    // Left/right movement.
     float horizontal = data.Horizontal;
     
-    //Only update the animator if data is created. Do not update the animator
-    //if not created as this will cause the animator to switch between having input
-    //and a default value.
+    // Only update the animator if data is created. Do not update the animator
+    // if not created as this will cause the animator to switch between having input
+    // and a default value.
     if (state.ContainsCreated())
         _myAnimator.SetFloat("Horizontal", horizontal);
 }
@@ -54,14 +54,14 @@ private void MovePlayer(ReplicateData data, ReplicateState state = ReplicateStat
     if (data.Jump)
     {
         DoJump();
-        //If ticked and not replayed then also play jump audio.
+        // If ticked and not replayed then also play jump audio.
         if (state.ContainsTicked() && !state.ContainsReplayed())
             PlayJumpAudio();
     }
 }
 ```
 
-## Preventing Future State Logic and Movement
+## Preventing future state logic and movement
 
 The replayed state is most commonly used to predict the future, or limit as opposition, limit the future.
 
@@ -77,19 +77,19 @@ This behavior can be difficult to explain, but is easy to see. Try our character
 [Replicate]
 private void MovePlayer(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
 {
-    //Exit the method early to prevent going into the future, which would
-    //result in the controller snapping upward very fast when replaying a jump.
+    // Exit the method early to prevent going into the future, which would
+    // result in the controller snapping upward very fast when replaying a jump.
     if (state.IsFuture())
         return;
         
-    //Set vertical velocity to jump up.
+    // Set vertical velocity to jump up.
     if (data.Jump)
         _verticalVelocity = 10f;
 
-    //Only add vertical movement for this example.
-    //Realistically, you would have x and z movement as well.
+    // Only add vertical movement for this example.
+    // Realistically, you would have x and z movement as well.
     Vector3 movement = new(0f, _verticalVelocity, 0f);
-    //Reduce vertical velocity to begin falling, but prevent it from going too low.
+    // Reduce vertical velocity to begin falling, but prevent it from going too low.
     _verticalVelocity -= (float)base.TimeManager.TickDelta;
     _verticalVelocity = Mathf.Max(_verticalVelocity, -5f);
 
@@ -116,7 +116,7 @@ private void MovePlayer(ReplicateData data, ReplicateState state = ReplicateStat
     _predictionRigidbody.AddVelocity(movement);
     _predictionRigidbody.Simulate();
     
-    //Nothing in this code prevents the rigidbody from moving into the future.
+    // Nothing in this code prevents the rigidbody from moving into the future.
 }
 ```
 
@@ -126,27 +126,27 @@ Preventing future movement on rigidbodies is a few more lines of code, but still
 [Replicate]
 private void MovePlayer(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
 {   
-    //Only the client would need to pause to prevent future movement,
-    //and only on objects they do not own (objects they are spectating).
+    // Only the client would need to pause to prevent future movement,
+    // and only on objects they do not own (objects they are spectating).
     bool canChangePause = !base.IsOwner && !base.IsServerStarted;
-    //If in the future do not process any logic and pause the rigidbody.
-    //If not in the future, then unpause the rigidbody.
-    //There are no negative side-effects of calling pause or unpause when
-    //when the RigidbodyPauser is already in the same state.
+    // If in the future do not process any logic and pause the rigidbody.
+    // If not in the future, then unpause the rigidbody.
+    // There are no negative side-effects of calling pause or unpause when
+    // when the RigidbodyPauser is already in the same state.
     if (state.IsFuture()
     {
-        //This will prevent the rigidbody from moving by
-        //making it kinematic. Pausing a rigidbody does also mean
-        //objects can potentially pass through it. Another approach
-        //will be shown in the next example.
+        // This will prevent the rigidbody from moving by
+        // making it kinematic. Pausing a rigidbody does also mean
+        // objects can potentially pass through it. Another approach
+        // will be shown in the next example.
         if (canChangePause)
             base.NetworkObject.RigidbodyPauser.Pause();
     }
     else
     {
-        //When not future, unpause. This allows the object to move
-        //again. Unpausing will restore velocities as they were
-        //prior to pausing.
+        // When not future, unpause. This allows the object to move
+        // again. Unpausing will restore velocities as they were
+        // prior to pausing.
         if (canChangePause)
             base.NetworkObject.RigidbodyPauser.Unpause();
             
@@ -168,10 +168,10 @@ Here's a different technique which instead simply zeros out velocities when in t
 [Replicate]
 private void MovePlayer(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
 {   
-    //If in the future then simply zero out velocities
-    //and exit the method to prevent checking any input logic.
-    //Using this approach will allow objects to still collide with
-    //the rigidbody.
+    // If in the future then simply zero out velocities
+    // and exit the method to prevent checking any input logic.
+    // Using this approach will allow objects to still collide with
+    // the rigidbody.
     if (state.IsFuture())
     {
         _myPredictionRigidbody.Velocity(Vector3.Zero);

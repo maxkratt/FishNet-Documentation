@@ -10,24 +10,24 @@ A **NetworkConnection** in FishNet is a core object that represents a single con
 
 ### Purposes
 
-* **Client Representation:**\
+* **Client representation:**\
   Each connected player/client has a corresponding NetworkConnection instance. This object tracks the client's identity, state, and the objects it owns.
-* **Ownership and Authority:**\
+* **Ownership and authority:**\
   NetworkConnection tracks which networked objects (such as player avatars) the client owns, enabling authority checks and state management.
-* **Authentication and State:**\
+* **Authentication and state:**\
   It manages authentication state, and notes if it’s disconnecting.
-* **Scene Tracking**\
+* **Scene tracking**\
   It is used to track which networked scenes the client has loaded into.
 * **Events:**\
   It provides events for actions like gaining or losing ownership of objects and loading start scenes.
-* **Custom Data:**\
+* **Custom data:**\
   Developers can associate custom data with a connection for gameplay or server logic. (This data is not automatically synchronized across the network.)
 * **Disconnection:**\
   Provides methods to disconnect the client, either immediately or after sending pending data.
 
 ***
 
-### Important Fields and Properties
+### Important fields and properties
 
 **ClientId** — One important field is the [`ClientId`](https://fish-networking.com/FishNet/api/api/FishNet.Connection.NetworkConnection.html#FishNet_Connection_NetworkConnection_ClientId). This is a unique ID for the NetworkConnection and it is used in a few other places in Fish-Networking. If a ClientId is not set, it defaults to -1, and generally ClientIds increment from 0 until the maximum integer value before reusing old ones from the beginning.
 

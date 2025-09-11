@@ -14,7 +14,7 @@ After having gone through the previous guides, it's recommended that you read th
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-book-open">:book-open:</i> <strong>Feature Guides</strong></td><td>Explore guides for even more FishNet features, including Client-side Prediction, Area of Interest, Transports, Addressables, and Lag Compensation.</td><td><a href="../../guides/features/">features</a></td></tr></tbody></table>
 
-## Moving On and Getting Help
+## Moving on and getting help
 
 After reading through those sections you are encouraged to jump in and start making projects using FishNet! There are some available demos on specific Fish-Networking features included in the FishNet asset itself, these can be a great tool for learning more about the specific features.
 

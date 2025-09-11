@@ -1,6 +1,6 @@
 # Server, Client, Host
 
-## Ownership and Controller <a href="#server-and-host" id="server-and-host"></a>
+## Ownership and controller <a href="#server-and-host" id="server-and-host"></a>
 
 Ownership is when a specific client _owns_ the object, while _controller_ is whichever entity controls the object. By our terms, only a client can own an object, but either the server or a client may be the controller.
 
@@ -12,11 +12,11 @@ A controller is the server if the object is not owned by any client, but again, 
 
 Server is an instance of your project which clients connect to. A server allows clients to interact with each other and will often be responsible for important aspects of your game such as score keeping, world spawning, and more.
 
-#### Local Server
+#### Local server
 
 When a server is started the build or instance running the server is referred to as the local server.
 
-#### Remote Client
+#### Remote client
 
 A remote client is a term only applicable when running as the server. A remote client is a player connection established with the server. It's possible for a remote client to be the same as a local client. The main difference is the local client refers to the player-side logic while a remote client refers to the server's connection with the client.
 
@@ -24,11 +24,11 @@ A remote client is a term only applicable when running as the server. A remote c
 
 A client connects to the server, whether the server be local or online. A client is the player for your game. A client experiences the game-play while the server synchronizes data between clients.
 
-#### Local Client
+#### Local client
 
 Local client refers to the client controlling their game. If you join the server as a player, you are the local client.
 
-#### Remote Server
+#### Remote server
 
 When the local client connects to a server, they are connecting to a remote server. It's possible the remote server is also the local server if the client is running as host.
 

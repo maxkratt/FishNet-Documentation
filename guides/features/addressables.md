@@ -6,11 +6,11 @@ description: How to manage prefab and scene addressables with FishNet.
 
 Both addressable scenes and prefabs work over the network.
 
-## Scene Addressables
+## Scene addressables
 
 Scene addressables utilize Fish-Networking's [Custom Scene Processors](scene-management/custom-scene-processors/). With a few overrides you can implement addressable scenes using [this guide](scene-management/custom-scene-processors/addressables.md).
 
-## Prefab Addressables
+## Prefab addressables
 
 To work reliably each addressables package must have a unique ushort Id, between 1 and 65535. **Never** use 0 as the Id, as the preconfigured SpawnablePrefabs use this Id. You may assign your addressable Ids however you like, for instance using a dictionary that tracks your addressable names with Ids.
 
@@ -67,7 +67,7 @@ public IEnumerator LoadAddressables(string addressablesPackage)
      * but this saves more performance by adding them all at once. */
     spawnablePrefabs.AddObjects(cache);
 
-    //Optionally(obviously, do it) store the collection cache for use later. We really don't like garbage!
+    // Optionally(obviously, do it) store the collection cache for use later. We really don't like garbage!
     CollectionCaches<NetworkObject>.Store(cache);
 }
 
@@ -76,7 +76,7 @@ public IEnumerator LoadAddressables(string addressablesPackage)
 /// </summary>
 public void UnoadAddressables(string addressablesPackage)
 {
-    //Get the Id the same was as we did for loading.
+    // Get the Id the same was as we did for loading.
     ushort id = addressablesPackage.GetStableHash16();
 
     /* Once again get the prefab collection for the Id and
@@ -84,7 +84,7 @@ public void UnoadAddressables(string addressablesPackage)
      * in memory. */
     SinglePrefabObjects spawnablePrefabs = (SinglePrefabObjects)_networkManager.GetPrefabObjects<SinglePrefabObjects>(id, true);
     spawnablePrefabs.Clear();
-    //You may now release your addressables!
+    // You may now release your addressables!
     Addressables.Release(_asyncHandle);
 }
 ```

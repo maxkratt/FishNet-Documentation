@@ -6,7 +6,7 @@ description: >-
 
 # Networking Models
 
-## Client-Server Architecture
+## Client-Server architecture
 
 The **client-server model** is the most widely used approach in multiplayer networking. In this model:
 
@@ -15,7 +15,7 @@ The **client-server model** is the most widely used approach in multiplayer netw
 
 There are two main types of servers:
 
-### **Dedicated Server**
+### **Dedicated server**
 
 The server runs as its own process, separate from any player. It’s more secure and scalable, commonly used in competitive or large-scale games.
 
@@ -25,7 +25,7 @@ As you can see from the above diagram, the clients (players) are all connected d
 
 ***
 
-### **Host (Listen Server)**
+### **Host (listen-server)**
 
 The server and one of the clients run in the same process. This is common in smaller games or development environments.
 
@@ -39,7 +39,7 @@ FishNet supports both dedicated and host server models out of the box.
 
 ***
 
-## Peer-to-Peer (P2P)
+## Peer-to-peer (P2P)
 
 In **peer-to-peer networking**, each player (or peer) connects directly to others without a central server. This reduces latency and server costs but comes with challenges:
 
@@ -47,7 +47,7 @@ In **peer-to-peer networking**, each player (or peer) connects directly to other
 * Difficult to synchronize game state reliably
 * NAT traversal issues
 
-<figure><img src="../../.gitbook/assets/p2p-model.svg" alt="An image of four clients all interconnected with each other." width="563"><figcaption><p>A Peer-to-peer model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/p2p-model.svg" alt="An image of four clients all interconnected with each other." width="563"><figcaption><p>A peer-to-peer model</p></figcaption></figure>
 
 P2P is rarely used in modern real-time multiplayer games, especially competitive ones, due to these drawbacks. FishNet does not use P2P, as it is designed around the client-server model for reliability and security.
 
@@ -57,7 +57,7 @@ Very often a listen server setup is referred to as P2P, FishNet does support a l
 
 ***
 
-## Relay Servers
+## Relay servers
 
 Sometimes clients are unable to connect directly to the server due to **NAT (Network Address Translation)** or **firewall** restrictions. A **relay server** acts as a middleman to forward traffic between clients and the server.
 
@@ -75,7 +75,7 @@ Fish-Networking supports multiple third-party relay services including [Unity's 
 
 ***
 
-### Host Migration
+### Host migration
 
 When using a listen server, the host leaving the game would cause all players to leave the game; **Host migration** is a feature for maintaining game sessions in the event the current host disconnects or experiences network issues. It enables a new host to be elected from the remaining connected players, minimizing disruption and ensuring the game session can continue seamlessly.
 

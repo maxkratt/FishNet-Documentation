@@ -12,7 +12,7 @@ When using predictions, especially physics prediction, the client will often re-
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/offline-rigidbody-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/offline-rigidbody-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear:  **Rigidbody Type**
 

@@ -1,5 +1,6 @@
 ---
 layout:
+  width: default
   title:
     visible: true
   description:
@@ -9,6 +10,8 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
     visible: true
 ---
 
@@ -32,7 +35,7 @@ Any changes made to SyncTypes in Awake will be performed on server and client wi
 Setting a SendRate of 0f will allow SyncTypes to send changes every network tick.
 {% endhint %}
 
-## Host Client Limitations
+## Host client limitations
 
 There is a small limitation with all **SyncTypes** when running both the client and server in a single build.
 
@@ -63,7 +66,7 @@ private void _mySyncVar_OnChange(int prev, int next, bool asServer)
 {
     // Only run the logic using the previous value if being called
     // with asServer true, or if only the client is started.
-    if (asServer || base.IsClientOnlyStarted)
+    if (asServer || IsClientOnlyStarted)
         DoSomething(prev, next);
 }
 ```

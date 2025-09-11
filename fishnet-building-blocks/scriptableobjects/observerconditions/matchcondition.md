@@ -8,7 +8,7 @@ The **Match Condition** evaluates to true when players or objects share the same
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left" data-full-width="false"><figure><img src="../../../.gitbook/assets/match-observer-condition.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left" data-full-width="false"><figure><img src="../../../.gitbook/assets/match-observer-condition.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear: **Add Order**
 

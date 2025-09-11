@@ -9,7 +9,7 @@ coverY: 0
 
 # Getting Started
 
-### What to Expect
+### What to expect
 
 This section introduces key features of Fish-Networking that you'll use frequently in your development journey. You'll find dedicated resources to deepen your understanding and step-by-step guides tailored for common first-time tasks.
 

@@ -18,7 +18,7 @@ private void Awake()
     _playerNames.OnChange += _playerNames_OnChange;
 }
 
-//SyncDictionaries also include the asServer parameter.
+// SyncDictionaries also include the asServer parameter.
 private void _playerNames_OnChange(SyncDictionaryOperation op,
     NetworkConnection key, string value, bool asServer)
 {
@@ -26,19 +26,19 @@ private void _playerNames_OnChange(SyncDictionaryOperation op,
     * Add, Remove, and Set. */     
     switch (op)
     {
-        //Adds key with value.
+        // Adds key with value.
         case SyncDictionaryOperation.Add:
             break;
-        //Removes key.
+        // Removes key.
         case SyncDictionaryOperation.Remove:
             break;
-        //Sets key to a new value.
+        // Sets key to a new value.
         case SyncDictionaryOperation.Set:
             break;
-        //Clears the dictionary.
+        // Clears the dictionary.
         case SyncDictionaryOperation.Clear:
             break;
-        //Like SyncList, indicates all operations are complete.
+        // Like SyncList, indicates all operations are complete.
         case SyncDictionaryOperation.Complete:
             break;
     }
@@ -72,11 +72,11 @@ private void Awake()
 private void ModifyContainer()
 {
     MyContainer mc = _containers[2];
-    //This will change the value locally but it will not synchronize to clients.
+    // This will change the value locally but it will not synchronize to clients.
     mc.Level = 10;
-    //You may re-apply the value to the dictionary.
+    // You may re-apply the value to the dictionary.
     _containers[2] = mc;
-    //Or set dirty on the value or key. Using the key is often more performant.
+    // Or set dirty on the value or key. Using the key is often more performant.
     _containers.Dirty(2);
 }
 ```

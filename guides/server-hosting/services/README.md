@@ -12,19 +12,19 @@ We strongly recommend reviewing our [Server Hosting](../) page for terminology a
 
 This information is updated to the best of our knowledge. If you are interested in a service listed below — to better understand their platform — please visit the provided links to their official website.
 
-## Our Recommended Service
+## Our recommended service
 
 **PlayFlow Cloud**, a company we've had the pleasure of working with firsthand, is recommended as our top-pick for a hosting service. Their outstanding support, reliable service, and superior pricing have consistently impressed our staff and community.
 
-<table data-card-size="large" data-view="cards" data-full-width="false"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>PlayFlow Cloud</strong></td><td>5</td><td><p><img src="../../../.gitbook/assets/attach_money_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">Generous free tier with better pricing than competitors.</p><p></p><p><img src="../../../.gitbook/assets/group_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> Lobby &#x26; Matchmaking, with an included SDK handling the work.</p><p></p><p><img src="../../../.gitbook/assets/public_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> Worldwide Dedicated and instanced servers.</p><p></p><p><img src="../../../.gitbook/assets/graph_5_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> User-friendly control panel, metrics, support, and more.</p></td><td><a href="../../../.gitbook/assets/playflow-card.png">playflow-card.png</a></td><td><a href="playflow-cloud.md">playflow-cloud.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards" data-full-width="false"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>PlayFlow Cloud</strong></td><td>5</td><td><p><img src="../../../.gitbook/assets/attach_money_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">Generous free tier with better pricing than competitors.</p><p><img src="../../../.gitbook/assets/group_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> Lobby &#x26; Matchmaking, with an included SDK handling the work.</p><p><img src="../../../.gitbook/assets/public_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> Worldwide Dedicated and instanced servers.</p><p><img src="../../../.gitbook/assets/graph_5_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt=""> User-friendly control panel, metrics, support, and more.</p></td><td><a href="../../../.gitbook/assets/playflow-card.png">playflow-card.png</a></td><td><a href="playflow-cloud/">playflow-cloud</a></td></tr></tbody></table>
 
 ***
 
-## Other Services
+## Other services
 
 Here is a non-extensive selection of other hosting services that work well with FishNet.
 
-### Dedicated Servers
+### Dedicated servers
 
 These hosts offer session-based servers, as well persistent servers. Relay services may be available as well.
 
@@ -32,7 +32,7 @@ These hosts offer session-based servers, as well persistent servers. Relay servi
 
 ***
 
-### Relays Only
+### Relays only
 
 These are relay only services.
 

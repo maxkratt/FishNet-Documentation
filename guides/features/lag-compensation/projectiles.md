@@ -1,6 +1,6 @@
 # Projectiles
 
-Projectiles which move over time can have lag hidden by accelerating the projectiles for the server and spectators, while allowing the firing client to show the projectile immediately.&#x20;
+Projectiles which move over time can have lag hidden by accelerating the projectiles for the server and spectators, while allowing the firing client to show the projectile immediately.
 
 Another bonus to this approach is you are not networking the projectile movement each tick, which saves tremendously on bandwidth and performance.
 
@@ -38,7 +38,7 @@ private void ClientFire()
      * they do not need to accelerate/catch up
      * the projectile. */
     SpawnProjectile(position, direction, 0f);
-    //Ask server to also fire passing in current Tick.
+    // Ask server to also fire passing in current Tick.
     ServerFire(position, direction, base.TimeManager.Tick);
 }
 
@@ -70,7 +70,7 @@ private void ServerFire(Vector3 position, Vector3 direction, uint tick)
      * How this is done depends largely upon your game so it
      * won't be covered in this guide. */
 
-    //Get passed time. Note the false for allow negative values.
+    // Get passed time. Note the false for allow negative values.
     float passedTime = (float)base.TimeManager.TimePassed(tick, false);
     /* Cap passed time at half of constant value for the server.
      * In our example max passed time is 300ms, so server value
@@ -81,9 +81,9 @@ private void ServerFire(Vector3 position, Vector3 direction, uint tick)
      * to punish other players because a laggy client is firing. */
     passedTime = Mathf.Min(MAX_PASSED_TIME / 2f, passedTime);
 
-    //Spawn on the server.
+    // Spawn on the server.
     SpawnProjectile(position, direction, passedTime);
-    //Tell other clients to spawn the projectile.
+    // Tell other clients to spawn the projectile.
     ObserversFire(position, direction, tick);
 }
 ```
@@ -101,11 +101,11 @@ Second, the passed time calculation is not limited by half. This is to support t
 [ObserversRpc(IncludeOwner = false)]
 private void ObserversFire(Vector3 position, Vector3 direction, uint tick)
 {
-    //Like on server get the time passed and cap it. Note the false for allow negative values.
+    // Like on server get the time passed and cap it. Note the false for allow negative values.
     float passedTime = (float)base.TimeManager.TimePassed(tick, false);
     passedTime = Mathf.Min(MAX_PASSED_TIME, passedTime);
 
-    //Spawn the projectile locally.
+    // Spawn the projectile locally.
     SpawnProjectile(position, direction, passedTime);
 }
 ```
@@ -150,10 +150,10 @@ The percentage applied when assigning the _step_ variable decides how fast your 
 /// </summary>
 private void Move()
 {
-    //Frame delta, nothing unusual here.
+    // Frame delta, nothing unusual here.
     float delta = Time.deltaTime;
 
-    //See if to add on additional delta to consume passed time.
+    // See if to add on additional delta to consume passed time.
     float passedTimeDelta = 0f;
     if (_passedTime > 0f)
     {
@@ -181,12 +181,12 @@ private void Move()
         passedTimeDelta = step;
     }
 
-    //Move the projectile using moverate, delta, and passed time delta.
+    // Move the projectile using moverate, delta, and passed time delta.
     transform.position += _direction * (MOVE_RATE * (delta + passedTimeDelta));
 }
 ```
 
-Very last, keep in mind these projectiles are fired locally and are not networked. Because of this you may want to perform different actions based on if client or server.  The code below demonstrates what a collision event might look like.
+Very last, keep in mind these projectiles are fired locally and are not networked. Because of this you may want to perform different actions based on if client or server. The code below demonstrates what a collision event might look like.
 
 ```csharp
 /// <summary>
@@ -200,13 +200,13 @@ private void OnCollisionEnter(Collision collision)
      * 100% accuracy. But, the differences are generally
      * insignifcant and will not affect gameplay. */
 
-    //If client show visual effects, play impact audio.
+    // If client show visual effects, play impact audio.
     if (InstanceFinder.IsClient)
     {
-        //Show VFX.
-        //Play Audio.
+        // Show VFX.
+        // Play Audio.
     }
-    //If server check to damage hit objects.
+    // If server check to damage hit objects.
     if (InstanceFinder.IsServer)
     {
         PlayerShip ps = collision.gameObject.GetComponent<PlayerShip>();
@@ -217,7 +217,7 @@ private void OnCollisionEnter(Collision collision)
             ps.Health -= 50f;
     }
 
-    //Destroy projectile (probably pool it instead).
+    // Destroy projectile (probably pool it instead).
     Destroy(gameObject);
 }
 ```

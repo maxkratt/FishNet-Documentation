@@ -22,7 +22,7 @@ For casual games an interpolation of 2-3 may be desired to drastically improve t
 
 Server interpolation is much the same but typically should be a lower value. This is how much of a buffer the server tries to hold for inputs, resulting in the server not running them after a number of ticks equal to the specified interpolation.
 
-## Excessive Replicate Dropping
+## Excessive replicate dropping
 
 Typically speaking the server will never have more than it's Server Interpolation +/- 1 in queue. However, there is a chance if the client is having network issues and is sending inputs in burst the queue could for example go from 0 to 5, if 5 of clients inputs came through at once.
 

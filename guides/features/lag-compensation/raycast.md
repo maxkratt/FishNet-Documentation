@@ -36,7 +36,7 @@ You've completed all the steps required for setting up an object.
 
 To utilize the lag compensation you must also add the RollbackManager script to your Networkmanager object. We have a section on the [RollbackManager ](../../../fishnet-building-blocks/components/managers/rollbackmanager-pro-feature.md)component to understand what each field does. Once you review the component settings we can move onto the code.
 
-## Performing a Rollback
+## Performing a rollback
 
 The RollbackManager must know how far back in time to place colliders to obtain accurate hit results. When your client is to fire their weapon you will want to gather the current PreciseTick and include it with your Fire RPC.
 
@@ -44,23 +44,23 @@ The RollbackManager must know how far back in time to place colliders to obtain 
 [Client]
 private void Fire()
 {
-    //Use LastPacketTick to get the best tick alignment.
+    // Use LastPacketTick to get the best tick alignment.
     PreciseTick pt = base.TimeManager.GetPreciseTick(TickType.LastPacketTick);
-    //Call fire on the server.
+    // Call fire on the server.
     ServerFire(pt);
 }
 
 [ServerRpc]
 private void ServerFire(PreciseTick pt)
 {
-    //Rollback using the precise tick sent in.
-    //Using Physics for 3d rolback, Physics3D for 2d rolback.
-    //Both physics types can be used at once.
+    // Rollback using the precise tick sent in.
+    // Using Physics for 3d rollback, Physics3D for 2d rollback.
+    // Both physics types can be used at once.
     base.RollbackManager.Rollback(pt, RollbackManager.PhysicsType.Physics, base.IsOwner);
-    //Perform your raycast normally.
+    // Perform your raycast normally.
     RaycastHit hit;
     if (Physics.Raycast(transform.position, transform.forward, out hit)) { }
-    //Return the colliders to their proper positions.
+    // Return the colliders to their proper positions.
     base.RollbackManager.Return();
 }
 ```

@@ -12,7 +12,7 @@ Very often your code will need to know if it's running on a server or a client, 
 
 ***
 
-## Checking a Boolean
+## Checking a boolean
 
 {% tabs %}
 {% tab title="Description" %}
@@ -58,7 +58,7 @@ public class Player : NetworkBehaviour
 
 ***
 
-## Method Attributes
+## Method attributes
 
 There are a variety of attributes which can be used to ensure a method only runs on the appropriate game instance.&#x20;
 
@@ -66,7 +66,7 @@ There are a variety of attributes which can be used to ensure a method only runs
 These methods are also used for Fish-Networking Pro's automatic code stripping. Importantly, methods marked with the `Server` attribute will have their method body stripped from non server builds.
 {% endhint %}
 
-### _Client_ Method Attribute
+### Client attribute
 
 {% tabs %}
 {% tab title="Description" %}
@@ -102,7 +102,7 @@ void PlayVFX()
 {% endtab %}
 {% endtabs %}
 
-### _Server_ Method Attribute
+### Server attribute
 
 {% tabs %}
 {% tab title="Description" %}

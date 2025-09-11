@@ -8,15 +8,15 @@ This guide will show you one way you can set-up your player camera for multiplay
 
 {% stepper %}
 {% step %}
-**Installing Cinemachine**
+### **Installing Cinemachine**
 
 The first step — if you haven't done so already — is to install [Cinemachine](https://unity.com/features/cinemachine) through the [Unity Package Manager](https://learn.unity.com/tutorial/the-package-manager).
 
-<figure><img src="../../../.gitbook/assets/installing-cinemachine.png" alt=""><figcaption><p>Cinemachine Installing</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/installing-cinemachine.png" alt=""><figcaption><p>Cinemachine installing</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-**Adding the Cinemachine Brain**
+### **Adding the Cinemachine Brain**
 
 Now that we have **Cinemachine** installed we can set it up. Add the **Cinemachine Brain** component to the **Main Camera** game object in the scene.
 
@@ -24,7 +24,7 @@ Now that we have **Cinemachine** installed we can set it up. Add the **Cinemachi
 {% endstep %}
 
 {% step %}
-**Giving the Player a Camera Holder**
+### **Giving the player a camera holder**
 
 Now create an empty Game Object on your **Player Prefab** and position it where you'd like. This will be our container for the **Cinemachine** **Camera**.
 
@@ -32,7 +32,7 @@ Now create an empty Game Object on your **Player Prefab** and position it where 
 {% endstep %}
 
 {% step %}
-**Adding the Cinemachine Camera**
+### **Adding the Cinemachine Camera**
 
 Now simply add the **Cinemachine Camera** component to the newly created **CameraHolder** game object.
 
@@ -40,7 +40,7 @@ Now simply add the **Cinemachine Camera** component to the newly created **Camer
 {% endstep %}
 
 {% step %}
-**Writing a PlayerCamera Script**
+### **Writing a PlayerCamera script**
 
 Let's now add the following script to the **Player Prefab** that we will use to take control of our **Camera** once our player spawns in.
 
@@ -69,7 +69,7 @@ This script uses the [OnStartClient](../../../guides/features/networked-gameobje
 {% endstep %}
 
 {% step %}
-**Assign your References to the Script**
+### **Assign your references to the script**
 
 Now select the **Player Camera** component in your **Player Prefab** and add drag the **Camera Holder** game object into the _Cinemachine Camera_ field to assign it the component.
 
@@ -77,7 +77,7 @@ Now select the **Player Camera** component in your **Player Prefab** and add dra
 {% endstep %}
 
 {% step %}
-**Test the Camera In-Game**
+### **Test the camera in-game**
 
 With all that set you should be able to run the game and see how the camera from the scene is controlled by only your local player.
 

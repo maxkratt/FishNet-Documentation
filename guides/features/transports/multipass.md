@@ -14,7 +14,7 @@ Like other transports to use Multipass it must be added to a gameObject, general
 Be sure that each transport within Multipass is listening on a different port.
 {% endhint %}
 
-![Setup example.](../../../.gitbook/assets/multipass-setup-example.png)
+![Setup example](../../../.gitbook/assets/multipass-setup-example.png)
 
 ## Client
 
@@ -23,11 +23,11 @@ A client may only use one transport within Multipass, while the server may liste
 For client actions to work you must specify which transport to use for the client.
 
 ```csharp
-//This can be done easily using the TransportManager.
+// This can be done easily using the TransportManager.
 Multipass mp = transportManager.GetTransport<Multipass>();
 
-//In this example if the build is a webGL build
-//then use Bayou, otherwise use Tugboat.
+// In this example if the build is a webGL build
+// then use Bayou, otherwise use Tugboat.
 
 #if UNITY_WEBGL && !UNITY_EDITOR
 mp.SetClientTransport<Bayou>();
@@ -45,15 +45,15 @@ Once a client transport is set you may perform functions normally as if you were
 As covered in the [component settings](../../../fishnet-building-blocks/transports/multipass.md#component-settings) _GlobalServerActions_ will execute server actions on all transports specified within Multipass. If you were to call ServerManager.StartConnection() while _GlobalServerActions_ is true then the server would start on all transports; otherwise an error will be thrown.
 
 ```csharp
-//Start all servers transports. This requires GlobalServerActions to be true.
+// Start all servers transports. This requires GlobalServerActions to be true.
 serverManagerReference.StartConnection();
 ```
 
 You may also access functions on a single transport by specifying the index of which transport to use.
 
 ```csharp
-//Start the connection on index 0.
+// Start the connection on index 0.
 Multipass mp = TransportManager.GetTransport<Multipass>();
-//The true parameter is to indicate you are starting a server.
+// The true parameter is to indicate you are starting a server.
 mp.StartConnection(true, 0);
 ```

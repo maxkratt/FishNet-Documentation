@@ -75,7 +75,7 @@ public class NetworkServerStarter : MonoBehaviour
 
 It's important to set up your chosen transport's settings for your dedicated server. The default transport [Tugboat](../../fishnet-building-blocks/transports/tugboat.md) should in most cases have the [Reuse Address](../../fishnet-building-blocks/transports/tugboat.md#reuse-address) option enabled.
 
-<figure><img src="../../.gitbook/assets/playflow-tutorial-tugboat-reuse-address.png" alt=""><figcaption><p>Reuse Address option enabled</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/playflow-tutorial-tugboat-reuse-address.png" alt=""><figcaption><p><strong>Reuse Address</strong> option enabled</p></figcaption></figure>
 
 In addition to that, you may want to set your **Port** and **Server Bind Address**. We'll take a look at how we can set these dynamically next.
 
@@ -158,7 +158,7 @@ When you run your server you may notice a lot of errors and warnings related to 
 * Go to **Edit → Project Settings → Player → Other Settings**
 * Under **Optimization**, enable **"Dedicated Server Optimizations"**
 
-<figure><img src="../../.gitbook/assets/dedicated-server-optimizations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dedicated-server-optimizations.png" alt=""><figcaption><p>Enabling the <strong>Dedicated Server Optimizations</strong> option</p></figcaption></figure>
 
 ## Excluding files from the server
 

@@ -6,4 +6,4 @@ The **Default Prefab Objects** asset is a dynamically populated collection of sp
 You do not need to manually populate or update this collection, FishNet will take care of it automatically.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/default-prefab-objects.png" alt=""><figcaption><p>Example of DefaultPrefabObjects being populated by Networked Prefabs</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/default-prefab-objects.png" alt=""><figcaption><p>Example of <strong>DefaultPrefabObjects</strong> being populated by Networked Prefabs</p></figcaption></figure>

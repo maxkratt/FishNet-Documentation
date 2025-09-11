@@ -12,7 +12,7 @@ There are many transports available, some are maintained by the Fish-Networking 
 [Tugboat](tugboat.md) is the default transport and will be added to your project at runtime. If you wish to use a different transport or customize **Tugboat** you must add the component to your [NetworkManager](../components/managers/network-manager.md) object.
 {% endhint %}
 
-## Switching Transports at Run-Time or using Multiple Transports
+## Switching transports at run-time or using multiple transports
 
 FishNet has support for changing transports on your NetworkManager while the network is not running as well as allowing servers to utilize multiple transports at once. For example you may want to use FishyEOS or Unity Transport to support your console users, but also use Tugboat to give a better experience to your Non-Console users.
 

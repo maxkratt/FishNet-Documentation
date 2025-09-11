@@ -1,3 +1,7 @@
+---
+description: Information about how to spawn and despawn objects on the network.
+---
+
 # Spawning and Despawning
 
 For objects to exist over the network they must have a NetworkObject component on them, and **must be spawned using the server**. To spawn an object it must first be instantiated, and then passed into a Spawn method. There are a variety of Spawn methods to access for your convenience, all of which provide the same outcome.
@@ -6,7 +10,7 @@ For objects to exist over the network they must have a NetworkObject component o
 Networked addressable prefabs must be registered with the NetworkManager differently. See [Addressables](../../addressables.md) guide for more information on this.
 {% endhint %}
 
-**Spawning Without an Owner** is done by passing in _null_ for the owner, or simply leaving the argument out.
+**Spawning without an owner** is done by passing in _null_ for the owner, or simply leaving the argument out.
 
 ```csharp
 GameObject go = Instantiate(_yourPrefab);
@@ -18,7 +22,7 @@ GameObject go = Instantiate(_yourPrefab);
 InstanceFinder.ServerManager.Spawn(go);
 ```
 
-**Spawning With Ownership**
+**Spawning with ownership**
 
 ```csharp
 GameObject go = Instantiate(_yourPrefab);
@@ -29,23 +33,23 @@ You may also access the spawn method within any script that inherits NetworkBeha
 
 ```csharp
 GameObject go = Instantiate(_yourPrefab);
-base.Spawn(go, ownerConnection); //networkBehaviour.
-//or
-networkObject.Spawn(go, ownerConnection); //referencing a NetworkObject.
+base.Spawn(go, ownerConnection); // networkBehaviour.
+// or
+networkObject.Spawn(go, ownerConnection); // referencing a NetworkObject.
 ```
 
 **Despawning** can be accessed the same ways as spawning. Through a NetworkBehaviour script, a reference NetworkObject, or through the ServerManager directly.
 
 ```csharp
-base.Despawn(); //networkBehaviour. Despawns the NetworkObject.
-networkObject.Despawn(); //referencing a NetworkObject.
-InstanceFinder.ServerManager.Despawn(gameObject); //through ServerManager.
+base.Despawn(); // networkBehaviour. Despawns the NetworkObject.
+networkObject.Despawn(); // referencing a NetworkObject.
+InstanceFinder.ServerManager.Despawn(gameObject); // through ServerManager.
 ```
 
 When despawning you may also choose to pool the object rather than destroy it. There are optional parameters available to change this behavior.
 
 ```csharp
-base.Despawn(DespawnType.Pool); //pools the object instead of destroying it.
+base.Despawn(DespawnType.Pool); // pools the object instead of destroying it.
 ```
 
 You can check if an object is spawned at anytime using the _IsSpawned_ property within NetworkBehaviour, or NetworkObject.

@@ -4,7 +4,7 @@ Limitation is not a word we like to use in Fish-Networking but unfortunately the
 
 <details>
 
-<summary>Networked Scene Objects</summary>
+<summary>Networked scene objects</summary>
 
 When a scene object is networked they may behave differently.
 

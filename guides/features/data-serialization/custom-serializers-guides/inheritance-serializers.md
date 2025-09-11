@@ -6,7 +6,7 @@ description: Learn how to serialize classes and any their children classes.
 
 Another frequently asked question is how to handle serialization for classes which are inherited by multiple other classes. These are often used to allow [RPCs ](../../network-communication/remote-procedure-calls.md)to use the base class as a parameter, while permitting other inheriting types to be used as arguments. This approach is similar to [Interface serializers.](interface-serializers.md)
 
-## Class Example
+## Class example
 
 Here is an example of a class you want to serialize, and two other types which inherit it.
 
@@ -56,7 +56,7 @@ private void ObsSendItem(ItemBase ib)
 }
 ```
 
-### Creating The Writer
+### Creating the writer
 
 Since you are accepting ItemBase through your RPC you must handle the different possibilities of what is being sent. Below is a serializer which does just that.
 

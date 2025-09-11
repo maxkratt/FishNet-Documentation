@@ -31,25 +31,25 @@ private void TimeManager_OnTick()
 
 }
 
-//RunLocally is used to the server also sets the emp tick.
+// RunLocally is used to the server also sets the emp tick.
 [ObserversRpc(RunLocally = true)]
 private void ObserversSetEMPTick(uint serverTick)
 {
-    //Converts the server EMP tick to local tick for this client.
+    // Converts the server EMP tick to local tick for this client.
     _empStartTick = base.TimeManager.TickToLocalTick(serverTick);
-    //Set end tick. In our example the EMP will last 1 second.
+    // Set end tick. In our example the EMP will last 1 second.
     _empEndTick = _empStartTick + base.TimeManager.TimeToTicks(1f, TickRounding.RoundUp);
 }
 ```
 
-When the RPC is received two fields are set, a tick when to start the EMP and when to end it.&#x20;
+When the RPC is received two fields are set, a tick when to start the EMP and when to end it.
 
 Next in our replicate method if the clients or servers LocalTick is within that EMP duration we prevent any further motor movement. As mentioned this example uses prediction but you could apply this to an Update loop as well if not using prediction.
 
 ```csharp
-//Tick when to start emp.
+// Tick when to start emp.
 private uint _empStartTick = uint.MaxValue;
-//Tick when to end emp.
+// Tick when to end emp.
 private uint _empEndTick = uint.MaxValue;
 
 /* This is an example of a replicate data excluding the extra
@@ -77,7 +77,7 @@ private void Replicate(MotorData md)
         return;
     }
 
-    //Normal motor logic here. 
+    // Normal motor logic here. 
 }
 ```
 

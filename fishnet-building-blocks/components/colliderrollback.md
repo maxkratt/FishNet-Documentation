@@ -4,7 +4,7 @@ description: >-
   compensation.
 ---
 
-# ColliderRollback  (Pro Feature)
+# ColliderRollback (Pro Feature)
 
 ## Description
 
@@ -12,7 +12,7 @@ This component is used for rolling back colliders on objects for the purpose of 
 
 ## Settings
 
-<div align="left"><figure><img src="../../.gitbook/assets/collider-rollback-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/collider-rollback-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear:  **Bounding Box**
 

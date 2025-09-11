@@ -6,13 +6,13 @@ Interfaces are very commonly used in most Unity Projects. Since Interfaces are n
 
 ***
 
-## Serializing the Interfaces Entire Class
+## Serializing the interfaces entire class
 
 In most cases you will want to interrogate an Interface as what its class type is, and serialize the entire types class over the network. This allows you to interrogate the interface later on the receiving client/server and have the data match what the sender has at the time it was sent as well.
 
 If the Interface is a NetworkBehaviour you might as well send it as one because Serializing them over the network is only sending an ID for the receiving client to look up. Very Little network traffic, and you still get all of the data!
 
-### Creating The Writer
+### Creating the writer
 
 Since Interfaces are not classes you must design the writer to be able to interrogate the class the Interface is, and serialize the class over the network. If an interface can be many types of classes, you will need to account for each class the Interface can be.
 
@@ -36,7 +36,7 @@ public static void WriteISomething(this Writer writer, ISomething som)
 }  
 ```
 
-### Creating The Reader
+### Creating the reader
 
 When reading the interface, we have to read the byte that identifies what class the interface actually is first. Then use the reader to read that classes data. Finally casting it as the interface we need.
 
@@ -62,11 +62,11 @@ public static ISomething ReadISomething(this Reader reader)
 
 ***
 
-## Serializing Only The Interfaces Properties
+## Serializing only the interfaces properties
 
 Sometimes you may only want to serialize just the Interface properties over the network, just keep in mind that if you cast it as the Type it actually is on the receiving client, the values of fields not apart of the interface will be their default values!
 
-### Creating The Writer
+### Creating the writer
 
 You still will have to use an Identifier to send what class the Interface is, but we will not be sending the entire class over the network. Just the Interface Properties.
 
@@ -102,7 +102,7 @@ public static void WriteISomething(this Writer writer, ISomething som)
 }
 ```
 
-### Creating The Reader
+### Creating the reader
 
 When reading, we will get the class type from the identifier, create a new class, cast the class as the interface, and then assign the custom serialized values to the interface!
 

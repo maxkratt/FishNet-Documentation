@@ -60,7 +60,7 @@ FishNet includes a basic latency simulator that can add artificial latency, pack
 
 To use this, add the [TransportManager](../../fishnet-building-blocks/components/managers/transportmanager/) component to your network manager. You will now be able to enable the **Latency Simulator** and tweak its settings.
 
-<figure><img src="../../.gitbook/assets/transport-manager-component.png" alt=""><figcaption><p>The Latency Simulator on the TransportManager</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/transport-manager-component.png" alt=""><figcaption><p>The <strong>Latency Simulator</strong> on the <strong>TransportManager</strong></p></figcaption></figure>
 
 ***
 

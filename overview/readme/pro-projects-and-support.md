@@ -27,7 +27,7 @@ _Please consider making purchases through GitHub as our preferred platform, or P
 
 _In addition, GitHub and Patreon offer extra bonuses as a thank you!_
 
-### GitHub and Patreon Perks
+### GitHub and Patreon perks
 
 {% hint style="info" %}
 Becoming a supporter is designed to be indie-dev and budget friendly.
@@ -43,7 +43,7 @@ When on any $10 tier or higher you will gain access to Priority Support, this in
 Business support tiers are **only** available on GitHub.
 {% endhint %}
 
-**Lifetime Benefits:**
+**Lifetime benefits:**
 
 {% hint style="success" %}
 You can get bonus Priority Support months on GitHub!
@@ -62,7 +62,7 @@ All higher tiers provide access to any content beneath them.
 For example: If you have access to Fish-Networking Pro, you also have access to Projects.
 {% endhint %}
 
-### Unity Asset Store Perks
+### Unity Asset Store perks
 
 Asset store purchases provide lifetime updates to Fish-Networking Pro.
 
@@ -72,7 +72,7 @@ You can also gain access to Priority Support with your asset store purchase! You
 The amount of months received are directly related to what goes back into the project after Unity's fees. If you purchase Fish-Networking Pro at $50 you will receive 4 months of Priority Support, and 2 months at $25.
 {% endhint %}
 
-## After Purchasing
+## After purchasing
 
 {% hint style="danger" %}
 Please be certain you read [Purchasing](pro-projects-and-support.md#purchasing) thoroughly.
@@ -110,7 +110,7 @@ All business [support tiers](pro-projects-and-support.md#support-tier-options) a
 We have an extremely flexible sharing license for Fish-Networking Pro, allowing teams and classrooms to work on a single purchase. You can view that license [here](https://github.com/FirstGearGames/FishNet/blob/main/LICENSE.md).
 {% endhint %}
 
-#### Features For Pro:
+#### Features for Pro:
 
 > **Lag Compensation**
 >
@@ -182,7 +182,7 @@ FPS Land for Fish-Networking V3 is still available for download.
 > * Movement modifiers from weapon weight and walking.
 > * Pet friendly goats.
 
-## Support Tier Options
+## Support tier options
 
 All business [support tiers](pro-projects-and-support.md#support-tier-options) also grant a complimentary lifetime Pro license.
 

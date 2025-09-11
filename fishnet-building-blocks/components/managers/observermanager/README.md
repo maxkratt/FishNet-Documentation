@@ -16,17 +16,17 @@ Check out its API page for more specific methods and events [here](https://fish-
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/observer-manager-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/observer-manager-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Update Host Visibility**
+### :gear: **Update Host Visibility**
 
 > This will hide renderers on networked objects which are hidden to host client. When true, all networked objects will be visible to the host client even if these objects would normally be despawned for the client.
 
-### :gear:  **Maximum Timed Observers**
+### :gear: **Maximum Timed Observers**
 
 > The maximum duration that the server will take to update timed observer conditions as server load increases. Lower values will result in timed conditions being checked quicker at the cost of performance.
 
-### :gear:  **Default Conditions**
+### :gear: **Default Conditions**
 
 > These are [Observer Conditions](../../../scriptableobjects/observerconditions/) which will be added to all NetworkObjects by default.
 >

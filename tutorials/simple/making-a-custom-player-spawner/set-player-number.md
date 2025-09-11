@@ -4,7 +4,7 @@ description: >-
   your game.
 ---
 
-# Spawning Players when Set Number of Players Joined
+# Spawning Players When Set Number of Players Joined
 
 {% stepper %}
 {% step %}
@@ -14,7 +14,7 @@ Create a new script in your project for your custom player spawner. We have give
 {% endstep %}
 
 {% step %}
-### Add the Needed Fields and Namespaces
+### Add the needed fields and namespaces
 
 Our class will take a NetworkObject prefab which will be spawned for our players and an integer for how many players need to connect before we spawn the players.
 
@@ -30,15 +30,18 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[SerializeField] private NetworkObject playerPrefab;
-[SerializeField] private int requiredPlayerCount;
-
-private NetworkManager networkManager;
+public class CountBasedPlayerSpawner : MonoBehaviour
+{
+    [SerializeField] private NetworkObject playerPrefab;
+    [SerializeField] private int requiredPlayerCount;
+    
+    private NetworkManager networkManager;
+}
 ```
 {% endstep %}
 
 {% step %}
-### Get a Reference to the NetworkManager
+### Get a reference to the NetworkManager
 
 Let's now get a reference to the NetworkManager, we will first try to get it from this object or one of this object's parents, but if that fails we will get it from the [InstanceFinder](../../../guides/features/instancefinder-guides.md).
 
@@ -59,7 +62,7 @@ private void Awake()
 {% endstep %}
 
 {% step %}
-### Listen for Clients Joining
+### Listen for clients joining
 
 With access to the **NetworkManager**, we can now monitor when clients join the game. To achieve this, we’ll utilize the `SceneManager.OnClientLoadedStartScenes` event, which is triggered once a client finishes loading the initial scenes after connecting.
 
@@ -83,7 +86,7 @@ private void OnDestroy()
 {% endstep %}
 
 {% step %}
-### Implement the OnClientLoadedStartScenes Method
+### Implement the OnClientLoadedStartScenes method
 
 Now let's implement the `OnClientLoadedStartScenes` method that will do all of the player spawning for us.
 
@@ -114,7 +117,7 @@ private void OnClientLoadedStartScenes(NetworkConnection _, bool asServer)
 {% endstep %}
 
 {% step %}
-### Enable Use of Object Pooling
+### Enable use of object pooling
 
 We can also make the script work with FishNet's [Object Pooling](../../../guides/features/networked-gameobjects-and-scripts/spawning/object-pooling.md) system by changing the `Instantiate` method call to one provided by FishNet. This code will work even if we don't use Object Pooling, so it's a direct improvement here.
 
@@ -126,7 +129,7 @@ NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer:
 {% endstep %}
 
 {% step %}
-### Handle Starting Scenes
+### Handle starting scenes
 
 This script functions well when clients are loaded into the scene via the FishNet [SceneManager](../../../guides/features/scene-management/). However, if the game begins in this scene without using the FishNet SceneManager to load it, we need to manually inform FishNet that the client has entered the scene and should begin observing it. To handle this, insert the following code right after our call to `Spawn`.
 
@@ -138,7 +141,7 @@ if (!client.Scenes.Contains(gameObject.scene))
 {% endstep %}
 
 {% step %}
-### Final Script
+### Final script
 
 The script is now completed and ready to use. You can add it to your NetworkManager object or a different object that exists before the clients start connecting. Don't forget to assign its `playerPrefab` and `requiredPlayerCount` fields.
 

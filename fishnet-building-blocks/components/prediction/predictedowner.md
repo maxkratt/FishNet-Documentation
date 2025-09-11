@@ -19,9 +19,8 @@ Check out its full API page for more specific methods and properties [here](http
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/predicted-owner-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/predicted-owner-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Allow Take Ownership**
+### :gear: **Allow Take Ownership**
 
 > This enables or disables the functionality of this component, and can be set at run-time from the server with this method: [`SetAllowTakeOwnership`](https://fish-networking.com/FishNet/api/api/FishNet.Component.Ownership.PredictedOwner.html#FishNet_Component_Ownership_PredictedOwner_SetAllowTakeOwnership_System_Boolean_).
-

@@ -1,3 +1,7 @@
+---
+description: Information about how to use object pooling for networked objects.
+---
+
 # Object Pooling
 
 Fish-Networking has built-in functionality for Object pooling that will allow the server and client to keep instances of loaded prefabs in memory for later use. This could potentially provide better spawning performance for clients and server.
@@ -22,15 +26,15 @@ By Default when examining the NetworkManager in the Editor nothing will be assig
 
 See below for screen captures of the NetworkManager.
 
-<figure><img src="../../../../.gitbook/assets/object-pool-unassigned.png" alt="Editor Mode"><figcaption><p>Editor Mode - Nothing will be assigned, unless you impliment your own Object Pool</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/object-pool-unassigned.png" alt="Editor Mode"><figcaption><p>Editor Mode - Nothing will be assigned, unless you implement your own Object Pool</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/object-pool-automatically-assigned.png" alt=""><figcaption><p>Play Mode - Default Object Pool Automatically Assigned</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/object-pool-automatically-assigned.png" alt=""><figcaption><p>Play Mode - Default Object Pool automatically assigned</p></figcaption></figure>
 
 {% hint style="info" %}
 By default the object pool is enabled, but your network objects will only use the pool if the default despawn behavior is modified, or through the despawn call. See below for examples to both of these.
 {% endhint %}
 
-### Default Despawn Behavior
+### Default despawn behavior
 
 On the [NetworkObject](../../../../manual/guides/spawning/broken-reference/) component you can set what the default despawn behavior is for the object where the script is placed.\
 \
@@ -38,13 +42,13 @@ This setting is set to "Destroy" by default, so make sure to switch this over to
 
 <figure><img src="../../../../.gitbook/assets/network-object-despawn-type-pool.png" alt=""><figcaption></figcaption></figure>
 
-### Manual Despawn Behavior
+### Manual despawn behavior
 
 You can manually change the despawn behavior through code for specific situations.
 
 ```csharp
-//When calling Fishnets Despawn from any location you can pass a enum 
-//perameter to deviate from the default behavior.
+// When calling Fishnets Despawn from any location you can pass a enum 
+// perameter to deviate from the default behavior.
 ServerManager.Despawn(nob, DespawnType.Pool);
 ```
 
@@ -53,11 +57,11 @@ ServerManager.Despawn(nob, DespawnType.Pool);
 When using the object pool you will want to retrieve NetworkObject from it prior to network spawning them. Doing so will pull from the pool rather than instantiate new objects.
 
 ```csharp
-//There are many overrides which can a variety of information.
-//You can use GameObjects, NetworkObjects, PrefabIds, CollectionIds,
-//spawn positions, and more.
+// There are many overrides which can a variety of information.
+// You can use GameObjects, NetworkObjects, PrefabIds, CollectionIds,
+// spawn positions, and more.
 NetworkObject nob = NetworkManager.GetPooledInstantiated(...);
-//Spawn normally.
+// Spawn normally.
 ServerManager.Spawn(nob);
 ```
 
@@ -85,6 +89,6 @@ private void Start()
 }
 ```
 
-## Custom Implementation
+## Custom implementation
 
 FishNet allows for the user to implement their own method of object pooling. First create your own class inheriting from the **ObjectPool** class. Place your new class component in your scene, typically directly on the NetworkManager object. Then assign your component to the _ObjectPool_ field on the NetworkManager.

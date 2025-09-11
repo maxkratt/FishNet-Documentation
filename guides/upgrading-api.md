@@ -112,13 +112,13 @@ description: >-
 > Fields previously identified as SyncVars using the SyncVar attributes must now use SyncVar\<Type> as the field, and must be initialized like SyncObjects.
 >
 > ```csharp
-> //Example.
+> // Example.
 > private readonly SyncVar<float> _health = new();
 >
 > private void MyMethod()
 > {
 >     Debug.Log($"Current health is {_health.Value}");
->     //Set health to a new value.
+>     // Set health to a new value.
 >     _health.Value = 10f;
 > }
 > ```
@@ -150,10 +150,10 @@ description: >-
 > Broadcast handlers now require Channel as the last parameter.
 >
 > ```csharp
-> //Example:
-> //Before
+> // Example:
+> // Before
 > private void OnResponseBroadcast(ResponseBroadcast rb)
-> //After
+> // After
 > private void OnResponseBroadcast(ResponseBroadcast rb, Channel channel)
 > ```
 

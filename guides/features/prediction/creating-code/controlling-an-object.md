@@ -2,9 +2,9 @@
 description: Learn how to create a predicted object that the owner or server can control.
 ---
 
-# Controlling An Object
+# Controlling an Object
 
-## Data Structures
+## Data structures
 
 Implementing prediction is done by creating a replicate and reconcile method, and making calls to the methods accordingly.
 
@@ -36,11 +36,11 @@ Here are the two structures containing basic mechanics for a rigidbody.
 
 public struct ReconcileData : IReconcileData
 {
-    //PredictionRigidbody is used to synchronize rigidbody states
-    //and forces. This could be done manually but the PredictionRigidbody
-    //type makes this process considerably easier. Velocities, kinematic state,
-    //transform properties, pending velocities and more are automatically
-    //handled with PredictionRigidbody.
+    // PredictionRigidbody is used to synchronize rigidbody states
+    // and forces. This could be done manually but the PredictionRigidbody
+    // type makes this process considerably easier. Velocities, kinematic state,
+    // transform properties, pending velocities and more are automatically
+    // handled with PredictionRigidbody.
     public PredictionRigidbody PredictionRigidbody;
     
     public ReconcileData(PredictionRigidbody pr) : this()
@@ -60,7 +60,7 @@ public struct ReconcileData : IReconcileData
 Learn more about using [PredictionRigidbody](../predictionrigidbody.md).
 {% endhint %}
 
-## Preparing To Call Prediction Methods
+## Preparing to call prediction methods
 
 Typically speaking you would want to run your replicate(or inputs) during OnTick. When you send the reconcile depends on if you are using physics bodies or not.
 
@@ -75,17 +75,17 @@ You may need to modify move and jump forces depending on the shape, drag, and ma
 {% endhint %}
 
 ```csharp
-//How much force to add to the rigidbody for jumps.
+// How much force to add to the rigidbody for jumps.
 [SerializeField]
 private float _jumpForce = 8f;
-//How much force to add to the rigidbody for normal movements.
+// How much force to add to the rigidbody for normal movements.
 [SerializeField]
 private float _moveForce = 15f;
-//PredictionRigidbody is set within OnStart/StopNetwork to use our
-//caching system. You could simply initialize a new instance in the field
-//but for increased performance using the cache is demonstrated.
+// PredictionRigidbody is set within OnStart/StopNetwork to use our
+// caching system. You could simply initialize a new instance in the field
+// but for increased performance using the cache is demonstrated.
 public PredictionRigidbody PredictionRigidbody;
-//True if to jump next replicate.
+// True if to jump next replicate.
 private bool _jump;
 
 private void Awake()
@@ -110,7 +110,7 @@ public override void OnStopNetwork()
 }
 ```
 
-## Calling Prediction Methods
+## Calling prediction methods
 
 For our described demo, below is how you would gather input for your replicate and reconcile methods.
 
@@ -142,7 +142,7 @@ private ReplicateData CreateReplicateData()
     if (!base.IsOwner)
         return default;
 
-    //Build the replicate data with all inputs which affect the prediction.
+    // Build the replicate data with all inputs which affect the prediction.
     float horizontal = Input.GetAxisRaw("Horizontal");
     float vertical = Input.GetAxisRaw("Vertical");
     ReplicateData md = new ReplicateData(_jump, horizontal, vertical);
@@ -152,21 +152,22 @@ private ReplicateData CreateReplicateData()
 }
 ```
 
-Now implement your replicate method. The name may be anything but the parameters shown are required. The first is what we pass in, the remainder are set at runtime. Although, you absolutely may change the default channel used in the parameter or even at runtime.&#x20;
+Now implement your replicate method. The name may be anything but the parameters shown are required. The first is what we pass in, the remainder are set at runtime. Although, you absolutely may change the default channel used in the parameter or even at runtime.
 
 For example, it could be beneficial to send an input as reliable if you absolutely want to ensure it's not dropped due to network issues.
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>[Replicate]
-</strong>private void RunInputs(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
+```csharp
+[Replicate]
+private void RunInputs(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
 {
     /* ReplicateState is set based on if the data is new, being replayed, ect.
     * Visit the ReplicationState enum for more information on what each value
     * indicates. At the end of this guide a more advanced use of state will
     * be demonstrated. */
     
-    //Be sure to always apply and set velocties using PredictionRigidbody
-    //and never on the rigidbody itself; this includes if also accessing from
-    //another script.
+    // Be sure to always apply and set velocties using PredictionRigidbody
+    // and never on the rigidbody itself; this includes if also accessing from
+    // another script.
     Vector3 forces = new Vector3(data.Horizontal, 0f, data.Vertical) * _moveRate;
     PredictionRigidbody.AddForce(forces);
 
@@ -175,16 +176,16 @@ For example, it could be beneficial to send an input as reliable if you absolute
         Vector3 jmpFrc = new Vector3(0f, _jumpForce, 0f);
         PredictionRigidbody.AddForce(jmpFrc, ForceMode.Impulse);
     }
-    //Add gravity to make the object fall faster. This is of course
-    //entirely optional.
+    // Add gravity to make the object fall faster. This is of course
+    // entirely optional.
     PredictionRigidbody.AddForce(Physics.gravity * 3f);
-    //Simulate the added forces.
-    //Typically you call this at the end of your replicate. Calling
-    //Simulate is ultimately telling the PredictionRigidbody to iterate
-    //the forces we added above.
+    // Simulate the added forces.
+    // Typically you call this at the end of your replicate. Calling
+    // Simulate is ultimately telling the PredictionRigidbody to iterate
+    // the forces we added above.
     PredictionRigidbody.Simulate();
 }
-</code></pre>
+```
 
 {% hint style="info" %}
 On non-owned objects a number of replicates will arrive as ReplicateState Created, but will contain default values. This is our PredictionManager.RedundancyCount feature working.
@@ -200,16 +201,16 @@ private void TimeManager_OnPostTick()
     CreateReconcile();
 }
 
-//Create the reconcile data here and call your reconcile method.
+// Create the reconcile data here and call your reconcile method.
 public override void CreateReconcile()
 {
-    //We must send back the state of the rigidbody. Using your
-    //PredictionRigidbody field in the reconcile data is an easy
-    //way to accomplish this. More advanced states may require other
-    //values to be sent; this will be covered later on.
+    // We must send back the state of the rigidbody. Using your
+    // PredictionRigidbody field in the reconcile data is an easy
+    // way to accomplish this. More advanced states may require other
+    // values to be sent; this will be covered later on.
     ReconcileData rd = new ReconcileData(PredictionRigidbody);
-    //Like with the replicate you could specify a channel here, though
-    //it's unlikely you ever would with a reconcile.
+    // Like with the replicate you could specify a channel here, though
+    // it's unlikely you ever would with a reconcile.
     ReconcileState(rd);
 }
 
@@ -221,8 +222,8 @@ Reconciling only a rigidbody state is very simple.
 [Reconcile]
 private void ReconcileState(ReconcileData data, Channel channel = Channel.Unreliable)
 {
-    //Call reconcile on your PredictionRigidbody field passing in
-    //values from data.
+    // Call reconcile on your PredictionRigidbody field passing in
+    // values from data.
     PredictionRigidbody.Reconcile(data.PredictionRigidbody);
 }
 ```

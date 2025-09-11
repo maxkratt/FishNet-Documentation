@@ -12,7 +12,7 @@ The **ServerSpawner** component is a helpful tool that you can use for optionall
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../.gitbook/assets/server-spawner-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/server-spawner-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear:  **Automatically Spawn**
 

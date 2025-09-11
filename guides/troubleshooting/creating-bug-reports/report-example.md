@@ -16,7 +16,7 @@ If troubleshooting was not performed or applicable fields are missing in the bug
 >
 > **FishNet Version:**
 >
-> * FishNet 4.6.12
+> * FishNet 4.3.1
 >
 > **Discord Troubleshot Link/What I've tried:**
 >
@@ -40,10 +40,6 @@ If troubleshooting was not performed or applicable fields are missing in the bug
 >
 > * Both the 1st and 2nd editor get callbacks.
 > * The SyncVar value should synchronize to the 2nd editor.
->
->
->
-> **\[Demo Project Attached]**
 
 At a glance this would suggest everything is working as intended. The server is not active on the 2nd editor (client only) so the InstanceFinder.IsServerStarted check is failing, and the value is never applied locally. The 1st editor is not sending the value because SyncTypes set in Awake are assumed applied in server and client since Awake always fires regardless of network state.
 

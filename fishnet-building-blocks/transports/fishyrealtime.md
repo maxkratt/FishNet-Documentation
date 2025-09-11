@@ -16,7 +16,7 @@ FishyRealtime is a transport that allows the Photon Realtime service from the co
 
 ***
 
-## How to Install
+## How to install
 
 Please visit the official GitHub link for Installation and Usage instructions.
 
@@ -28,12 +28,12 @@ To reiterate, This transport does depend on installing the Photon Realtime SDK S
 
 ***
 
-## Component Settings
+## Component settings
 
 * **Photon APP ID:** The app id of the Photon Realtime product.
 * **App Version:** The version of the product(Game), only clients with the same version can connect to each other.
 
-#### Default Room Options
+#### Default room options
 
 * **Max Players:** Default max players.
 * **Is Visable:** Whether Room is Visiable to Public Room List.

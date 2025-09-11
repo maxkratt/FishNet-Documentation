@@ -1,5 +1,6 @@
 ---
 layout:
+  width: default
   title:
     visible: true
   description:
@@ -9,6 +10,8 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
     visible: true
 ---
 
@@ -28,7 +31,7 @@ Using **FishyUnityTransport** also allows you to utilize some of [Unity's Multip
 
 ***
 
-## How to Install
+## How to install
 
 For installation instructions and usage please visit the official GitHub site.
 
@@ -36,7 +39,7 @@ Main: [https://github.com/ooonush/FishyUnityTransport](https://github.com/ooonus
 
 ***
 
-## Component Settings
+## Component settings
 
 {% hint style="warning" %}
 Settings marked in <mark style="color:yellow;">**Yellow**</mark> are only supported on Unity Transport 2.0!

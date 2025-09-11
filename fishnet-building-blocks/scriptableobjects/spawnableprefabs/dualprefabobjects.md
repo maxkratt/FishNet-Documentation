@@ -6,4 +6,4 @@ The Dual Prefab Objects asset can be used to have Fish-Networking spawn a differ
 You can select the same prefab in both the Server and Client fields to have the same one spawned on all clients as the server.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/dual-prefab-objects.png" alt=""><figcaption><p>Example of a Dual Prefab Objects asset being populated</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/dual-prefab-objects.png" alt=""><figcaption><p>Example of a <strong>Dual Prefab Objects</strong> asset being populated</p></figcaption></figure>

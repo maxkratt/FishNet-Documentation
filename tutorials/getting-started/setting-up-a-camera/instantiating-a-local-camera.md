@@ -8,21 +8,21 @@ With this method of camera management we will instantiate a camera from a prefab
 
 {% stepper %}
 {% step %}
-**Creating a Camera Prefab**
+### **Creating a camera prefab**
 
 Let's start by dragging the **Main Camera** in the scene into our **Project Window** to create a prefab out of it. You can now delete the **Main Camera** from the **Scene Hierarchy**.
 {% endstep %}
 
 {% step %}
-**Giving the Player a Camera Holder**
+### **Giving the player a camera holder**
 
 Now create an empty Game Object on your **Player Prefab** and position it where you'd like. This will be where we instantiate and position the **Camera** object.
 
-<figure><img src="../../../.gitbook/assets/camera-holder-setup.png" alt=""><figcaption><p>Camera Holder created on the Player Prefab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/camera-holder-setup.png" alt=""><figcaption><p>Camera Holder created on the player prefab</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-**Writing a PlayerCamera Script**
+### **Writing a PlayerCamera script**
 
 Let's now add the following script to the **Player Prefab** that we will use to instantiate our **Camera Prefab** once our player spawns in.
 
@@ -54,15 +54,15 @@ This script uses the [OnStartClient](../../../guides/features/networked-gameobje
 {% endstep %}
 
 {% step %}
-**Assign your References to the Script**
+### **Assign your references to the script**
 
 Now select the **Player Camera** component in your **Player Prefab** and add the **Camera Prefab** we made to the _Camera Prefab_ field. Also select the **CameraHolder** game object in the _Camera Holder_ field.
 
-<figure><img src="../../../.gitbook/assets/assigned-player-camera-to-player.png" alt=""><figcaption><p>The Player prefab with the Main Camera filled in</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/assigned-player-camera-to-player.png" alt=""><figcaption><p>The player prefab with the Main Camera filled in</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-**Test the Camera In-Game**
+### **Test the camera in-game**
 
 With all that set you should be able to run the game and see how the camera is created for only your local player.
 

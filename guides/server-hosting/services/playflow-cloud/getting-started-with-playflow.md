@@ -8,15 +8,15 @@ description: Step-by-step tutorial for getting up and running with PlayFlow Clou
 
 ***
 
-## Written Tutorial
+## Written tutorial
 
 This guide assumes you have some or all of your game already written using FishNet and are now ready to use PlayFlow to implement a dedicated server. You can also use PlayFlow throughout the development process as its one-click deployment makes it easy to setup a temporary server for testing.
 
-## Before we Begin...
+## Before we begin...
 
 {% stepper %}
 {% step %}
-### Starting Project
+### Starting project
 
 If you don't have a project already setup but want to follow this tutorial, you can use the [getting-started](../../../../tutorials/getting-started/ "mention") FishNet tutorial project. The files for it can be downloaded here:
 
@@ -42,7 +42,7 @@ If you need more detailed instructions for this step, check out **PlayFlow's** o
 {% endstep %}
 
 {% step %}
-### Add the Necessary Unity Modules
+### Add the necessary Unity modules
 
 The next thing we need to do is ensure our Unity installation has the correct modules for building a server. Install the **Linux Build Support** modules for your Unity version in the Unity Hub.
 
@@ -78,7 +78,7 @@ If we have set the [networkhudcanvas.md](../../../../fishnet-building-blocks/pre
 
 Once that's all done we can move on to using PlayFlow Cloud!
 
-## Deploying your Game with PlayFlow
+## Deploying your game with PlayFlow
 
 {% stepper %}
 {% step %}
@@ -90,7 +90,7 @@ Go to the [PlayFlow Cloud website](https://app.playflowcloud.com/) and sign-up u
 {% endstep %}
 
 {% step %}
-### Create a Game Studio
+### Create a game studio
 
 You'll now be prompted to create a Game Studio. Game Studios make it easy to organize your game projects and work smoothly with your team.
 
@@ -104,7 +104,7 @@ If you've chosen the **Pro** plan, you will also be able to manage **Team Collab
 {% endstep %}
 
 {% step %}
-### Create a New Project
+### Create a new project
 
 Now that you've created your first Studio you'll be prompted to choose it and then we can move forward with creating a new project.
 
@@ -118,7 +118,7 @@ You can now click **Create Project** to proceed,
 {% endstep %}
 
 {% step %}
-### Explore the Dashboard
+### Explore the dashboard
 
 With your new project created and selected, you can check out the **PlayFlow** dashboard for it.
 
@@ -130,7 +130,7 @@ Once you're done looking around, we'll jump into setting up our server build and
 {% endstep %}
 
 {% step %}
-### Link the PlayFlow SDK to your Project
+### Link the PlayFlow SDK to your project
 
 Now let's link our Unity Project to the PlayFlow one we've just created.&#x20;
 
@@ -143,7 +143,7 @@ Now let's link our Unity Project to the PlayFlow one we've just created.&#x20;
 {% endstep %}
 
 {% step %}
-### Build and Upload the Server
+### Build and upload the server
 
 You should now specify the scene that the server should start in with the **Server Scene** field. You can set it manually by selecting the chosen scene through the dropdown or you can make PlayFlow use the **Build Settings' Scene List** instead, by enabling that option.
 
@@ -159,7 +159,7 @@ If needed, you can browse the files of the build and delete it directly from the
 {% endstep %}
 
 {% step %}
-### Setup the PlayFlow Port
+### Setup the PlayFlow port
 
 Now we will setup the port to use in the PlayFlow dashboard. Open up the website and head to the **Configuration** tab and then **Network Ports** section. Click the **Add Your First Port** button and fill in the fields.
 
@@ -174,7 +174,7 @@ Once those are entered, click the **Add Port** button to finish this step.
 {% endstep %}
 
 {% step %}
-### Create the Server
+### Create the server
 
 Now we are ready to start our server, head over to the Servers tab and click the **Create Your First Server** button.
 
@@ -188,7 +188,7 @@ You should now see the server in the Servers tab and you can see its details or 
 {% endstep %}
 
 {% step %}
-### Connect to the Server
+### Connect to the server
 
 Click on the **Details** button to see the details of the server. You can view the Details, Metrics, and Logs of the server here; we will look at the **Details → Network** section and copy the _Host_ and the _External Port_ fields.
 
@@ -201,7 +201,7 @@ In the Unity Editor, select the Tugboat component (or other transport you may be
 {% endstep %}
 
 {% step %}
-### Test the Game
+### Test the game
 
 You can now run the game or build and run it and connect as a client. Your game should connect to the PlayFlow server we setup and work correctly!
 {% endstep %}

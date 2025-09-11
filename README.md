@@ -2,6 +2,7 @@
 cover: .gitbook/assets/fishnet-cover.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
     size: full
@@ -15,9 +16,11 @@ layout:
     visible: true
   pagination:
     visible: true
+  metadata:
+    visible: true
 ---
 
-# What is FishNet?
+# What Is FishNet?
 
 ## Overview
 
@@ -29,13 +32,13 @@ Any kind of network topology is supported through the Transport system. Transpor
 
 High-level API allows you to quickly access the ability to synchronize states, logic, objects, and more, without needing to get your hands dirty. We also believe in providing the best experience possible; you may additionally utilize low-level functionality via included events or inheritance.
 
-## No-break Promise
+## No-break promise
 
 Developing projects can take a lot of time, and updating your networking solution along the way is often inevitable. Fish-Networking promises to not release any breaking API or behavior changes between major versions. Major releases will occur no more frequent than every six months, unless **absolutely necessary**.
 
 When breaks do occur we will do our best to keep the changes simple. We also have our [Break Solutions](guides/upgrading-api.md) section which will describe planned breaks, the next major release, and how to remedy breaks for each version.
 
-## Long-Term Support
+## Long-Term support
 
 Fish-Networking is the only solution to offer free LTS. We will be using a unique but effective approach at creating LTS releases. Rather than the standard expectations of being locked into a version for long-term support, FishNet is providing what we refer to as 'Release' and 'Development' switches. Any version of Fish-Networking which ends in R supports switching between Release and Development features, for example: 3.10.7R.
 
@@ -45,16 +48,16 @@ With Fish-Networking Long-Term support does not mean being stuck on older versio
 To toggle between beta features simply use the Fish-Networking menu in engine, choose Beta, and turn on or off each feature to your liking.
 {% endhint %}
 
-## External Links
+## External links
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Fish-Networking GitHub</td><td><a href=".gitbook/assets/github-card.png">github-card.png</a></td><td><a href="https://github.com/FirstGearGames/FishNet/">https://github.com/FirstGearGames/FishNet/</a></td></tr><tr><td>Asset Store</td><td><a href=".gitbook/assets/unity-card.png">unity-card.png</a></td><td><a href="https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815">https://assetstore.unity.com/packages/tools/network/fish-net-networking-evolved-207815</a></td></tr><tr><td>Community Discord</td><td><a href=".gitbook/assets/discord-card.png">discord-card.png</a></td><td><a href="https://discord.gg/Ta9HgDh4Hj">https://discord.gg/Ta9HgDh4Hj</a></td></tr></tbody></table>
 
-## Community Made Resources
+## Community made resources
 
 There are many third-party add-ons, integrations, and resources that can aid you through your development. Many assets also have direct support for FishNet and work well together with it.
 
 <a href="overview/asset-integrations/" class="button primary">Asset Integrations</a> <a href="overview/community-resources.md" class="button primary">Community Resources</a>
 
-## Contributing Documentation
+## Contributing documentation
 
 We are now taking documentation contributions! If you'd like to include your own guide, or make edits to our current documentation, you can do so on our documentation GitHub [here](https://github.com/FirstGearGames/FishNet-Documentation).

@@ -10,11 +10,11 @@ description: >-
 
 Often times you may want to display the local client's ping while developing your game, this can easily be done with the **PingDisplay** component. This component is commonly added to the [NetworkManager](../managers/network-manager.md) object, but that is not a requirement.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/ping-display-example.png" alt="An image of a game with a text at the top right showing the client&#x27;s ping"><figcaption><p>Example of the PingDisplay component in-use.</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/ping-display-example.png" alt="An image of a game with a text at the top right showing the client&#x27;s ping"><figcaption><p>Example of the PingDisplay component in-use</p></figcaption></figure></div>
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/ping-display-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/ping-display-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear:  **Color**
 
