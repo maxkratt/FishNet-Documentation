@@ -44,6 +44,7 @@
     * [Spawning Players Manually](tutorials/simple/making-a-custom-player-spawner/manually.md)
   * [Building a Dedicated Server](tutorials/simple/building-a-dedicated-server.md)
   * [Testing with Multiple Editors](tutorials/simple/testing-with-multiple-editors.md)
+  * [Simulating Bad Network Connections](tutorials/simple/simulating-bad-network-connections.md)
 * [Complete Games](tutorials/complete-games.md)
 
 ## Guides
