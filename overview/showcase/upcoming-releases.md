@@ -4,6 +4,16 @@ description: Here are some upcoming titles we expect in the near future.
 
 # Upcoming Releases
 
+## Starlight Re:Volver
+
+Starlight Re:Volver is a 1-4 player co-op action roguelite, set in a nostalgic, anime-inspired MMO universe. Connect with other Divers in the city and explore dreamlike biomes, teaming up for thrilling adventures, minigames, fishing, and crafting.
+
+{% embed url="https://www.youtube.com/watch?v=sdnpI6n0LuQ" %}
+
+{% embed url="https://store.steampowered.com/app/3201010/Starlight_ReVolver/" %}
+
+***
+
 ## Ravenous Horde
 
 Hunt zombies, become turned, kill hunters. In this round based multiplayer post-apocalyptic FPS you can play both sides, level up, unlock perks and weapons, customize and more.

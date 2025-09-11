@@ -14,6 +14,16 @@ You're a small-time drug dealer rolling into a fresh town with no cash, no produ
 
 ***
 
+## Mage Arena
+
+A co-op PvP experience about using your voice to cast spells in the Mage Arena to settle an ages-old feud between sorcerers and warlocks.
+
+{% embed url="https://www.youtube.com/watch?pp=ygURbWFnZSBhcmVuYSB0cmFsZXI=&v=d1Cge7zYaDI" %}
+
+{% embed url="https://store.steampowered.com/app/3716600/Mage_Arena/" %}
+
+***
+
 ## Moorhuhn Kart 4
 
 The world's craziest chicken is heading back to the racetrack! Wacky characters, cool tracks and karts, and zany items await in a worldwide online battle for first place!
@@ -204,4 +214,4 @@ Plethora is a MMO made with Fish-Networking, utilizing our built-in client-side 
 
 [https://plethora.game/](https://plethora.game/)
 
-![](<../../.gitbook/assets/showcase-plethora.png>)
+![](../../.gitbook/assets/showcase-plethora.png)

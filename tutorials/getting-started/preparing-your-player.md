@@ -61,7 +61,7 @@ To see another player spawn you can build and run the game and which will then a
 
 <figure><img src="../../.gitbook/assets/build-connected-to-editor.png" alt="Built Game Connected to Editor"><figcaption><p>Built Game Connected to Editor</p></figcaption></figure>
 
-Alternatively, you can launch a second Unity Editor instance by using [Unity's Multiplayer Play Mode](https://docs-multiplayer.unity3d.com/mppm/current/about/) package or a third party package such as [ParrelSync](https://github.com/VeriorPies/ParrelSync?tab=readme-ov-file#parrelsync).
+Alternatively, you can launch a second Unity Editor instance by using [Unity's Multiplayer Play Mode](https://docs-multiplayer.unity3d.com/mppm/current/about/) package or a third party package such as [ParrelSync](https://github.com/VeriorPies/ParrelSync?tab=readme-ov-file#parrelsync). Find out more about these options and how to use them with this tutorial: [testing-with-multiple-editors.md](../simple/testing-with-multiple-editors.md "mention").
 
 <figure><img src="../../.gitbook/assets/mppm-connected-to-editor.png" alt="Multiplayer Play Mode Connected to Editor"><figcaption><p>Multiplayer Play Mode Connected to Editor</p></figcaption></figure>
 

@@ -43,9 +43,11 @@ The constructors available for [**SceneLoadData**](../scene-data/sceneloaddata.m
 
 <summary>Loading New Scenes</summary>
 
-Scenes can be loaded globally or by a collection of client connections.
+Scenes can be loaded globally or for any number of specified clients, including none (which will only load the scene on the server).
 
-Loading new Scenes can only be done by Name, you cannot use Handle or Scene References.
+{% hint style="info" %}
+Loading new Scenes can only be done by Name, you **cannot** use Handles or Scene References.
+{% endhint %}
 
 #### Global Scenes
 
@@ -59,7 +61,7 @@ base.SceneManager.LoadGlobalScenes(sld);
 
 #### Connection Scenes
 
-Connection Scenes follow the same principle, but has a few method overloads.
+Connection Scenes follow the same principle, but have a few method overloads.
 
 * You can load scenes for a single connection, multiple connections at once, or load scenes only on the server in preparation for connections.
 * When loading by connection only the connections specified will load the scenes.
@@ -68,16 +70,16 @@ Connection Scenes follow the same principle, but has a few method overloads.
 ```csharp
 SceneLoadData sld = new SceneLoadData("Main");
 
-//Load scenes for a single connection.
+// Load scenes for a single connection.
 NetworkConnection conn = base.Owner;
 base.SceneManager.LoadConnectionScenes(conn, sld);
 
-//Load scenes for several connections at once.
+// Load scenes for several connections at once.
 NetworkConnection[] conns = new NetworkConnection[] { connA, connB };
 base.SceneManager.LoadConnectionScenes(conns, sld);
 
-//Load scenes only on the server. This can be used to preload scenes
-//that you don't want all players in.
+// Load scenes only on the server. This can be used to preload scenes
+// that you don't want all players in.
 base.SceneManager.LoadConnectionScenes(sld); 
 ```
 
@@ -114,8 +116,8 @@ Here are a few ways to get reference to the scenes that you already loaded using
 **By Event:**
 
 ```csharp
-// Manage your own collection of SceneRefernces/Handles
-// Customize how you want to manage you scene references so its easy
+// Manage your own collection of SceneReferences/Handles
+// Customize how you want to manage you scene references so it's easy
 // for you to find them later.
 List<Scene> ScenesLoaded = new();
 
@@ -126,14 +128,12 @@ public void OnEnable()
 
 public void RegisterScenes(SceneLoadEndEventArgs args)
 {
-    //Only Register on Server
-    if (!obj.QueueData.AsServer) return;
+    // Only register on the server
+    if (!args.QueueData.AsServer) return;
     
     //if you know you only loaded one scene you could just grab index [0]
     foreach(var scene in args.loadedScenes)
-    {
         ScenesLoaded.Add(scene);
-    }
 }
 
 public void OnDisable()
@@ -153,18 +153,16 @@ InstanceFinder.ServerManger.Clients[clientToLookup].Scenes;
 **By SceneManager.SceneConnnections:**
 
 ```csharp
-// SceneManager Keeps a Dictionary of All Connection Scenes as the Key
+// SceneManager keeps a Dictionary of all connection scenes as the key
 // and the client connections that are in that scene as the value.
 NetworkConnection conn;
 Scene sceneNeeded;
 
-//Get the scene you need with foreach or use Linq to filter your conditions.
-foreach(var pair in SceneManager.SceneConnections)'
+// Get the scene you need with foreach or use LINQ to filter your conditions.
+foreach(var pair in SceneManager.SceneConnections)
 {
-    if(pair.Value.Contains(conn))
-    {
+    if (pair.Value.Contains(conn))
         sceneNeeded = pair.Key;
-    }
 }
 ```
 
@@ -174,15 +172,15 @@ Use the methods above to get the reference or handle of a scene, and use that re
 
 ```csharp
 scene sceneReference;
-NetworkConnection[] conns = new(){connA,connB};
+NetworkConnection[] conns = new() {connA,connB};
 
-//by reference
+// by reference
 SceneLoadData sld = new(sceneReference);
-base.SceneManager.LoadConnectionScenes(conns,sld);
+base.SceneManager.LoadConnectionScenes(conns, sld);
 
-//by handle
+// by handle
 SceneLoadData sld = new(sceneReference.handle);
-base.SceneManager.LoadConnectionScenes(conns,sld);
+base.SceneManager.LoadConnectionScenes(conns, sld);
 ```
 
 </details>
@@ -208,12 +206,12 @@ This is the default method when loading, it will ignore the replace options and 
 This will replace all scenes currently loaded in unity, even ones not managed by FishNet's SceneManager.
 
 ```csharp
-//Replace All Option.
+// Replace All Option.
 SceneLoadData sld = new SceneLoadData("DungeonScene");
 sld.ReplaceScenes = ReplaceOption.All;
 
-//This will replace all Scenes loaded by FishNet or outside of FishNet like Unity,
-//and load "DungeonScene"
+// This will replace all Scenes loaded by FishNet or outside of FishNet like Unity,
+// and load "DungeonScene"
 SceneManager.LoadGlobalScenes(sld);
 ```
 
@@ -222,11 +220,11 @@ SceneManager.LoadGlobalScenes(sld);
 This will replace only scenes managed by the SceneManager in FishNet.
 
 ```csharp
-//Replace Online Only Option.
+// Replace Online Only Option.
 SceneLoadData sld = new SceneLoadData("DungeonScene");
 sld.ReplaceScenes = ReplaceOption.OnlineOnly;
 
-//This will replace only scenes managed by the SceneManager in FishNet.
+// This will replace only scenes managed by the SceneManager in FishNet.
 SceneManager.LoadGlobalScenes(sld);
 ```
 
@@ -242,6 +240,6 @@ The [**SceneManager**](../../../../fishnet-building-blocks/components/managers/s
 
 #### Events
 
-Make sure to check out the [**Scene Events**](../scene-events.md) that you can subscribe to to give better control over your game.
+Make sure to check out the [**Scene Events**](../scene-events.md) that you can subscribe to in order to have better control over your game.
 
 </details>
