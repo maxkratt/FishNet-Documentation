@@ -69,7 +69,7 @@ layout:
 
 <h2 align="center"><strong>Generous free tier &#x26; support that listens</strong></h2>
 
-<p align="center"><mark style="color:$info;">Build fast, playtest often. All without pulling out your credit card. <strong>PlayFlow</strong> offers the quickest way to test your game online, directly from the Unity editor, and you can do so for free!</mark> </p>
+<p align="center"><mark style="color:$info;">Build fast, play-test often. All without pulling out your credit card. <strong>PlayFlow</strong> offers the quickest way to test your game online, directly from the Unity editor, and you can do so for free!</mark> </p>
 
 <p align="center"><mark style="color:$info;">Get help from real people with fast replies, and feedback that actually shapes the platform.</mark></p>
 
