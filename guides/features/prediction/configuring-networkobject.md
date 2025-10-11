@@ -12,7 +12,7 @@ All of the current options for the NetworkObject inspector are shown below. Ther
 
 To begin you must first choose to Enable Prediction. Next you will set the Prediction Type. If you are using a rigidbody or rigidbody2D set the prediction type accordingly. Other is used for non-physics such as character controllers.
 
-## State Forwarding
+## State forwarding
 
 State forwarding will allow the same inputs to run on all clients as they do on the server. This can be useful if you want all clients and server to run the same input based logic, similar to if the client or server owns the object. State forwarding is more CPU intensive as it means a state buffer must be kept, and the object must reconcile to make corrections as well re-run past states.
 
@@ -20,7 +20,7 @@ Even with the overhead state forwarding is often the most preferred approach bec
 
 When state forwarding is disabled only the owner and server will run the inputs, and only the owner will keep the buffer for objects they own. This also means you must forward any information to clients that is essential to them displaying actions on non-owned objects, such as using a NetworkAnimator to now relay animations, or using RPCs to send gun fire audio. Movement is also not forwarded, so you may want to attach a NetworkTransform and specify it within the NetworkTransform field. Specifying the NetworkTransform will simply try to configure it to prediction based on your other NetworkObject inspector settings. If you are finding this is causing issues you can simply leave the field empty.
 
-## Graphical Object
+## Graphical object
 
 This is the object which holds your graphics for the NetworkObject. By graphics, this means anything which holds visual representation that you would likely want smoothed between ticks, as well corrections from any potential de-synchronizations. It's very much worth mentioning you can leave this field empty and you will lose view additional options, such as Smoothing.
 

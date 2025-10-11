@@ -12,7 +12,7 @@ The **Level Logging Configuration** scriptable object simply allows you to custo
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<figure><img src="../../.gitbook/assets/level-logging-configuration.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/level-logging-configuration.png" alt=""><figcaption><p>Default settings</p></figcaption></figure>
 
 ### :gear: **Is Enabled**
 

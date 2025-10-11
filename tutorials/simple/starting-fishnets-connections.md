@@ -8,13 +8,13 @@ This guide will show you how you can start the FishNet server and client yoursel
 
 {% stepper %}
 {% step %}
-#### Install FishNet
+### Install FishNet
 
 Before we begin, don't forget to install FishNet if you haven't already. You can follow this guide if needed: [installing-fish-networking.md](../getting-started/installing-fish-networking.md "mention")
 {% endstep %}
 
 {% step %}
-#### Create a NetworkManager
+### Create a NetworkManager
 
 Create a new game object in your scene and give it a nice name such as `NetworkManager`.
 
@@ -22,17 +22,17 @@ Add the [NetworkManager component](../../fishnet-building-blocks/components/mana
 
 Finally, add an [ObserverManager component](../../fishnet-building-blocks/components/managers/observermanager/) and in the **Default Conditions** field, add a new element and select the [SceneCondition](../../fishnet-building-blocks/scriptableobjects/observerconditions/scenecondition.md).
 
-<figure><img src="../../.gitbook/assets/starting-connections-network-manager.png" alt=""><figcaption><p>The NetworkManager Components</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/starting-connections-network-manager.png" alt=""><figcaption><p>The NetworkManager components</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-#### Setup Basic UI
+### Setup basic UI
 
 To get started, let's add a basic user interface which we can use to start the FishNet server, client, and allow the user to enter an IP Address to connect to.
 
 Add three buttons to your game, label them **Start Host**, **Start Server**, and **Start Client**. Now add an input field for the address the client will attempt to connect to.
 
-<figure><img src="../../.gitbook/assets/starting-connections-scene.png" alt=""><figcaption><p>The Scene Setup</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/starting-connections-scene.png" alt=""><figcaption><p>The scene setup</p></figcaption></figure>
 
 {% hint style="info" %}
 You can download the graphics used above here:
@@ -42,7 +42,7 @@ You can download the graphics used above here:
 {% endstep %}
 
 {% step %}
-#### Create a ConnectionManager Script
+### Create a ConnectionManager script
 
 Let's now create the following script and add it to our [**Canvas**](#user-content-fn-1)[^1] game object.
 
@@ -88,7 +88,7 @@ The code show here is very simple, but one thing to observe is that the script d
 {% endstep %}
 
 {% step %}
-#### Assign the NetworkManager
+### Assign the NetworkManager
 
 Our **ConnectionManager** needs a reference to the NetworkManager component, assign that in the editor now.
 
@@ -96,19 +96,19 @@ Our **ConnectionManager** needs a reference to the NetworkManager component, ass
 {% endstep %}
 
 {% step %}
-#### Hook-Up the UI to the Code
+### Hook-up the UI to the code
 
 Now select your UI components and attach their OnClick events to the relevant methods in our ConnectionManager.
 
-<figure><img src="../../.gitbook/assets/starting-connections-host-button.png" alt=""><figcaption><p>Hooking up the Host Button</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/starting-connections-host-button.png" alt=""><figcaption><p>Hooking up the host button</p></figcaption></figure>
 
 For the IP Address Input Field, you can hook up the **On Value Changed** event to the `ConnectionManager.SetIPAddress` method we created.
 
-<figure><img src="../../.gitbook/assets/starting-connections-input-field.png" alt=""><figcaption><p>Setting the IP Address Input Field</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/starting-connections-input-field.png" alt=""><figcaption><p>Setting the IP address input field</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-#### Test it out!
+### Test it out!
 
 With that all done you should be able to run the game and use the UI we created to start the FishNet server and/or client.
 

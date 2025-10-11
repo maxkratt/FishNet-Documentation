@@ -1,12 +1,16 @@
+---
+description: Instructions for how to unload networked scenes in FishNet.
+---
+
 # Unloading Scenes
 
 ## General
 
 Unloading scenes is the same as loading scenes, except to call Unload rather than Load. Scenes can be unloaded by connection, or globally. When unloaded globally scenes will be unloaded for all players. When unloading by connection only the connections specified will unload the scenes.
 
-## Unloading Scenes
+## Unloading scenes
 
-### Global Scenes
+### Global scenes
 
 * **Global Scenes** can be unloaded by calling UnloadGlobalScenes() in the SceneManager.
 * You cannot unload a global scene with UnloadConnectionScenes() method.
@@ -16,7 +20,7 @@ SceneUnloadData sud = new SceneUnloadData("Town");
 base.NetworkManager.SceneManager.UnloadGlobalScenes(sud);
 ```
 
-### Connection Scenes
+### Connection scenes
 
 **Connection Scenes** follow the same principle, but has a few method overloads. You can unload scenes for a single connection, multiple connections at once, or unload scenes on the server.
 
@@ -27,22 +31,22 @@ base.NetworkManager.SceneManager.UnloadGlobalScenes(sud);
 ```csharp
 SceneUnloadData sud = new SceneUnloadData(new string[] { "Main", "Additive") });
 
-//Unload scenes for a single connection.
+// Unload scenes for a single connection.
 NetworkConnection conn = base.Owner;
 base.NetworkManager.SceneManager.UnloadConnectionScenes(conn, sud);
 
-//Unload scenes for several connections at once.
+// Unload scenes for several connections at once.
 NetworkConnection[] conns = new NetworkConnection[] { connA, connB };
 base.NetworkManager.SceneManager.UnloadConnectionScenes(conns, sud);
 
-//Unload scenes only on the server.
-//that you don't want all players in.
+// Unload scenes only on the server.
+// that you don't want all players in.
 base.NetworkManager.SceneManager.UnloadConnectionScenes(sud);
 ```
 
-## Advanced Info
+## Advanced info
 
-### Behind the "Scenes"
+### Behind the "scenes"
 
 The [**SceneManager**](../../../fishnet-building-blocks/components/managers/scenemanager.md) Class has very detailed XML comments on how the unload process works in detail, if you need to troubleshoot the scene unload process, these comments will help you understand the flow of how a scene loads.
 

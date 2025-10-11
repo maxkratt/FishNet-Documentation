@@ -20,33 +20,33 @@ Check out the API page for specific methods, and properties [here](https://fish-
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../.gitbook/assets/network-animator-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/network-animator-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Animator**
+### :gear: **Animator**
 
 > This field indicates which Animator to synchronize over the network. The referenced animator can be anywhere on the object. You may also change the Animator at runtime using Network Animator API.
 
-### :gear:  **Synchronize When Disabled**
+### :gear: **Synchronize When Disabled**
 
 > When enabled, this will allow the **NetworkAnimator** to synchronize changes even when the **Animator** component is disabled.
 
-### :gear:  **Interpolation**
+### :gear: **Interpolation**
 
 > This is how many ticks of interpolation to use. Like the [NetworkTransform](network-transform.md), the animator will be this number of ticks behind before iterating data. To use tick alignment with a NetworkTransform, use the same value of interpolation as on the NetworkTransform.
 
-### :gear:  **Smooth Floats**
+### :gear: **Smooth Floats**
 
 > This will ensure floats are moved over time on those receiving animator updates. This is commonly left true to allow blending between animation trees.
 
-### :gear:  **Client Authoritative**
+### :gear: **Client Authoritative**
 
 > When this is enabled it allows the owning client to make changes to their animations locally, and those changes will be sent to the server and other clients. While disabled the server must change animations to have them sent to clients.
 
-### :gear:  **Send To Owner**
+### :gear: **Send To Owner**
 
 > This will only be displayed when _**Client Authoritative**_ is false. While _**Synchronize To Owner**_ is true the server will also send animation changes to the object owner; while false the owner will not get the animation changes by the server. This can be useful if you want to run animations locally in real time on owning clients.
 
-### :gear:  **Synchronized Parameters (pro feature)**
+### :gear: **Synchronized Parameters (pro feature)**
 
 > These allow only specified parameters to be synchronized over the network. This can be useful if some parameters should only be used for the local client, or do not necessarily need to be networked.
 
@@ -59,8 +59,8 @@ However, most projects also depend on using crossfade, play, and other common An
 To synchronize these actions over the network you will simply call each desired method on your NetworkAnimator reference.
 
 ```csharp
-//This will perform Play on your animator, and synchronize the
-//action over the network.
+// This will perform Play on your animator, and synchronize the
+// action over the network.
 _myNetworkAnimator.Play(stringOrHash);
 ```
 

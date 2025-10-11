@@ -8,15 +8,17 @@ description: >-
 
 To spawn a player when they load into a scene, let's write a `ScenePlayerSpawner.cs` script that we can add to our desired scene to handle this.
 
+## Basic version
+
 {% stepper %}
 {% step %}
-### Create the Script
+### Create the script
 
 Create a new script in your project and name it something like `ScenePlayerSpawner.cs`.
 {% endstep %}
 
 {% step %}
-### Make the Script a NetworkBehaviour
+### Make the script a NetworkBehaviour
 
 Instead of being a regular [MonoBehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), we'll make our class inherit from [NetworkBehaviour](../../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md), this will enable us to use the **NetworkBehaviour** callbacks and properties.
 
@@ -37,7 +39,7 @@ Remember that since this class is a **NetworkBehaviour**, it should not be place
 {% endstep %}
 
 {% step %}
-### Expose the Prefab in the Inspector
+### Expose the prefab in the inspector
 
 Add a [NetworkObject](../../../guides/features/networked-gameobjects-and-scripts/networkobjects/) variable for holding a reference to our player prefab.
 
@@ -47,7 +49,7 @@ Add a [NetworkObject](../../../guides/features/networked-gameobjects-and-scripts
 {% endstep %}
 
 {% step %}
-### Override the OnSpawnServer Method
+### Override the OnSpawnServer method
 
 Let's utilize the NetworkBehaviour's [OnSpawnServer](../../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#onspawnserver) method to trigger the player spawning for us. This **OnSpawnServer** method gets called by FishNet on the server as soon as the object is being spawned for a client, thus we know he is in the scene and ready to receive a player object.
 
@@ -65,7 +67,7 @@ This code simply instantiates the given prefab and then tells FishNet to spawn t
 {% endstep %}
 
 {% step %}
-### Use FishNet's Object Pooling
+### Use FishNet's object pooling
 
 We can optionally make the script work with FishNet's [Object Pooling](../../../guides/features/networked-gameobjects-and-scripts/spawning/object-pooling.md) system by changing the `Instantiate` method call to one provided by FishNet. This code will work even if we don't use Object Pooling, so it's a direct improvement here.
 
@@ -79,7 +81,7 @@ NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer:
 {% endstep %}
 
 {% step %}
-### Basic Final Script
+### Basic final script
 
 The script can now be added to a game object in your desired scene and assigned a player prefab to it. As long as the client is loaded into this scene after connecting, he should get a player object spawned for him.
 
@@ -113,13 +115,13 @@ This will work great as long as the scene is not one of the starting scenes. If 
 
 ***
 
-### Handling Starting Scenes
+## Handling starting scenes
 
 If this scene happens to be a scene that's loaded before or as soon as the client connects, then the previous script will cause a warning. To fix this we need to only spawn the player **after** the client has loaded all starting scenes.
 
 {% stepper %}
 {% step %}
-### Listening for the Event
+### Listening for the event
 
 Let's start solving this by adding the override methods `OnStartServer` and `OnStopServer`. We will use these to subscribe to the [SceneManager](../../../fishnet-building-blocks/components/managers/scenemanager.md)'s [OnClientLoadedStartScenes ](../../../guides/features/network-callbacks.md#shared-events)event.
 
@@ -140,7 +142,7 @@ These methods will run on the server side as soon as this [NetworkObject](../../
 {% endstep %}
 
 {% step %}
-### Handling the Event
+### Handling the event
 
 Now we'll write the code that will spawn the player when this event is triggered, as long as he is actually in the scene (remember this event will be triggered whenever the player has loaded all starting scenes, which may or not include this one at all).
 
@@ -161,7 +163,7 @@ You will notice we are calling a `SpawnPlayer` method here, we'll create that sh
 {% endstep %}
 
 {% step %}
-### Adjusting the OnSpawnServer Method
+### Adjusting the OnSpawnServer method
 
 Now we will adjust to the `OnSpawnServer` method to make sure it only spawns a player if he's loaded the starting scenes.
 
@@ -180,7 +182,7 @@ Checking the `NetworkConnection.LoadedStartScenes` method will return, as expect
 {% endstep %}
 
 {% step %}
-### The SpawnPlayer Method
+### The SpawnPlayer method
 
 Finally, we moved the actual player spawning logic into its own method called **SpawnPlayer**.
 
@@ -202,7 +204,7 @@ The result of this is that whichever happens later will be the one to spawn the 
 {% endstep %}
 
 {% step %}
-### Final Script
+### Final script
 
 The script is now finished and you can add it to a game object in your desired scene and assign the player prefab to it.
 

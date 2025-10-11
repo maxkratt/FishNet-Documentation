@@ -53,7 +53,7 @@ com.unity.multiplayer.playmode
 {% endstep %}
 
 {% step %}
-### Create your Clones
+### Create your clones
 
 Open the MPPM window (**Window → Multiplayer → Multiplayer Play Mode**) and click the checkbox next to one of the four Virtual Player options:
 
@@ -63,7 +63,7 @@ After the clone creates the necessary files, it will open a&#x20;
 {% endstep %}
 
 {% step %}
-### Customize your Clone Window
+### Customize your clone window
 
 Now that your clone window has opened, you can choose which Unity tabs you want to show in it, such as the scene hierarchy, inspector, and console.
 
@@ -112,7 +112,7 @@ Or alternatively:
 {% endstep %}
 
 {% step %}
-### Create and Test your Clones
+### Create and test your clones
 
 From the menu bar, open the ParrelSync Clones Manager (**ParrelSync → Clones Manager**). You'll be able to delete, browse, create new clones, as well as set the arguments to use for each.
 
@@ -130,7 +130,7 @@ It's important to only make changes to your project from the original editor ins
 
 ***
 
-## Final Comments
+## Final comments
 
 With either of those options setup you can now easily test your game with multiple editors without needing to rebuild each time.
 

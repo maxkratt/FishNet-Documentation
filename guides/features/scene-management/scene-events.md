@@ -1,7 +1,13 @@
+---
+description: >-
+  Information about FishNet's many available scene events, the order they are
+  invoked in, and how to use them.
+---
+
 # Scene Events
 
 {% embed url="https://www.youtube.com/watch?index=1&list=PLkx8oFug638qBthd3n_F98zAtOdI8o_Gb&v=c_kdZELyJcQ" %}
-Scene Events Video Guide
+Scene events video guide
 {% endembed %}
 
 ## General
@@ -10,7 +16,7 @@ There are a variety of events within SceneManager to help with your development.
 
 This diagram represents which order events can be expected to run. You may also find this diagram within your Fish-Networking import under Example/All/SceneManager.
 
-![SceneManager Event Order](<../../../.gitbook/assets/scenemanager-event-diagram.png>)
+![SceneManager event order](../../../.gitbook/assets/scenemanager-event-diagram.png)
 
 {% hint style="info" %}
 Notice that client and server process queues and events exactly the same. OnClientPresence change is a special exception, as discussed below.
@@ -43,7 +49,7 @@ Only available when loading scenes is the **OnLoadPercentChange** event. This ev
 The **OnLoadEnd** event is called after all scenes for the queue entry have been loaded. This event will only invoke after the scenes have fully loaded, and after the active scene has been set if applicable. Like the **OnLoadStart** event _QueueData_ is provided. Additionally, _LoadedScenes_ and _SkippedSceneNames. LoadedScenes_ provides Scene references to which scenes were loaded. _SkippedSceneNames_ contains strings of scenes which were not loaded; this generally occurs if the scene is already loaded.
 
 {% hint style="warning" %}
-You may want to spawn objects for players once a  scene is loaded, but it's best to do that once the specific client has started observing the scene to prevent race conditions. Thus it's better to use one of the OnClientPresenceChange events or OnSpawnServer from a NetworkBehaviour in the scene.
+You may want to spawn objects for players once a scene is loaded, but it's best to do that once the specific client has started observing the scene to prevent race conditions. Thus it's better to use one of the OnClientPresenceChange events or OnSpawnServer from a NetworkBehaviour in the scene.
 {% endhint %}
 
 ### OnUnloadEnd

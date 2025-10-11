@@ -14,7 +14,7 @@ Fishy EOS uses the PlayEveryware EOS Plugin for Unity SDK, which is a wrapper AP
 
 ***
 
-## How to Install
+## How to install
 
 Please visit the GitHub locations for official installation and usage instructions.
 
@@ -28,7 +28,7 @@ Remember that this transport requires a separate installation of the PlayEverywa
 
 ***
 
-## Component Settings
+## Component settings
 
 * Maximum Clients: Maximum number of players which may be connected at once
 

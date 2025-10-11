@@ -7,7 +7,7 @@ description: >-
 
 # Custom Comparers
 
-You may see an error in the console about a type requiring a custom comparer. For example, generics and arrays specifically must have a custom comparer provided.&#x20;
+You may see an error in the console about a type requiring a custom comparer. For example, generics and arrays specifically must have a custom comparer provided.
 
 ```csharp
 /* For example, this will create an error stating
@@ -16,7 +16,7 @@ public struct MoveData : IReplicateData
 {
     public Vector2 MoveDirection;
     public byte[] CustomData;
-    //rest omitted..
+    // rest omitted..
 }
 ```
 
@@ -28,30 +28,30 @@ public static bool CompareByteArray(byte[] a, byte[] b)
 {
     bool aNull = (a is null);
     bool bNull = (b is null);
-    //Both are null.
+    // Both are null.
     if (aNull && bNull)
         return true;
-    //One is null, other is not.
+    // One is null, other is not.
     if (aNull != bNull)
         return false;
-    //Not same lengths, cannot match.
+    // Not same lengths, cannot match.
     if (a.Length != b.Length)
         return false;
 ​
-    //Both not null and same length, compare bytes.
+    // Both not null and same length, compare bytes.
     int length = a.Length;
     for (int i = 0; i < length; i++)
     {
-        //Differs.
+        // Differs.
         if (a[i] != b[i])
             return false;
     }
 ​
-    //Fall through, if here everything matches.
+    // Fall through, if here everything matches.
     return true;
 }
 ```
 
-The above code is a working example of how to create a custom comparer, but it may not be the most ideal comparer for your needs; this is why we require you to make your own comparer for such types.&#x20;
+The above code is a working example of how to create a custom comparer, but it may not be the most ideal comparer for your needs; this is why we require you to make your own comparer for such types.
 
 Creating your own comparer is simple. Make a new static method with any name and boolean as the return type. Decorate the method with the **\[CustomComparer]** attribute. There must also be two parameters, each being the type you want to compare. The method logic can contain whichever code you like

@@ -36,7 +36,7 @@ namespace FishNet.Example.IntermediateLayers
     public class IntermediateLayerCipher : IntermediateLayer
     {
         private const byte CIPHER_KEY = 5;
-        //Decipher incoming data.
+        // Decipher incoming data.
         public override ArraySegment<byte> HandleIncoming(ArraySegment<byte> src, bool fromServer)
         {
             byte[] arr = src.Array;
@@ -53,7 +53,7 @@ namespace FishNet.Example.IntermediateLayers
 
             return src;
         }
-        //Cipher outgoing data.
+        // Cipher outgoing data.
         public override ArraySegment<byte> HandleOutgoing(ArraySegment<byte> src, bool toServer)
         {
             byte[] arr = src.Array;
@@ -90,5 +90,5 @@ public class MyIntermediateLayer : IntermediateLayer
         const int bytesForMyHeader = 10;
         manager.SetMTUReserve(bytesForMyHeader);
     }
-    //...rest omitted
+    // ...rest omitted
 ```

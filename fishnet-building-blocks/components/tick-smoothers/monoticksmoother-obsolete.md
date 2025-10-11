@@ -16,7 +16,7 @@ The main difference between NetworkTickSmoother and MonoTickSmoother is that Mon
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/mono-tick-smoother-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/mono-tick-smoother-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear:  **Use Instance Finder**
 

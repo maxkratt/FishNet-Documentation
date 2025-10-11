@@ -19,13 +19,13 @@ Please review our [API ](https://fish-networking.com/FishNet/api/api/FishNet.Com
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/offline-tick-smoother-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/offline-tick-smoother-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Automatically Initialize**
+### :gear: **Automatically Initialize**
 
 > This option will configure this smoother in Awake using the [InstanceFinder](../../../guides/features/instancefinder-guides.md) to listen to network callbacks. When false, you must manually call the `Initialize` method on this component.
 
-### :gear:  Initialization Settings
+### :gear: Initialization Settings
 
 > These are essential to the component working.
 >
@@ -33,7 +33,7 @@ Please review our [API ](https://fish-networking.com/FishNet/api/api/FishNet.Com
 > * **Detach On Start** when true will unparent the object which the smoother is attached, placing it as root in world space. Detach is commonly used when the smoothed object is a camera target, given cameras do not handle rollback or larger tick steps well.
 > * **Attach On Stop** when true will reparent the graphical object when the network stop callbacks occur on the object, as detach will unparent on network start callbacks. Typically you want to reattach graphical objects. If the Target Transform is destroyed while detached the object the smoother is attached to will also destroy itself.
 
-### :gear:  Smoothing
+### :gear: Smoothing
 
 > The **Smoothing** settings determine how the object is smoothed.
 >

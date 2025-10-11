@@ -10,7 +10,7 @@ description: >-
 This is not a comprehensive list of available events, but merely some of the most commonly used ones. To view all the available ones check out the [API pages](https://fish-networking.com/FishNet/api/api/index.html).
 {% endhint %}
 
-## Server Side Events
+## Server side events
 
 ### [**OnAuthenticationResult**](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Server.ServerManager.html#FishNet_Managing_Server_ServerManager_OnAuthenticationResult)
 
@@ -41,7 +41,7 @@ This event is called when a client's [state ](#user-content-fn-1)[^1]changes wit
 
 ***
 
-## Client Side Events
+## Client side events
 
 ### [**OnAuthenticated**](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Client.ClientManager.html#FishNet_Managing_Client_ClientManager_OnAuthenticated)
 
@@ -79,7 +79,7 @@ This is only available when using [ServerManager.ShareIds](https://fish-networki
 
 ***
 
-## Shared Events
+## Shared events
 
 ### [**OnClientLoadedStartScenes**](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Scened.SceneManager.html#FishNet_Managing_Scened_SceneManager_OnClientLoadedStartScenes)
 

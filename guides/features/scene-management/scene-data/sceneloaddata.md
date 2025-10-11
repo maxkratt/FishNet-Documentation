@@ -10,10 +10,10 @@ description: >-
 
 Loading scenes of all types depend upon SceneLoadData. The SceneLoadData class contains information about what scenes to load, how to load them, which objects to move to new scenes, and more. You can view the SceneLoadData API [here](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Scened.SceneLoadData.html).
 
-## Default Values
+## Default values
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>//Default Values
-</strong>SceneLoadData sld = new SceneLoadData()
+```csharp
+SceneLoadData sld = new SceneLoadData()
 {
     PreferredActiveScene = null,
     SceneLookupDatas = new SceneLookupData[0],
@@ -29,11 +29,11 @@ Loading scenes of all types depend upon SceneLoadData. The SceneLoadData class c
         AutomaticallyUnload = true,
         AllowStacking = false,
         LocalPhysics = LocalPhysicsMode.None,
-        ReloadScenes = false, //Obsolete, Comming Soon.
+        ReloadScenes = false, // Obsolete, Coming Soon.
         Addressables = false
     }
 };
-</code></pre>
+```
 
 <details>
 
@@ -81,11 +81,11 @@ See [**Replacing Scenes**](../loading-scenes/#replacing-scenes) Section of Loadi
 
 Params are an optional way to assign data to your scene loads/unloads. This data will be available within[ **Scene Events**](../scene-events.md), Information used in Params can be useful for storing information about the scene load/unload and referencing it later when the scene load/unload completes.
 
-#### ServerParams
+**ServerParams**
 
 _ServerParams_ are only included on the server side, and are not networked. It is an array of objects, meaning you can send anything you want. However when accessing the Params through event args, you will have to cast the object to the data you want.
 
-#### ClientParams
+**ClientParams**
 
 _ClientParams_ is a byte array which may contain anything, and will be sent to clients when they receive the load scene instructions. Clients can access the _ClientParams_ within the scene change events.
 
@@ -97,7 +97,7 @@ _ClientParams_ is a byte array which may contain anything, and will be sent to c
 
 You may further enhance how you load/unload scenes with Options.
 
-#### AutomaticallyUnload
+**AutomaticallyUnload**
 
 * When _set to_ true scenes will be unloaded automatically on the server when there are no more connections present. This is the default behaviour.
 * When set to false the scene will remain if connections leave the scene unexpected, such as being disconnected.
@@ -105,19 +105,19 @@ You may further enhance how you load/unload scenes with Options.
 * Only scenes loaded for connections will be automatically unloaded when emptied.
 * Global scenes can only be unloaded using ReplaceScenes or by calling unload on them.
 
-#### AllowStacking
+**AllowStacking**
 
 * When _AllowStacking_ remains false the SceneManager will not stack scenes in your SceneLoadDatas.
 * If true then scenes can be stacked (loaded multiple times).
 * In the SceneLookupData section it was mentioned that if a Scene reference or handle is specified then the SceneManager will favor loading a scene using a scene handle. When you would like to load connections into the same stacked scene over multiple load calls, you will populate your SceneLookupDatas by Scene reference or handle.
 * See [**Scene Stacking**](../scene-stacking.md) for more detail and examples
 
-#### LocalPhysics
+**LocalPhysics**
 
 * [_LocalPhysics_](https://docs.unity3d.com/ScriptReference/SceneManagement.LocalPhysicsMode.html) is a Unity property that lets you determine how physics are simulated in your scenes.
 * Generally if you are stacking scenes you will want to set a LocalPhysics mode so that stacked scenes do not collide with each other.
 
-#### Addressables
+**Addressables**
 
 * _Addressables_ is only used as a reference and performs no additional functionality.
 * You may set this value to know if a scene is loading using addressables, without having to create Params.

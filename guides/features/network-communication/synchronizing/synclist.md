@@ -21,10 +21,10 @@ private void Awake()
 }
 private void Update()
 {
-    //You can modify a synclist as you would any other list.
+    // You can modify a synclist as you would any other list.
     _myCollection.Add(10);
     _myCollection.RemoveAt(0);
-    //ect.
+    // ect.
 }
 
 /* Like SyncVars the callback offers an asServer option
@@ -85,12 +85,12 @@ If you are using this SyncType with a container, such as a class, and want to mo
 
 private readonly SyncList&#x3C;MyClass> _players = new SyncList&#x3C;MyClass>();
 
-//Call dirty on an index after modifying an entries field to force a synchronize. 
+// Call dirty on an index after modifying an entries field to force a synchronize. 
 <strong>[Server] 
 </strong>private void ModifyPlayer()
 {
     _players[0].Level = 10;
-    //Dirty the 0 index.
+    // Dirty the 0 index.
     _players.Dirty(0);
 }
 </code></pre>

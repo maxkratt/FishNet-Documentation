@@ -8,7 +8,6 @@ description: >-
 
 ## General
 
-See Sub Pages
+See sub pages
 
 ### [Addressables](addressables.md)
-

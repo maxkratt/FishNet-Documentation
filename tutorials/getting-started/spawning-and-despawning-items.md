@@ -14,7 +14,7 @@ We have added a large green cube to act as the floor which you can do too, but t
 
 {% stepper %}
 {% step %}
-**Creating the Item NetworkObject Prefab**
+### **Creating the item network object prefab**
 
 Let's create a **Cube** in the scene hierarchy, and add a **NetworkObject** component to it. We've also decreased it's scale by half so that it doesn't look too large.\
 Then drag it into the project window to turn it into a prefab; you can destroy the original game object in the scene hierarchy now.
@@ -23,7 +23,7 @@ Then drag it into the project window to turn it into a prefab; you can destroy t
 {% endstep %}
 
 {% step %}
-**Creating a Script to Spawn the Cube**
+### **Creating a script to spawn the cube**
 
 Now create a script called `PlayerCubeCreator` and add it to your **Player Prefab**. This script is going to be responsible for spawning our new cube item across the network.
 
@@ -114,11 +114,11 @@ You can read our more in-depth page about **Spawning** [here](spawning-and-despa
 {% endstep %}
 
 {% step %}
-**Assigning the Prefab to Your Script**
+### **Assigning the prefab to your script**
 
 Now select your **Player Prefab** and assign your **Cube Prefab** to the "Cube Prefab" field in your newly created **Player Cube Creator** script.
 
-<figure><img src="../../.gitbook/assets/player-cube-creator-set.png" alt=""><figcaption><p>Player Cube Creator with Cube Prefab assigned</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/player-cube-creator-set.png" alt=""><figcaption><p>PlayerCubeCreator with cube prefab assigned</p></figcaption></figure>
 
 {% hint style="info" %}
 You may have noticed that an **Empty Network Behaviour** component was automatically added to your game objects with a **NetworkObject** component. This happens because each FishNet requires every NetworkObject to also have a NetworkBehaviour on it, and it will automatically add an empty one if it doesn't detect any. You can safely remove this empty component as you have added multiple other **NetworkBehaviour** components, but it's not a problem either way.
@@ -126,31 +126,31 @@ You may have noticed that an **Empty Network Behaviour** component was automatic
 {% endstep %}
 
 {% step %}
-**Test If the Spawning Works**
+### **Test if the spawning works**
 
 Now launch a couple instances of your game and see if you can run around and spawn cube items by pressing the <kbd>Fire1</kbd> button. The cubes should be visible on all devices connected to each other.
 
-<figure><img src="../../.gitbook/assets/test-cube-spawning.gif" alt=""><figcaption><p>Player Spawning Cubes</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/test-cube-spawning.gif" alt=""><figcaption><p>Player spawning cubes</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-**Add Some Physics**
+### **Add some physics**
 
 Static cubes are boring! Let's add a **Rigidbody** component to the **Cube Prefab** to enable basic physics interactions with them.
 
-<figure><img src="../../.gitbook/assets/rigidbody-added-to-cube.png" alt=""><figcaption><p>Rigidbody added to the Cube</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rigidbody-added-to-cube.png" alt=""><figcaption><p>Rigidbody added to the cube</p></figcaption></figure>
 
 Now the cubes should roll around and collide with the ground. Let's add a **Rigidbody** to the **Player** now and set it to **Is Kinematic**.
 
-<figure><img src="../../.gitbook/assets/player-with-rigidbody.png" alt=""><figcaption><p>Player with Kinematic Rigidbody added</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/player-with-rigidbody.png" alt=""><figcaption><p>Player with kinematic rigidbody added</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-**Test If the Physics Works**
+### **Test if the physics works**
 
 If you launch the game now, the cubes should have basics physics working.
 
-<figure><img src="../../.gitbook/assets/players-spawning-physics-cubes.gif" alt=""><figcaption><p>Players Spawning Physics Cubes</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/players-spawning-physics-cubes.gif" alt=""><figcaption><p>Players spawning physics cubes</p></figcaption></figure>
 
 You may notice the cubes' positions don't always sync up after they are moved around, that's because we haven't done any positional syncing besides the initial position syncing that FishNet automatically did when we called `Spawn`.
 
@@ -160,7 +160,7 @@ Networked Rigidbodies are a complex topic, and better suited to a different guid
 {% endstep %}
 
 {% step %}
-**Script to Despawn Cubes On A Timer**
+### **Script to despawn cubes on a timer**
 
 Now that we can `Spawn` cubes successfully, let's `Despawn` them after a few seconds so that we don't end up with too many objects at once.
 
@@ -198,13 +198,13 @@ This script uses the [OnStartServer](../../guides/features/networked-gameobjects
 {% endstep %}
 
 {% step %}
-**Assigning the Script and Testing**
+### **Assigning the script and testing**
 
 Open your **Cube Prefab** now and add the **Despawn After Time** script you just made to the object.
 
 Launch the game again and observe the objects being Despawned successfully on the server and all clients after a few seconds.
 
-<figure><img src="../../.gitbook/assets/cubes-despawning.gif" alt=""><figcaption><p>Cubes Despawning After 3 Seconds</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cubes-despawning.gif" alt=""><figcaption><p>Cubes despawning after 3 seconds</p></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 

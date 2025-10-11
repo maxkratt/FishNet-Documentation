@@ -27,7 +27,7 @@ Recommended for most users who want a stable release without version control set
 
 ***
 
-### Unity Package File
+### Unity package file
 
 Use this method if you have a `.unitypackage` file, for example, downloaded from [GitHub Releases](https://github.com/FirstGearGames/FishNet/releases), from the [Fish-Networking website](https://www.fish-networking.com/), or shared by a team member.
 
@@ -63,7 +63,7 @@ Ensure you have the [Git client](https://git-scm.com/) (minimum version 2.14.0) 
 
 ***
 
-### Fix for Errors After Importing
+### Fix for errors after importing
 
 If you receive the following errors after importing FishNet, then make sure you don't have Netcode for GameObjects inside your project. The files it uses will clash with FishNet's files and you will need to remove it first and then import FishNet again.
 

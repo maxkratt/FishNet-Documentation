@@ -6,7 +6,7 @@ coverY: 0
 
 # Fundamentals
 
-## A Networked Game
+## A networked game
 
 At its heart, a networked game using Fish-Networking can be thought of as a single-player game running on multiple machines (or even multiple instances of the game running on a the same machine, which is very useful for development). The magic of multiplayer comes from FishNet's ability to synchronize various parts of your game's code and state across these machines, and to send custom messages back and forth to trigger actions or update information. This ensures that all players experience a consistent and interactive world.
 
@@ -18,13 +18,13 @@ For NetworkObjects that can be instantiated during run-time, FishNet needs to st
 
 ***
 
-## The Server and Client
+## The server and client
 
 FishNet is capable of running as a server and/or as a client, and they can be started and stopped independently of one another. When you start the server, FishNet will set various fields such as `IsServerStarted` as true in that game instance that is running as the server. The same applies when you start a client; when both are running FishNet will also set values such as `IsHostStarted`. These fields can be used to determine if the code is running in the game instance acting as a server, client, or both.
 
 ***
 
-## Key Concepts
+## Key concepts
 
 * **NetworkManager:** This is the central hub of your FishNet application. It manages the networking lifecycle, including starting and stopping servers and clients, handling connections, and overseeing the spawning of networked objects.
 * **NetworkObject:** Any GameObject in your Unity scene that needs to be linked across the network must have a NetworkObject component attached. This component assigns a unique network ID and manages the object's networked lifecycle, ensuring its existence and state are consistent across all connected clients.

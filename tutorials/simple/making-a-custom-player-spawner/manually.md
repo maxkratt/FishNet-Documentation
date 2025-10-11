@@ -10,13 +10,13 @@ You may find yourself needing to spawn your players from some custom action othe
 
 {% stepper %}
 {% step %}
-### Create the Script
+### Create the script
 
 Create a new script in your project for your custom player spawner. We have called ours `ManualPlayerSpawner`.
 {% endstep %}
 
 {% step %}
-### Add the Namespaces and Inheritance
+### Add the namespaces and inheritance
 
 Our script will make use of a few different FishNet namespaces and will inherit from **NetworkBehaviour** to make use of its exposed properties.
 
@@ -37,7 +37,7 @@ Remember that since this class is a **NetworkBehaviour**, it should not be place
 {% endstep %}
 
 {% step %}
-### Expose the Prefab in the Inspector
+### Expose the prefab in the inspector
 
 Let's add a [NetworkObject](../../../guides/features/networked-gameobjects-and-scripts/networkobjects/) variable for holding a reference to our player prefab.
 
@@ -47,7 +47,7 @@ Let's add a [NetworkObject](../../../guides/features/networked-gameobjects-and-s
 {% endstep %}
 
 {% step %}
-### Create a SpawnPlayers Method
+### Create a SpawnPlayers method
 
 Now we can create the method that we will call when we want to spawn in the players.
 
@@ -81,7 +81,7 @@ Wonderful, with that we already have a functioning player spawner, but we can st
 {% endstep %}
 
 {% step %}
-### Prevent Accidentally Running on Client
+### Prevent accidentally running on client
 
 Let's prevent ourselves from accidentally running this method on the client side, remember, spawning should only happen by the server.
 
@@ -96,7 +96,7 @@ This will also allow FishNet to strip out this code from client builds when usin
 {% endstep %}
 
 {% step %}
-### Enable Use of Object Pooling
+### Enable use of object pooling
 
 We can also make the script work with FishNet's [Object Pooling](../../../guides/features/networked-gameobjects-and-scripts/spawning/object-pooling.md) system by changing the `Instantiate` method call to one provided by FishNet. This code will work even if we don't use Object Pooling, so it's a direct improvement here.
 
@@ -108,7 +108,7 @@ NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer:
 {% endstep %}
 
 {% step %}
-### Handle Starting Scenes
+### Handle starting scenes
 
 Now the script works well for situations where the clients are loaded into the scene by the [FishNet SceneManager](../../../guides/features/scene-management/), but what if you start the game in this scene and **don't** use the FishNet SceneManager to load it? In that case we can tell FishNet that the client has loaded this scene and should observe it. Let's add the following code after checking that the client is authenticated and before instantiating the object for him.
 
@@ -120,7 +120,7 @@ if (!client.Scenes.Contains(gameObject.scene))
 
 ***
 
-**Alternatively**, perhaps you only want clients who are already loaded in this scene to have a player spawned for them; for example if you have multiple games running in different scenes in the same server instance.&#x20;
+**Alternatively**, perhaps you only want clients who are already loaded in this scene to have a player spawned for them; for example if you have multiple games running in different scenes in the same server instance.
 
 To do that you can simply `continue` the loop instead of adding the connection to this scene, thus skipping the spawning of that player.
 
@@ -132,7 +132,7 @@ if (!client.Scenes.Contains(gameObject.scene))
 {% endstep %}
 
 {% step %}
-### The Final Script
+### The final script
 
 And that's all there is to it, you should now have a script like this that you can use. Add it to a game object in your desired scene and assign the player prefab to it.
 

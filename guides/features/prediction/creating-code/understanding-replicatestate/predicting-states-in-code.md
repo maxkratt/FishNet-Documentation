@@ -4,7 +4,7 @@ description: >-
   Predicting states is a simple way to compensate for these events.
 ---
 
-# Predicting States In Code
+# Predicting States in Code
 
 If your game is fast-paced and reaction based, even if not using physics, predicting states can be useful to _predict_ the next inputs you'll get from the server before you actually get them.
 
@@ -21,8 +21,8 @@ By predicting inputs you can place objects in the future of where you know them 
 Below is an example of a simple replicate method.
 
 ```csharp
-//What data does is irrelevant in this example.
-//We're only interested in how to predict a future state.
+// What data does is irrelevant in this example.
+// We're only interested in how to predict a future state.
 [Replicate]
 private void RunInputs(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
 { 
@@ -41,7 +41,7 @@ A state ending in 'Future' essentially means input has not been received yet, an
 
 Let's assume your game has a likeliness that players will move in the same direction regularly enough. If a player was holding forward for three ticks the input would look like this...
 
-```
+```csharp
 (data.Vertical == 1)
 (data.Vertical == 1)
 (data.Vertical == 1)
@@ -49,11 +49,11 @@ Let's assume your game has a likeliness that players will move in the same direc
 
 But what if one of the inputs didn't arrive, or arrived late? The chances of inputs not arriving at all are pretty slim, but arriving late due to network variance is extremely common. If perhaps an input did arrive late the values may appear as something of this sort...
 
-```
+```csharp
 (data.Vertical == 1)
 (data.Vertical == 1)
-(data.Vertical == 0) //Didn't arrive here, but will arrive late next tick.
-(data.Vertical == 1) //This was meant to arrive the tick before, but arrived late.
+(data.Vertical == 0) // Didn't arrive here, but will arrive late next tick.
+(data.Vertical == 1) // This was meant to arrive the tick before, but arrived late.
 ```
 
 Because of this interruption the player may seem to move forward twice, pause, then forward again. Realistically to help cover this up you will have interpolation on your graphicalObject as shown under the prediction settings for [NetworkObject.](../../../../../fishnet-building-blocks/components/network-object.md) The [PredictionManager](../../../../../fishnet-building-blocks/components/prediction/) also offers QueuedInputs which can give you even more of a buffer. For the sake of this guide though we're going to pretend both of those didn't get the job done, and you need to account for the late input.
@@ -66,37 +66,37 @@ private ReplicateData _lastCreatedInput = default;
 [Replicate]
 private void RunInputs(ReplicateData data, ReplicateState state = ReplicateState.Invalid, Channel channel = Channel.Unreliable)
 { 
-    //If inputs are not known. You could predict
-    //all the way into CurrentFuture, which would be
-    //real-time with the client. Though the more you predict
-    //in the future the more you are likely to mispredict.
+    // If inputs are not known. You could predict
+    // all the way into CurrentFuture, which would be
+    // real-time with the client. Though the more you predict
+    // in the future the more you are likely to miss predict.
     if (state.IsFuture())
     {
         uint lastCreatedTick = _lastCreatedInput.GetTick();
-        //If it's only been 2 ticks since the last created
-        //input then run the logic below.
-        //This essentially means if the last created tick
-        //was 100, this logic would run if the future tick was 102
-        //or less. This is an example of a basic approach to only
-        //predict a certain number of inputs.
+        // If it's only been 2 ticks since the last created
+        // input then run the logic below.
+        // This essentially means if the last created tick
+        // was 100, this logic would run if the future tick was 102
+        // or less. This is an example of a basic approach to only
+        // predict a certain number of inputs.
         uint thisTick = data.GetTick();
         if ((data.GetTick() - lastCreatedTick) <= 2)
         {
-            //We do not necessarily want to predict all states.
-            //For example, it probably wouldn't make sense to predict
-            //multiple jumps in a row. In this example only the movement
-            //inputs are predicted.
+            // We do not necessarily want to predict all states.
+            // For example, it probably wouldn't make sense to predict
+            // multiple jumps in a row. In this example only the movement
+            // inputs are predicted.
             data.Vertical = _lastCreatedInput.Vertical;
         }
     }
-    //If created data then set as lastCreatedInput.
+    // If created data then set as lastCreatedInput.
     else if (state == ReplicateState.ReplayedCreated)
     {
-        //If ReplicateData contains fields which could generate garbage you
-        //probably want to dispose of the lastCreatedInput
-        //before replacing it. This step is optional.
+        // If ReplicateData contains fields which could generate garbage you
+        // probably want to dispose of the lastCreatedInput
+        // before replacing it. This step is optional.
         _lastCreatedInput.Dispose();
-        //Assign newest value as last.
+        // Assign newest value as last.
         _lastCreatedInput = data;
     }
     

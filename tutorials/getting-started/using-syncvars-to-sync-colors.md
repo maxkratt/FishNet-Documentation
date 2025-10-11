@@ -10,7 +10,7 @@ Let's liven up the colors in our game and synchronize them with SyncVars.
 
 {% stepper %}
 {% step %}
-**Creating a Script to Sync Color**
+### **Creating a script to sync color**
 
 Create a new script called `SyncMaterialColor`. This will be used to synchronize the **Material** color of our **MeshRenderers**.
 
@@ -54,15 +54,15 @@ You may want to read more about **SyncVars** and the other available **SyncTypes
 {% endstep %}
 
 {% step %}
-**Add the Script Component**
+### **Add the script component**
 
 Now add your newly created script to your **Cube Prefab**. The script won't currently do anything unless we change the `color` **SyncVar** in it, so let's do that next.
 
-<figure><img src="../../.gitbook/assets/cube-with-sync-color.png" alt=""><figcaption><p>The Sync Material Color Component Added</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cube-with-sync-color.png" alt=""><figcaption><p>The Sync Material Color component added</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
-**Give the Cubes Random Colors**
+### **Give the cubes random colors**
 
 Let's give the cubes some color now as soon as we instantiate them.
 
@@ -146,11 +146,11 @@ This line of code gets the **SyncMaterialColor** component and sets the SyncVar 
 {% endstep %}
 
 {% step %}
-**Test the Synchronized Cubes**
+### **Test the synchronized cubes**
 
 Now all you need to do is run your game again and see if the cubes spawn with a random color and if that color is synchronized across the network.
 
-<figure><img src="../../.gitbook/assets/synced-cube-colors.gif" alt=""><figcaption><p>Cube Color Synchronized!</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/synced-cube-colors.gif" alt=""><figcaption><p>Cube color synchronized!</p></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 

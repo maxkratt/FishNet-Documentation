@@ -16,7 +16,7 @@ See the How to Install section to setup the Transport and FacePunch.Steamworks.
 
 ***
 
-## How to Install
+## How to install
 
 To install visit [https://github.com/FirstGearGames/FishyFacepunch](https://github.com/FirstGearGames/FishyFacepunch) and follow the Setup instructions.
 
@@ -26,11 +26,11 @@ Note that this transport requires Facepunch.Steamworks to be installed separatel
 
 ***
 
-## Component Settings
+## Component settings
 
-<figure><img src="../../.gitbook/assets/facepunch-component.png" alt=""><figcaption><p>Default FishyFacepunch Component</p></figcaption></figure>
+<div align="left"><figure><img src="../../.gitbook/assets/facepunch-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-* **Steam App ID:** The App ID assigned to your game when registered with Steam. The default is 480 which is steams testing game (SpaceWars).
+* **Steam App ID:** The App ID assigned to your game when registered with Steam. The default is 480 which is Steam's testing game (SpaceWar).
 
 #### Server
 
@@ -41,4 +41,4 @@ Note that this transport requires Facepunch.Steamworks to be installed separatel
 #### Client
 
 * **ClientAddress:** The Steam ID of the server you are connecting to. The Servers Steam ID if its standalone, or the Hosts Client Steam ID if the server is a host.
-* **Timeout(Seconds):** The amount of time allowed to establish a connection, in seconds.
+* **Timeout (Seconds):** The amount of time allowed to establish a connection, in seconds.

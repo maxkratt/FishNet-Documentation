@@ -8,7 +8,7 @@ The **Grid Condition** is similar to the [DistanceCondition](distancecondition.m
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/grid-observer-condition.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/grid-observer-condition.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear: **Add Order**
 

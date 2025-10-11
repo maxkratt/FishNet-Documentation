@@ -33,7 +33,7 @@ layout:
 
 <div align="center" data-full-width="false"><figure><img src="../../../../.gitbook/assets/animated-down-arrow.webp" alt=""><figcaption></figcaption></figure></div>
 
-<h2 align="center"><strong>Instant Scaling with Global Deployment</strong></h2>
+<h2 align="center"><strong>Instant scaling with global deployment</strong></h2>
 
 <p align="center"><mark style="color:$info;">Effortlessly scale in real time with no surprise costs during traffic surges, and deploy worldwide in seconds using Unity, containers, or your control panel.</mark></p>
 
@@ -41,7 +41,7 @@ layout:
 
 ***
 
-<h3 align="center">More Key Benefits of PlayFlow</h3>
+<h3 align="center">More key benefits of PlayFlow</h3>
 
 <p align="center"><mark style="color:$info;">The PlayFlow Unity SDK provides a powerful and convenient way to manage your game servers, lobbies, and matchmaking directly within the Unity Editor and your game’s C# scripts.</mark></p>
 
@@ -51,7 +51,7 @@ layout:
 
 <h2 align="center"><i class="fa-square-dollar">:square-dollar:</i></h2>
 
-<h2 align="center"><strong>Better Pricing Than the Competition</strong></h2>
+<h2 align="center"><strong>Better pricing than the competition</strong></h2>
 
 <p align="center"><mark style="color:$info;">No hidden fees. Transparent pricing — paying only for what you use. You can use their cost estimator to get an idea of what running your game might cost you directly from their website. Check out their full pricing page</mark> <a href="https://www.playflowcloud.com/#pricing"><mark style="color:$primary;">here</mark></a><mark style="color:$info;">.</mark></p>
 
@@ -59,7 +59,7 @@ layout:
 
 <h2 align="center"><i class="fa-users">:users:</i></h2>
 
-<h2 align="center"><strong>Matchmaking &#x26; Lobby System</strong></h2>
+<h2 align="center"><strong>Matchmaking &#x26; lobby system</strong></h2>
 
 <p align="center"><mark style="color:$info;">Complete game lobby system and matchmaking included so you can match-up your players by skill, region, or your own rules.</mark></p>
 
@@ -67,7 +67,7 @@ layout:
 
 <h2 align="center"><i class="fa-comments-question-check">:comments-question-check:</i></h2>
 
-<h2 align="center"><strong>Generous Free Tier &#x26; Support That Listens</strong></h2>
+<h2 align="center"><strong>Generous free tier &#x26; support that listens</strong></h2>
 
 <p align="center"><mark style="color:$info;">Build fast, play-test often. All without pulling out your credit card. <strong>PlayFlow</strong> offers the quickest way to test your game online, directly from the Unity editor, and you can do so for free!</mark> </p>
 
@@ -77,7 +77,7 @@ layout:
 
 <h2 align="center"><i class="fa-arrow-up-right-dots">:arrow-up-right-dots:</i></h2>
 
-<h2 align="center">Real-Time Metrics &#x26; <strong>Powerful Control Panel</strong></h2>
+<h2 align="center">Real-time metrics &#x26; <strong>powerful control panel</strong></h2>
 
 <p align="center"><mark style="color:$info;">Experience seamless monitoring with the advanced dashboard for complete visibility. Instantly track server health, player counts, CPU/memory usage, and network traffic. Features include real-time performance tracking, customizable alerts, log aggregation, and player activity monitoring for optimal performance.</mark></p>
 

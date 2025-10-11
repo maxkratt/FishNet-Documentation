@@ -11,7 +11,7 @@ When using client-side prediction the NetworkCollider components are designed to
 All events have the same name across each component: NetworkCollider, NetworkCollider2D, NetworkTrigger, and NetworkTrigger2D. What is returned in each event naturally will vary, depending on which component you use. For example, the NetworkCollision component will return _Collider_ for what was intersected, while NetworkCollision2D will return _Collider2D._
 
 {% hint style="warning" %}
-Our OnStay callback does not return _Collision_ as you would expect with the Unity version. Due to Unity limitations we are unable to provide a Collision callback without hotpath allocations.&#x20;
+Our OnStay callback does not return _Collision_ as you would expect with the Unity version. Due to Unity limitations we are unable to provide a Collision callback without hotpath allocations.
 
 If you require Collision to be returned please use the Unity OnStay callback instead; this will function properly with prediction.
 {% endhint %}
@@ -33,7 +33,7 @@ Keep in mind each callback description varies if you are using Collsion, Trigger
 This example script is placed on the player object. Our script demonstrates subscribing to all three events and using the `OnEnter` event to play a sound, as well applying forces to 'this' player.
 
 ```csharp
-//We are assuming this script inherits NetworkBehaviour.
+// We are assuming this script inherits NetworkBehaviour.
 [SerializeField]
 private AudioSource _hitSound;
 
@@ -41,9 +41,9 @@ private NetworkCollision _networkCollision;
 
 private void Awake()
 {
-    //Get the NetworkCollision component placed on this object.
-    //You can place the component anywhere you would normally
-    //use Unity collider callbacks!
+    // Get the NetworkCollision component placed on this object.
+    // You can place the component anywhere you would normally
+    // use Unity collider callbacks!
     _networkCollision = GetComponent<NetworkCollision>();
     // Subscribe to the desired collision event
     _networkCollision.OnEnter += NetworkCollisionEnter;
@@ -53,12 +53,12 @@ private void Awake()
 
 private void OnDestroy()
 {
-    //Since the NetworkCollider is placed on the same object as
-    //this script we do not need to unsubscribe; the callbacks
-    //will be destroyed with the object.
-    //
-    //But if your NetworkCollider resides on another object you
-    //likely will want to unsubscribe to your events as well as shown.
+    // Since the NetworkCollider is placed on the same object as
+    // this script we do not need to unsubscribe; the callbacks
+    // will be destroyed with the object.
+
+    // But if your NetworkCollider resides on another object you
+    // likely will want to unsubscribe to your events as well as shown.
     if (_networkCollision != null)
     {
         _networkCollision.OnEnter -= NetworkCollisionEnter;
@@ -69,16 +69,16 @@ private void OnDestroy()
 
 private void NetworkCollisionEnter(Collider other)
 {
-    //Only play the sound effect when not currently reconciling.
-    //If you were to play the sound also during reconcilations
-    //the audio would execute each reconcile, each tick, until the
-    //player was no longer reconciling into the collider.
+    // Only play the sound effect when not currently reconciling.
+    // If you were to play the sound also during reconciliations
+    // the audio would execute each reconcile, each tick, until the
+    // player was no longer reconciling into the collider.
     if (!base.PredictionManager.IsReconciling)
         _hitSound.Play();
         
-    //Always apply velocity to this player on enter, even if reconciling.
+    // Always apply velocity to this player on enter, even if reconciling.
     PlayerMover pm = GetComponent<PlayerMover>();
-    //For this example we are pushing away from the other object.
+    // For this example we are pushing away from the other object.
     Vector3 dir = (transform.position - other.gameObject.transform).normalized;
     pm.PredictionRigidbody.AddForce(dir * 50f, ForceMode.Impulse);
 }

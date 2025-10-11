@@ -1,4 +1,4 @@
-# Upgrading To Fish-Networking
+# Upgrading to Fish-Networking
 
 Moving to Fish-Networking will vary depending on which previous networking solution you are coming from. With other solutions changing their API so regularly it may be difficult to keep transition information up to date but we will try our best.
 
@@ -56,10 +56,10 @@ Before running the upgrade tool you will likely need to remove a few files. If u
 In addition, any scripts requiring component NetworkIdentity will need to have the declaring line removed.
 
 ```csharp
-//Replace the following with an empty string.
+// Replace the following with an empty string.
 [RequireComponent(typeof(NetworkIdentity))]
 
-//The hotkey in Visual Studio is Ctrl + Shift + H.
+// The hotkey in Visual Studio is Ctrl + Shift + H.
 ```
 
 **Component changes:**
@@ -127,13 +127,13 @@ Mirror uses several singletons while Fish-Networking uses an anti-singleton desi
 
 Fish-Networking instead uses sealed managers with events. To mimic the NetworkManager of Mirror create a new MonoBehaviour and place it on your NetworkManager object. Instead of using overrides subscribe to your needed events from each appropriate Fish-Networking manager.
 
-```
-//Mirror example.
-//Called when a remote client connects.
+```csharp
+// Mirror example.
+// Called when a remote client connects.
 public override OnServerConnect(NetworkConnectionToClient conn) {}
 
-//FishNet example.
-//Called when a remote client state changes.
+// FishNet example.
+// Called when a remote client state changes.
 networkManager.ServerManager.OnRemoteConnectionState += YourCallback;
 ```
 
@@ -146,6 +146,6 @@ networkManager.ServerManager.OnRemoteConnectionState += YourCallback;
 | <p>OnStartServer</p><p>OnStopServer</p><p>OnServerError</p>                                                                                                | ServerManager.OnServerConnectionState                                                                                                                                  |
 | <p>OnStartClient</p><p>OnStopClient</p><p>OnClientConnect</p><p>OnClientDisconnect</p><p>OnClientError</p>                                                 | ClientManager.OnClientConnectionState                                                                                                                                  |
 
-### Automatic Online/Offline Scenes
+### Automatic online/offline scenes
 
 To mimic the Online and Offline scene setting in the Mirror NetworkManager you can add the [DefaultScene](../fishnet-building-blocks/components/utilities/defaultscene.md) component to your network manager object and fill it in with your desired scenes.

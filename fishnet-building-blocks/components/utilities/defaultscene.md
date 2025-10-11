@@ -20,7 +20,7 @@ For this component to work, both the online scene and the offline scene must be 
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/default-scene-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/default-scene-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear: **Enable Global Scenes**
 

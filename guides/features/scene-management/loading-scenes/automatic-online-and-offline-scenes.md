@@ -8,7 +8,7 @@ If you're looking for a simple way to manage scene transitions when your network
 
 This is perfect for developers who want a plug-and-play setup without writing custom scene logic.
 
-### Setup Instructions
+### Setup instructions
 
 To get started:
 

@@ -1,5 +1,6 @@
 ---
 layout:
+  width: default
   title:
     visible: true
   description:
@@ -9,6 +10,8 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
     visible: true
 ---
 
@@ -34,7 +37,7 @@ To support offline play and online play you will want to consider using [Multipa
 
 ***
 
-## How to Install
+## How to install
 
 Yak is part of FishNet Pro! So you must have purchased pro. See how to purchase and download FishNet Pro [here](../../overview/readme/pro-projects-and-support.md).\
 \

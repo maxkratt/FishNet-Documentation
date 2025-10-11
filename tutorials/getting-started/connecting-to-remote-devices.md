@@ -10,7 +10,7 @@ Once you have a basic networked game set up and can connect as a host, the next 
 
 {% stepper %}
 {% step %}
-**Identifying the Server's IP Address**
+### **Identifying the server's IP address**
 
 For a client to connect to a remote server, it needs to know the server's IP address.
 
@@ -23,7 +23,7 @@ For testing on a local network, you can often find your machine's IP address by 
 {% endstep %}
 
 {% step %}
-**Configuring the Client to Connect**
+### **Configuring the client to connect**
 
 To connect as a client to a remote server, you'll need to manually set the server's address.
 
@@ -40,7 +40,7 @@ The `NetworkHudCanvas` is a convenient debugging tool. In a finished game, you w
 {% endstep %}
 
 {% step %}
-**Building and Testing the Connection**
+### **Building and testing the connection**
 
 To test connecting to a remote device, you'll need to build your game.
 
@@ -53,7 +53,7 @@ If configured correctly, the client should connect to the server, and you should
 {% endstep %}
 
 {% step %}
-**Troubleshooting Common Connection Issues**
+### **Troubleshooting common connection issues**
 
 If your client fails to connect, consider these common issues:
 

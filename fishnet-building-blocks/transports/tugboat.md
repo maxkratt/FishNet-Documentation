@@ -4,6 +4,7 @@ description: >-
   reliability of LiteNetLib.
 coverY: 0
 layout:
+  width: default
   cover:
     visible: false
     size: full
@@ -16,6 +17,8 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
     visible: true
 ---
 
@@ -33,7 +36,7 @@ Tugboat uses [LiteNetLib](https://github.com/RevenantX/LiteNetLib) to support re
 
 ***
 
-## How to Install
+## How to install
 
 Tugboat is the default transport of FishNet! Which means it comes with FishNet by default when Importing FishNet from your favorite source.
 
@@ -43,52 +46,44 @@ The [Transport Manager](../components/managers/transportmanager/) will automatic
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../.gitbook/assets/tugboat-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/tugboat-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  Stop Sockets On Thread
+### :gear: Stop Sockets On Thread
 
 > When enabled, causes the local server and client sockets to be stopped using a new thread. This option can be useful for ensuring that the socket shutdown process does not block the main thread, which may help with smoother shutdowns or prevent the application from freezing during network cleanup.
 
-### :gear:  Don't Route
+### :gear: Don't Route
 
 > Enable **Don't Route** if you want your Tugboat server or client to send data directly to the local interface, avoiding any network routing by the operating system. This is an advanced option primarily for special networking requirements.
 
-### :gear:  **Unreliable MTU**
+### :gear: **Unreliable MTU**
 
 > This is the largest size an unreliable packet may be. When a single outbound data exceeds this value it is sent reliably. Smaller unreliable datas will be automatically split over multiple unreliable sends.
 
-### :gear:  **Reuse Address**
+### :gear: **Reuse Address**
 
 > Allows the same address and port to be used multiple times by the server. This can be useful if you wish to launch multiple builds or server instances on the same machine using the same configuration.
 
-### :gear:  I**Pv4 Bind Address**
+### :gear: I**Pv4 Bind Address**
 
 > This is which address to bind the server to. If set and IPv4 is not available this will cause a socket error upon server start.
 
-### :gear:  **Enable IPv6**
+### :gear: **Enable IPv6**
 
 > Enables IPv6 binding when available. In some cases you may want this disabled if you have an IPv6 interface you do not want used.
 
-### :gear:  **IPv6 Bind Address**
+### :gear: **IPv6 Bind Address**
 
 > This is which address to bind the server to. If set and IPv6 is not available this will cause a socket error upon server start.
 
-### :gear:  **Port**
+### :gear: **Port**
 
 > Is which port the server will listen on. This is also the port clients will connect to. In some instances you may need to change this at runtime using `TransportManager.SetPort()`.
 
-### :gear:  **Maximum Clients**
+### :gear: **Maximum Clients**
 
 > **Maximum Clients** is the maximum active clients allowed before the transport begins to deny connections.
 
-### :gear:  **Client Address**
+### :gear: **Client Address**
 
 > This is which address to connect to as a client. This is typically your server address. Localhost is set as default for local testing.
-
-<details>
-
-<summary>Channels <em>are settings related to channels, such as reliable and unreliable.</em></summary>
-
-
-
-</details>

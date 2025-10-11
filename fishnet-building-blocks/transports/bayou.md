@@ -1,5 +1,6 @@
 ---
 layout:
+  width: default
   title:
     visible: true
   description:
@@ -9,6 +10,8 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
     visible: true
 ---
 
@@ -41,9 +44,9 @@ Once Downloaded and Imported into Unity with FishNet. You should add the compone
 
 ## Settings
 
-<div align="left"><figure><img src="../../.gitbook/assets/bayou-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/bayou-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Use WSS**
+### :gear: **Use WSS**
 
 > When enabled, Bayou will use Secure WebSockets instead of normal WebSockets.
 >
@@ -54,18 +57,18 @@ Once Downloaded and Imported into Unity with FishNet. You should add the compone
 > * **Certificate Password**: Password for certificate
 > * **SSL Protocol**: The protocol you would like to use for encryption.
 
-### :gear:  **MTU**
+### :gear: **MTU**
 
 > Maximum Transmission Unity for the unreliable channel (in bytes)
 
-### :gear:  **Port**
+### :gear: **Port**
 
 > The port you want to bind the server to. Default port is 7770.
 
-### :gear:  **Maximum Clients**
+### :gear: **Maximum Clients**
 
 > The maximum amount of clients allowed to connect to the server. Default is 2000 clients.
 
-### :gear:  **Client Address**
+### :gear: **Client Address**
 
 > The Address the client should use to connect to the server.

@@ -6,7 +6,7 @@ description: >-
 
 # Ownership
 
-### What is Ownership?
+### What is ownership?
 
 Ownership is a core concept in Fish-Net, determining which client has control over an object.
 
@@ -20,7 +20,7 @@ Ownership checks are essential for ensuring proper control over objects. Common 
 * Checking ownership status for player-related values like name or score.
 * Ensuring only the owner executes specific network calls (e.g., ServerRpcs).
 
-### Assigning Ownership
+### Assigning ownership
 
 Ownership can be granted in several ways:
 
@@ -47,7 +47,7 @@ networkObject.RemoveOwnership();
 `ownerConnection` and `newOwnerConnection` above represent a NetworkConnection that will be set as the new owner.
 {% endhint %}
 
-### Checking Ownership
+### Checking ownership
 
 Ownership can be verified via the following NetworkObject or NetworkBehaviour properties:
 
@@ -57,7 +57,7 @@ base.Owner;        // Retrieves the current owner NetworkConnection.
 base.IsController; // True if the local client owns the object or is the server with no assigned owner.
 ```
 
-#### Simple Movement Example
+#### Simple movement example
 
 A client must own an object to execute certain actions. Below is an example of movement logic restricted to the object's owner:
 
@@ -78,7 +78,7 @@ void Update()
 
 When paired with a [Network Transform](../../../fishnet-building-blocks/components/network-transform.md) set to Client Authoritative, this movement will be relayed to the server and synchronized across all clients.
 
-### Transferring Ownership
+### Transferring ownership
 
 Only the server can assign, transfer, or remove ownership. Typically, ownership is granted when spawning an object.
 

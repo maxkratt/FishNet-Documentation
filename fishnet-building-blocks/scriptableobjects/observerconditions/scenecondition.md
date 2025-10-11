@@ -8,7 +8,7 @@ The **Scene Condition** evaluates to true if the client shares any scenes with t
 
 ## Settings <a href="#server-and-host" id="server-and-host"></a>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/scene-observer-condition.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/scene-observer-condition.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear: **Add Order**
 

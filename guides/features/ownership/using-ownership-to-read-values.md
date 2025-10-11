@@ -4,7 +4,7 @@ description: >-
   reading owner information.
 ---
 
-# Using Ownership To Read Values
+# Using Ownership to Read Values
 
 {% hint style="info" %}
 This guide requires Share Ids to be enabled on the ServerManager for clients to read values. Share Ids is enabled by default, and does not reveal any sensitive information to clients.
@@ -60,41 +60,41 @@ public class PlayerNames : NetworkBehaviour
 
     public override void OnStartNetwork()
     {
-        //Register this to the NetworkManager so it can be found easily by any script!
-        base.NetworkManager.RegisterInstance(this);
+        // Register this to the NetworkManager so it can be found easily by any script!
+        NetworkManager.RegisterInstance(this);
     }
 
     public override void OnStartServer()
     {
-        base.ServerManager.OnRemoteConnectionState += ServerManagerOnOnRemoteConnectionState;
+        ServerManager.OnRemoteConnectionState += ServerManagerOnOnRemoteConnectionState;
     }
 
     public override void OnStopServer() 
     {
-        base.ServerManager.OnRemoteConnectionState -= ServerManagerOnOnRemoteConnectionState;
+        ServerManager.OnRemoteConnectionState -= ServerManagerOnOnRemoteConnectionState;
     }
 
     public override void OnStopNetwork()
     {
-        //Unregister to clean up.
-        if (base.NetworkManager != null)
-            base.NetworkManager.UnregisterInstance<PlayerNames>();
+        // Unregister to clean up.
+        if (NetworkManager != null)
+            NetworkManager.UnregisterInstance<PlayerNames>();
     }
 
     private void ServerManagerOnOnRemoteConnectionState(NetworkConnection conn, RemoteConnectionStateArgs args)
     {
-        //If disconnecting remove from the dictionary.
+        // If disconnecting remove from the dictionary.
         if (args.ConnectionState == RemoteConnectionState.Stopped) 
         {
             Names.Remove(conn);
         }
-        //If connecting then add.
+        // If connecting then add.
         else if (args.ConnectionState == RemoteConnectionState.Started)
         {
             /* When a player connects assign them a random number
              * as their name. */
             
-            //Another cog in the machine.
+            // Another cog in the machine.
             string randomName = Random.Range(1000, 999999).ToString();
             Names.Add(conn, randomName);
         }
@@ -103,9 +103,9 @@ public class PlayerNames : NetworkBehaviour
     /// <summary>
     /// Calls whenever the _names collection updates.
     /// </summary>
-    private void NamesOnOnChange(SyncDictionaryOperation op, NetworkConnection key, string value, bool asserver)
+    private void NamesOnOnChange(SyncDictionaryOperation op, NetworkConnection key, string value, bool asServer)
     {
-        //If an add or modify then invoke.
+        // If an add or modify then invoke.
         if (op == SyncDictionaryOperation.Add || op == SyncDictionaryOperation.Set)
             OnPlayerNameChanged?.Invoke(key, value);
     }
@@ -116,7 +116,7 @@ public class PlayerNames : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void ServerSetName(string newName, NetworkConnection caller = null)
     {
-        //Caller will never be null; the server will assign it automatically when a client calls this since RequireOwnership is false.
+        // Caller will never be null; the server will assign it automatically when a client calls this since RequireOwnership is false.
         // ReSharper disable once AssignNullToNotNullAttribute
         Names[caller] = newName;
     }
@@ -126,13 +126,13 @@ public class PlayerNames : NetworkBehaviour
 
 The above code snippet will give players a random name when they connect, and allow clients to change their name by calling the SetName RPC.
 
-## Automatically Spawning PlayerNames
+## Automatically spawning PlayerNames
 
 After you have made the prefab select your scene NetworkManager, make a child object named ServerSpawner, and add the script ServerSpawner. You may place this script anywhere in your scene or game, but for simplicity sake we're going to nest it beneath the NetworkManager. After you add the script, insert your newly created PlayerNames prefab into the 'Network Objects' field and ensure Automatically Spawn is enabled.
 
 <figure><img src="../../../.gitbook/assets/player-names-server-spawner.png" alt=""><figcaption></figcaption></figure>
 
-## Displaying Player Names
+## Displaying player names
 
 Next we are going to make a very simple script which changes the text value on a TextMeshPro component. This is a very simple example which might go on the players character. You could use similar scripts for chat names, and more.
 
@@ -154,31 +154,31 @@ public class CharacterName : NetworkBehaviour
     [SerializeField]
     private TextMeshProUGUI _text;
 
-    //Cached value for unsubscribing to save a little perf.
+    // Cached value for unsubscribing to save a little perf.
     private PlayerNames _playerNames;
     
     public override void OnStartClient() 
     {
-        //If owner is not set then do not get the name, as this does not belong to a client.
+        // If owner is not set then do not get the name, as this does not belong to a client.
         if (!base.Owner.IsValid)
             return;
         
-        //Get the PlayerNames instance to read this characters name(the player name).
+        // Get the PlayerNames instance to read this characters name(the player name).
         _playerNames = base.NetworkManager.GetInstance<PlayerNames>();
 
-        //If cannot be found exit method; this shouldn't ever happen.
+        // If cannot be found exit method; this shouldn't ever happen.
         if (!_playerNames.Names.TryGetValue(base.Owner, out string theName))
             return;
 
         _text.text = theName;
 
-        //Also listen for updates for
+        // Also listen for updates for
         _playerNames.OnPlayerNameChanged += PlayerNamesOnOnPlayerNameChanged;
     }
     
     public override void OnStopClient() 
     {
-        //Unsubscribe from events to clean up.
+        // Unsubscribe from events to clean up.
         if (_playerNames != null)
             _playerNames.OnPlayerNameChanged -= PlayerNamesOnOnPlayerNameChanged;
     }
@@ -189,11 +189,11 @@ public class CharacterName : NetworkBehaviour
     /// </summary>
     private void PlayerNamesOnOnPlayerNameChanged(NetworkConnection conn, string theName)
     {
-        //If the name being changed is not for this owner then do not update anything.
+        // If the name being changed is not for this owner then do not update anything.
         if (conn != base.Owner)
             return;
 
-        //Set new name.
+        // Set new name.
         _text.text = theName;
     }
 
@@ -203,5 +203,5 @@ public class CharacterName : NetworkBehaviour
 Now when an object spawns containing the script above, the \_text field will be updated to the owners player name. In addition, if the owner changes their name at any time, the text will be updated again.
 
 {% hint style="success" %}
-Notice how we make use of NetworkManager.Register, Unregister, and GetInstance in this guide. This is a very useful feature for accessing global networked scripts.
+Notice how we make use of **NetworkManager.Register**, **Unregister**, and **GetInstance** in this guide. This is a very useful feature for accessing global networked scripts.
 {% endhint %}

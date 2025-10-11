@@ -18,13 +18,13 @@ Check out its full API page for the specific methods [here](https://fish-network
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/predicted-spawn-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/predicted-spawn-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Allow Spawning**
+### :gear: **Allow Spawning**
 
 > This allows clients to predicted spawn this object. You can change this at run-time with the [`SetAllowSpawning`](https://fish-networking.com/FishNet/api/api/FishNet.Component.Ownership.PredictedSpawn.html#FishNet_Component_Ownership_PredictedSpawn_SetAllowDespawning_System_Boolean_) method. Just be sure to do so on the client and server side.
 
-### :gear:  **Allow Despawning**
+### :gear: **Allow Despawning**
 
 > This allows clients to predicted despawn this object. You can change this at run-time with the [`SetAllowDespawning`](https://fish-networking.com/FishNet/api/api/FishNet.Component.Ownership.PredictedSpawn.html#FishNet_Component_Ownership_PredictedSpawn_SetAllowDespawning_System_Boolean_) method. Just be sure to do so on the client and server side.
 

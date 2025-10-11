@@ -36,23 +36,23 @@ The server is always considered right and never has to correct data, so it never
 
 Server and client use this flag. A created flag indicates that the data was created by controller, such as owner or the server if no owner. The created flag will not be present if the controller has not sent updates, such as if they are not taking any action.
 
-## State Examples
+## State examples
 
 Below are examples of some possible states and what they mean.
 
 ```csharp
-//You will see this value if the data is being replayed, it previously ran outside the
-//reconcile, and data is created by controller.
+// You will see this value if the data is being replayed, it previously ran outside the
+// reconcile, and data is created by controller.
 state = (ReplicateState.Replayed | ReplicateState.Ticked | ReplicateState.Created);
-//When the state is only Replayed then the data is not Created, and the tick on data
-//has not occurred outside the reconcile yet. This is what we often refer to as a
-//future state.
+// When the state is only Replayed then the data is not Created, and the tick on data
+// has not occurred outside the reconcile yet. This is what we often refer to as a
+// future state.
 state = ReplicateState.Replayed;
-//When a state is Ticked only it indicates that the data is being run outside a
-//reconcile, and that the controller has not sent data for this particular tick.
+// When a state is Ticked only it indicates that the data is being run outside a
+// reconcile, and that the controller has not sent data for this particular tick.
 state = ReplicateState.Ticked;
 ```
 
 {% hint style="success" %}
-For more possible flag examples see the state extensions (the ReplicateState file).&#x20;
+For more possible flag examples see the state extensions (the ReplicateState file).
 {% endhint %}

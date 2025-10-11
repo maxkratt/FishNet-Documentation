@@ -18,7 +18,7 @@ private void Awake()
 
 private void FixedUpdate()
 {
-    //You can modify a synchashset as you would any other hashset.
+    // You can modify a synchashset as you would any other hashset.
     _myCollection.Add(Time.frameCount);
 }
 
@@ -87,9 +87,9 @@ private void Awake()
 private void ModifyPlayer()
 {
     
-    //This will change the value locally but it will not synchronize to clients.
+    // This will change the value locally but it will not synchronize to clients.
     _containerReference.Level = 10;
-    //The value must be set dirty to force a synchronization.
+    // The value must be set dirty to force a synchronization.
     _containers.Dirty(_containerReference);
 }
 ```

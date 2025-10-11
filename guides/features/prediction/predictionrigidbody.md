@@ -10,7 +10,7 @@ Using PredictionRigidbody is very straight forward. In short, you move from appl
 
 View the [Creating Code](creating-code/) guide for using PredictionRigidbody in your replicate and reconcile methods.
 
-## Using Outside The Script
+## Using outside the script
 
 As mentioned above you should always apply forces to the PredictionRigidbody component rather than the Rigidbody directly. Our first guides demonstrate how to do this within the replicate method, as well how to reconcile using the PredictionRigidbody, but do not show how to add forces from outside scripts, such as a bumper in your game.
 
@@ -19,7 +19,7 @@ There is virtually no complexity to adding outside forces other than remembering
 The example below is what it might look like if using a trigger on a world object to repel the player.
 
 {% hint style="warning" %}
-For triggers and collisions to work properly with prediction you must use our NetworkTrigger/NetworkCollision components. Otherwise, due to a Unity limitation, such interactions would not work.  You can learn more about those components here.
+For triggers and collisions to work properly with prediction you must use our NetworkTrigger/NetworkCollision components. Otherwise, due to a Unity limitation, such interactions would not work. You can learn more about those components here.
 {% endhint %}
 
 {% hint style="success" %}
@@ -29,11 +29,11 @@ Fun fact: Fish-Networking is the only framework that has the ability to simulate
 ```csharp
 private void NetworkTrigger_OnEnter(Collider other)
 {
-    //Add upward impulse when hitting this trigger.
+    // Add upward impulse when hitting this trigger.
     if (other.TryGetComponent<RigidbodyPlayer>(out rbPlayer))
         rbPlayer.PredictionRigidbody.AddForce(Vector3.up, ForceMode.Impulse);
-    //Do not call Simulate on the PredictionRigidbody here. That should only be done
-    //within the replicate method.
+    // Do not call Simulate on the PredictionRigidbody here. That should only be done
+    // within the replicate method.
 }
 ```
 

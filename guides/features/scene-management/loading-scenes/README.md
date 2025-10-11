@@ -1,7 +1,13 @@
+---
+description: >-
+  Instructions for loading networked scenes with FishNet, both on the server and
+  on clients.
+---
+
 # Loading Scenes
 
 {% embed url="https://www.youtube.com/watch?index=3&list=PLkx8oFug638qBthd3n_F98zAtOdI8o_Gb&v=PhWKZsL0Za4" %}
-Loading Scenes Video Guide
+Loading scenes video guide
 {% endembed %}
 
 ## General
@@ -89,7 +95,7 @@ base.SceneManager.LoadConnectionScenes(sld);
 * When loading multiple scenes in one call, the NetworkObjects you put into [**Moved NetworkObjects**](../scene-data/sceneloaddata.md#movednetworkobjects) will be moved to the first valid scene in the list of scenes you tried to load. See Persisting NetworkObjects for more info about keeping NetworkObjects across scenes.
 
 ```csharp
-//Loading Multiple Connections into Multiple Scenes
+// Loading Multiple Connections into Multiple Scenes
 string[] scenesToLoad = new string[] {"Main", "Additive"};
 NetworkConnection[] conns = new NetworkConnection[] {connA, connB,connC}
 
@@ -131,7 +137,7 @@ public void RegisterScenes(SceneLoadEndEventArgs args)
     // Only register on the server
     if (!args.QueueData.AsServer) return;
     
-    //if you know you only loaded one scene you could just grab index [0]
+    // if you know you only loaded one scene you could just grab index [0]
     foreach(var scene in args.loadedScenes)
         ScenesLoaded.Add(scene);
 }
@@ -145,7 +151,7 @@ public void OnDisable()
 **By Connection:**
 
 ```csharp
-//NetworkConnections have a list of Scenes they are currently in. 
+// NetworkConnections have a list of Scenes they are currently in. 
 int clientToLookup;
 InstanceFinder.ServerManger.Clients[clientToLookup].Scenes;
 ```

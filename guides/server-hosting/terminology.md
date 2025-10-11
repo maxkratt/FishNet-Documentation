@@ -6,13 +6,13 @@ description: >-
 
 # Terminology
 
-### Session-based versus Persistent
+### Session-based versus persistent
 
 A session-based service, be it relay or dedicated server, will start up and end as needed. Given that these servers are on-demand(session-based) you typically pay-per-use rather than a flat rate, which can save you a substantial amount of money. Session-based services are the most common way online games are hosted and are typically used for matches and lobby based gaming, but can also be used for entire worlds with hundreds of players.
 
 Persistent services are typically always running, no matter the number of players present. Because the servers are always available, this makes it easier to maintain the state of your worlds. A persistent server is the common choice for MMO-like games. While a constant world is very appealing this type of service often comes with significantly higher costs.
 
-### Dedicated Servers
+### Dedicated servers
 
 A dedicated server refs to a server-authoritative game server. There are several advantages to a dedicated server, and very few cons.
 

@@ -15,39 +15,39 @@ If two clients went into the same dungeon, each client will load their own copy 
 \
 Stacked scenes typically have different Clients observing each instance of the scene.
 
-## Stacking Scenes
+## Stacking scenes
 
-### Loading Into New Stacked Scene
+### Loading into new stacked scene
 
 * To stack scenes you must set _AllowStacking_ to true in your SceneLoadData's [**Options**](scene-data/sceneloaddata.md#options-1).
 * To create a new instance of a stacked scene the SceneLookupData must be populated by using the scene name. There is more information on this in the [SceneLookupData](scene-data/scenelookupdata.md) section.
 * Global Scenes cannot be stacked!
 
 ```csharp
-//Stacking a new Scene
-//Select Connections to load into new stacked scene.
+// Stacking a new Scene
+// Select Connections to load into new stacked scene.
 NetworkConnection[] conns = new NetworkConnection[]{connA,ConnB};
 
-//You must use the scene name to stack scenes!
+// You must use the scene name to stack scenes!
 SceneLoadData sld = new SceneLoadData("DungeonScene");
 
-//Set AllowStacking Option to true.
+// Set AllowStacking Option to true.
 sld.Options.AllowStacking = true;
 
-//Decide if you want seperate Physics for the scene.
+// Decide if you want seperate Physics for the scene.
 sld.Options.LocalPhysics = LocalPhysicsMode.Physics3D;
 
-//load the Scene via connections, you cannot stack global scenes.
+// load the Scene via connections, you cannot stack global scenes.
 base.SceneManager.LoadConnectionScene(conns,sld);
 ```
 
-### Loading Into Existing Stacked Scene
+### Loading into existing stacked scene
 
 * If you were to load two connections into a scene by Scene reference or handle they will be added to the same scene, regardless if _AllowStacking_ is true or not.
 
 This is identical to the examples given in the Loading Scenes Guide, on how to load into existing scenes. Review it [**here**](loading-scenes/#loading-existing-scenes).
 
-## Separating Physics
+## Separating physics
 
 You may want to separate physics while stacking scenes. This ensures that the stacked scenes physics do not interact with each other. You will want to set the LocalPhysics option in the [**SceneLoadData**](scene-data/sceneloaddata.md)**.**\\
 
@@ -116,7 +116,7 @@ public class PhysicsSceneSync : NetworkBehaviour
 
     public override void OnStopNetwork()
     {
-        //Check to unsubscribe.
+        // Check to unsubscribe.
         if (_synchronizePhysics || _synchronizePhysics2D)
         {
             _synchronizedScenes.Remove(gameObject.scene.handle);

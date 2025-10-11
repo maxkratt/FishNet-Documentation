@@ -43,7 +43,7 @@ In very rare cases a data type cannot be automatically serialized; a _Sprite_ is
 FishNet should be able to automatically serialize many basic C# and Unity types as well as classes and structs made with serializable types.
 {% endhint %}
 
-### The ExcludeSerialization Attribute
+### The ExcludeSerialization attribute
 
 {% tabs %}
 {% tab title="Description" %}

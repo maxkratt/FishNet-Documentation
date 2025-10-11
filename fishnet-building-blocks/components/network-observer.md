@@ -28,7 +28,7 @@ Each condition must be created as a scriptable object, and dropped into the Netw
 
 ## Settings <a href="#component-settings" id="component-settings"></a>
 
-<div align="left"><figure><img src="../../.gitbook/assets/network-observer-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/network-observer-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear: **Override Type**
 

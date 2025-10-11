@@ -19,9 +19,9 @@ Please review our [API ](https://fish-networking.com/FishNet/api/api/FishNet.Com
 
 ## Settings
 
-<div align="left"><figure><img src="../../../.gitbook/assets/network-tick-smoother-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/network-tick-smoother-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  Initialization Settings
+### :gear: Initialization Settings
 
 > These are essential to the component working.
 >
@@ -29,7 +29,7 @@ Please review our [API ](https://fish-networking.com/FishNet/api/api/FishNet.Com
 > * **Detach On Start** when true will unparent the object which the smoother is attached, placing it as root in world space. Detach is commonly used when the smoothed object is a camera target, given cameras do not handle rollback or larger tick steps well.
 > * **Attach On Stop** when true will reparent the graphical object when the network stop callbacks occur on the object, as detach will unparent on network start callbacks. Typically you want to reattach graphical objects. If the Target Transform is destroyed while detached the object the smoother is attached to will also destroy itself.
 
-### :gear:  **Controller Smoothing**
+### :gear: **Controller Smoothing**
 
 > The **Controller Smoothing** settings determine how the object is smoothed for the controller of the object, which is either the owner or if the object has no owner then it is the server.
 >
@@ -43,7 +43,7 @@ Please review our [API ](https://fish-networking.com/FishNet/api/api/FishNet.Com
 >   * **Interpolation Value** is displayed when Adaptive Interpolation is off. This is a flat amount of interpolation that does not increase when the local client's latency does.
 > * **Smoothed Properties** determines which properties of the transform will be smoothed. If smoothing is not set for a specific property then that particular value will persist in the same world space at all times. For example, if you uncheck Position from Smoothed Properties and move the root, the object which this component sits will never move in space, unless you of course move it manually.
 
-### :gear:  Spectator Smoothing
+### :gear: Spectator Smoothing
 
 > The **Spectator Smoothing** settings determine how the object is smoothed for client's that are **not** the owner.
 >

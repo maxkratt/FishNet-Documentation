@@ -20,7 +20,7 @@ Check out its API page for more specific methods and events [here](https://fish-
 
 ## Settings
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/transport-manager-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/transport-manager-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
 ### :gear: **Transport**
 

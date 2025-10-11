@@ -40,7 +40,7 @@ You can view the API for this method [here](https://fish-networking.com/FishNet/
 
 The first parameter of the **ReadPayload** method needs to be a [NetworkConnection](../../server-and-client-identification/networkconnections.md), this represents which client the spawn is happening for and is provided by FishNet when it calls the method.
 
-The second parameter should be of the type [Reader](https://fish-networking.com/FishNet/api/api/FishNet.Serializing.Reader.html), this will represent a reference to the Reader being used and you will use it to get data out of  the payload.
+The second parameter should be of the type [Reader](https://fish-networking.com/FishNet/api/api/FishNet.Serializing.Reader.html), this will represent a reference to the Reader being used and you will use it to get data out of the payload.
 
 For example you can do the following:
 
@@ -58,7 +58,7 @@ public override void ReadPayload(NetworkConnection connection, Reader reader)
 You can view the API for this method [here](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html#FishNet_Object_NetworkBehaviour_ReadPayload_FishNet_Connection_NetworkConnection_FishNet_Serializing_Reader_).
 {% endhint %}
 
-## More Advanced Example
+## More advanced example
 
 {% code title="SpawnPayloadExample.cs" lineNumbers="true" %}
 ```csharp
@@ -123,7 +123,7 @@ public class SpawnPayloadExample : NetworkBehaviour
             // Do all your reads as you would.
 
             int readAmount = reader.Position - readerStart;
-            //Let's use a pooled array so we don't allocate.
+            // Let's use a pooled array so we don't allocate.
             byte[] payload = ArrayPool<byte>.Shared.Rent(readAmount);
             /* Copy into payload array from where the reader started, up to to
              * the calculated readAmount. */

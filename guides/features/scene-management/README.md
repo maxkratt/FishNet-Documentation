@@ -15,7 +15,7 @@ The [**SceneManager**](../../../fishnet-building-blocks/components/managers/scen
 Visit the [**API**](https://fish-networking.com/FishNet/api/api/FishNet.Managing.Scened.SceneManager.html) to see the public items exposed to the user in the SceneManager.
 {% endhint %}
 
-## Sub Pages
+## Sub pages
 
 ### [Automatic Online and Offline Scenes](loading-scenes/automatic-online-and-offline-scenes.md)
 

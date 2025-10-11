@@ -4,7 +4,7 @@ description: Hosting is a way for players to access your game and play together.
 
 # Server Hosting
 
-## What does Server Hosting entail?
+## What does server hosting entail?
 
 Server hosting involves renting or utilizing a server to host your game's files and services. A server host is essential for game deployment because it provides the infrastructure and resources necessary to manage server loads, enable online gameplay, and ensure the game is accessible to players around the world. It also facilitates updates, balances traffic, and maintains security, which are crucial for a smooth gaming experience.
 

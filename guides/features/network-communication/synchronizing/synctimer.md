@@ -17,7 +17,7 @@ private readonly SyncTimer _timeRemaining = new SyncTimer();
 Making changes to the timer is very simple, and like other SyncTypes must be done on the server.
 
 ```csharp
-//All of the actions below are automatically synchronized.
+// All of the actions below are automatically synchronized.
 
 /* Starts the timer with 5 seconds on it.
  * 
@@ -34,7 +34,7 @@ _timeRemaining.StartTimer(5f, true);
 /* Pauses the timer and optionally sends the current
  * timer value as it is on the server. */
 _timeRemaining.PauseTimer(false);
-//Unpauses the current timer.
+// Unpauses the current timer.
 _timeRemaining.UnpauseTimer();
 /* Stops the timer early and optionally sends the
 * current timer value as it is on the server. */
@@ -81,21 +81,21 @@ private void _timeRemaining_OnChange(SyncTimerOperation op, float prev, float ne
     /* Like all SyncType callbacks, asServer is true if the callback
      * is occuring on the server side, false if on the client side. */
 
-    //Operations can be used to be notified of changes to the timer.
+    // Operations can be used to be notified of changes to the timer.
 
-    //Timer has been started with initial values.
+    // Timer has been started with initial values.
     if (op == SyncTimerOperation.Start)
         Debug.Log($"The timer was started with {next} seconds.");
-    //Timer has been paused.
+    // Timer has been paused.
     else if (op == SyncTimerOperation.Pause)
         Debug.Log($"The timer was paused.");
-    //Timer has been paused and latest server values were sent. 
+    // Timer has been paused and latest server values were sent. 
     else if (op == SyncTimerOperation.PauseUpdated)
         Debug.Log($"The timer was paused and remaining time has been updated to {next} seconds.");
-    //Timer was unpaused.
+    // Timer was unpaused.
     else if (op == SyncTimerOperation.Unpause)
         Debug.Log($"The timer was unpaused.");
-    //Timer has been manually stopped.
+    // Timer has been manually stopped.
     else if (op == SyncTimerOperation.Stop)
         Debug.Log($"The timer has been stopped and is no longer running.");
     /* Timer has been manually stopped.
@@ -110,10 +110,10 @@ private void _timeRemaining_OnChange(SyncTimerOperation op, float prev, float ne
      * StopUpdated is also sent to know previous timer values before starting a new timer. */
     else if (op == SyncTimerOperation.StopUpdated)
         Debug.Log($"The timer has been stopped and is no longer running. The timer was stopped at value {next} before stopping, and the previous value was {prev}");
-    //A timer has reached 0f.
+    // A timer has reached 0f.
     else if (op == SyncTimerOperation.Finished)
         Debug.Log($"The timer has completed!");
-    //Complete occurs after all change events are processed.
+    // Complete occurs after all change events are processed.
     else if (op == SyncTimerOperation.Complete)
         Debug.Log("All timer callbacks have completed for this tick.");
 }

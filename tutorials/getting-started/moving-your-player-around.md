@@ -6,7 +6,7 @@ description: Get your player objects moving around and synchronized!
 
 Now that your player object is properly spawned and prepared, it's time to get it moving. In this section, we'll implement a simple client-authoritative movement script and utilize FishNet's [NetworkTransform ](../../fishnet-building-blocks/components/network-transform.md)component to effortlessly synchronize that movement across all connected devices.
 
-#### Client-Authoritative Movement Script
+#### Client-authoritative movement script
 
 For many games, particularly those with real-time player input, client-authoritative movement is the most straightforward approach. This means the client directly controls its own player object and then informs the server (and other clients) about its position and rotation.
 
@@ -16,7 +16,7 @@ Client-authoritative movement makes it easier for the client to cheat with speed
 
 {% stepper %}
 {% step %}
-**Creating a Player Movement Script**
+### **Creating a player movement script**
 
 Select your **Player** prefab in the Project window. In the Inspector, click on **Add Component** and search for **New Script**. Name the script `PlayerMovement` and click **Create and Add**.
 
@@ -24,7 +24,7 @@ Select your **Player** prefab in the Project window. In the Inspector, click on 
 {% endstep %}
 
 {% step %}
-**Editing the Script**
+### **Editing the script**
 
 Double-click the `PlayerMovement` script to open it in your code editor. Replace the default code with the following:
 
@@ -115,7 +115,7 @@ Since there will be multiple player game objects in the game, we need to determi
 {% endstep %}
 
 {% step %}
-**Synchronizing the Movement**
+### **Synchronizing the movement**
 
 Now we have code that will allow clients to move only their respective player object, but nothing is yet synchronized over the network This means that we won't ever see other players moving, and they won't see us moving.
 
@@ -129,7 +129,7 @@ This component has quite a few settings, but the most important ones for us righ
 {% endstep %}
 
 {% step %}
-**Test Player Movement**
+### **Testing the player movement**
 
 Save your scene and press the **Play** button in Unity's Editor. Your player capsule should now be visible. Use the **W, A, S, D** keys or arrow keys to move your player around the scene.
 

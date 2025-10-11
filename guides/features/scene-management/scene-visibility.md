@@ -16,9 +16,9 @@ The **Scene Condition** ensures that[ **NetworkObjects**](../networked-gameobjec
 When encountering an error about being unable to find a NetworkObject or RPCLink during a scene change, you likely forgot to add the scene condition.
 {% endhint %}
 
-## Managing Visibility
+## Managing visibility
 
-### Initial Scene Load
+### Initial scene load
 
 When a client is loading into the game for the first time, the first scene/offline scene loaded is done so by the Unity Scene Manager. This means that clients were not automatically added to the scene when connected. Which also means they do not have visibility of that scene.
 
@@ -28,7 +28,7 @@ Once client connects to a host or server, If you use the **PlayerSpawner** compo
 If you decided not to use the **PlayerSpawner** Component provided on the NetworkManger in Fishnet, you will have to either have to load a client into a scene using FishNets SceneManager, or call SceneManger.AddOwnerToDefaultScene() on a Object that you gave that client ownership to.
 {% endhint %}
 
-### Adding Client Connections To Scenes
+### Adding client connections to scenes
 
 * When Loading a scene globally or by connection, the SceneManager will automatically place that connection into the scene.
 * Once added that client will be able to view all NetworkObjects that are apart of that scene.
@@ -38,7 +38,7 @@ If you decided not to use the **PlayerSpawner** Component provided on the Networ
 Manually adding and removing client connections is recommended for Power Users only.
 {% endhint %}
 
-### Removing Client Connections From Scenes
+### Removing client connections from scenes
 
 * When Unloading a scene from a client, the server will automatically remove the client connection from the scene.
 * If you are the host, and you unload the hosts client from a scene, it will only remove the host from the scene and the hosts client will lose visibility. See Host Behaviour for [**Scene Caching**](scene-caching.md) for more details.

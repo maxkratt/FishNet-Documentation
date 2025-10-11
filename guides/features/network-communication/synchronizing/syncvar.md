@@ -29,7 +29,7 @@ private void Awake()
     _health.OnChange += on_health;
 }
 
-//This is called when _health changes, for server and clients.
+// This is called when _health changes, for server and clients.
 private void on_health(float prev, float next, bool asServer)
 {
     /* Each callback for SyncVars must contain a parameter
@@ -54,9 +54,9 @@ In a future release we are planning to make all SyncTypes have client-authoritat
 {% endhint %}
 
 ```csharp
-//A typical server-side SyncVar.
+// A typical server-side SyncVar.
 public readonly SyncVar<string> Name = new SyncVar<string>();
-//Create a ServerRpc to allow owner to update the value on the server.
+// Create a ServerRpc to allow owner to update the value on the server.
 [ServerRpc] private void SetName(string value) => Name.Value = value;
 ```
 
@@ -65,9 +65,9 @@ When using client-side SyncVars you may want to consider ExcludeOwner in the Syn
 Using ExcludeOwner as the SyncVar ReadPermissions, and ClientUnsynchronized in the WritePermissions. . In the example below we also set RunLocally to true for the ServerRpc so that the calling client also sets the value locally.
 
 ```csharp
-//Attributes shown in previous examples can stack but they were removed
-//here for simplicity.
+// Attributes shown in previous examples can stack but they were removed
+// here for simplicity.
 private readonly SyncVar<string> Name = new SyncVar<string>(new SyncTypeSettings(WritePermission.ClientUnsynchronized, ReadPermission.ExcludeOwner));
-//Create a ServerRpc to allow owner to update the value on the server.
+// Create a ServerRpc to allow owner to update the value on the server.
 [ServerRpc(RunLocally = true)] private void SetName(string value) => Name.Value = value;
 ```

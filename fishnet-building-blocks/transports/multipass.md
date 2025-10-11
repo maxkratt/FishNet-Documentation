@@ -1,5 +1,6 @@
 ---
 layout:
+  width: default
   title:
     visible: true
   description:
@@ -9,6 +10,8 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
     visible: true
 ---
 
@@ -28,7 +31,7 @@ For usage see the [guide](../../guides/features/transports/multipass.md#setup).
 
 ***
 
-## How to Install
+## How to install
 
 Multipass comes with FishNet by default! No extra downloads needed.\
 \
@@ -38,12 +41,12 @@ Just add Multipass to your [Transport Manager](../components/managers/transportm
 
 ## Settings
 
-<div align="left"><figure><img src="../../.gitbook/assets/multipass-component.png" alt=""><figcaption><p>Default Settings</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/multipass-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
-### :gear:  **Global Server Actions**
+### :gear: **Global Server Actions**
 
 > **W**hile enabled, this will perform server actions such as start or stop server on all transports.
 
-### :gear:  **Transports**
+### :gear: **Transports**
 
 > A collection of [transports](../../guides/features/transports/) you wish **Multipass** to support.

@@ -12,7 +12,7 @@ If you have a contribution you would like to add to this page, please feel free 
 
 The following resources are put together by developers such as yourself. The Fish-Networking team has no official involvement in this resources, thus we may not be able to troubleshoot or resolve any issues you experience with them.
 
-## Asset Integrations
+## Asset integrations
 
 [MetaVoiceChat](https://github.com/Metater/MetaVoiceChat) is a completely **free,** simple, and self-contained proximity voice chat solution for&#x20;Unity's popular client-server networking libraries with all of&#x20;the features you need.
 

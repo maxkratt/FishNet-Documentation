@@ -1,16 +1,20 @@
+---
+description: A simple guide on how to write a custom observer condition.
+---
+
 # Custom Conditions
 
 Sometimes you may have unique requirements for an observer condition. When this is the case you can easily create your own ObserverCondition. The code below comments on how to create your own condition.
 
 ```csharp
-//The example below does not have many practical uses
-//but it shows the bare minimum needed to create a custom condition.
-//This condition makes an object only visible if the connections
-//ClientId mathes the serialized value, _id.
+// The example below does not have many practical uses
+// but it shows the bare minimum needed to create a custom condition.
+// This condition makes an object only visible if the connections
+// ClientId mathes the serialized value, _id.
 
-//Make a new class which inherits from ObserverCondition.
-//ObserverCondition is a scriptable object, so also create an asset
-//menu to create a new scriptable object of your condition.
+// Make a new class which inherits from ObserverCondition.
+// ObserverCondition is a scriptable object, so also create an asset
+// menu to create a new scriptable object of your condition.
 [CreateAssetMenu(menuName = "FishNet/Observers/ClientId Condition", fileName = "New ClientId Condition")]
 public class ClientIdCondition : ObserverCondition
 {
@@ -23,9 +27,9 @@ public class ClientIdCondition : ObserverCondition
 
     private void Awake()
     {
-        //Awake can be optionally used to initialize values based on serialized
-        //data. The source file of DistanceCondition is a good example
-        //of where Awake may be used.
+        // Awake can be optionally used to initialize values based on serialized
+        // data. The source file of DistanceCondition is a good example
+        // of where Awake may be used.
     }
     
     /// <summary>
@@ -38,11 +42,11 @@ public class ClientIdCondition : ObserverCondition
     {
         notProcessed = false;
 
-        //When true is returned it means the connection meets
-        //the condition requirements. When false, the
-        //connection does not and will not see the object.
+        // When true is returned it means the connection meets
+        // the condition requirements. When false, the
+        // connection does not and will not see the object.
 
-        //Will return true if connection Id matches _id.
+        // Will return true if connection Id matches _id.
         return (connection.ClientId == _id);
     }
 

@@ -12,7 +12,7 @@ FishySteamworks is FizzySteamworks reformed. FishySteamworks has significant per
 
 ***
 
-## How to Install
+## How to install
 
 Github: [https://github.com/FirstGearGames/FishySteamworks/](https://github.com/FirstGearGames/FishySteamworks/)\
 \
@@ -24,7 +24,7 @@ _FishySteamworks is dependent upon_ [Steamworks.NET](https://steamworks.github.i
 
 ***
 
-## Component Settings <a href="#server-and-host" id="server-and-host"></a>
+## Component settings <a href="#server-and-host" id="server-and-host"></a>
 
 * **Steam App Id:** is the Id for your steam application. 480 is the default, which is often used as a test App Id.
 * **Server Bind Address:** Which IP the server will bind/listen on. The default value is empty.
