@@ -37,7 +37,7 @@ layout:
 
 <p align="center"><mark style="color:$info;">Effortlessly scale in real time with no surprise costs during traffic surges, and deploy worldwide in seconds using Unity, containers, or your control panel.</mark></p>
 
-<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>15+</strong></td><td>Global Regions</td></tr><tr><td><strong>&#x3C;20ms</strong></td><td>Average Latency</td></tr><tr><td><strong>1M+</strong></td><td>Players Served</td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th align="center"></th><th align="center"></th></tr></thead><tbody><tr><td align="center"><strong>15+</strong></td><td align="center">Global Regions</td></tr><tr><td align="center"><strong>&#x3C;20ms</strong></td><td align="center">Average Latency</td></tr><tr><td align="center"><strong>1M+</strong></td><td align="center">Players Served</td></tr></tbody></table>
 
 ***
 
@@ -69,7 +69,7 @@ layout:
 
 <h2 align="center"><strong>Generous free tier &#x26; support that listens</strong></h2>
 
-<p align="center"><mark style="color:$info;">Build fast, play-test often. All without pulling out your credit card. <strong>PlayFlow</strong> offers the quickest way to test your game online, directly from the Unity editor, and you can do so for free!</mark> </p>
+<p align="center"><mark style="color:$info;">Build fast, playtest often. All without pulling out your credit card. <strong>PlayFlow</strong> offers the quickest way to test your game online, directly from the Unity editor, and you can do so for free!</mark> </p>
 
 <p align="center"><mark style="color:$info;">Get help from real people with fast replies, and feedback that actually shapes the platform.</mark></p>
 
