@@ -46,6 +46,7 @@
   * [Building a Dedicated Server](tutorials/simple/building-a-dedicated-server.md)
   * [Testing with Multiple Editors](tutorials/simple/testing-with-multiple-editors.md)
   * [Simulating Bad Network Connections](tutorials/simple/simulating-bad-network-connections.md)
+  * [Making a Loading Screen](tutorials/simple/making-a-loading-screen.md)
 * [Complete Games](tutorials/complete-games/README.md)
 
 ## Guides
