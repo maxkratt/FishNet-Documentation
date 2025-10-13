@@ -21,7 +21,7 @@ There are two types of purchases, **Fish-Networking Pro**, and **Projects**.
 
 At this time **Projects** can only be purchased through GitHub and Patreon.
 
-Once FPSLand V4 is complete projects will be added to the asset store as well.
+Once FPSLand V4 is complete, projects will be added to the asset store as well.
 
 _Please consider making purchases through GitHub as our preferred platform, or Patreon. When purchased through GitHub or Patreon more of your support goes towards the developers and community helpers._
 
@@ -119,10 +119,6 @@ We have an extremely flexible sharing license for Fish-Networking Pro, allowing 
 > **Automatic Code Stripping**
 >
 > Code stripping helps protect your game server by removing sensitive logic that the player should not be aware of. Far as we know, Fish-Networking is the only solution with the ability to remove server code from clients, and client code from the server.
-
-> **Network Level of Detail**
->
-> Level of Detail determines how often the server sends updates to clients. With level of detail enabled moving objects can expect to use up to 95% LESS bandwidth. Other aspects of Fish-Networking benefit marginally from network level of detail as well.
 
 > **Extrapolation, NetworkTransform**
 >
