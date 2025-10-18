@@ -1,7 +1,5 @@
 ---
-description: >-
-  Simple step-by-step tutorials on how to perform commonly used tasks in
-  FishNet.
+description: Simple step-by-step tutorials on how to perform common tasks in FishNet.
 ---
 
 # Common Tasks

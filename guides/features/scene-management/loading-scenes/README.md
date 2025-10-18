@@ -24,7 +24,7 @@ Loading Scenes globally or by connection will add the specified clients connecti
 
 {% hint style="warning" %}
 In the Examples below, all SceneManager calls are done inside a NetworkBehaviour class, that is why you can get reference to SceneManager by doing base.SceneManager.\
-If you would like a reference outside of a NetworkBehaviour consider using FishNets [**InstanceFinder**](../../instancefinder-guides.md).SceneManager.
+If you would like a reference outside of a NetworkBehaviour consider using FishNet's [**InstanceFinder**](../../instancefinder-guides.md).SceneManager.
 {% endhint %}
 
 <details>
@@ -33,11 +33,11 @@ If you would like a reference outside of a NetworkBehaviour consider using FishN
 
 Before calling the SceneManagers Load Scene functions you will need to setup the load data to tell the [**SceneManager**](../../../../fishnet-building-blocks/components/managers/scenemanager.md) how you want it to handle the scene load.
 
-#### SceneLookupData
+**SceneLookupData**
 
 [**SceneLookupData**](../scene-data/scenelookupdata.md) is the class used to specify what scene you want the [**SceneManager**](../../../../fishnet-building-blocks/components/managers/scenemanager.md) to load. You do not need to create the lookup data manually but can instead use the SceneLoadData constructors which will create the SceneLookupData automatically.
 
-#### SceneLoadData
+**SceneLoadData**
 
 When loading a scene in any way, you must pass in an instance of a [**SceneLoadData**](../../../../fishnet-building-blocks/components/managers/scenemanager.md)[ ](../scene-data/sceneloaddata.md)class into the load methods. This class provides the scene manager all of the info it needs to load the scene or scenes properly.
 
@@ -55,7 +55,7 @@ Scenes can be loaded globally or for any number of specified clients, including 
 Loading new Scenes can only be done by Name, you **cannot** use Handles or Scene References.
 {% endhint %}
 
-#### Global Scenes
+**Global Scenes**
 
 * Global Scenes can be loaded by calling `LoadGlobalScenes()` in the SceneManager.
 * When loaded globally, scenes will be loaded for all current, and future clients.
@@ -65,7 +65,7 @@ SceneLoadData sld = new SceneLoadData("Town");
 base.SceneManager.LoadGlobalScenes(sld);
 ```
 
-#### Connection Scenes
+**Connection Scenes**
 
 Connection Scenes follow the same principle, but have a few method overloads.
 
@@ -89,7 +89,7 @@ base.SceneManager.LoadConnectionScenes(conns, sld);
 base.SceneManager.LoadConnectionScenes(sld); 
 ```
 
-#### Loading Multiple Scenes
+**Loading Multiple Scenes**
 
 * Whether loading globally or by connection, you can load more than one scene in a single method call.
 * When loading multiple scenes in one call, the NetworkObjects you put into [**Moved NetworkObjects**](../scene-data/sceneloaddata.md#movednetworkobjects) will be moved to the first valid scene in the list of scenes you tried to load. See Persisting NetworkObjects for more info about keeping NetworkObjects across scenes.
@@ -115,7 +115,7 @@ If you load the scene by name, it will load the connections into the first scene
 
 You can load clients into scenes that have no other clients in them if you are utilizing [**Scene Caching**](../scene-caching.md) **-** the ability to keep a scene loaded with its current state on the server when all clients leave the scene.
 
-#### Getting References to a Loaded Scene
+**Getting References to a Loaded Scene**
 
 Here are a few ways to get reference to the scenes that you already loaded using FishNet's **SceneManager**.
 
@@ -172,7 +172,7 @@ foreach(var pair in SceneManager.SceneConnections)
 }
 ```
 
-#### Using Reference to Load Into Existing Instance
+**Using Reference to Load Into Existing Instance**
 
 Use the methods above to get the reference or handle of a scene, and use that reference or handle to load a client into an existing scene.
 
@@ -203,11 +203,11 @@ Replaced scenes will be unloaded before the new scenes are loaded.
 
 Replacing Scenes by Default will replace scenes on both the server and clients. If you would like the server to keep the scene loaded and only replace the scene on the clients - see [**Scene Caching**](../scene-caching.md) for more details.
 
-#### Replace None:
+**Replace None:**
 
 This is the default method when loading, it will ignore the replace options and load the scene in normally.
 
-#### Replace All:
+**Replace All:**
 
 This will replace all scenes currently loaded in unity, even ones not managed by FishNet's SceneManager.
 
@@ -221,7 +221,7 @@ sld.ReplaceScenes = ReplaceOption.All;
 SceneManager.LoadGlobalScenes(sld);
 ```
 
-#### Replace Online Only:
+**Replace Online Only:**
 
 This will replace only scenes managed by the SceneManager in FishNet.
 
@@ -240,12 +240,16 @@ SceneManager.LoadGlobalScenes(sld);
 
 <summary>Advanced Info</summary>
 
-#### Behind the "Scenes"
+**Behind the "Scenes"**
 
 The [**SceneManager**](../../../../fishnet-building-blocks/components/managers/scenemanager.md) Class has very detailed XML comments on how the load process works in detail, if you need to troubleshoot the scene load process, these comments will help you understand the flow of how a scene loads.
 
-#### Events
+**Events**
 
 Make sure to check out the [**Scene Events**](../scene-events.md) that you can subscribe to in order to have better control over your game.
+
+**More Control**
+
+If you want more control over how FishNet loads and unloads scenes, you can create a custom scene processor to override FishNet's functionality. Learn more about that [here](../custom-scene-processors/).
 
 </details>

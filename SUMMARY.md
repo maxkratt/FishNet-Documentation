@@ -40,12 +40,14 @@
   * [Starting FishNet's Connections](tutorials/simple/starting-fishnets-connections.md)
   * [Making a Custom Player Spawner](tutorials/simple/making-a-custom-player-spawner/README.md)
     * [Spawning Players Manually](tutorials/simple/making-a-custom-player-spawner/manually.md)
+    * [Spawning Selected Player](tutorials/simple/making-a-custom-player-spawner/spawning-selected-player.md)
     * [Spawning Players When Set Number of Players Joined](tutorials/simple/making-a-custom-player-spawner/set-player-number.md)
     * [Spawning Players on Scene Load](tutorials/simple/making-a-custom-player-spawner/on-scene-load.md)
   * [Building a Dedicated Server](tutorials/simple/building-a-dedicated-server.md)
   * [Testing with Multiple Editors](tutorials/simple/testing-with-multiple-editors.md)
   * [Simulating Bad Network Connections](tutorials/simple/simulating-bad-network-connections.md)
-* [Complete Games](tutorials/complete-games.md)
+  * [Making a Loading Screen](tutorials/simple/making-a-loading-screen.md)
+* [Complete Games](tutorials/complete-games/README.md)
 
 ## Guides
 
