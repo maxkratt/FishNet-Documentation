@@ -1,4 +1,22 @@
-# Upgrading to Fish-Networking
+---
+description: Helpful tips for how to move your project from another solution to FishNet.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
+# Moving to Fish-Networking
 
 Moving to Fish-Networking will vary depending on which previous networking solution you are coming from. With other solutions changing their API so regularly it may be difficult to keep transition information up to date but we will try our best.
 

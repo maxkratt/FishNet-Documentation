@@ -63,6 +63,16 @@ Ensure you have the [Git client](https://git-scm.com/) (minimum version 2.14.0) 
 
 ***
 
+### Installing FishNet Pro
+
+Installing FishNet Pro can be done in the same way as the first steps listed above.
+
+If you do need more details though, you can find complete steps for purchasing and installing FishNet Pro at these pages:&#x20;
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>FishNet Pro, Projects, and Support</strong></td><td><mark style="color:blue;">Details about what FishNet Pro is, the available paid Projects, and Professional Support.</mark></td><td><a href="../../overview/readme/pro-projects-and-support.md">pro-projects-and-support.md</a></td></tr><tr><td><strong>Installing FishNet Pro</strong></td><td><mark style="color:blue;">Instructions for how to purchase and install FishNet Pro.</mark></td><td><a href="../../guides/updating-fishnet/upgrading-to-fishnet-pro.md">upgrading-to-fishnet-pro.md</a></td></tr></tbody></table>
+
+***
+
 ### Fix for errors after importing
 
 If you receive the following errors after importing FishNet, then make sure you don't have Netcode for GameObjects inside your project. The files it uses will clash with FishNet's files and you will need to remove it first and then import FishNet again.
