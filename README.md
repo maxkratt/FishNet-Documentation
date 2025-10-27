@@ -36,7 +36,7 @@ High-level API allows you to quickly access the ability to synchronize states, l
 
 Developing projects can take a lot of time, and updating your networking solution along the way is often inevitable. Fish-Networking promises to not release any breaking API or behavior changes between major versions. Major releases will occur no more frequent than every six months, unless **absolutely necessary**.
 
-When breaks do occur we will do our best to keep the changes simple. We also have our [Break Solutions](guides/upgrading-api.md) section which will describe planned breaks, the next major release, and how to remedy breaks for each version.
+When breaks do occur we will do our best to keep the changes simple. We also have our [Break Solutions](guides/updating-fishnet/upgrading-api.md) section which will describe planned breaks, the next major release, and how to remedy breaks for each version.
 
 ## Long-Term support
 

@@ -4,7 +4,7 @@ description: >-
   rough experience. You may find planned breaks here, and how to resolve them.
 ---
 
-# Upgrading API
+# Changes in API
 
 ## 4.1.0
 
@@ -95,7 +95,7 @@ description: >-
 
 **SyncTypes**
 
-> **SyncVar and SyncObject attribute are no longer used.**&#x20;
+> **SyncVar and SyncObject attribute are no longer used.**
 >
 > Remove SyncVar/SyncObject attribute. When setting or getting the SyncVar's value be sure to use the `.Value` of it instead of trying to set or get it directly.
 
@@ -248,7 +248,7 @@ Reconcile methods must also now include a Channel parameter as shown.
 private void MyReconcile(ReconcileData rd, bool asServer, Channel channel = Channel.Unreliable)
 ```
 
-For more detailed instructions on these changes see the [prediction guide](../manual/general/changelog/broken-reference/).
+For more detailed instructions on these changes see the [prediction guide](../../manual/general/changelog/broken-reference/).
 
 **TimeManager Fields and Events**
 

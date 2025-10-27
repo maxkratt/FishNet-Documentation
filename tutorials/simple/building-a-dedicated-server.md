@@ -71,6 +71,8 @@ public class NetworkServerStarter : MonoBehaviour
 ```
 {% endcode %}
 
+***
+
 ## Configuring the transport
 
 It's important to set up your chosen transport's settings for your dedicated server. The default transport [Tugboat](../../fishnet-building-blocks/transports/tugboat.md) should in most cases have the [Reuse Address](../../fishnet-building-blocks/transports/tugboat.md#reuse-address) option enabled.
@@ -79,7 +81,9 @@ It's important to set up your chosen transport's settings for your dedicated ser
 
 In addition to that, you may want to set your **Port** and **Server Bind Address**. We'll take a look at how we can set these dynamically next.
 
-### Using command line arguments
+***
+
+## Using command line arguments
 
 If you find yourself needing to set the port from command line arguments, you can use a simple script like the following on your NetworkManager:
 
@@ -160,15 +164,31 @@ When you run your server you may notice a lot of errors and warnings related to 
 
 <figure><img src="../../.gitbook/assets/dedicated-server-optimizations.png" alt=""><figcaption><p>Enabling the <strong>Dedicated Server Optimizations</strong> option</p></figcaption></figure>
 
-## Excluding files from the server
+***
 
-With server builds you will often want to exclude assets that aren't completely necessary on the server, such as audio files and textures. While Unity can handle stripping of a lot of these itself, you sometimes will want to manually force stripping of others. You can easily do this for code through using Assembly Definitions and choosing to exclude (or include) the dedicated server platforms.
+## Excluding files from the build
 
-If you want to do this for other asset file types it's recommended to use one of the following tools:
+With server builds you will often want to exclude assets that aren't completely necessary on the server, such as audio files and textures. While Unity can handle stripping of a lot of these itself, you sometimes will want to manually force stripping of others.&#x20;
+
+If you want to do this for various asset file types it's recommended to use one of the following tools:
 
 * [Exclude From Build](https://assetstore.unity.com/packages/tools/utilities/exclude-from-build-222791?aid=1100lqC54\&pubref=kamgam)
 * [File Excluder](https://assetstore.unity.com/packages/tools/utilities/file-excluder-294650)
 * [BuildExcluder](https://github.com/Yansubaev/BuildExcluder)
+
+### Excluding code from the server
+
+You can do this by using Assembly Definitions and then choosing to exclude the dedicated server platforms. You can also exclude specific code by using the `!UNITY_SERVER` [preprocessor directive](https://docs.unity3d.com/Manual/platform-dependent-compilation.html).
+
+### Excluding code from the client
+
+As mentioned above, you can use Assembly Definitions by choosing to exclude the chosen platforms. You can also exclude specific code by using the `UNITY_SERVER` [preprocessor directive](https://docs.unity3d.com/Manual/platform-dependent-compilation.html), this will remove the code from non dedicated server builds.
+
+If you have [FishNet Pro](../../overview/readme/pro-projects-and-support.md), then you can make use of its built-in code stripping to strip out server specific code from client-only builds. This includes code inside methods marked with [ServerRpc](../../guides/features/network-communication/remote-procedure-calls.md#serverrpc) or [Server](../../guides/features/server-and-client-identification/executing-on-server-or-client.md#server-attribute) attributes, as well as server only callbacks such as [OnStartServer](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#onstartserver). You can access this option in the FishNet Configuration menu through the Unity Toolbar.
+
+{% hint style="info" %}
+Be sure to let the code recompile after changing the FishNet Code Stripping option.
+{% endhint %}
 
 ***
 

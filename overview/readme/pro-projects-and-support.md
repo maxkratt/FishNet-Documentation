@@ -7,6 +7,107 @@ description: >-
 
 # Pro, Projects, and Support
 
+## FishNet Pro
+
+Some features are only available in Fish-Networking Pro.
+
+All business [support tiers](pro-projects-and-support.md#support-tier-options) also grant a complimentary lifetime Pro license.
+
+{% hint style="success" %}
+We have an extremely flexible sharing license for Fish-Networking Pro, allowing teams and classrooms to work on a single purchase. You can view that license [here](https://github.com/FirstGearGames/FishNet/blob/main/LICENSE.md).
+{% endhint %}
+
+#### Features for Pro:
+
+> **Lag Compensation**
+>
+> Another very important feature for precision based gaming is lag compensation. This is the act of rolling back colliders in time to where a client had seen them; this ensures accurate hit registration. This technique is applicable to several genre types but is most commonly seen in shooter games
+
+> **Automatic Code Stripping**
+>
+> Code stripping helps protect your game server by removing sensitive logic that the player should not be aware of. Far as we know, Fish-Networking is the only solution with the ability to remove server code from clients, and client code from the server.
+
+> **Extrapolation, NetworkTransform**
+>
+> When enabled the NetworkTransform will extrapolate as necessary to create a smoother experience for unstable connections.
+
+> **Synchronized Parameters, NetworkAnimator**
+>
+> Customize which parameters are synchronized over the network on the NetworkAnimator.
+
+> **Yak**
+>
+> [Yak](../../fishnet-building-blocks/transports/yak-pro-feature.md) is a transport which provides an entirely offline experience using your multiplayer code. When combined with Multipass (available to free users), you may run your game offline or online.
+
+## Paid projects
+
+Projects are completed Unity projects which act as a template or learning opportunity.
+
+> **Lobby and Worlds**
+>
+> Lobby and Worlds is designed to use a single server for a lobby containing your players, as well create games on the same server using rooms created by your players. Each room is isolated from other players, both visually and in network traffic.
+>
+> Many aspects of the lobby can be customized to your needs. Lobby and Worlds allows you to design your game normally in it's own scenes, while the project takes care of everything else.
+>
+> Features include:
+>
+> * Loading any number of game scenes, multiple times; think dungeon instances!
+> * Sign in system.
+> * Lobby to create and join rooms.
+> * Join rooms after start, optional.
+> * Password rooms.
+> * Ready up system, optional.
+> * Kick players.
+> * Player limits.
+> * Customizable lobby logic and demo game.
+
+{% hint style="warning" %}
+FPS Land is not yet available for Fish-Networking V4. We are in the process of rewriting FPS Land to better take advantage of newer FishNet features.
+
+Upon release, FPS Land V4 will be available to anyone that joined Pro tier from January 31st 2024 and onward, even if you are not currently a Pro subscriber.
+{% endhint %}
+
+{% hint style="info" %}
+FPS Land for Fish-Networking V3 is still available for download.
+{% endhint %}
+
+> **FPS Land**
+>
+> This project is a full server authoritative demo on how you may get started on creating a FPS game with Fish-Networking.
+>
+> Key points are:
+>
+> * Full server authoritative: movement, sound, firing, reloading, animations, ect.
+> * Four weapon types: rifle, pistol, knife, and grenades.
+> * Lag compensation for weapons such as rifles.
+> * Lag compensation projectiles, such as grenades.
+> * Picked up items.
+> * Movement modifiers from weapon weight and walking.
+> * Pet friendly goats.
+
+## Support tier options
+
+All business [support tiers](pro-projects-and-support.md#support-tier-options) also grant a complimentary lifetime Pro license.
+
+> **Free Tier Support**
+>
+> * Discord: Multiple channels of support, with support provided by our community and helpers.
+> * Unity Forum: support provided by our community and helpers.
+> * Website(s): Documentation, Guides, and Videos available from our Team and Community
+
+> **Priority Tier Support**
+>
+> * Everything in Free Tier.
+> * Discord: Additional access to post in our Priority Support channel. This channel uses threads to keep each question individualized and sorted. The questions asked in Priority Support are prioritized by our helpers.
+> * Projects: Access to projects that are completed Unity projects which act as a template or learning opportunity.
+> * There are multiple priority tier options. Support quality is equal for all tiers. Priority tiers 2+ receive enhanced visibility within our Discord community to show off your support.
+
+> **Business Support**
+>
+> * Everything in Free Tier
+> * Everything in Priority Tier
+> * Additional Enterprise Features, please view our monthly tiers on [GitHub](https://github.com/sponsors/FirstGearGames) to see what we offer per tier. For more information you may also email firstgeargames@gmail.com, or contact FirstGearGames on Discord.
+
 ## Purchasing
 
 There are a variety of ways to purchase Pro and Projects.
@@ -100,103 +201,6 @@ Business tiers are unique in that they receive dedicated channels. Please contac
 * **Patreon Instructions:** [**https://support.patreon.com/hc/en-us/articles/212052266-Getting-Discord-access**](https://support.patreon.com/hc/en-us/articles/212052266-Getting-Discord-access)
 * **Asset Store Instructions:** Join our Discord and message Sharky your purchase invoice number.
 
-## Pro
+## More information
 
-Some features are only available in Fish-Networking Pro.
-
-All business [support tiers](pro-projects-and-support.md#support-tier-options) also grant a complimentary lifetime Pro license.
-
-{% hint style="success" %}
-We have an extremely flexible sharing license for Fish-Networking Pro, allowing teams and classrooms to work on a single purchase. You can view that license [here](https://github.com/FirstGearGames/FishNet/blob/main/LICENSE.md).
-{% endhint %}
-
-#### Features for Pro:
-
-> **Lag Compensation**
->
-> Another very important feature for precision based gaming is lag compensation. This is the act of rolling back colliders in time to where a client had seen them; this ensures accurate hit registration. This technique is applicable to several genre types but is most commonly seen in shooter games
-
-> **Automatic Code Stripping**
->
-> Code stripping helps protect your game server by removing sensitive logic that the player should not be aware of. Far as we know, Fish-Networking is the only solution with the ability to remove server code from clients, and client code from the server.
-
-> **Extrapolation, NetworkTransform**
->
-> When enabled the NetworkTransform will extrapolate as necessary to create a smoother experience for unstable connections.
-
-> **Synchronized Parameters, NetworkAnimator**
->
-> Customize which parameters are synchronized over the network on the NetworkAnimator.
-
-> **Yak**
->
-> [Yak](../../fishnet-building-blocks/transports/yak-pro-feature.md) is a transport which provides an entirely offline experience using your multiplayer code. When combined with Multipass (available to free users), you may run your game offline or online.
-
-## Projects
-
-Projects are completed Unity projects which act as a template or learning opportunity.
-
-> **Lobby and Worlds**
->
-> Lobby and Worlds is designed to use a single server for a lobby containing your players, as well create games on the same server using rooms created by your players. Each room is isolated from other players, both visually and in network traffic.
->
-> Many aspects of the lobby can be customized to your needs. Lobby and Worlds allows you to design your game normally in it's own scenes, while the project takes care of everything else.
->
-> Features include:
->
-> * Loading any number of game scenes, multiple times; think dungeon instances!
-> * Sign in system.
-> * Lobby to create and join rooms.
-> * Join rooms after start, optional.
-> * Password rooms.
-> * Ready up system, optional.
-> * Kick players.
-> * Player limits.
-> * Customizable lobby logic and demo game.
-
-{% hint style="warning" %}
-FPS Land is not yet available for Fish-Networking V4. We are in the process of rewriting FPS Land to better take advantage of newer FishNet features.
-
-Upon release, FPS Land V4 will be available to anyone that joined Pro tier from January 31st 2024 and onward, even if you are not currently a Pro subscriber.
-{% endhint %}
-
-{% hint style="info" %}
-FPS Land for Fish-Networking V3 is still available for download.
-{% endhint %}
-
-> **FPS Land**
->
-> This project is a full server authoritative demo on how you may get started on creating a FPS game with Fish-Networking.
->
-> Key points are:
->
-> * Full server authoritative: movement, sound, firing, reloading, animations, ect.
-> * Four weapon types: rifle, pistol, knife, and grenades.
-> * Lag compensation for weapons such as rifles.
-> * Lag compensation projectiles, such as grenades.
-> * Picked up items.
-> * Movement modifiers from weapon weight and walking.
-> * Pet friendly goats.
-
-## Support tier options
-
-All business [support tiers](pro-projects-and-support.md#support-tier-options) also grant a complimentary lifetime Pro license.
-
-> **Free Tier Support**
->
-> * Discord: Multiple channels of support, with support provided by our community and helpers.
-> * Unity Forum: support provided by our community and helpers.
-> * Website(s): Documentation, Guides, and Videos available from our Team and Community
-
-> **Priority Tier Support**
->
-> * Everything in Free Tier.
-> * Discord: Additional access to post in our Priority Support channel. This channel uses threads to keep each question individualized and sorted. The questions asked in Priority Support are prioritized by our helpers.
-> * Projects: Access to projects that are completed Unity projects which act as a template or learning opportunity.
-> * There are multiple priority tier options. Support quality is equal for all tiers. Priority tiers 2+ receive enhanced visibility within our Discord community to show off your support.
-
-> **Business Support**
->
-> * Everything in Free Tier
-> * Everything in Priority Tier
-> * Additional Enterprise Features, please view our monthly tiers on [GitHub](https://github.com/sponsors/FirstGearGames) to see what we offer per tier. For more information you may also email firstgeargames@gmail.com, or contact FirstGearGames on Discord.
+For more detailed instructions of purchasing and installing FishNet Pro, checkout this guide: [upgrading-to-fishnet-pro.md](../../guides/updating-fishnet/upgrading-to-fishnet-pro.md "mention")
