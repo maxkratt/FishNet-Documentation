@@ -166,6 +166,7 @@
     * [ObserverManager](fishnet-building-blocks/components/managers/observermanager/README.md)
       * [HashGrid](fishnet-building-blocks/components/managers/observermanager/hashgrid.md)
     * [RollbackManager (Pro Feature)](fishnet-building-blocks/components/managers/rollbackmanager-pro-feature.md)
+    * [DebugManager](fishnet-building-blocks/components/managers/debugmanager.md)
   * [Prediction](fishnet-building-blocks/components/prediction/README.md)
     * [Network Collider](fishnet-building-blocks/components/prediction/network-collider/README.md)
       * [NetworkCollision](fishnet-building-blocks/components/prediction/network-collider/networkcollision.md)
