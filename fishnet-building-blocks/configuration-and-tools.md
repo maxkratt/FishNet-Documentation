@@ -22,7 +22,7 @@ The settings here will vary depending on your FishNet version and will enable yo
 
 With this option you will be able to disable and enable certain attributes FishNet uses. It's not recommended to use this unless a developer or community helper advises you do so for debugging purposes.
 
-### Upgrading > From Mirror
+### Upgrading From Mirror
 
 When converting a project from Mirror Networking, it can be helpful to use these tools.
 

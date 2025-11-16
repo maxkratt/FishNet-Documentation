@@ -12,7 +12,7 @@ Scene events video guide
 
 ## General
 
-There are a variety of events within SceneManager to help with your development. The order in which events invoke are reliable.
+There are a variety of events within SceneManager to help with your development. The order in which events are invoked is reliable.
 
 This diagram represents which order events can be expected to run. You may also find this diagram within your Fish-Networking import under Example/All/SceneManager.
 
