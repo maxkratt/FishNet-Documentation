@@ -39,7 +39,7 @@ SceneLoadData sld = new SceneLoadData()
 
 <summary>PreferredActiveScene</summary>
 
-Preferred Active Scene will allow you to choose what scene will be active on the server and client. Currently this sets both client and server to the SceneLookupData provided.
+Preferred Active Scene will allow you to choose what scene will be active on the server and/or client. You can choose to have the chosen SceneLookupData apply to both the server and client or seperate ones for each.
 
 If left with the default value of null, the first valid scene loaded will become the ActiveScene.
 
@@ -59,7 +59,7 @@ See [**Loading Scenes**](../loading-scenes/) for examples.
 
 <summary>MovedNetworkObjects</summary>
 
-NetworkObjects can be moved when loading new scenes, such as if you want to move a player to a different scene as you load the new scene. You may include an array of NetworkObjects to move to the new scenes. NetworkObjects within this array will be moved to the first scene specified in SceneLookupData.\
+Instantiated NetworkObjects can be moved when loading new scenes, such as if you want to move a player to a different scene as you load the new scene. You may include an array of NetworkObjects to move to the new scenes. NetworkObjects within this array will be moved to the first scene specified in SceneLookupData.\
 \
 See [**Persisting NetworkObjects**](../persisting-networkobjects.md) for more details on what type of NetworkObjects you are allowed to move.
 
@@ -108,14 +108,14 @@ You may further enhance how you load/unload scenes with Options.
 **AllowStacking**
 
 * When _AllowStacking_ remains false the SceneManager will not stack scenes in your SceneLoadDatas.
-* If true then scenes can be stacked (loaded multiple times).
+* If true, then scenes can be stacked (loaded multiple times).
 * In the SceneLookupData section it was mentioned that if a Scene reference or handle is specified then the SceneManager will favor loading a scene using a scene handle. When you would like to load connections into the same stacked scene over multiple load calls, you will populate your SceneLookupDatas by Scene reference or handle.
 * See [**Scene Stacking**](../scene-stacking.md) for more detail and examples
 
 **LocalPhysics**
 
 * [_LocalPhysics_](https://docs.unity3d.com/ScriptReference/SceneManagement.LocalPhysicsMode.html) is a Unity property that lets you determine how physics are simulated in your scenes.
-* Generally if you are stacking scenes you will want to set a LocalPhysics mode so that stacked scenes do not collide with each other.
+* Generally, if you are stacking scenes you will want to set a LocalPhysics mode so that stacked scenes do not collide with each other.
 
 **Addressables**
 

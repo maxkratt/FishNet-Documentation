@@ -31,7 +31,7 @@ If you would like a reference outside of a NetworkBehaviour consider using FishN
 
 <summary>Setup</summary>
 
-Before calling the SceneManagers Load Scene functions you will need to setup the load data to tell the [**SceneManager**](../../../../fishnet-building-blocks/components/managers/scenemanager.md) how you want it to handle the scene load.
+Before calling the SceneManager's Load Scene functions you will need to setup the load data to tell the [**SceneManager**](../../../../fishnet-building-blocks/components/managers/scenemanager.md) how you want it to handle the scene load.
 
 **SceneLookupData**
 
@@ -67,7 +67,7 @@ base.SceneManager.LoadGlobalScenes(sld);
 
 **Connection Scenes**
 
-Connection Scenes follow the same principle, but have a few method overloads.
+Connection Scenes follow the same principle but have a few method overloads.
 
 * You can load scenes for a single connection, multiple connections at once, or load scenes only on the server in preparation for connections.
 * When loading by connection only the connections specified will load the scenes.

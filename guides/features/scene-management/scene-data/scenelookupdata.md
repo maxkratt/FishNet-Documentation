@@ -13,9 +13,13 @@ description: >-
 When Creating [**SceneLoadData**](sceneloaddata.md) or [**SceneUnloadData**](sceneunloaddata.md) there are provided constructors that automatically create SceneLookupData for you. Most likely you will be using these constructors and will not be creating a separate SceneLookupData.
 {% endhint %}
 
-When you specify a scene by reference, or handle, the SceneManager will prefer to lookup that scene using the scene handle. This is important information when [**Scene Stacking**](../scene-stacking.md). Looking up a scene by handle will place connections in the scene specified, but when using scene names, the server will create a new scene instance for the specified connections and place them into that scene. The described behavior only applies when loading scenes over multiple Load calls; such as if you call LoadConnectionScene twice, each with it's own connection.
+When you specify a scene by reference, or handle, the SceneManager will prefer to lookup that scene using the scene handle. This is important information when [**Scene Stacking**](../scene-stacking.md). Looking up a scene by handle or object reference will place connections in the scene specified, but when using scene names, the server will create a new scene instance for the specified connections and place them into that scene. The described behavior only applies when loading scenes over multiple load calls; such as if you call LoadConnectionScene twice, each with its own connection.
 
 ## Default values
+
+{% hint style="info" %}
+A Scene Handle is an integer that Unity generates for a scene instance when it is loaded. You can use it to specify an instance of a scene that is already loaded, but not for loading a new instance of that scene. Read more about it here: [https://docs.unity3d.com/ScriptReference/SceneManagement.Scene-handle.html](https://docs.unity3d.com/ScriptReference/SceneManagement.Scene-handle.html)
+{% endhint %}
 
 ```csharp
         // SceneLookupData Default values

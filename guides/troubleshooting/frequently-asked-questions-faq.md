@@ -91,7 +91,7 @@ You can also try enabling the [ReuseAddress](../../fishnet-building-blocks/trans
 
 </details>
 
-## Missing or hidden objects.
+## Missing or hidden objects
 
 <details>
 
@@ -133,7 +133,7 @@ If a client is not an observer of an object then the server does not spawn the o
 
 </details>
 
-## SyncTypes (SyncVar, SyncList, etc.).
+## SyncTypes (SyncVar, SyncList, etc.)
 
 <details>
 
@@ -153,7 +153,7 @@ However, even if the interval is met, SyncTypes always synchronize after remote 
 
 </details>
 
-## Remote Procedure Calls (RPCs).
+## Remote Procedure Calls (RPCs)
 
 <details>
 
@@ -213,9 +213,9 @@ It's also possible you have a method decorated with the '\[Server]' attribute, s
 
 <summary>Why do I get this error? "SceneId of 4013929391 not found in SceneObjects."?</summary>
 
-You will see this error if the server thinks your client is in scene, when the client does not have the scene loaded. Using a SceneCondition on the [ObserverManager ](../../fishnet-building-blocks/components/managers/observermanager/)will typically resolve this problem.
+You will see this error if the server thinks your client is in scene, when the client does not have the scene loaded. Using a [SceneCondition](../../fishnet-building-blocks/scriptableobjects/observerconditions/scenecondition.md) on the [ObserverManager ](../../fishnet-building-blocks/components/managers/observermanager/)will typically resolve this problem. You can simply add the ObserverManager component to your network manager and give it the scene condition in its [Default Conditions](../../fishnet-building-blocks/components/managers/observermanager/#default-conditions) list.
 
-If you are already using a SceneCondition and are certain the correct scenes are being loaded then open the scenes which you are having problems with, and use the Fish-Networking menu to Rebuild SceneIds.
+If you are already using a SceneCondition and are certain the correct scenes are being loaded then open the scenes which you are having problems with, and use the [**Reserialize NetworkObjects** utility](../../fishnet-building-blocks/configuration-and-tools.md#reserialize-networkobjects) from the (**Tools → Fish-Networking** **→ Reserialize NetworkObjects**) toolbar menu.
 
 You can also troubleshoot this further by adding the DebugManager component to your NetworkManager and enable Write Scene Object Details. The next time you see the error it will also print the scene and object name the spawn or message was intended for.
 
