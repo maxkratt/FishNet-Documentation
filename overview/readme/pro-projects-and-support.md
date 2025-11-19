@@ -21,19 +21,19 @@ We have an extremely flexible sharing license for Fish-Networking Pro, allowing 
 
 > **Lag Compensation**
 >
-> Another very important feature for precision based gaming is lag compensation. This is the act of rolling back colliders in time to where a client had seen them; this ensures accurate hit registration. This technique is applicable to several genre types but is most commonly seen in shooter games
+> Another very important feature for precision-based gaming is [lag compensation](../../fishnet-building-blocks/components/colliderrollback.md). This is the act of rolling back colliders in time to where a client had seen them; this ensures accurate hit registration. This technique is applicable to several genre types but is most commonly seen in shooter games
 
 > **Automatic Code Stripping**
 >
-> Code stripping helps protect your game server by removing sensitive logic that the player should not be aware of. Far as we know, Fish-Networking is the only solution with the ability to remove server code from clients, and client code from the server.
+> [Code stripping](../../guides/features/code-stripping.md) helps protect your game server by removing sensitive logic that the player should not be aware of. Far as we know, Fish-Networking is the only solution with the ability to remove server code from clients, and client code from the server.
 
 > **Extrapolation, NetworkTransform**
 >
-> When enabled the NetworkTransform will extrapolate as necessary to create a smoother experience for unstable connections.
+> When enabled the [NetworkTransform](../../fishnet-building-blocks/components/network-transform.md) will extrapolate as necessary to create a smoother experience for unstable connections.
 
 > **Synchronized Parameters, NetworkAnimator**
 >
-> Customize which parameters are synchronized over the network on the NetworkAnimator.
+> Customize which parameters are synchronized over the network on the [NetworkAnimator](../../fishnet-building-blocks/components/networkanimator.md#synchronized-parameters-pro-feature).
 
 > **Yak**
 >
