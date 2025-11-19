@@ -46,7 +46,7 @@ Below is a comparison of unique and enhanced features, with more to come.
 
 > **Automatic Code Stripping (pro feature)**
 >
-> Code stripping helps protect your game server by removing sensitive logic that the player should not be aware of. Far as we know, Fish-Networking is the only solution with the ability to remove server code from clients, and client code from the server.
+> Code stripping helps protect your game server by removing sensitive logic that the player should not be aware of.
 
 > **Large Packet Handling**
 >
