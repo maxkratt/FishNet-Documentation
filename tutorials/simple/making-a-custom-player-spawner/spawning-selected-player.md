@@ -45,7 +45,7 @@ Remember that since this class is a **NetworkBehaviour**, it should not be place
 Let's add a [NetworkObject](../../../guides/features/networked-gameobjects-and-scripts/networkobjects/) array for holding all the permitted prefabs your players can choose from. We'll populate this array inside the Unity inspector.
 
 ```csharp
-[SerializeField] private NetworkObject[] playerPrefabs;
+[SerializeField] private NetworkObject[] _playerPrefabs;
 ```
 {% endstep %}
 
@@ -58,7 +58,7 @@ We'll give the method two parameters, a NetworkObject parameter for the players 
 
 ```csharp
 [ServerRpc(RequireOwnership = false)]
-public void SpawnPlayer(NetworkObject playerPrefab, NetworkConnection sender = null)
+public void SpawnPlayer(NetworkObject _playerPrefab, NetworkConnection sender = null)
 ```
 
 {% hint style="info" %}
@@ -77,7 +77,7 @@ After that, we'll ensure the player can only spawn one of our permitted prefabs.
         return;
     }
 
-    if (!playerPrefabs.Contains(playerPrefab))
+    if (!_playerPrefabs.Contains(_playerPrefab))
     {
         Debug.LogWarning("Invalid player prefab selected, cannot spawn.");
         // You don't have to kick the player, but there isn't any good reason 
@@ -86,7 +86,7 @@ After that, we'll ensure the player can only spawn one of our permitted prefabs.
         return;
     }
 
-    NetworkObject obj = Instantiate(playerPrefab);
+    NetworkObject obj = Instantiate(_playerPrefab);
     Spawn(obj, sender, gameObject.scene);
 }
 ```
@@ -104,7 +104,7 @@ We can also make the script work with FishNet's [Object Pooling](../../../guides
 The `NetworkManager.GetPooledInstantiated` method requires an additional argument to indicate if this is being called on the server or client. Since we are only going to call it on the server, we provide `true` to the final `asServer` parameter.
 
 ```csharp
-    NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+    NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
 ```
 {% endstep %}
 
@@ -152,7 +152,7 @@ using UnityEngine;
 
 public class SelectablePlayerSpawner : NetworkBehaviour
 {
-    [SerializeField] private NetworkObject[] playerPrefabs;
+    [SerializeField] private NetworkObject[] _playerPrefabs;
 
     public override void OnStartServer()
     {
@@ -172,7 +172,7 @@ public class SelectablePlayerSpawner : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void SpawnPlayer(NetworkObject playerPrefab, NetworkConnection sender = null)
+    public void SpawnPlayer(NetworkObject _playerPrefab, NetworkConnection sender = null)
     {
         if (sender.FirstObject != null)
         {
@@ -180,7 +180,7 @@ public class SelectablePlayerSpawner : NetworkBehaviour
             return;
         }
 
-        if (!playerPrefabs.Contains(playerPrefab))
+        if (!_playerPrefabs.Contains(_playerPrefab))
         {
             Debug.LogWarning("Invalid player prefab selected, cannot spawn.");
             // You don't have to kick the player, but there isn't any good reason 
@@ -189,7 +189,7 @@ public class SelectablePlayerSpawner : NetworkBehaviour
             return;
         }
 
-        NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+        NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
         Spawn(obj, sender, gameObject.scene);
     }
 }
