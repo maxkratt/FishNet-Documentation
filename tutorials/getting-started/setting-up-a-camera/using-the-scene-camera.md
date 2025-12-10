@@ -26,7 +26,7 @@ Now create an empty Game Object on your **Player Prefab** and position it where 
 {% step %}
 ### **Writing a PlayerCamera script**
 
-Let's now add the following script to the **Player Prefab** that we will use to take control of our **Camera** once our player spawns in.
+Let's now add the following `PlayerCamera` script to the **Player Prefab** that we will use to take control of our **Camera** once our player spawns in.
 
 {% code title="PlayerCamera.cs" lineNumbers="true" %}
 ```csharp
@@ -38,7 +38,7 @@ using UnityEngine;
 // OnOwnershipClient override.
 public class PlayerCamera : NetworkBehaviour
 {
-    [SerializeField] private Transform cameraHolder;
+    [SerializeField] private Transform _cameraHolder;
 
     // This method is called on the client after gaining or losing ownership of the object.
     // We could have used OnStartClient instead, as we did in the previous example, but using OnOwnershipClient
@@ -52,8 +52,8 @@ public class PlayerCamera : NetworkBehaviour
         // and moving it to our camera holder.
         if (IsOwner)
         {
-            Camera.main.transform.SetPositionAndRotation(cameraHolder.position, cameraHolder.rotation);
-            Camera.main.transform.SetParent(cameraHolder);
+            Camera.main.transform.SetPositionAndRotation(_cameraHolder.position, _cameraHolder.rotation);
+            Camera.main.transform.SetParent(_cameraHolder);
         }
     }
 }
@@ -83,5 +83,5 @@ With all that set you should be able to run the game and see how the camera from
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-the-scene-camera/using-the-scene-camera.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/using-the-scene-camera" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-the-scene-camera/using-the-scene-camera.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/scene-camera" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}

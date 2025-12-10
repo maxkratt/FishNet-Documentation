@@ -4,7 +4,7 @@ description: Synchronizing color with synchronized variables!
 
 # Using SyncVars to Sync Colors
 
-We've got quite a few things synchronized now, but how would you synchronize a specific variable in one of your scripts? SyncVars[^1] are one answer! A [SyncVar](../../guides/features/network-communication/synchronizing/syncvar.md) is a FishNet generic type that can be used within [NetworkBehaviours](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md) that automatically synchronize their value from the server to all clients.
+We've got quite a few things synchronized now, but how might you go about synchronizing a specific variable in one of your scripts? SyncVars[^1] are one answer! A [SyncVar](../../guides/features/network-communication/synchronizing/syncvar.md) is a FishNet generic type that can be used within [NetworkBehaviours](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md) that automatically synchronize their value from the server to all clients.
 
 Let's liven up the colors in our game and synchronize them with SyncVars.
 
@@ -23,22 +23,22 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class SyncMaterialColor : NetworkBehaviour
 {
-    public readonly SyncVar<Color> color = new SyncVar<Color>();
+    public readonly SyncVar<Color> Color = new SyncVar<Color>();
 
-    void Awake()
+    private void Awake()
     {
-        color.OnChange += OnColorChanged;
+        Color.OnChange += OnColorChanged;
     }
 
     private void OnColorChanged(Color previous, Color next, bool asServer)
     {
-        GetComponent<MeshRenderer>().material.color = color.Value;
+        GetComponent<MeshRenderer>().material.color = Color.Value;
     }
 }
 ```
 {% endcode %}
 
-This simple script has a `color` variable of the type `SyncVar<Color>`. It needs be set to `readonly`, but don't worry, we can still get and set its `Value`.
+This simple script has a `Color` variable of the type `SyncVar<Color>`. It needs be set to `readonly`, but don't worry, we can still get and set its `Value`.
 
 {% hint style="info" %}
 Setting your **SyncVar** as `readonly` will cause it to be hidden from the Unity Inspector. You can read about a work-around for this [here](../../guides/features/network-communication/synchronizing/customizing-behavior.md).
@@ -56,7 +56,7 @@ You may want to read more about **SyncVars** and the other available **SyncTypes
 {% step %}
 ### **Add the script component**
 
-Now add your newly created script to your **Cube Prefab**. The script won't currently do anything unless we change the `color` **SyncVar** in it, so let's do that next.
+Now add your newly created script to your **Cube Prefab**. The script won't currently do anything unless we change the `Color` **SyncVar** in it, so let's do that next.
 
 <figure><img src="../../.gitbook/assets/cube-with-sync-color.png" alt=""><figcaption><p>The Sync Material Color component added</p></figcaption></figure>
 {% endstep %}
@@ -66,11 +66,13 @@ Now add your newly created script to your **Cube Prefab**. The script won't curr
 
 Let's give the cubes some color now as soon as we instantiate them.
 
-Reopen the `PlayerCubeCreator.cs` script and make the following addition as show on line 24:
+Reopen the `PlayerCubeCreator.cs` script and make the following addition after the call to `Instantiate` and before the call to `Spawn`:
 
 ```csharp
-obj.GetComponent<SyncMaterialColor>().color.Value = Random.ColorHSV();
+obj.GetComponent<SyncMaterialColor>().Color.Value = Random.ColorHSV();
 ```
+
+Here is the complete script with the change made:
 
 {% tabs %}
 {% tab title="Old Input System" %}
@@ -79,7 +81,7 @@ using UnityEngine;
 
 public class PlayerCubeCreator : NetworkBehaviour
 {
-    public NetworkObject cubePrefab;
+    public NetworkObject CubePrefab;
 
     void Update()
     {
@@ -95,14 +97,11 @@ public class PlayerCubeCreator : NetworkBehaviour
     [ServerRpc]
     private void SpawnCube()
     {
-        NetworkObject obj = Instantiate(cubePrefab, transform.position, Quaternion.identity);
-
-<strong>        obj.GetComponent&#x3C;SyncMaterialColor>().color.Value = Random.ColorHSV();
-</strong>
-        Spawn(obj); // NetworkBehaviour shortcut for ServerManager.Spawn(obj);
+        NetworkObject obj = Instantiate(CubePrefab, transform.position, Quaternion.identity);
+<strong>        obj.GetComponent&#x3C;SyncMaterialColor>().Color.Value = Random.ColorHSV();
+</strong>        Spawn(obj); // NetworkBehaviour shortcut for ServerManager.Spawn(obj);
     }
 }
-
 </code></pre>
 {% endtab %}
 
@@ -113,7 +112,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerCubeCreator : NetworkBehaviour
 {
-    public NetworkObject cubePrefab;
+    public NetworkObject CubePrefab;
 
     public override void OnStartClient()
     {
@@ -121,9 +120,9 @@ public class PlayerCubeCreator : NetworkBehaviour
             GetComponent&#x3C;PlayerInput>().enabled = true;
     }
 
-    public void OnFire(InputAction.CallbackContext context)
+    public void OnAttack(InputValue value)
     {
-        if (context.started)
+        if (value.isPressed)
             SpawnCube();
     }
 
@@ -131,10 +130,8 @@ public class PlayerCubeCreator : NetworkBehaviour
     [ServerRpc]
     private void SpawnCube()
     {
-        NetworkObject obj = Instantiate(cubePrefab, transform.position, Quaternion.identity);
-<strong>        
-</strong><strong>        obj.GetComponent&#x3C;SyncMaterialColor>().color.Value = Random.ColorHSV();
-</strong><strong>        
+        NetworkObject obj = Instantiate(CubePrefab, transform.position, Quaternion.identity);
+<strong>        obj.GetComponent&#x3C;SyncMaterialColor>().Color.Value = Random.ColorHSV();
 </strong>        Spawn(obj); // NetworkBehaviour shortcut for ServerManager.Spawn(obj);
     }
 }
@@ -157,7 +154,7 @@ Now all you need to do is run your game again and see if the cubes spawn with a 
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-syncvars-to-sync-colors/using-syncvars-to-sync-colors.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/using-syncvars-to-sync-colors" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/using-syncvars-to-sync-colors/using-syncvars-to-sync-colors.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/syncing-colors" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}
 
 [^1]: synchronized variables

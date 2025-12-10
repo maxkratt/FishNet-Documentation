@@ -24,7 +24,7 @@ Now create an empty Game Object on your **Player Prefab** and position it where 
 {% step %}
 ### **Writing a PlayerCamera script**
 
-Let's now add the following script to the **Player Prefab** that we will use to instantiate our **Camera Prefab** once our player spawns in.
+Let's now add the following `PlayerCamera` script to the **Player Prefab** that we will use to instantiate our **Camera Prefab** once our player spawns in.
 
 {% code title="PlayerCamera.cs" lineNumbers="true" %}
 ```csharp
@@ -35,8 +35,8 @@ using UnityEngine;
 // OnStartClient override.
 public class PlayerCamera : NetworkBehaviour
 {
-    [SerializeField] private Camera cameraPrefab;
-    [SerializeField] private Transform cameraHolder;
+    [SerializeField] private Camera _cameraPrefab;
+    [SerializeField] private Transform _cameraHolder;
 
     // This method will run on the client once this object is spawned.
     public override void OnStartClient()
@@ -44,7 +44,7 @@ public class PlayerCamera : NetworkBehaviour
         // Since this will run on all clients that this object spawns for
         // we need to only instantiate the camera for the object we own.
         if (IsOwner)
-            Instantiate(cameraPrefab, cameraHolder.position, cameraHolder.rotation, cameraHolder);
+            Instantiate(_cameraPrefab, _cameraHolder.position, _cameraHolder.rotation, _cameraHolder);
     }
 }
 ```
@@ -73,5 +73,5 @@ With all that set you should be able to run the game and see how the camera is c
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/instantiating-a-local-camera/instantiating-a-local-camera.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/instantiating-a-local-camera" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/instantiating-a-local-camera/instantiating-a-local-camera.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/local-camera" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}

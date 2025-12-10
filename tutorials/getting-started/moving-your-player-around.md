@@ -40,9 +40,9 @@ using UnityEngine;
 // Inherit from NetworkBehaviour instead of MonoBehaviour
 public class PlayerMovement : NetworkBehaviour
 {
-    public float moveSpeed = 5f;
+    public float MoveSpeed = 5f;
 
-    void Update()
+    private void Update()
     {
         // Only run this code on the object the local client owns.
         // This prevents us from moving other players' objects.
@@ -56,7 +56,7 @@ public class PlayerMovement : NetworkBehaviour
         if (moveDirection.magnitude > 1f)
             moveDirection.Normalize();
 
-        transform.position += moveSpeed * Time.deltaTime * moveDirection;
+        transform.position += MoveSpeed * Time.deltaTime * moveDirection;
     }
 }
 ```
@@ -72,44 +72,49 @@ If using [Unity's New Input System](https://learn.unity.com/tutorial/setting-up-
 
 Unlike typical single-player scripts that use `MonoBehaviour`, this script inherits from `NetworkBehaviour`. This allows for direct access to the `IsOwner` field. Although you could still check ownership via the [NetworkObject](../../fishnet-building-blocks/components/network-object.md) component on a **MonoBehaviour**, [NetworkBehaviour](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md) provides significant advantages. It enables [RPCs](../../guides/features/network-communication/remote-procedure-calls.md), [SyncVars](../../guides/features/network-communication/synchronizing/), and [specialized override methods](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) (akin to Unity's `Start`, `Awake`, and `OnDestroy` but for networked objects).
 
-<pre class="language-csharp" data-title="PlayerMovement.cs" data-line-numbers><code class="lang-csharp">using FishNet.Object;
+{% code title="PlayerMovement.cs" lineNumbers="true" %}
+```csharp
+using FishNet.Object;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 // Inherit from NetworkBehaviour instead of MonoBehaviour
-<strong>public class PlayerMovement : NetworkBehaviour
-</strong>{
-    public float moveSpeed = 5f;
-    private Vector2 currentMovementInput;
+public class PlayerMovement : NetworkBehaviour
+{
+    public float MoveSpeed = 5f;
+    private Vector2 _currentMovementInput;
 
     public override void OnStartClient()
     {
         if (IsOwner)
-            GetComponent&#x3C;PlayerInput>().enabled = true;
+            GetComponent<PlayerInput>().enabled = true;
     }
 
     public void OnMove(InputValue value)
     {
-        currentMovementInput = value.Get&#x3C;Vector2>();
+        _currentMovementInput = value.Get<Vector2>();
     }
 
-    void Update()
+    public void Update()
     {
         // Only run this code on the object the local client owns.
         // This prevents us from moving other players' objects.
         if (!IsOwner)
             return;
 
-        Vector3 moveDirection = new Vector3(currentMovementInput.x, 0f, currentMovementInput.y);
+        Vector3 moveDirection = new Vector3(_currentMovementInput.x, 0f, _currentMovementInput.y);
         if (moveDirection.magnitude > 1f)
             moveDirection.Normalize();
 
-        transform.position += moveSpeed * Time.deltaTime * moveDirection;
+        transform.position += MoveSpeed * Time.deltaTime * moveDirection;
     }
 }
-</code></pre>
+```
+{% endcode %}
 
 Since there will be multiple player game objects in the game, we need to determine which one is "our" local player's one and only move that with our input. The `IsOwner` guard clause in `Update` handles this. We are also using the NetworkBehaviour `OnStartClient` callback to enable the **PlayerInput** component when `IsOwner` is true. This method runs when the network object is initialized on the network and only on the client side. It's similar to Unity's `Start` callback and is used here to only send the input to our local player object.
+
+You might wonder why we can’t just use `Awake` or `Start` here, but the reason is that FishNet doesn’t always have enough time to link the object on the network and assign its owner before those methods execute.
 {% endtab %}
 {% endtabs %}
 {% endstep %}
@@ -142,5 +147,5 @@ To test multi-player movement, you can build and run the game, which will automa
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/moving-your-player-around/moving-your-player-around.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/moving-your-player-around" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/moving-your-player-around-complete/moving-your-player-around.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/moving-your-player-around" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}

@@ -31,10 +31,10 @@ The server and one of the clients run in the same process. This is common in sma
 
 <figure><img src="../../.gitbook/assets/listen-server-model.svg" alt="An image showing multiple clients connected to a single server which is also acting as a client itself" width="563"><figcaption><p>A listen-server model</p></figcaption></figure>
 
-The above diagram demonstrates how the listen server is similar to the dedicated server model where all clients connect directly with the server, but unlike the dedicated server, the listen server is also acting as a client (player).
+The above diagram demonstrates how the listen-server is similar to the dedicated server model where all clients connect directly with the server, but unlike the dedicated server, the listen server is also acting as a client (player).
 
 {% hint style="success" %}
-FishNet supports both dedicated and host server models out of the box.
+FishNet supports both dedicated and listen-server models out of the box.
 {% endhint %}
 
 ***

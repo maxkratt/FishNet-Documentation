@@ -64,7 +64,7 @@ Additionally the console will log some network-related messages. Successful conn
 {% endstepper %}
 
 {% hint style="success" %}
-You willl see following warning: "Player prefab is empty and cannot be spawned for connection 0."
+You will see following warning: "Player prefab is empty and cannot be spawned for connection 0."
 
 This is fine and will be dealt with in the next section.
 {% endhint %}
@@ -74,5 +74,5 @@ By following these steps, you should now have a functional network setup in your
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/getting-connected/getting-connected-complete.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/getting-connected" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/getting-connected-complete/getting-connected.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/getting-connected" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}
