@@ -53,7 +53,7 @@ using UnityEngine;
 
 public class ConnectionManager : MonoBehaviour
 {
-    [SerializeField] private NetworkManager NetworkManager;
+    [SerializeField] private NetworkManager _networkManager;
 
     public void StartHost()
     {
@@ -63,17 +63,17 @@ public class ConnectionManager : MonoBehaviour
 
     public void StartServer()
     {
-        NetworkManager.ServerManager.StartConnection();
+        _networkManager.ServerManager.StartConnection();
     }
 
     public void StartClient()
     {
-        NetworkManager.ClientManager.StartConnection();
+        _networkManager.ClientManager.StartConnection();
     }
 
     public void SetIPAddress(string text)
     {
-        NetworkManager.TransportManager.Transport.SetClientAddress(text);
+        _networkManager.TransportManager.Transport.SetClientAddress(text);
     }
 }
 ```
@@ -116,7 +116,7 @@ You should try extending these buttons to also include stopping the server and c
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-starting-connections/releases/download/v1.1-starting-connections-guide/starting-connections.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-starting-connections" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-starting-connections/releases/download/v1.2-starting-connections-guide/starting-connections.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-starting-connections" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}
 
 [^1]: Or any other object in the scene you prefer.
