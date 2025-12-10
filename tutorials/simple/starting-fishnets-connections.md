@@ -53,34 +53,29 @@ using UnityEngine;
 
 public class ConnectionManager : MonoBehaviour
 {
-    [SerializeField] NetworkManager networkManager;
+    [SerializeField] private NetworkManager NetworkManager;
 
-    // A host is simply a server and a client, so start them both.
     public void StartHost()
     {
         StartServer();
         StartClient();
     }
 
-    // The server can be started directly from the ServerManager or Transport
     public void StartServer()
     {
-        networkManager.ServerManager.StartConnection();
+        NetworkManager.ServerManager.StartConnection();
     }
 
-    // The client can be started directly from the ClientManager or Transport
     public void StartClient()
     {
-        networkManager.ClientManager.StartConnection();
+        NetworkManager.ClientManager.StartConnection();
     }
 
-    // This is set on the Transport to indicate where the client should connect.
     public void SetIPAddress(string text)
     {
-        networkManager.TransportManager.Transport.SetClientAddress(text);
+        NetworkManager.TransportManager.Transport.SetClientAddress(text);
     }
 }
-
 ```
 {% endcode %}
 
@@ -121,7 +116,7 @@ You should try extending these buttons to also include stopping the server and c
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-starting-connections/releases/download/v1.0-starting-connections-guide/starting-connections.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-starting-connections" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-starting-connections/releases/download/v1.1-starting-connections-guide/starting-connections.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-starting-connections" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}
 
 [^1]: Or any other object in the scene you prefer.

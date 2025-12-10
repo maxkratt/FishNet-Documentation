@@ -42,7 +42,7 @@ Remember that since this class is a **NetworkBehaviour**, it should not be place
 Let's add a [NetworkObject](../../../guides/features/networked-gameobjects-and-scripts/networkobjects/) variable for holding a reference to our player prefab.
 
 ```csharp
-[SerializeField] private NetworkObject playerPrefab;
+[SerializeField] private NetworkObject _playerPrefab;
 ```
 {% endstep %}
 
@@ -58,7 +58,7 @@ After that it will loop through all the connected clients and as long as they ar
 ```csharp
 public void SpawnPlayers()
 {
-    if (playerPrefab == null)
+    if (_playerPrefab == null)
     {
         Debug.LogWarning("Player prefab is not assigned and thus cannot be spawned.");
         return;
@@ -71,7 +71,7 @@ public void SpawnPlayers()
         if (!client.IsAuthenticated)
             continue;
 
-        NetworkObject obj = Instantiate(playerPrefab);
+        NetworkObject obj = Instantiate(_playerPrefab);
         Spawn(obj, client, gameObject.scene);
     }
 }
@@ -103,7 +103,7 @@ We can also make the script work with FishNet's [Object Pooling](../../../guides
 The `NetworkManager.GetPooledInstantiated` method requires an additional argument to indicate if this is being called on the server or client. Since we are only going to call it on the server, we provide `true` to the final `asServer` parameter.
 
 ```csharp
-NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
 ```
 {% endstep %}
 
@@ -145,13 +145,13 @@ using UnityEngine;
 
 public class ManualPlayerSpawner : NetworkBehaviour
 {
-    [SerializeField] private NetworkObject playerPrefab;
+    [SerializeField] private NetworkObject _playerPrefab;
 
     // The Server attribute here prevents this method from being called except on the server.
     [Server]
     public void SpawnPlayers()
     {
-        if (playerPrefab == null)
+        if (_playerPrefab == null)
         {
             Debug.LogWarning("Player prefab is not assigned and thus cannot be spawned.");
             return;
@@ -168,7 +168,7 @@ public class ManualPlayerSpawner : NetworkBehaviour
             if (!client.Scenes.Contains(gameObject.scene))
                 SceneManager.AddConnectionToScene(client, gameObject.scene);
 
-            NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+            NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
             Spawn(obj, client, gameObject.scene);
         }
     }
