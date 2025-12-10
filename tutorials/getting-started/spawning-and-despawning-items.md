@@ -36,9 +36,9 @@ using UnityEngine;
 
 public class PlayerCubeCreator : NetworkBehaviour
 {
-    public NetworkObject cubePrefab;
+    public NetworkObject CubePrefab;
 
-    void Update()
+    private void Update()
     {
         // Only the local player object should perform these actions.
         if (!IsOwner)
@@ -52,7 +52,7 @@ public class PlayerCubeCreator : NetworkBehaviour
     [ServerRpc]
     private void SpawnCube()
     {
-        NetworkObject obj = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+        NetworkObject obj = Instantiate(CubePrefab, transform.position, Quaternion.identity);
         Spawn(obj); // NetworkBehaviour shortcut for ServerManager.Spawn(obj);
     }
 }
@@ -70,7 +70,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerCubeCreator : NetworkBehaviour
 {
-    public NetworkObject cubePrefab;
+    public NetworkObject CubePrefab;
 
     public override void OnStartClient()
     {
@@ -78,9 +78,9 @@ public class PlayerCubeCreator : NetworkBehaviour
             GetComponent<PlayerInput>().enabled = true;
     }
 
-    public void OnFire(InputAction.CallbackContext context)
+    public void OnAttack(InputValue value)
     {
-        if (context.started)
+        if (value.isPressed)
             SpawnCube();
     }
 
@@ -88,7 +88,7 @@ public class PlayerCubeCreator : NetworkBehaviour
     [ServerRpc]
     private void SpawnCube()
     {
-        NetworkObject obj = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+        NetworkObject obj = Instantiate(CubePrefab, transform.position, Quaternion.identity);
         Spawn(obj); // NetworkBehaviour shortcut for ServerManager.Spawn(obj);
     }
 }
@@ -101,7 +101,7 @@ public class PlayerCubeCreator : NetworkBehaviour
 This may be a great time to read [this page](../../guides/features/network-communication/remote-procedure-calls.md) about RPCs[^1] such as the [ServerRpc](../../guides/features/network-communication/remote-procedure-calls.md#serverrpc) we use here.
 {% endhint %}
 
-Because this script contains a ServerRpc, it will also need to be a **NetworkBehaviour**. The `Update` method listens for the user to press the <kbd>Fire1</kbd> button (typically the left mouse button) and then calls `SpawnCube`.
+Because this script contains a ServerRpc, it will also need to be a **NetworkBehaviour**. The `Update` method listens for the user to press the <kbd>Fire1</kbd>/<kbd>Attack</kbd> button (typically the left mouse button) and then calls `SpawnCube`.
 
 **Understanding `SpawnCube`:**
 
@@ -128,7 +128,7 @@ You may have noticed that an **Empty Network Behaviour** component was automatic
 {% step %}
 ### **Test if the spawning works**
 
-Now launch a couple instances of your game and see if you can run around and spawn cube items by pressing the <kbd>Fire1</kbd> button. The cubes should be visible on all devices connected to each other.
+Now launch a couple instances of your game and see if you can run around and spawn cube items by pressing the <kbd>Fire1</kbd>/<kbd>Attack</kbd> button. The cubes should be visible on all devices connected to each other.
 
 <figure><img src="../../.gitbook/assets/test-cube-spawning.gif" alt=""><figcaption><p>Player spawning cubes</p></figcaption></figure>
 {% endstep %}
@@ -174,7 +174,7 @@ using UnityEngine;
 
 public class DespawnAfterTime : NetworkBehaviour
 {
-    public float secondsBeforeDespawn = 3f;
+    public float SecondsBeforeDespawn = 3f;
 
     public override void OnStartServer()
     {
@@ -183,7 +183,7 @@ public class DespawnAfterTime : NetworkBehaviour
 
     private IEnumerator DespawnAfterSeconds()
     {
-        yield return new WaitForSeconds(secondsBeforeDespawn);
+        yield return new WaitForSeconds(SecondsBeforeDespawn);
 
         Despawn(); // NetworkBehaviour shortcut for ServerManager.Despawn(gameObject);
     }
@@ -194,7 +194,7 @@ public class DespawnAfterTime : NetworkBehaviour
 
 This script uses the [OnStartServer](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#onstartserver) NetworkBehaviour override method to start a Coroutine which will `Despawn` the object. OnStartServer will run on the server when the object is initialized with the network.
 
-`Despawn` needs to be called on the server and it will destroy the game object locally as well as on all clients automatically for you.
+`Despawn` needs to be called on the server, and it will destroy the game object locally as well as on all clients automatically for you.
 {% endstep %}
 
 {% step %}
@@ -211,7 +211,7 @@ Launch the game again and observe the objects being Despawned successfully on th
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/spawning-and-despawning-items/spawning-and-despawning-items.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/spawning-and-despawning-items" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/spawning-and-despawning-complete/spawning-and-despawning.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/spawning-and-despawning-items" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}
 
 [^1]: Remote Procedure Calls

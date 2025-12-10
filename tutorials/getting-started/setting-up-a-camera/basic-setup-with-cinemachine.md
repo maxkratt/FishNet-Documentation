@@ -42,7 +42,7 @@ Now simply add the **Cinemachine Camera** component to the newly created **Camer
 {% step %}
 ### **Writing a PlayerCamera script**
 
-Let's now add the following script to the **Player Prefab** that we will use to take control of our **Camera** once our player spawns in.
+Let's now add the following `PlayerCamera` script to the **Player Prefab** that we will use to take control of our **Camera** once our player spawns in.
 
 {% code title="PlayerCamera.cs" lineNumbers="true" %}
 ```csharp
@@ -53,13 +53,13 @@ using UnityEngine;
 // This script will be a NetworkBehaviour so that we can use the OnStartClient override.
 public class PlayerCamera : NetworkBehaviour
 {
-    [SerializeField] private CinemachineCamera cinemachineCamera;
+    [SerializeField] private CinemachineCamera _cinemachineCamera;
 
     // This method is called on the client after the object is spawned in.
     public override void OnStartClient()
     {
         // Simply enable our local cinemachine camera on the object if we are the owner.
-        cinemachineCamera.enabled = IsOwner;
+        _cinemachineCamera.enabled = IsOwner;
     }
 }
 ```
@@ -88,5 +88,5 @@ With all that set you should be able to run the game and see how the camera from
 {% hint style="info" %}
 Download the project files with these completed steps here, or explore the repository:
 
-<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/basic-setup-with-cinemachine/basic-setup-with-cinemachine.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/basic-setup-with-cinemachine" class="button secondary" data-icon="github">Repository</a>
+<a href="https://github.com/maxkratt/fish-networking-getting-started/releases/download/basic-setup-with-cinemachine/basic-setup-with-cinemachine.unitypackage" class="button primary" data-icon="down-to-line">Source Files</a> <a href="https://github.com/maxkratt/fish-networking-getting-started/tree/cinemachine-camera" class="button secondary" data-icon="github">Repository</a>
 {% endhint %}
