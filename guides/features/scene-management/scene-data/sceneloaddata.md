@@ -39,7 +39,7 @@ SceneLoadData sld = new SceneLoadData()
 
 <summary>PreferredActiveScene</summary>
 
-Preferred Active Scene will allow you to choose what scene will be active on the server and/or client. You can choose to have the chosen SceneLookupData apply to both the server and client or seperate ones for each.
+Preferred Active Scene will allow you to choose what scene will be active on the server and/or client. You can choose to have the chosen SceneLookupData apply to both the server and client or separate ones for each.
 
 If left with the default value of null, the first valid scene loaded will become the ActiveScene.
 

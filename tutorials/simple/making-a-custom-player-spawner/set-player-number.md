@@ -32,10 +32,10 @@ using UnityEngine;
 
 public class CountBasedPlayerSpawner : MonoBehaviour
 {
-    [SerializeField] private NetworkObject playerPrefab;
-    [SerializeField] private int requiredPlayerCount;
+    [SerializeField] private NetworkObject _playerPrefab;
+    [SerializeField] private int _requiredPlayerCount;
     
-    private NetworkManager networkManager;
+    private NetworkManager _networkManager;
 }
 ```
 {% endstep %}
@@ -48,11 +48,11 @@ Let's now get a reference to the NetworkManager, we will first try to get it fro
 ```csharp
 private void Awake()
 {
-    networkManager = GetComponentInParent<NetworkManager>();
-    if (networkManager == null)
-        networkManager = InstanceFinder.NetworkManager;
+    _networkManager = GetComponentInParent<NetworkManager>();
+    if (_networkManager == null)
+        _networkManager = InstanceFinder.NetworkManager;
 
-    if (networkManager == null)
+    if (_networkManager == null)
     {
         Debug.LogWarning($"CountBasedPlayerSpawner cannot work as a NetworkManager couldn't be found.");
         return;
@@ -70,7 +70,7 @@ Subscribe to the event at the end of the Awake method.
 
 {% code overflow="wrap" %}
 ```csharp
-networkManager.SceneManager.OnClientLoadedStartScenes += OnClientLoadedStartScenes;
+_networkManager.SceneManager.OnClientLoadedStartScenes += OnClientLoadedStartScenes;
 ```
 {% endcode %}
 
@@ -79,8 +79,8 @@ And also unsubscribe when this object is destroyed.
 ```csharp
 private void OnDestroy()
 {
-    if (networkManager != null)
-        networkManager.SceneManager.OnClientLoadedStartScenes -= OnClientLoadedStartScenes;
+    if (_networkManager != null)
+        _networkManager.SceneManager.OnClientLoadedStartScenes -= OnClientLoadedStartScenes;
 }
 ```
 {% endstep %}
@@ -102,15 +102,15 @@ private void OnClientLoadedStartScenes(NetworkConnection _, bool asServer)
     if (!asServer)
         return;
 
-    List<NetworkConnection> authenticatedClients = networkManager.ServerManager.Clients.Values
+    List<NetworkConnection> authenticatedClients = _networkManager.ServerManager.Clients.Values
         .Where(conn => conn.IsAuthenticated).ToList();
 
-    if (authenticatedClients.Count < requiredPlayerCount) return;
+    if (authenticatedClients.Count < _requiredPlayerCount) return;
 
     foreach (NetworkConnection client in authenticatedClients)
     {
-        NetworkObject obj = Instantiate(playerPrefab);
-        networkManager.ServerManager.Spawn(obj, client);
+        NetworkObject obj = Instantiate(_playerPrefab);
+        _networkManager.ServerManager.Spawn(obj, client);
     }
 }
 ```
@@ -124,7 +124,7 @@ We can also make the script work with FishNet's [Object Pooling](../../../guides
 The `NetworkManager.GetPooledInstantiated` method requires an additional argument to indicate if this is being called on the server or client. Since we are only going to call it on the server, we provide `true` to the final `asServer` parameter.
 
 ```csharp
-NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: tr
+NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: tr
 ```
 {% endstep %}
 
@@ -158,30 +158,30 @@ using UnityEngine;
 
 public class CountBasedPlayerSpawner : MonoBehaviour
 {
-    [SerializeField] private NetworkObject playerPrefab;
-    [SerializeField] private int requiredPlayerCount;
+    [SerializeField] private NetworkObject _playerPrefab;
+    [SerializeField] private int _requiredPlayerCount;
 
-    private NetworkManager networkManager;
+    private NetworkManager _networkManager;
 
     private void Awake()
     {
-        networkManager = GetComponentInParent<NetworkManager>();
-        if (networkManager == null)
-            networkManager = InstanceFinder.NetworkManager;
+        _networkManager = GetComponentInParent<NetworkManager>();
+        if (_networkManager == null)
+            _networkManager = InstanceFinder.NetworkManager;
 
-        if (networkManager == null)
+        if (_networkManager == null)
         {
             Debug.LogWarning($"CountBasedPlayerSpawner cannot work as a NetworkManager couldn't be found.");
             return;
         }
 
-        networkManager.SceneManager.OnClientLoadedStartScenes += OnClientLoadedStartScenes;
+        _networkManager.SceneManager.OnClientLoadedStartScenes += OnClientLoadedStartScenes;
     }
 
     private void OnDestroy()
     {
-        if (networkManager != null)
-            networkManager.SceneManager.OnClientLoadedStartScenes -= OnClientLoadedStartScenes;
+        if (_networkManager != null)
+            _networkManager.SceneManager.OnClientLoadedStartScenes -= OnClientLoadedStartScenes;
     }
 
     private void OnClientLoadedStartScenes(NetworkConnection _, bool asServer)
@@ -189,19 +189,19 @@ public class CountBasedPlayerSpawner : MonoBehaviour
         if (!asServer)
             return;
 
-        List<NetworkConnection> authenticatedClients = networkManager.ServerManager.Clients.Values
+        List<NetworkConnection> authenticatedClients = _networkManager.ServerManager.Clients.Values
             .Where(conn => conn.IsAuthenticated).ToList();
 
-        if (authenticatedClients.Count < requiredPlayerCount) return;
+        if (authenticatedClients.Count < _requiredPlayerCount) return;
 
         foreach (NetworkConnection client in authenticatedClients)
         {
-            NetworkObject obj = networkManager.GetPooledInstantiated(playerPrefab, asServer: true);
-            networkManager.ServerManager.Spawn(obj, client);
+            NetworkObject obj = _networkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
+            _networkManager.ServerManager.Spawn(obj, client);
 
             // If the client isn't observing this scene, make him an observer of it.
             if (!client.Scenes.Contains(gameObject.scene))
-                networkManager.SceneManager.AddOwnerToDefaultScene(obj);
+                _networkManager.SceneManager.AddOwnerToDefaultScene(obj);
         }
     }
 }

@@ -22,7 +22,7 @@ using FishNet.Object.Synchronizing;
 
 public class Player : NetworkBehaviour
 {
-    readonly SyncVar<int> _health = new SyncVar<int>(100);
+    private readonly SyncVar<int> _health = new SyncVar<int>(100);
 
     public void StepOnLego()
     {
@@ -52,9 +52,9 @@ using FishNet.Object;
 public class Player : NetworkBehaviour
 {
     [ServerRpc]
-    void UpdatePlayerName(string newName)
+    private void UpdatePlayerName(string newName)
     {
-        print($"Player {OwnerId} has updated their name to {newname}");
+        print($"Player {OwnerId} has updated their name to {newName}");
     }
 }
 ```

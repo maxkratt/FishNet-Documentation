@@ -16,9 +16,10 @@ It's also worth mentioning if you are going to allocate in your structures it co
 
 Here are the two structures containing basic mechanics for a rigidbody.
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>public struct ReplicateData : IReplicateData
-</strong><strong>{
-</strong>    public bool Jump;
+```csharp
+public struct ReplicateData : IReplicateData
+{
+    public bool Jump;
     public float Horizontal;
     public float Vertical;
     public ReplicateData(bool jump, float horizontal, float vertical) : this()
@@ -54,7 +55,7 @@ public struct ReconcileData : IReconcileData
     public void SetTick(uint value) => _tick = value;
 }
 
-</code></pre>
+```
 
 {% hint style="info" %}
 Learn more about using [PredictionRigidbody](../predictionrigidbody.md).
@@ -165,7 +166,7 @@ private void RunInputs(ReplicateData data, ReplicateState state = ReplicateState
     * indicates. At the end of this guide a more advanced use of state will
     * be demonstrated. */
     
-    // Be sure to always apply and set velocties using PredictionRigidbody
+    // Be sure to always apply and set velocities using PredictionRigidbody
     // and never on the rigidbody itself; this includes if also accessing from
     // another script.
     Vector3 forces = new Vector3(data.Horizontal, 0f, data.Vertical) * _moveRate;

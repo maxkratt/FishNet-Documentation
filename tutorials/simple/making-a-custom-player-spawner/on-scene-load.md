@@ -44,7 +44,7 @@ Remember that since this class is a **NetworkBehaviour**, it should not be place
 Add a [NetworkObject](../../../guides/features/networked-gameobjects-and-scripts/networkobjects/) variable for holding a reference to our player prefab.
 
 ```csharp
-[SerializeField] private NetworkObject playerPrefab;
+[SerializeField] private NetworkObject _playerPrefab;
 ```
 {% endstep %}
 
@@ -57,7 +57,7 @@ Let's utilize the NetworkBehaviour's [OnSpawnServer](../../../guides/features/ne
 ```csharp
 public override void OnSpawnServer(NetworkConnection connection)
 {
-    NetworkObject obj = Instantiate(playerPrefab);
+    NetworkObject obj = Instantiate(_playerPrefab);
     Spawn(obj, connection, gameObject.scene);
 }
 ```
@@ -75,7 +75,7 @@ The `NetworkManager.GetPooledInstantiated` method requires an additional argumen
 
 {% code overflow="wrap" %}
 ```csharp
-NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
 ```
 {% endcode %}
 {% endstep %}
@@ -94,13 +94,13 @@ using UnityEngine;
 
 public class ScenePlayerSpawner : NetworkBehaviour
 {
-    [SerializeField] private NetworkObject playerPrefab;
+    [SerializeField] private NetworkObject _playerPrefab;
 
     // This method runs on the server when the client is about to spawn this object.
     // Since the player is about to spawn this object, we know he is in this scene.
     public override void OnSpawnServer(NetworkConnection connection)
     {
-        NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+        NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
         Spawn(obj, connection, gameObject.scene);
     }
 }
@@ -189,7 +189,7 @@ Finally, we moved the actual player spawning logic into its own method called **
 ```csharp
 private void SpawnPlayer(NetworkConnection connection)
 {
-    NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+    NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
     Spawn(obj, connection, gameObject.scene);
 }
 ```
@@ -217,7 +217,7 @@ using UnityEngine;
 
 public class ScenePlayerSpawner : NetworkBehaviour
 {
-    [SerializeField] private NetworkObject playerPrefab;
+    [SerializeField] private NetworkObject _playerPrefab;
 
     public override void OnStartServer()
     {
@@ -252,7 +252,7 @@ public class ScenePlayerSpawner : NetworkBehaviour
 
     private void SpawnPlayer(NetworkConnection connection)
     {
-        NetworkObject obj = NetworkManager.GetPooledInstantiated(playerPrefab, asServer: true);
+        NetworkObject obj = NetworkManager.GetPooledInstantiated(_playerPrefab, asServer: true);
         Spawn(obj, connection, gameObject.scene);
     }
 }

@@ -22,15 +22,15 @@ A Scene Handle is an integer that Unity generates for a scene instance when it i
 {% endhint %}
 
 ```csharp
-        // SceneLookupData Default values
-        SceneLookupData slud = new SceneLookupData()
-        { 
-            // If Handle is greater than 0 then it will ignore Name and use Handle
-            // to look up the scene.
-            Handle = 0,
-            // If Handle is set to 0, then Name is used to lookup the scene instead.
-            Name = null 
-        }; 
+// SceneLookupData default values
+SceneLookupData slud = new SceneLookupData()
+{ 
+    // If Handle is greater than 0 then it will ignore Name and use Handle
+    // to look up the scene.
+    Handle = 0,
+    // If Handle is set to 0, then Name is used to lookup the scene instead.
+    Name = null 
+}; 
 ```
 
 See[ **Loading Scenes**](../loading-scenes/) and [**Unloading Scenes**](../unloading-scenes.md) for implementation.

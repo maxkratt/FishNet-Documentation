@@ -44,7 +44,7 @@ public class Player : NetworkBehaviour
 {
     public void OnStruck()
     {
-        if (!IsClientStarted)
+        if (!IsClientInitialized)
             return;
 
         // Play visual effect and sounds only on a client.
@@ -78,7 +78,7 @@ Simple example showing the `Client` attribute to prevent the method from running
 
 ```csharp
 [Client]
-void ShowUI()
+private void ShowUI()
 {
     // This code will only run on a client, otherwise it will print a warning.
 }
@@ -94,7 +94,7 @@ Finally, you can use the `UseIsStarted` property to cause this to ignore the ini
 ```csharp
 // The server does not need to play VFX; only play VFX if the client is active.
 [Client(Logging = LoggingType.Off, RequireOwnership = true, UseIsStarted = true)]
-void PlayVFX() 
+private void PlayVFX() 
 { 
     // Play VFX here...
 }

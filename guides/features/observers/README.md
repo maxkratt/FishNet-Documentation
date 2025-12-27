@@ -32,14 +32,14 @@ public class InitialSceneObserver : MonoBehaviour
 {
     private void Start()
     {
-        var networkManager = InstanceFinder.NetworkManager;
+        NetworkManager networkManager = InstanceFinder.NetworkManager;
         if (networkManager != null)
             networkManager.SceneManager.OnClientLoadedStartScenes += OnClientLoadedStartScenes;
     }
 
     private void OnDestroy()
     {
-        var networkManager = InstanceFinder.NetworkManager;
+        NetworkManager networkManager = InstanceFinder.NetworkManager;
         if (networkManager != null)
             networkManager.SceneManager.OnClientLoadedStartScenes -= OnClientLoadedStartScenes;
     }

@@ -114,9 +114,10 @@ private void RpcSetAmmo(NetworkConnection conn, int newAmmo)
 
 It is possible to have a single method be both a TargetRpc, as well an ObserversRpc. This can be very useful if you sometimes want to send a RPC to all observers, or a single individual. A chat message could be an example of this.
 
-<pre class="language-csharp"><code class="lang-csharp">[ObserversRpc][TargetRpc]
-<strong>private void DisplayChat(NetworkConnection target, string sender, string message)
-</strong>{
+```csharp
+[ObserversRpc][TargetRpc]
+private void DisplayChat(NetworkConnection target, string sender, string message)
+{
     Debug.Log($"{sender}: {message}."); // Display a message from sender.
 }
 
@@ -128,7 +129,7 @@ private void SendChatMessage()
     // Send to everyone.
     DisplayChat(null, "Bob", "Hello world");
 }
-</code></pre>
+```
 
 ***
 

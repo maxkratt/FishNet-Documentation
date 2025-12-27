@@ -14,7 +14,7 @@ When unloading scenes information on what to unload is constructed within the Sc
 
 ```csharp
 SceneUnloadData sud = new SceneUnloadData()
-   {
+{
     SceneLookupDatas = new SceneLookupData[0],
     Params = new UnloadParams()
     {
@@ -47,11 +47,11 @@ Params are an optional way to assign data to your scene loads/unloads. This data
 
 **ServerParams**
 
-_ServerParams_ are only included on the server side, and are not networked. It is an array of objects, meaning you can send anything you want. However when accessing the Params through event args, you will have to cast the object to the data you want.
+_ServerParams_ are only included on the server side and are not networked. It is an array of objects, meaning you can send anything you want. However when accessing the Params through event args, you will have to cast the object to the data you want.
 
 **ClientParams**
 
-_ClientParams_ is a byte array which may contain anything, and will be sent to clients when they receive the load scene instructions. Clients can access the _ClientParams_ within the scene change events.
+_ClientParams_ is a byte array which may contain anything. It will be sent to clients when they receive the load scene instructions. Clients can access the _ClientParams_ within the scene change events.
 
 </details>
 

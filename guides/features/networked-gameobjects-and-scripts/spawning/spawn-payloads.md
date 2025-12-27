@@ -25,8 +25,8 @@ For example you can do the following:
 ```csharp
 public override void WritePayload(NetworkConnection connection, Writer writer)
 {
-    // Writes the string stored in the class variable playerName to the spawn payload.
-    writer.WriteString(playerName);
+    // Writes the string stored in the class variable _playerName to the spawn payload.
+    writer.WriteString(_playerName);
     // Writes the integer 42 to the payload.
     writer.WriteInt32(42);
 }
@@ -47,10 +47,10 @@ For example you can do the following:
 ```csharp
 public override void ReadPayload(NetworkConnection connection, Reader reader)
 {
-    // Reads a string from the payload. Since a string was written first it must be read first too.
-    playerName = reader.ReadStringAllocated();
+    // Reads a string from the payload. Since a string was written first, it must be read first too.
+    _playerName = reader.ReadStringAllocated();
     // Reads an integer from the payload.
-    playerScore = reader.ReadInt32();
+    _playerScore = reader.ReadInt32();
 }
 ```
 

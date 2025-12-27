@@ -33,7 +33,7 @@ private void Awake()
     // You can change all settings at once.
     _myInt.UpdateSettings(new SyncTypeSettings(....);
 
-        // Or update only specific things, such as SendRate.
+    // Or update only specific things, such as SendRate.
     // Change send rate to once per second.
     _myInt.UpdateSendRate(1f);
 }
@@ -75,6 +75,6 @@ The code above will actually prevent compilation in the editor as our code gener
 ```csharp
 // This will work and show your SyncType in the inspector!
 [AllowMutableSyncType]
-[SerializeField] // Be sure to serializeField if not public.
+[SerializeField] // Be sure to use the SerializeField attribute if not public.
 private SyncVar<int> _myInt = new();
 ```

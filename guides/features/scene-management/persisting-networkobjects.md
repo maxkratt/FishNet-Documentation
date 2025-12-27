@@ -25,7 +25,7 @@ If you load Multiple Scenes in one method call, and you are moving network objec
 #### Example
 
 ```csharp
-// Just Create an array of NetworkObjects 
+// Just create an array of NetworkObjects 
 // that are not a Scene, Global or Nested NetworkObjects.
 NetworkObject[] objectsToMove = new NetworkObject[] { object1, object2, object3 }
 
@@ -33,17 +33,17 @@ NetworkObject[] objectsToMove = new NetworkObject[] { object1, object2, object3 
 SceneLoadData sld = new SceneLoadData("NewScene");
 sld.MovedNetworkObjects = objectsToMove;
 
-// Fishnet will handle the rest after loading!
+// FishNet will handle the rest after loading!
 SceneManager.LoadGlobalScenes(sld);
 ```
 
 ## Scene NetworkObjects
 
-[**Scene NetworkObjects**](../networked-gameobjects-and-scripts/networkobjects/#scenenetworkobject) currently cannot persist across scenes, it is a [**limitation**](../../troubleshooting/technical-limitations.md) with the way Unity and Fishnet was designed. You can not mark them as Global, or put them into "DontDestroyOnLoad" scene. If you would like a Scene NetworkObject to persist across scenes it is recommended to remove them and use the other options available on this page.
+[**Scene NetworkObjects**](../networked-gameobjects-and-scripts/networkobjects/#scenenetworkobject) currently cannot persist across scenes, it is a [**limitation**](../../troubleshooting/technical-limitations.md) with the way Unity and FishNet was designed. You cannot mark them as IsGlobal, or put them into the "DontDestroyOnLoad" scene. If you would like a Scene NetworkObject to persist across scenes it is recommended to remove them and use the other options available on this page.
 
 ## Global NetworkObjects
 
-<mark style="color:blue;">**G**</mark>[<mark style="color:blue;">**lobal NetworkObjects**</mark>](../networked-gameobjects-and-scripts/networkobjects/#globalnetworkobject) work similar to how a normal GameObject would when put into the "DontDestroyOnLoad"(DDOL) scene.\
+<mark style="color:blue;">**G**</mark>[<mark style="color:blue;">**lobal NetworkObjects**</mark>](../networked-gameobjects-and-scripts/networkobjects/#globalnetworkobject) work similar to how a normal GameObject would when put into the "DontDestroyOnLoad" (DDOL) scene.\
 \
 When loading and unloading scenes, **Global NetworkObjects** will stay in the (DDOL) scene on both the server and client persisting their state. No extra steps needed.
 

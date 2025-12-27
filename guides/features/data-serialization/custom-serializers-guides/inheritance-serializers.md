@@ -66,8 +66,9 @@ When using this approach it is very important that you check for the child-most 
 For example: Weapon is before Item, and so is Currency, so those two are checked first. Just as if you had Melee : Weapon, then Melee would be before Weapon, and so on.
 {% endhint %}
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>public static void WriteItembase(this Writer writer, ItemBase ib)
-</strong>{
+```csharp
+public static void WriteItembase(this Writer writer, ItemBase ib)
+{
     if (ib is Weapon wp)
     {
         // 1 will be the identifer for the reader that this is Weapon.
@@ -93,16 +94,16 @@ public static ItemBase ReadItembase(this Reader reader)
     *  readability, but since we are using a clsType indicator
     *  the type is known so we can just compare against the clsType. */
     if (clsType == 1)
-        return reader.Read&#x3C;Weapon>();
+        return reader.Read<Weapon>();
     else if (clsType == 2)
-        return reader.Read&#x3C;Currency>();
+        return reader.Read<Currency>();
     else if (clsType == 1)
-        return reader.Read&#x3C;Item>();
+        return reader.Read<Item>();
     // Unhandled, this would probably result in read errors.
     else
         return null;
 }
-</code></pre>
+```
 
 {% hint style="success" %}
 You can still create custom serializers for individual classes in addition to encapsulating ones as shown! If for example you had a custom serializer for Currency then using the code above would use your serializer for Currency rather than the one Fish-Networking generates.

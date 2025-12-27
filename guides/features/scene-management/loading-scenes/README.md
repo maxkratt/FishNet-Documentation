@@ -197,7 +197,7 @@ base.SceneManager.LoadConnectionScenes(conns, sld);
 
 Fishnet gives the ability to replace scenes that are already loaded on the clients with the new requested scenes to load.
 
-To Replace Scenes you will set the ReplaceScene Option in the SceneLoadData
+To Replace Scenes, you will set the ReplaceScene Option in the SceneLoadData
 
 Replaced scenes will be unloaded before the new scenes are loaded.
 

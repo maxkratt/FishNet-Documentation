@@ -47,8 +47,8 @@ This setting is set to "Destroy" by default, so make sure to switch this over to
 You can manually change the despawn behavior through code for specific situations.
 
 ```csharp
-// When calling Fishnets Despawn from any location you can pass a enum 
-// perameter to deviate from the default behavior.
+// When calling FishNet's Despawn method from any location, you can pass an enum 
+// parameter to deviate from the default behavior.
 ServerManager.Despawn(nob, DespawnType.Pool);
 ```
 
@@ -57,7 +57,7 @@ ServerManager.Despawn(nob, DespawnType.Pool);
 When using the object pool you will want to retrieve NetworkObject from it prior to network spawning them. Doing so will pull from the pool rather than instantiate new objects.
 
 ```csharp
-// There are many overrides which can a variety of information.
+// There are many overrides which allow for a variety of information.
 // You can use GameObjects, NetworkObjects, PrefabIds, CollectionIds,
 // spawn positions, and more.
 NetworkObject nob = NetworkManager.GetPooledInstantiated(...);
