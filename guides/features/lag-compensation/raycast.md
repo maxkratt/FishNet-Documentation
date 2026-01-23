@@ -20,6 +20,10 @@ Notice the 'hitbox' objects are children of the moving component, and only have 
 
 <figure><img src="../../../.gitbook/assets/collider-rollback-children-objects.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+When using a [Tick Smoother](../../../fishnet-building-blocks/components/tick-smoothers/), ensure that the hitboxes are placed on the "target" objects rather than smoothed objects (the object with the smoother component or one of its children). When a rollback occurs, the server automatically interpolates (lerps) hitboxes between positions, making local smoothing unnecessary. To maintain consistency, set the smoother’s **Flat Interpolation** value to match the **Additional Ticks** configured in your **Rollback Manager**.
+{% endhint %}
+
 Next the ColliderRollback script must be added somewhere within your prefab or object. For the sake of simplicity I have mine on the root, with the NetworkObject.
 
 Once added, specify each object you added as a collider within the **Collider Parents** collection.

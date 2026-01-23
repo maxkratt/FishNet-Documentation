@@ -18,6 +18,8 @@ The following resources are put together by developers such as yourself. The Fis
 
 [Dissonance Voice Chat](https://assetstore.unity.com/packages/tools/audio/dissonance-voice-chat-70078) is a real-time Voice over IP (VoIP) system designed to be built directly into Unity games. [Dissonance Voice Chat for Fish-Networking](https://github.com/LambdaTheDev/DissonanceVoiceForFishNet) is a community integration for using it with FishNet, provided by [LambdaTheDev](https://github.com/LambdaTheDev) and the creator of Dissonance.
 
+[FishNet Multi‑Room Manager](https://github.com/Sean-Zeo/Multi-Room-Manager-For-FishNet-Unity/) is a lightweight, single-process multi-room solution for FishNet that allows you to host **multiple isolated game rooms** on one server using Unity’s additive scenes and FishNet's built in scene-based visibility. Players connect to a central lobby, where they can view active rooms, create new ones (with a custom name, data string, scene name, and max player count), and join existing rooms. Each room runs in its own additive scene with completely isolated network traffic (spawns, RPCs, syncs).
+
 [Turtle Pass](https://github.com/DanielSnd/TurtlePass) allows you to send large byte arrays over several frames to prevent data from overwhelming bandwidth limited transports like Steam and Unity Transport.
 
 [Network Audio Sync](https://github.com/LambdaTheDev/NetworkAudioSync) is an easy to way synchronize audio clips over the network.

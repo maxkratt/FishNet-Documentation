@@ -42,11 +42,11 @@ The `NetworkHudCanvas` is a convenient debugging tool. In a finished game, you w
 {% step %}
 ### **Building and testing the connection**
 
-To test connecting to a remote device, you'll need to build your game.
+To test connecting to a remote device, you'll either need to build your game or setup your Unity editor with your project on the other devices.
 
 1. **Build the Client:** Go to `File > Build Settings...`. Ensure your scene is added to "Scenes In Build". Select your target platform (e.g., Windows, macOS, Android). Click `Build` and choose a location to save your executable.
 2. **Start the Server:** Launch one instance of your game (either from the Unity Editor, a regular build or a dedicated server build) on the machine that will act as the server. If it's a dedicated server build then the FishNet server will start automatically, otherwise you will need to make sure you start it with the NetworkHudCanvas Server button, Autostart option, or through your own code.
-3. **Launch the Client:** On a _separate_ machine, launch the client build you just created.
+3. **Launch the Client:** On a _separate_ machine, launch the client build you just created (or your project from the Unity editor on the separate machine).
 4. **Connect:** If you disabled auto-start, click the "Start Client" button from the NetworkHudCanvas in the client build.
 
 If configured correctly, the client should connect to the server, and you should see network-related messages in both the server and client consoles indicating a successful connection. You should also see players spawning as configured in the [preparing-your-player.md](preparing-your-player.md "mention") guide.

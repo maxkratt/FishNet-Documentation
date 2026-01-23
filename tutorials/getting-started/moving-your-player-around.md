@@ -138,7 +138,7 @@ This component has quite a few settings, but the most important ones for us righ
 
 Save your scene and press the **Play** button in Unity's Editor. Your player capsule should now be visible. Use the **W, A, S, D** keys or arrow keys to move your player around the scene.
 
-To test multi-player movement, you can build and run the game, which will automatically connect as a client to the editor. You should then be able to control your player in the editor, and the second instance will control its own player, seeing both players move independently.
+To test multi-player movement, you can build and run the game (or use [multiple editor windows](../simple/testing-with-multiple-editors.md)), which will automatically connect as a client to the editor. You should then be able to control your player in the editor, and the second instance will control its own player, seeing both players move independently.
 
 <figure><img src="../../.gitbook/assets/player-movement-gif.gif" alt=""><figcaption></figcaption></figure>
 {% endstep %}

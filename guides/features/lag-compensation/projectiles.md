@@ -54,6 +54,10 @@ private void SpawnProjectile(Vector3 position, Vector3 direction, float passedTi
 
 When the server receives the fire request it will calculate how long it took the client to send the fire message using the provided tick. Later on the projectile will be accelerated based on this time passed.
 
+{% hint style="info" %}
+You will notice we aren't calling `Spawn` for the projectiles, that is because they aren't NetworkObjects, just regular game objects. Do not make the PredictedProjectile script a NetworkBehaviour, or give it any network components.
+{% endhint %}
+
 After the _passedTime_ is calculated, spawn the projectile on the server, then tell spectators to also spawn the projectile; spectators being other clients.
 
 ```csharp
@@ -92,13 +96,13 @@ Observers use the same technique to calculate the passed time and spawn the proj
 
 First, this RPC is sent to everyone but the owner. The owner does not need to receive the RPC because it already spawned the projectile locally.
 
-Second, the passed time calculation is not limited by half. This is to support the maximum possible passed time. This is not a requirement, but is recommended.
+Second, the passed time calculation is not limited by half. This is to support the maximum possible passed time. This is not a requirement but is recommended.
 
 ```csharp
 /// <summary>
 /// Fires on all clients but owner.
 /// </summary>
-[ObserversRpc(IncludeOwner = false)]
+[ObserversRpc(ExcludeOwner = true)]
 private void ObserversFire(Vector3 position, Vector3 direction, uint tick)
 {
     // Like on server get the time passed and cap it. Note the false for allow negative values.
@@ -110,7 +114,7 @@ private void ObserversFire(Vector3 position, Vector3 direction, uint tick)
 }
 ```
 
-With the projectile spawned all that's left is showing how to use the calculated passed time. You likely noticed the **SpawnProjectile** method was initializing the projectile with some values. Here's what that looks like:
+With the projectile spawned all that's left is showing how to use the calculated passed time. You likely noticed the `SpawnProjectile` method was initializing the projectile with some values. Here's what that looks like:
 
 ```csharp
 /// <summary>
@@ -140,7 +144,7 @@ public void Initialize(Vector3 direction, float passedTime)
 
 After initializing with the specified passed time and direction all that's left to accelerate the projectile is a move method. The provided example is a very basic implementation of a move method, while also applying the acceleration.
 
-If there is passed time to apply then additional delta is added using the _passedTimeDelta_ variable.
+If there is passed time to apply, then additional delta is added using the `passedTimeDelta` variable.
 
 The percentage applied when assigning the _step_ variable decides how fast your projectile will catch up to the predicted value. In this code I am using 8% of the passed time per Move call. Higher values will result in the projectile catching up faster.
 

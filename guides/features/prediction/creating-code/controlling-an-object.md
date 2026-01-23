@@ -228,3 +228,15 @@ private void ReconcileState(ReconcileData data, Channel channel = Channel.Unreli
     PredictionRigidbody.Reconcile(data.PredictionRigidbody);
 }
 ```
+
+{% hint style="info" %}
+When reconciling an object with a CharacterController, ensure you disable the CharacterController component immediately before setting its position and re-enable it afterwards. Because this controller uses a custom physics engine, skipping this toggle will prevent the internal state from refreshing, resulting in a synchronization error between the physics and the transform.\
+As an example:<br>
+
+```csharp
+_characterController.enabled = false;
+transform.localPosition = reconcileData.Position;
+_characterController.enabled = true;
+```
+{% endhint %}
+

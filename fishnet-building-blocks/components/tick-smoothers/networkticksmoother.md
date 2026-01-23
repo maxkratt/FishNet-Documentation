@@ -21,6 +21,10 @@ Please review our [API ](https://fish-networking.com/FishNet/api/api/FishNet.Com
 
 <div align="left"><figure><img src="../../../.gitbook/assets/network-tick-smoother-component.png" alt=""><figcaption><p>Default settings</p></figcaption></figure></div>
 
+### :gear: Favor Prediction Network Transform
+
+> This setting prevents jitter by automatically disabling the NetworkTickSmoother when a predicted NetworkObject is under the active control of a NetworkTransform. If a specific transform is assigned in the prediction field, the smoother will yield control to the NetworkTransform’s internal smoothing logic; otherwise, the smoother remains active to handle state interpolation.
+
 ### :gear: Initialization Settings
 
 > These are essential to the component working.
