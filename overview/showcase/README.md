@@ -1,5 +1,5 @@
 ---
-description: Because seeing is believing
+description: Because seeing is believing.
 ---
 
 # Showcase
@@ -31,6 +31,38 @@ The world's craziest chicken is heading back to the racetrack! Wacky characters,
 {% embed url="https://www.youtube.com/watch?v=tso30vyd25Q" %}
 
 {% embed url="https://store.steampowered.com/app/3012980/Moorhuhn_Kart_4/" %}
+
+***
+
+## RaceWorms
+
+Dig your way through this competitive multiplayer racing game with up to 6 players! RaceWorms can be played online, locally (max. 4 players) or both. Burrow through dynamic maps, leap from the ground to gain a burst of speed, and use items to hinder your opponents.
+
+{% embed url="https://www.youtube.com/watch?v=0mdk1_0paSo" %}
+
+{% embed url="https://store.steampowered.com/app/3653330/RaceWorms/" %}
+
+***
+
+## Skygard Arena
+
+Skygard Arena is a modern turn-based tactical RPG. Assemble your squad of Heroes, pick their items and spells, and outplay your opponent in fast-paced tactical battles. Discover the world of Skygard in a solo adventure or head straight to the Arena for thrilling PvP matches!
+
+{% embed url="https://www.youtube.com/watch?v=G48JmViE6sU" %}
+
+{% embed url="https://store.steampowered.com/app/2148970/Skygard_Arena/" %}
+
+***
+
+## Forsaken Frontiers
+
+Step into the frozen unknown in **Forsaken Frontiers**, a cooperative analog horror adventure set in the unforgiving embrace of an everlasting winter.
+
+{% embed url="https://www.youtube.com/watch?v=tez81QCiOkQ" %}
+
+{% embed url="https://store.steampowered.com/app/2810780/Forsaken_Frontiers/" %}
+
+***
 
 ## Potion Shop Simulator
 

@@ -36,7 +36,7 @@ Check out the API page for more specific methods, properties, and events [here](
 
 :gear: **Initialize Order**
 
-> Determines the order in which **NetworkObjects** spawned in the same tick will run their [initialization callbacks](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks). A lower value will have higher priority and execute first. The default value is 0 and negative values are allowed.
+> Determines the order in which **NetworkObjects** spawned in the same tick will run their [initialization callbacks](../../guides/features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks). A lower value will have higher priority and execute first. The default value is 0 and negative values are allowed. On the server or clientHost, this value is not used and initialization order dependent upon the order Spawn is called.
 
 :gear: **Prevent Despawn On Disconnect**
 

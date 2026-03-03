@@ -4,6 +4,16 @@ description: Here are some upcoming titles we expect in the near future.
 
 # Upcoming Releases
 
+## Goblin Cleanup
+
+A co-op cleaning game where you have to clean and rearrange a dungeon before the next adventurers come to complete it again.
+
+{% embed url="https://www.youtube.com/watch?v=iAcf6PitZ-c" %}
+
+{% embed url="https://store.steampowered.com/app/2748340/Goblin_Cleanup/" %}
+
+***
+
 ## Starlight Re:Volver
 
 Starlight Re:Volver is a 1-4 player co-op action roguelite, set in a nostalgic, anime-inspired MMO universe. Connect with other Divers in the city and explore dreamlike biomes, teaming up for thrilling adventures, minigames, fishing, and crafting.
@@ -11,6 +21,16 @@ Starlight Re:Volver is a 1-4 player co-op action roguelite, set in a nostalgic, 
 {% embed url="https://www.youtube.com/watch?v=sdnpI6n0LuQ" %}
 
 {% embed url="https://store.steampowered.com/app/3201010/Starlight_ReVolver/" %}
+
+***
+
+## Alchemy Tunes
+
+Alchemy Tunes is a delivery co-op game, cook with friends, deliver potions to nomads and survive the hardships of the vast desert.
+
+{% embed url="https://www.youtube.com/watch?v=QqdAq3numq4" %}
+
+{% embed url="https://store.steampowered.com/app/4241880/Alchemy_Tunes/" %}
 
 ***
 
@@ -24,16 +44,6 @@ Hunt zombies, become turned, kill hunters. In this round based multiplayer post-
 
 ***
 
-## Skygard Arena
-
-Skygard Arena is a modern turn-based tactical RPG. Assemble your squad of Heroes, pick their items and spells, and outplay your opponent in fast-paced tactical battles. Discover the world of Skygard in a solo adventure or head straight to the Arena for thrilling PvP matches!
-
-{% embed url="https://www.youtube.com/watch?v=G48JmViE6sU" %}
-
-{% embed url="https://store.steampowered.com/app/2148970/Skygard_Arena/" %}
-
-***
-
 ## Purrrifiers: Cleaning Chaos
 
 Purrrifiers is a hilarious 4-player co-op game about cleaning while causing chaos. Solve puzzles, drive quirky vehicles, use an array of cleaning tools and team up with adorable cats. Experience absurd humor, diverse locations, and non-stop fun as you collaborate or troll your way to cleaning glory!
@@ -41,16 +51,6 @@ Purrrifiers is a hilarious 4-player co-op game about cleaning while causing chao
 {% embed url="https://www.youtube.com/watch?v=MhoFuPkSPls" %}
 
 {% embed url="https://store.steampowered.com/app/2117430/Purrrifiers_Cleaning_Chaos/" %}
-
-***
-
-## Goblin Cleanup
-
-A co-op cleaning game where you have to clean and rearrange a dungeon before the next adventurers come to complete it again.
-
-{% embed url="https://www.youtube.com/watch?v=iAcf6PitZ-c" %}
-
-{% embed url="https://store.steampowered.com/app/2748340/Goblin_Cleanup/" %}
 
 ***
 
@@ -81,24 +81,6 @@ Blue Ridge Hunting is a co-op horror game where you and your friends investigate
 {% embed url="https://www.youtube.com/watch?v=nXsfcEnHWbw" %}
 
 {% embed url="https://store.steampowered.com/app/2434930/Blue_Ridge_Hunting/" %}
-
-## Forging Ahead
-
-Your focus will be blacksmithing, crafting and shopkeeping. Use the in-game physics to smash and hit materials into new objects to sell at your shop! Upgrade and decorate your shop, all while mastering the fine arts of smithing and crafting. Throughout the game you will level and gain reputation in the town, to get better customers with higher requirements, but also higher pay. Use your gold on upgrading the shop, buying new materials or hiring adventurers to go and gather more rare resources for you.
-
-{% embed url="https://www.youtube.com/watch?v=vh7_VUgjWw0" %}
-
-{% embed url="https://store.steampowered.com/app/2349410/Forging_Ahead/" %}
-
-***
-
-## Forsaken Frontiers
-
-Step into the frozen unknown in **Forsaken Frontiers**, a cooperative analog horror adventure set in the unforgiving embrace of an everlasting winter.
-
-{% embed url="https://www.youtube.com/watch?v=tez81QCiOkQ" %}
-
-{% embed url="https://store.steampowered.com/app/2810780/Forsaken_Frontiers/" %}
 
 ***
 

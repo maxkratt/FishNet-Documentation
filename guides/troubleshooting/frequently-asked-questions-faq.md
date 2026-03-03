@@ -193,7 +193,7 @@ You can view more information about SyncTypes [here](../features/network-communi
 
 <summary>Why do I get the warning: "Cannot complete action because client is not active."?</summary>
 
-You will see this warning if the client is not started. It's also possible to see this warning if you are trying to communicate with the server such as using a ServerRpc before the object is initialized for the client. See NetworkBehaviour [API](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html) and [callback order](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) for more information on this.
+You will see this warning if the client is not started. It's also possible to see this warning if you are trying to communicate with the server such as using a ServerRpc before the NetworkObject has finished initializing for the client, even if the client connection has started. (`obj.IsClientInitialized`) See NetworkBehaviour [API](https://fish-networking.com/FishNet/api/api/FishNet.Object.NetworkBehaviour.html) and [callback order](../features/networked-gameobjects-and-scripts/network-behaviour-guides.md#callbacks) for more information on this.
 
 It's also possible you have a method decorated with the '\[Client]' attribute, such as if you want a method to only run on clients. This will cause the warning, even if your intents are to not have the client connected. If this is true, you may set LoggingType to Off within the Client attribute.
 
