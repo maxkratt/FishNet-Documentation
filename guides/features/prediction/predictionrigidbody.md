@@ -12,7 +12,7 @@ View the [Creating Code](creating-code/) guide for using PredictionRigidbody in 
 
 ## Using outside the script
 
-As mentioned above you should always apply forces to the PredictionRigidbody component rather than the Rigidbody directly. Our first guides demonstrate how to do this within the replicate method, as well how to reconcile using the PredictionRigidbody, but do not show how to add forces from outside scripts, such as a bumper in your game.
+As mentioned above you should always apply forces to the PredictionRigidbody rather than the Rigidbody directly. Our first guides demonstrate how to do this within the replicate method, as well how to reconcile using the PredictionRigidbody, but do not show how to add forces from outside scripts, such as a bumper in your game.
 
 There is virtually no complexity to adding outside forces other than remembering to add them again, to the PredictionRigidbody and not the Rigidbody.
 

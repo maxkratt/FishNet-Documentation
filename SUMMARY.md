@@ -43,10 +43,10 @@
     * [Spawning Selected Player](tutorials/simple/making-a-custom-player-spawner/spawning-selected-player.md)
     * [Spawning Players When Set Number of Players Joined](tutorials/simple/making-a-custom-player-spawner/set-player-number.md)
     * [Spawning Players on Scene Load](tutorials/simple/making-a-custom-player-spawner/on-scene-load.md)
-  * [Building a Dedicated Server](tutorials/simple/building-a-dedicated-server.md)
+  * [Making a Loading Screen](tutorials/simple/making-a-loading-screen.md)
   * [Testing with Multiple Editors](tutorials/simple/testing-with-multiple-editors.md)
   * [Simulating Bad Network Connections](tutorials/simple/simulating-bad-network-connections.md)
-  * [Making a Loading Screen](tutorials/simple/making-a-loading-screen.md)
+  * [Building a Dedicated Server](tutorials/simple/building-a-dedicated-server.md)
 * [Complete Games](tutorials/complete-games.md)
 
 ## Guides

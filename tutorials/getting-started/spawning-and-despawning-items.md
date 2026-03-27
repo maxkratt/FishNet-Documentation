@@ -109,7 +109,7 @@ Because this script contains a ServerRpc, it will also need to be a **NetworkBeh
 * `Spawn(obj);`: This is the most critical line for networked objects. Calling `Spawn(obj)` on the `NetworkObject` tells FishNet's `ServerManager` to "spawn" this object over the network. This means the server will now instruct all currently connected clients (and any clients that connect later) to instantiate their own replica of this object.
 
 {% hint style="info" %}
-You can read our more in-depth page about **Spawning** [here](spawning-and-despawning-items.md).
+You can read our more in-depth page about **Spawning** [here](../../guides/features/networked-gameobjects-and-scripts/spawning/).
 {% endhint %}
 {% endstep %}
 
